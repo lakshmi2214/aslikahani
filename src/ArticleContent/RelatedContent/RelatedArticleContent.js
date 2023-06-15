@@ -64,7 +64,7 @@ function RelatedArticleContent() {
                          <li> {data.created_at} </li> 
                      </ul>
                      <p> {data.description}</p> 
-                     <p>{data.body}</p>
+                     <div dangerouslySetInnerHTML={{ __html: data.body }}></div>
                      
                         
                       </div>
