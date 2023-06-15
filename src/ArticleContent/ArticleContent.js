@@ -10,12 +10,13 @@ import ArchivePostArticle from './ArchivePostArticle'
 import Footer from './Footer'
 import AdvertisementRightConnect from '../Home/Content/AdvertisementRightConnect'
 
+
 function ArticleContent() {
   return (
     <div>
       <Navbar />
       
-      <section className="main-content">
+      <section className="main-content"> 
             <div className="container">
             <div className="row">
                <RelatedArticleContent /> 
