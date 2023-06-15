@@ -50,13 +50,13 @@ function AdvertisementRightConnect() {
                            <h2 className="main-heading">Advertizement</h2>
                            <span className="heading-ping"></span>
                         </div> 
-         {data?.categories?.slice(4,5).map((item) => {
+                        {data.categories?.slice(0,1).map((item,index)=>{
+    return(
+        item.advertisements.TopPosterAd2.map((item,index)=>{
+            console.log(item)
             return(
-               item.advertisements.slice(1,2).map((item,index) =>{
-                  console.log(item)
-                         
-            return(
-               <div key={index}>
+               
+                <div key={index}>
                   <div className="ad-div style-box">
                            <a href={item.url}>
                            <img src={item.image} className="img-responsive " alt=""/>

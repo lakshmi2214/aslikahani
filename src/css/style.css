@@ -4675,8 +4675,11 @@ footer .social-media-icons ul {
  background: #2c3e50;
 }
 .color-switcher ul li a.blue {
- background: #2196f3;
+ background: red;
 }
+/* .color-switcher ul li a.blue {
+	background: #2196f3;
+   } */
 .color-switcher ul li a.amethyst {
  background: #9b59b6;
 }

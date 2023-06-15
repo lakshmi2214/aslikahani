@@ -1,7 +1,7 @@
 import React from "react";
 import ArtPosts from "./ArtCultureBlog/ArtPosts";
-import AdvertisementRightConnect from "./ArtCultureBlog/AdvertisementRightConnect";
-import AdvertisementRight2 from "./ArtCultureBlog/AdvertisementRight2"
+import AdvertisementRightConnect from "../Home/Content/AdvertisementRightConnect";
+import AdvertisementRight2 from "../Home/Content/AdvertisementRight2"
 import RecentArt from "./ArtCultureBlog/RecentArt"; 
 import SliderWidgetArt from "./ArtCultureBlog/SliderWidgetArt";
 import ArchivePostArt from "./ArtCultureBlog/ArchivePostArt";
@@ -19,8 +19,8 @@ function BlogArt() {
                </div>
                <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
                   <aside>
-                   {/* <AdvertisementRightConnect />
-                   <AdvertisementRight2 /> */}
+                    <AdvertisementRightConnect />
+                   <AdvertisementRight2 /> 
                      <RecentArt />
                     <SliderWidgetArt />
                     <ArchivePostArt />

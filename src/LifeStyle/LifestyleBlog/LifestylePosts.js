@@ -27,8 +27,8 @@ import '../../css/owl.carousel.css';
 import { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import AdvertisementLeft1 from "./AdvertisementLeft1";
-// import AdvertisementLeft2 from "./AdvertisementLeft2";
+import AdvertisementLeft1 from '../../Home/Content/AdvertisementLeft1';
+import AdvertisementLeft2 from "../../Home/Content/AdvertisementLeft2";
 
 function LifestylePosts() {
 
@@ -161,7 +161,7 @@ function LifestylePosts() {
                            </div>
                         </article>
                      </div>
-                     {/* <AdvertisementLeft1 /> */}
+                     <AdvertisementLeft1 /> 
                      <div className="row">
                         <article className="col-md-6 col-sm-6 col-xs-12">
                            <div className="grid-1">
@@ -272,7 +272,7 @@ function LifestylePosts() {
                            </div>
                         </article>
                      </div>
-                     {/* <AdvertisementLeft2 /> */}
+                     <AdvertisementLeft2 />
                      <div className="row">
                         <article className="col-md-6 col-sm-6 col-xs-12">
                            <div className="grid-1">

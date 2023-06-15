@@ -1,7 +1,7 @@
 import React from "react";
 import TechnologyPosts from "./TechnologyBlog/TechnologyPosts";
-import AdvertisementRightConnect from "./TechnologyBlog/AdvertisementRightConnect";
-import AdvertisementRight2 from "./TechnologyBlog/AdvertisementRight2";
+import AdvertisementRightConnect from "../Home/Content/AdvertisementRightConnect"
+import AdvertisementRight2 from "../Home/Content/AdvertisementRight2"
 import RecentTechnology from "./TechnologyBlog/RecentTechnology";
 import SliderWidgetTechnology from "./TechnologyBlog/SliderWidgetTechnology";
 import ArchivePostTechnology from "./TechnologyBlog/ArchivePostTechnology"
@@ -20,8 +20,8 @@ function BlogTechnology() {
                </div>
                <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
                   <aside>
-                  {/* <AdvertisementRightConnect />
-                   <AdvertisementRight2/> */}
+                  <AdvertisementRightConnect />
+                   <AdvertisementRight2/>
                      <RecentTechnology />
                      <SliderWidgetTechnology />
                      <ArchivePostTechnology />

@@ -1,10 +1,11 @@
 import React from "react";
 import BusinessPosts from "./BusinessBlog/BusinessPosts";
-import AdvertisementRightConnect from "./BusinessBlog/AdvertisementRightConnect"
-import RecentBusiness from "./BusinessBlog/RecentBusiness";
+import AdvertisementRightConnect from "../Home/Content/AdvertisementRightConnect";
+import AdvertisementRight2 from "../Home/Content/AdvertisementRight2"
 import SliderWidgetBusiness from "./BusinessBlog/SliderWidgetBusiness";
 // import ArchivePostBusiness from "./BusinessBlog/ArchivePostBusiness";
-import AdvertisementRight2 from "./BusinessBlog/AdvertisementRight2";
+// import AdvertisementRight2 from "./BusinessBlog/AdvertisementRight2";
+import RecentBusiness from "./BusinessBlog/RecentBusiness";
 
 function BlogBusiness() {
     return(
@@ -19,8 +20,8 @@ function BlogBusiness() {
                </div>
                <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
                   <aside>
-                   {/* <AdvertisementRightConnect />
-                     <AdvertisementRight2/> */}
+                   <AdvertisementRightConnect />
+                     <AdvertisementRight2/>
                      <RecentBusiness />
                      <SliderWidgetBusiness />
                   {/* <ArchivePostBusiness /> */}

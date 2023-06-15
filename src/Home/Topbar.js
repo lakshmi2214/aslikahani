@@ -40,7 +40,7 @@ function Topbar(){
                         <li><a href="https://twitter.com/aslikahani_in"><i className="ti-twitter"></i></a></li>
                         <li><a href="https://www.youtube.com/@AsliKahani_in"><i className="ti-youtube"></i></a></li>
                         <li><a hre=" https://www.instagram.com/aslikahani.in/"><i className="ti-instagram"></i></a></li>
-                        {/* <li><a hre=""><i className="ti-spotify"></i></a></li> */}
+                        <li><a hre="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><i class="fa fa-spotify"></i></a></li>
                         {/*<li><a href=""><i className="ti-pinterest"></i></a></li>
                          <li><a href=""><i className="ti-linkedin"></i></a></li>
                         <li><a href=""><i className="ti-google"></i></a></li> */}

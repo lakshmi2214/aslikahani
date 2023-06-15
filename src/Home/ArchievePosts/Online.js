@@ -33,7 +33,7 @@ function Online() {
                            <span class="heading-ping"></span>
                         </div>
                         <div class="pol-holder">
-                           <p>Lorem ipsum dolor sit amet, adipiscing elit, sed do eiusmod tempor incidi dunta.</p>
+                           <p>A captivating platform that takes you on a journey through the realms of imagination, inspiration and cultural richness. Asli Kahani, meaning "Real Story" in Hindi, is a celebration of narratives that connect us, embracing diverse voices and bringing forth compelling tales from around the country.</p>
                            <ul>
                               <li> <input type="radio" value="1" name="pol"/> There will be the First option.</li>
                               <li> <input type="radio" value="2" name="pol"/> Need Second option. </li>

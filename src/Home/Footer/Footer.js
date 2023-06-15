@@ -12,9 +12,9 @@ function Footer() {
             <div class="container">
                <div class="row">
                   <About />
-                  <MostRead />
+                  {/* <MostRead />
                   <Twitter />
-                  <Instagram />  
+                  <Instagram />   */}
                </div>
             </div>
          </div>
@@ -28,7 +28,7 @@ function Footer() {
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">Blog</a></li>
                      </ul>
-                     <div class="copyright"> <span>&copy; 2017 All rights reserved. NewsForest</span> </div>
+                     <div class="copyright"> <span>&copy; 2023 All rights reserved. Aslikahani</span> </div>
                   </div>
                </div>
             </div>
