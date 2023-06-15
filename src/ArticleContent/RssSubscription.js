@@ -38,8 +38,8 @@ function RssSubscription() {
                            </div>
                            <button type="submit" className="btn btn-default"><i className="ti-angle-right"></i></button>
                            </form>
-                           <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry.  </p>
-                           </div>
+                           <p>A captivating platform that takes you on a journey through the realms of imagination, inspiration and cultural richness. Asli Kahani, meaning "Real Story" in Hindi, is a celebration of narratives that connect us, embracing diverse voices and bringing forth compelling tales from around the country.</p>
+ </div>
                           </div>
         </>
     )

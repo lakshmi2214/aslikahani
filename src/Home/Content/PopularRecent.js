@@ -61,7 +61,7 @@ function PopularRecent() {
                               
                               <ul className="nav nav-tabs nav-justified" role="tablist">
                                  <li className="active" role="presentation"> <a aria-controls="popularRecent" aria-expanded="true" data-toggle="tab"
-                                    href="#popularRecent" role="tab">Popular / Recent</a> </li>
+                                    href="#popularRecent" role="tab" style={{color:"white"}}>Popular / Recent</a> </li>
                                  {/* <li className="" role="presentation"> <a aria-controls="comments-count-count" aria-expanded="false"
                                     data-toggle="tab" href="#comments-count-count" role=
                                     "tab">recent</a> </li> */}

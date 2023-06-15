@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Grid() {
 
@@ -43,15 +44,15 @@ useEffect(()=>{
             return(
          <div key={index}>  
          
-    <div className="post-content"  onClick={() => handleNavigation(item,index)} >
+    <div className="post-content"  >
     <div className="catname"></div>
-    <h5> <a href={item.url}> {item.title}</a> </h5>
+    <h5> <a href="penny-saved-is-a-penny-earned-tips-on-saving-money">{item?.title}</a> </h5>
        <ul className="post-tools">
      <li>  {item.created_at} </li>
     </ul>
-    </div><a  href={item.url}>
+    </div>
     <div className="post-thumb" onClick={() => handleNavigation(item, index)}>
-     <img alt="" src={item.image}  style={{height:"417px"}}/> </div></a>
+     <img alt="" src={item.image}  style={{height:"417px"}}/> </div>
     </div>
     )})}
 </div>

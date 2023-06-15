@@ -22,20 +22,13 @@ import '../css/font-awesome.min.css';
 import '../css/zerogrid.css';
 import '../css/royal-slider/rs-default.css';
 import '../css/owl.carousel.css';
+import AdvertisementRightConnect from "../Home/Content/AdvertisementRightConnect";
 
 function AdvertizementArticle() {
     return(
         <>
         <div className="widget widget-bg">
-                          <div className="heading">
-                          <h2 className="main-heading">Advertizement</h2>
-                              <span className="heading-ping"></span>
-                          </div>
-                          <div className="ad-div style-box">
-                          <a href="https://themeforest.net/item/hashpro-listing-and-directory-template/16901616">
-                              <img src={ Add1 } className="img-responsive " alt=""/>
-                              </a>
-                          </div>
+                          <AdvertisementRightConnect />
                           </div>
         </>
     );

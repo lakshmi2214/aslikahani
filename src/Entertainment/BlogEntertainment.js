@@ -1,7 +1,7 @@
 import React from "react";
 import EntertainmentPosts from "./BlogPage/EntertainmentPosts";
-import AdvertisementRightConnect from "./BlogPage/AdvertisementRightConnect";
-import AdvertisementRight2 from "./BlogPage/AdvertisementRight2";
+import AdvertisementRightConnect from "../Home/Content/AdvertisementRightConnect"
+import AdvertisementRight2 from "../Home/Content/AdvertisementRight2"
 import RecentEntertainment from "./BlogPage/RecentEntertainment";
 import SliderWidgetEntertainment from "./BlogPage/SliderWidgetEntertainment";
 import ArchivePostEnetrtainment from "./BlogPage/ArchivePostEntertainment";
@@ -20,8 +20,8 @@ function BlogEntertainment() {
                </div>
                <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
                   <aside>
-                   {/* <AdvertisementRightConnect />
-                     <AdvertisementRight2 /> */}
+                   <AdvertisementRightConnect />
+                     <AdvertisementRight2 /> 
                      <RecentEntertainment />
                      <SliderWidgetEntertainment />
                     <ArchivePostEnetrtainment />

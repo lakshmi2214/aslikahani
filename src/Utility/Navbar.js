@@ -35,7 +35,7 @@ return(
 )    
 })}
 
-{data.categories?.slice(7,8).map((item,index)=>{
+{data.categories?.slice(6,7).map((item,index)=>{
      console.log(item);
 return(
     
@@ -47,7 +47,7 @@ return(
 
 
 
-{data.categories?.slice(6,7).map((item,index)=>{
+{data.categories?.slice(5,6).map((item,index)=>{
      console.log(item);
 return(
     
@@ -57,7 +57,7 @@ return(
 )    
 })}
 
-{data.categories?.slice(5,6).map((item,index)=>{
+{data.categories?.slice(4,5).map((item,index)=>{
      console.log(item);
 return(
     
@@ -67,7 +67,7 @@ return(
 )    
 })}
 
-{data.categories?.slice(4,5).map((item,index)=>{
+{data.categories?.slice(3,4).map((item,index)=>{
      console.log(item);
 return(
     
@@ -77,7 +77,7 @@ return(
 )    
 })}
 
-{data.categories?.slice(3,4).map((item,index)=>{
+{data.categories?.slice(2,3).map((item,index)=>{
      console.log(item);
 return(
     
@@ -87,7 +87,7 @@ return(
 )    
 })}
 
-{data.categories?.slice(2,3).map((item,index)=>{
+{data.categories?.slice(1,2).map((item,index)=>{
      console.log(item);
 return(
     
@@ -97,7 +97,7 @@ return(
 )    
 })}
 
-{data.categories?.slice(1,2).map((item,index)=>{
+{data.categories?.slice(7,8).map((item,index)=>{
      console.log(item);
 return(
     

@@ -38,14 +38,14 @@ function RelatedArticleContent() {
    const [data,setData] = useState([]);
 
    useEffect(()=>{
-      const url = `https://newsbackend-388608.as.r.appspot.com/api/v1/articles/get?url=${location.state.item.url}`
+      const url = `https://newsbackend-388608.as.r.appspot.com/api/v1/articles/get?url=${location.state?.item.url}`
       fetch(url).then(res => res.json())
       .then(res => {
       console.log(res)
       setData(res);
      })
       .catch(err => setData(err))
-  },[])
+  })
 
   return(
         <>
@@ -53,7 +53,7 @@ function RelatedArticleContent() {
                     
          
                      <div className="picture">
-                       <img alt="" className="img-responsive" src={data.image} style={{height:"250px",width:"760px"}}/>  
+                       <img alt="" className="img-responsive" src={data.image} style={{height:"350px",width:"760px"}}/>  
                      </div>
                      <div className="catname">
                      <br></br>
@@ -65,6 +65,7 @@ function RelatedArticleContent() {
                      </ul>
                      <p> {data.description}</p> 
                      <div dangerouslySetInnerHTML={{ __html: data.body }}></div>
+
                      
                         
                       </div>

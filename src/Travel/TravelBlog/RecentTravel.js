@@ -55,10 +55,10 @@ function RecentTravel() {
                          <div role="tabpanel">
                             <ul className="nav nav-tabs nav-justified" role="tablist">
                                <li className="active" role="presentation"> <a aria-controls="popular" aria-expanded="true" data-toggle="tab"
-                                  href="#popular" role="tab">Popular</a> </li>
-                               <li className="" role="presentation"> <a aria-controls="comments-count-count" aria-expanded="false"
+                                  href="#popular" role="tab" style={{color:"white"}}>Popular / Recent</a> </li>
+                               {/* <li className="" role="presentation"> <a aria-controls="comments-count-count" aria-expanded="false"
                                   data-toggle="tab" href="#comments-count-count" role=
-                                  "tab">recent</a> </li>
+                                  "tab">recent</a> </li> */}
                             </ul>
                             <div className="tab-content">
                                <div className="tab-pane active" id="popular" role="tabpanel">

@@ -25,21 +25,31 @@ function AdvertisementLeft1() {
         <>
         <div className="ad-div text-center" style={{border:"1px solid black"}}>
             <div>Advertisement</div>
-        {data?.categories?.slice(7,8).map((item) => {
+            {data.categories?.slice(0,1).map((item,index)=>{
+    return(
+        item.advertisements.BottomBannerAd1.map((item,index)=>{
+            console.log(item)
             return(
-               item.advertisements.slice(3,4).map((item,index) =>{
-                  console.log(item)
-                         
-            return(
-               <div key={index}>
+               
+                <div key={index}>
                      <a href={item.url} target="_blank" onClick={() => handleNavigation(item, index)}>
                          <img src={item.image} className="img-responsive" alt=""/>
                          </a>
-                         
-                        </div>
-            )}))})}
+                         </div>
+            )
+           
+        })
+    )
+})}   
+                        
                   </div>
         </>
     )
 }
 export default AdvertisementLeft1;
+
+
+    
+ 
+
+
