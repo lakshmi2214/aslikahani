@@ -1,0 +1,58 @@
+.backgroundMenu{
+    border:1px solid rgb(171, 170, 170);
+    height:60px;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: white;
+    color:black;
+   position:sticky;
+   top:0;
+   z-index:2;
+     
+
+}
+.nav{
+background-color: white;
+ font-size: 18px;
+font-weight: 700; 
+padding-top: 16px;
+ padding-right:18px;
+padding-left: 18px; 
+text-decoration: none;
+
+}
+.nav:hover{
+    background-color: red;
+    color:white;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+    .backgroundMenu{
+        border:1px solid rgb(171, 170, 170);
+        height:350px;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        background-color: white;
+        color:black;
+        text-align: center;
+        position: relative;
+        
+       
+}
+.nav{
+    background-color: white;
+    
+    position: relative;
+    }
+    .nav:hover{
+        background-color: red;
+        color:white;
+        text-decoration: none;
+    }   
+}
+

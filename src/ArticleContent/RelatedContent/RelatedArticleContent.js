@@ -1,0 +1,75 @@
+import React, { useState } from "react";
+import { useEffect} from "react";
+// import Pic1 from '../../images/posts/64.jpg';
+// import Pic2 from '../../images/250.png';
+import '../../css/style.css';
+import '../../css/animate.min.css';
+import '../../css/megaMenu.css';
+import '../../css/colors/amethyst.css';
+// import '../../css/colors/blue.css';
+import '../../css/colors/carrat.css';
+import '../../css/colors/defualt.css';
+import '../../css/colors/golden.css';
+import '../../css/colors/java-color.css';
+// import '../../css/colors/sea-green.css';
+import '../../css/themify-icons.css';
+import '../../css/royal-slider/royalslider.css';
+import '../../css/tranparentmenu.css';
+import '../../css/magnific-popup.css';
+import '../../css/bootstrap-normal-container.min.css';
+import '../../css/bootstrap.min.css';
+import '../../css/owl.theme.default.css';
+import '../../css/breakingNews.css';
+import '../../css/font-awesome.min.css';
+import '../../css/zerogrid.css';
+import '../../css/royal-slider/rs-default.css';
+import '../../css/owl.carousel.css';
+
+import {useParams, useLocation} from "react-router-dom";
+
+
+function RelatedArticleContent() {
+   
+   const param = useParams();
+   const location = useLocation();
+   console.log(param);
+   console.log(location.state);
+
+   const [data,setData] = useState([]);
+
+   useEffect(()=>{
+      const url = `https://newsbackend-388608.as.r.appspot.com/api/v1/articles/get?url=${location.state.item.url}`
+      fetch(url).then(res => res.json())
+      .then(res => {
+      console.log(res)
+      setData(res);
+     })
+      .catch(err => setData(err))
+  },[])
+
+  return(
+        <>
+        <div className="col-md-7 col-sm-7 col-xs-12 ">
+                    
+         
+                     <div className="picture">
+                       <img alt="" className="img-responsive" src={data.image} style={{height:"250px",width:"760px"}}/>  
+                     </div>
+                     <div className="catname">
+                     <br></br>
+                        <br></br>
+                         <h2>{data.title}</h2> 
+                     <ul className="post-tools nolineheight">
+                      <li> by <a href=""> <strong> {data.authored_by}</strong> </a></li> 
+                         <li> {data.created_at} </li> 
+                     </ul>
+                     <p> {data.description}</p> 
+                     <p>{data.body}</p>
+                     
+                        
+                      </div>
+                               </div>
+        </>
+    );
+}
+export default RelatedArticleContent;
