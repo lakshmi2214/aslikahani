@@ -25,7 +25,7 @@ function ArticleContent() {
                                 <aside>
                                 <AboutAuthor />
                                  {/* <MostReadPost /> */}
-                               {/* <AdvertisementRightConnect /> */}
+                               <AdvertisementRightConnect /> 
                         </aside>
                     </div>
                     </div>

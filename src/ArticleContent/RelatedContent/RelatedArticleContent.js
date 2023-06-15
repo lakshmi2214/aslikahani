@@ -38,7 +38,7 @@ function RelatedArticleContent() {
    const [data,setData] = useState([]);
 
    useEffect(()=>{
-      const url = `https://newsbackend-388608.as.r.appspot.com/api/v1/articles/get?url=${location.state?.url}`
+      const url = `https://newsbackend-388608.as.r.appspot.com/api/v1/articles/get?url=${location.state?.item.url}`
       fetch(url).then(res => res.json())
       .then(res => {
       console.log(res)
@@ -64,7 +64,7 @@ function RelatedArticleContent() {
                          <li> {data.created_at} </li> 
                      </ul>
                      <p> {data.description}</p> 
-                     <p>{data.body}</p>
+                     <p>{  data.body}</p>
                      
                         
                       </div>
