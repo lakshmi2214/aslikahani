@@ -4,13 +4,12 @@ import NationalNews from './NationalNews';
 import TrendingNews from './TrendingNews';
 import TopNews from './TopNews';
 // import NewCategory from './NewCategory';
-import Connect from './Connect';
 import PopularRecent from './PopularRecent';
 import SliderPostWidget from './SliderPostWidget';
 // import ArchivePost from './ArchivePost';
- import AdvertisementLeft1 from "./AdvertisementLeft1";
- import AdvertisementRight2 from "./AdvertisementRight2";
- import AdvertisementRightConnect from "./AdvertisementRightConnect";
+import ChaiTheoryAd from "../../Advertisements/ChaiTheoryAd";
+import SristarAd1 from "../../Advertisements/SristarAd1";
+import BannerAd1 from "../../Advertisements/BannerAd1";
 
 
 function Main() {
@@ -23,7 +22,7 @@ function Main() {
                   <LatestArticles />
                   <NationalNews />                 
                   <TrendingNews />
-                 <AdvertisementLeft1/> 
+              <BannerAd1/>
                </div>
                <div className="col-md-2 col-sm-2 hidden-xs hidden-sm nopadding">
                   <div className="category-sidebar sidebar-middle">
@@ -33,10 +32,11 @@ function Main() {
                </div>
                <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
                   <aside>
-                        <AdvertisementRightConnect /> 
-                      <AdvertisementRight2 />  
+                       <ChaiTheoryAd/>
+                      
                      
                       <PopularRecent /> 
+                      <SristarAd1/> 
                      <div className="widget widget-bg ">                       
                       <SliderPostWidget /> 
                      </div>

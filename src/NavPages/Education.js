@@ -1,14 +1,14 @@
 import React from 'react';
 import Navbar from '../Utility/Navbar';
 import BlogEducation from '../Education/BlogEducation'
-import FooterEducation from '../Education/FooterEducation'
+import FooterCategory from '../FooterCategory/FooterCategory';
 
 function Education() {
   return (
     <div>
         <Navbar />
         <BlogEducation />
-        <FooterEducation />
+        <FooterCategory />
     </div>
   )
 }

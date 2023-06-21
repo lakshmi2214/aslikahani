@@ -1,7 +1,4 @@
 import React from "react";
-import Admin1 from '../../images/posts/33.jpg';
-import Admin2 from '../../images/posts/61.jpg';
-import Admin3 from '../../images/posts/47.jpg';
 import '../../css/style.css';
 import '../../css/animate.min.css';
 import '../../css/megaMenu.css';
@@ -70,7 +67,7 @@ function AdminC() {
                 <div className="picture">
                 
                 <div className="category-image"  onClick={() => handleNavigation(item, index)}>
-                <a href={item.url}>
+                <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                 <img alt="" className="img-responsive" src={item.image} style={{height:"280px",width:"380px"}}/>
                 </a>
                 </div>
@@ -78,11 +75,11 @@ function AdminC() {
                         <div className="detail">
                         <div className="caption"  onClick={() => handleNavigation(item, index)}>
                         <h5>
-                            <a href={item.url}>{item.title}</a>
+                            <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
                                        </h5>
                         </div>
                         <ul className="post-tools"  onClick={() => handleNavigation(item, index)}>
-                                       <li> by <a href={item.url}> <strong> {item.authored_by}</strong> </a></li>
+                                       <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
                                        <li>  {item.created_at} </li>
                                     </ul>
                                    </div>
@@ -98,7 +95,7 @@ function AdminC() {
                                         <div key={index}>
                          <div className="picture">
                          <div className="category-image"  onClick={() => handleNavigation(item, index)}>
-                         <a href={item.url}>
+                         <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                          <img alt="" className="" src={item.image} style={{height:"280px",width:"380px"}}/>
                          </a>
                                     </div>
@@ -106,11 +103,11 @@ function AdminC() {
                                  <div className="detail">
                                  <div className="caption"  onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                          <a href={item.url}>{item.title}</a>
+                                          <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
                                        </h5>
                                  </div>
                                  <ul className="post-tools"  onClick={() => handleNavigation(item, index)}>
-                                       <li> by <a href={item.url}> <strong> {item.authored_by}</strong> </a></li>
+                                       <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
                                        <li>  {item.created_at} </li>
                                     </ul>
                                  </div>
@@ -126,7 +123,7 @@ function AdminC() {
                                         <div key={index}>
                          <div className="picture">
                          <div className="category-image"  onClick={() => handleNavigation(item, index)}>
-                         <a href={item.url}>
+                         <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                          <img alt="" className="" src={item.image} style={{height:"280px",width:"380px"}}/>
                          </a>
                                      </div>
@@ -134,11 +131,11 @@ function AdminC() {
                                      <div className="detail">
                                      <div className="caption"  onClick={() => handleNavigation(item, index)}>
                                      <h5>
-                                          <a href={item.url}>{item.title}</a>
+                                          <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
                                        </h5>
                                      </div>
                                      <ul className="post-tools"  onClick={() => handleNavigation(item, index)}>
-                                     <li> by <a href={item.url}> <strong> {item.authored_by}</strong> </a></li>
+                                     <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
                                        <li> {item.created_at} </li>
                                      </ul>
                                      </div>

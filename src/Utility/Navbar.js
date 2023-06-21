@@ -25,7 +25,7 @@ useEffect(()=>{
      console.log(item);
 return(
     
- <div key={index} className="nav">  
+ <div key={index} className="navbar">  
 
 
 
@@ -39,7 +39,7 @@ return(
      console.log(item);
 return(
     
- <div key={index} className="nav">   
+ <div key={index} className="navbar">   
 <Link to={"/entertainment"} style={{color:"black",textDecoration:"none"}}>{item.name}</Link>
 </div>
 )    
@@ -51,7 +51,7 @@ return(
      console.log(item);
 return(
     
- <div key={index} className="nav">   
+ <div key={index} className="navbar">   
 <Link to={"/education"} style={{color:"black",textDecoration:"none"}}>{item.name}</Link>
 </div>
 )    
@@ -61,7 +61,7 @@ return(
      console.log(item);
 return(
     
- <div key={index} className="nav">   
+ <div key={index} className="navbar">   
 <Link to={"/technology"} style={{color:"black",textDecoration:"none"}}>{item.name}</Link>
 </div>
 )    
@@ -71,7 +71,7 @@ return(
      console.log(item);
 return(
     
- <div key={index} className="nav">   
+ <div key={index} className="navbar">   
 <Link to={"/business"} style={{color:"black",textDecoration:"none"}}>{item.name}</Link>
 </div>
 )    
@@ -81,7 +81,7 @@ return(
      console.log(item);
 return(
     
- <div key={index} className="nav">   
+ <div key={index} className="navbar">   
 <Link to={"/travel"} style={{color:"black",textDecoration:"none"}}>{item.name}</Link>
 </div>
 )    
@@ -91,7 +91,7 @@ return(
      console.log(item);
 return(
     
- <div key={index} className="nav">   
+ <div key={index} className="navbar">   
 <Link to={"/lifestyle"} style={{color:"black",textDecoration:"none"}}>{item.name}</Link>
 </div>
 )    
@@ -101,7 +101,7 @@ return(
      console.log(item);
 return(
     
- <div key={index} className="nav">   
+ <div key={index} className="navbar">   
 <Link to={"/artandculture"} style={{color:"black",textDecoration:"none"}}>{item.name}</Link>
 </div>
 )    

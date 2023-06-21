@@ -61,7 +61,7 @@ function PopularRecent() {
                               
                               <ul className="nav nav-tabs nav-justified" role="tablist">
                                  <li className="active" role="presentation"> <a aria-controls="popularRecent" aria-expanded="true" data-toggle="tab"
-                                    href="#popularRecent" role="tab" style={{color:"white"}}>Popular / Recent</a> </li>
+                                    href="#popularRecent" role="tab" style={{color:"white"}}>Popular</a> </li>
                                  {/* <li className="" role="presentation"> <a aria-controls="comments-count-count" aria-expanded="false"
                                     data-toggle="tab" href="#comments-count-count" role=
                                     "tab">recent</a> </li> */}
@@ -74,10 +74,10 @@ function PopularRecent() {
                                        console.log(item);
                                         return(
                                         <div key={index}>
-                                          <div className="pic" onClick={() => handleNavigation(item, index)}> <a href={item.url}>
+                                          <div className="pic" onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                             <img alt="" className="img-responsive" src={item.image} style={{height:"83px",width:"83px"}}/></a> 
                                           </div>
-                                          <div className="caption" onClick={() => handleNavigation(item, index)}> <a href={item.url}>
+                                          <div className="caption" onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                              {item.title}</a> 
                                           </div>
                                           <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
@@ -91,9 +91,9 @@ function PopularRecent() {
                                        console.log(item);
                                         return(
                                         <div key={index}>
-                                          <div className="pic" onClick={() => handleNavigation(item, index)}>  <a href={item.url}>
+                                          <div className="pic" onClick={() => handleNavigation(item, index)}>  <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                             <img alt="" className="img-responsive" src={item.image} style={{height:"83px",width:"83px"}}/></a> </div>
-                                          <div className="caption" onClick={() => handleNavigation(item, index)}> <a href={item.url}>
+                                          <div className="caption" onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                              {item.title}</a> </div>
                                           <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
                                              <li>  {item.created_at} </li>
@@ -106,9 +106,9 @@ function PopularRecent() {
                                        console.log(item);
                                         return(
                                         <div key={index}>
-                                          <div className="pic" onClick={() => handleNavigation(item, index)}> <a href={item.url}>
+                                          <div className="pic" onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                             <img alt="" className="img-responsive" src={item.image} style={{height:"83px",width:"83px"}}/></a> </div>
-                                          <div className="caption" onClick={() => handleNavigation(item, index)}> <a href={item.url}>
+                                          <div className="caption" onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                              {item.title}</a> </div>
                                           <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
                                              <li>  {item.created_at} </li>
@@ -121,9 +121,9 @@ function PopularRecent() {
                                        console.log(item);
                                         return(
                                         <div key={index}>
-                                          <div className="pic" onClick={() => handleNavigation(item, index)}> <a href={item.url}>
+                                          <div className="pic" onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                             <img alt="" className="img-responsive" src={item.image} style={{height:"83px",width:"83px"}}/></a> </div>
-                                          <div className="caption" onClick={() => handleNavigation(item, index)}> <a href={item.url}>{item.title}</a> </div>
+                                          <div className="caption" onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a> </div>
                                           <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
                                              <li>  {item.created_at} </li>
                                           </ul>
@@ -141,9 +141,9 @@ function PopularRecent() {
                                        console.log(item);
                                         return(
                                         <div key={index}>
-                                          <div className="pic"> <a href={item.url}>
+                                          <div className="pic"> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                             <img alt="" className="img-responsive" src={Post11}/></a> </div>
-                                          <div className="caption"> <a href={item.url}>The assault on federally supported </a> </div>
+                                          <div className="caption"> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>The assault on federally supported </a> </div>
                                           <ul className="post-tools">
                                              <li title="Comments"> <i className="ti-thought"></i> 105 </li>
                                           </ul>
@@ -158,9 +158,9 @@ function PopularRecent() {
                                        console.log(item);
                                         return(
                                         <div key={index}>
-                                          <div className="pic"> <a href={item.url}>
+                                          <div className="pic"> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                             <img alt="" className="img-responsive" src={Post8} /></a> </div>
-                                          <div className="caption"> <a href={item.url}>Taco Bell's newest creation may be the grossest fast food invention yet</a> </div>
+                                          <div className="caption"> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>Taco Bell's newest creation may be the grossest fast food invention yet</a> </div>
                                           <ul className="post-tools">
                                              <li title="Comments"><a href=""> <i className="ti-thought"></i> 35</a> </li>
                                           </ul>
@@ -175,9 +175,9 @@ function PopularRecent() {
                                        console.log(item);
                                         return(
                                         <div key={index}>
-                                          <div className="pic"> <a href={item.url}>       
+                                          <div className="pic"> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>       
                                             <img alt="" className="img-responsive" src={Post5} /></a> </div>
-                                          <div className="caption"> <a href={item.url}>MBD just hired a big shot to run its virtual reality division</a> </div>
+                                          <div className="caption"> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>MBD just hired a big shot to run its virtual reality division</a> </div>
                                           <ul className="post-tools">
                                              <li title="Comments"> <a href=""><i className="ti-thought"></i> 163</a> </li>
                                           </ul>
@@ -192,9 +192,9 @@ function PopularRecent() {
                                        console.log(item);
                                         return(
                                         <div key={index}>
-                                          <div className="pic"> <a href={item.url}>
+                                          <div className="pic"> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                             <img alt="" className="img-responsive" src={item.image}/></a> </div>
-                                          <div className="caption"> <a href={item.url}>Get a stern talking-to from your parents with Kit Kat's Lunar</a> </div>
+                                          <div className="caption"> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>Get a stern talking-to from your parents with Kit Kat's Lunar</a> </div>
                                           <ul className="post-tools">
                                              <li title="Comments"> <a href=""><i className="ti-thought"></i> 953</a> </li>
                                           </ul>
@@ -209,9 +209,9 @@ function PopularRecent() {
                                        console.log(item);
                                         return(
                                         <div key={index}>
-                                          <div className="pic"> <a href={item.url}>
+                                          <div className="pic"> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                             <img alt="" className="img-responsive" src={Post12}/></a> </div>
-                                          <div className="caption"> <a href={item.url}>Presidential campaigns is too odd</a> </div>
+                                          <div className="caption"> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>Presidential campaigns is too odd</a> </div>
                                           <ul className="post-tools">
                                              <li title="Comments"> <a href=""><i className="ti-thought"></i> 305 </a></li>
                                           </ul>

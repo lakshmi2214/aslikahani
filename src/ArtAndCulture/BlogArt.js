@@ -1,10 +1,10 @@
 import React from "react";
 import ArtPosts from "./ArtCultureBlog/ArtPosts";
-import AdvertisementRightConnect from "../Home/Content/AdvertisementRightConnect";
-import AdvertisementRight2 from "../Home/Content/AdvertisementRight2"
 import RecentArt from "./ArtCultureBlog/RecentArt"; 
 import SliderWidgetArt from "./ArtCultureBlog/SliderWidgetArt";
 import ArchivePostArt from "./ArtCultureBlog/ArchivePostArt";
+import ChaiTheoryAd from "../Advertisements/ChaiTheoryAd";
+import SristarAd1 from "../Advertisements/SristarAd1";
 
 function BlogArt() {
     return(
@@ -19,9 +19,9 @@ function BlogArt() {
                </div>
                <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
                   <aside>
-                    <AdvertisementRightConnect />
-                   <AdvertisementRight2 /> 
-                     <RecentArt />
+                    <ChaiTheoryAd />
+                     <RecentArt />                     
+                    <SristarAd1 />
                     <SliderWidgetArt />
                     <ArchivePostArt />
                   </aside>

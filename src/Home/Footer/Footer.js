@@ -12,9 +12,9 @@ function Footer() {
             <div class="container">
                <div class="row">
                   <About />
-                  {/* <MostRead />
+                  <MostRead />
                   <Twitter />
-                  <Instagram />   */}
+                  <Instagram />  
                </div>
             </div>
          </div>

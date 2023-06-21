@@ -59,7 +59,7 @@ function SliderPostWidget() {
                                  <div className="picture">
                                     <div className="category-image" onClick={() => handleNavigation(item, index)}> 
                                     
-                                       <a href={item.url}>
+                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                        <img alt="" className="img-responsive" src={item.image} style={{height:"250px", width:"400px"}} />
                                        </a>
                                     </div>
@@ -67,7 +67,7 @@ function SliderPostWidget() {
                                  <div className="detail">
                                     <div className="caption" onClick={() => handleNavigation(item, index)}> 
                                        <h5>
-                                          <a href={item.url}>{item.title}</a>
+                                          <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
                                        </h5>
                                     </div>
                                     <ul className="post-tools" onClick={() => handleNavigation(item, index)}>

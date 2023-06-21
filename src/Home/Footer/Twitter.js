@@ -30,19 +30,27 @@ function Twitter() {
                      <h2>Twitter Widget</h2>
                      <ul class="tabs-posts twitter-widget">
                         <li>
-                           <div class="caption"> Developing Classified Theme with ajax base technology. 
-                              <a href="" class="url"> https://goo.gl/XBS4Ar </a>
+                           <div class="caption"><a href="https://twitter.com/aslikahani_in" class="url"> PENNY SAVED IS A PENNY EARNED: TIPS ON SAVING MONEY 
+                              </a>
                            </div>
                            <ul class="post-tools">
                               <li> 3 Hours Ago </li>
                            </ul>
                         </li>
                         <li>
-                           <div class="caption"> Nokia is going to lanch his new smart phone. 
-                              <a href="" class="url"> https://goo.gl/XBS4Ar </a>
+                           <div class="caption"><a href="" class="url">BATTERY ELECTRIC VEHICLES - ROAD TO AN ELECTRIFYING FUTURE
+                           </a>
                            </div>
                            <ul class="post-tools">
-                              <li> 10 Hours Ago </li>
+                              <li> 3 Hours Ago </li>
+                           </ul>
+                        </li>
+                        <li>
+                           <div class="caption"><a href="" class="url">AN OVERVIEW OF COSMETIC SURGERY AND BEAUTY TREATMENTS 
+                           </a>
+                           </div>
+                           <ul class="post-tools">
+                              <li> 3 Hours Ago </li>
                            </ul>
                         </li>
                      </ul>

@@ -51,7 +51,7 @@ function RecentBusiness() {
                          <div role="tabpanel">
                             <ul className="nav nav-tabs nav-justified" role="tablist">
                                <li className="active" role="presentation"> <a aria-controls="popular" aria-expanded="true" data-toggle="tab"
-                                  href="#popular" role="tab" style={{color:"white"}}>Popular / Recent</a> </li>
+                                  href="#popular" role="tab" style={{color:"white"}}>Popular</a> </li>
                                
                             </ul>
                             <div className="tab-content">

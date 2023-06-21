@@ -46,7 +46,7 @@ useEffect(()=>{
          
     <div className="post-content"  >
     <div className="catname"></div>
-    <h5> <a href="penny-saved-is-a-penny-earned-tips-on-saving-money">{item?.title}</a> </h5>
+    <h5> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item?.title}</a> </h5>
        <ul className="post-tools">
      <li>  {item.created_at} </li>
     </ul>
@@ -71,7 +71,7 @@ useEffect(()=>{
          <div key={index}>
       <div className="post-content" onClick={() => handleNavigation(item, index)}>
         <div className="catname"></div>
-     <h5 onClick={() => handleNavigation(item, index)}> <a href={item.url}>{item.title}</a> </h5>
+     <h5 onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a> </h5>
       <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
         <li> {item.created_at} </li>
        </ul>
@@ -93,7 +93,7 @@ useEffect(()=>{
           <div key={index}> 
          <div className="post-content" onClick={() => handleNavigation(item, index)}>
             <div className="catname"></div>
-      <h5 onClick={() => handleNavigation(item, index)}> <a href={item.url}>{item.title}</a> </h5>
+      <h5 onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a> </h5>
          <ul className="post-tools">
             <li onClick={() => handleNavigation(item, index)}>  {item.created_at} </li>
                  </ul>
@@ -104,7 +104,7 @@ useEffect(()=>{
      
 
 </div>
-   </div>
+   </div> 
 </div>
 
 
@@ -120,7 +120,7 @@ useEffect(()=>{
              <div key={index}> 
          <div className="post-content" onClick={() => handleNavigation(item, index)}>
           <div className="catname"></div>
-          <h5 onClick={() => handleNavigation(item, index)}> <a href={item.url}>{item.title}</a> </h5>
+          <h5 onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a> </h5>
             <ul className="post-tools">
              <li onClick={() => handleNavigation(item, index)}> {item.created_at} </li>
             </ul>
@@ -142,7 +142,7 @@ useEffect(()=>{
           <div key={index}> 
       <div className="post-content" onClick={() => handleNavigation(item, index)}>
          <div className="catname"></div>
-            <h5 onClick={() => handleNavigation(item, index)}> <a href={item.url}>{item.title}</a> </h5>
+            <h5 onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a> </h5>
                <ul className="post-tools">
                   <li onClick={() => handleNavigation(item, index)}>{item.created_at}</li>
               </ul>

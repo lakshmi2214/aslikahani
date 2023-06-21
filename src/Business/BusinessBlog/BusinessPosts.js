@@ -24,9 +24,8 @@ import '../../css/owl.carousel.css';
 import { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import AdvertisementLeft2 from "../../Home/Content/AdvertisementLeft2";
-import AdvertisementLeft1 from "../../Home/Content/AdvertisementLeft1";
-
+import BannerAd1 from "../../Advertisements/BannerAd1";
+import BannerAd2 from "../../Advertisements/BannerAd2";
 function BusinessPosts() {
 
    const navigate = useNavigate()
@@ -158,7 +157,7 @@ function BusinessPosts() {
                            </div>
                         </article>
                      </div>
-                      <AdvertisementLeft1 /> 
+                  <BannerAd1/>
                      <div className="row">
                         <article className="col-md-6 col-sm-6 col-xs-12">
                            <div className="grid-1">
@@ -269,7 +268,7 @@ function BusinessPosts() {
                            </div>
                         </article>
                      </div>
-                    <AdvertisementLeft2 /> 
+                 <BannerAd2/>
                      <div className="row">
                         <article className="col-md-6 col-sm-6 col-xs-12">
                            <div className="grid-1">

@@ -1,5 +1,4 @@
 import React from "react";
-import ADF728 from '../../images/ads/adforest728.jpg';
 import '../../css/style.css';
 import '../../css/animate.min.css';
 import '../../css/megaMenu.css';
@@ -22,11 +21,11 @@ import '../../css/font-awesome.min.css';
 import '../../css/zerogrid.css';
 import '../../css/royal-slider/rs-default.css';
 import '../../css/owl.carousel.css';
-import AdvertisementLeft1 from '../../Home/Content/AdvertisementLeft1';
-import AdvertisementLeft2 from "../../Home/Content/AdvertisementLeft2";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import BannerAd1 from "../../Advertisements/BannerAd1";
+import BannerAd2 from "../../Advertisements/BannerAd2";
 
 function TechnologyPosts() {
 
@@ -58,7 +57,7 @@ function TechnologyPosts() {
                                         <div key={index}>
                               <div className="picture">
                                  <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                    <a href={item.url}>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{height:"240px",widtth:"300px"}}/>
                                     </a>                                    
                                  </div>
@@ -66,11 +65,11 @@ function TechnologyPosts() {
                               <div className="detail">
                                  <div className="caption" onClick={() => handleNavigation(item, index)}>
                                     <h5>
-                                       <a href={item.url}>{item.title}</a>
+                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>{item.title}</a>
                                     </h5>
                                  </div>
                                  <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                    <li> by <a href={item.url}> <strong> {item.authored_by}</strong> </a></li>
+                                    <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
                                  </ul>
                               </div>
                               </div>
@@ -85,7 +84,7 @@ function TechnologyPosts() {
                                         <div key={index}>
                               <div className="picture">
                                  <div className="category-image" onClick={() => handleNavigation(item, index)}> 
-                                    <a href={item.url}>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{height:"240px",widtth:"300px"}}/>
                                     </a>                                   
                                  </div>
@@ -93,11 +92,11 @@ function TechnologyPosts() {
                               <div className="detail">
                                  <div className="caption" onClick={() => handleNavigation(item, index)}>
                                     <h5>
-                                       <a href={item.url}>{item.title}</a>
+                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>{item.title}</a>
                                     </h5>
                                  </div>
                                  <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                    <li> by <a href={item.url}> <strong> {item.authored_by}</strong> </a></li>
+                                    <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
                                  </ul>
                               </div>
                               </div>
@@ -112,7 +111,7 @@ function TechnologyPosts() {
                                         <div key={index}>
                               <div className="picture">
                                  <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                    <a href={item.url}>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{height:"240px",widtth:"300px"}}/>
                                     </a>
                                  </div>
@@ -120,7 +119,7 @@ function TechnologyPosts() {
                               <div className="detail">
                                  <div className="caption">
                                     <h5>
-                                       <a href={item.url}>{item.title}</a>
+                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>{item.title}</a>
                                     </h5>
                                  </div>
                                  <ul className="post-tools">
@@ -139,7 +138,7 @@ function TechnologyPosts() {
                                         <div key={index}>
                               <div className="picture">
                                  <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                    <a href={item.url}>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{height:"240px",width:"370px"}}/>
                                     </a>
                                  </div>
@@ -147,7 +146,7 @@ function TechnologyPosts() {
                               <div className="detail">
                                  <div className="caption">
                                     <h5>
-                                       <a href={item.url}>{item.title}</a>
+                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>{item.title}</a>
                                     </h5>
                                  </div>
                                  <ul className="post-tools">
@@ -159,7 +158,7 @@ function TechnologyPosts() {
                            </div>
                         </article>
                      </div>
-                     <AdvertisementLeft2 />
+                    <BannerAd1/>
                      <div className="row">
                         <article className="col-md-6 col-sm-6 col-xs-12">
                            <div className="grid-1">
@@ -169,7 +168,7 @@ function TechnologyPosts() {
                                         <div key={index}>
                               <div className="picture">
                                  <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                    <a href={item.url}>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{height:"240px", width:"380px"}}/>
                                     </a>
                                  </div>
@@ -177,7 +176,7 @@ function TechnologyPosts() {
                               <div className="detail">
                                  <div className="caption" onClick={() => handleNavigation(item, index)}>
                                     <h5>
-                                       <a href={item.url}>{item.title}</a>
+                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>{item.title}</a>
                                     </h5>
                                  </div>
                                  <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
@@ -196,7 +195,7 @@ function TechnologyPosts() {
                                         <div key={index}>
                               <div className="picture">
                                  <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                    <a href={item.url}>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{height:"240px", width:"380px"}}/>
                                     </a>
                                  </div>
@@ -204,7 +203,7 @@ function TechnologyPosts() {
                               <div className="detail">
                                  <div className="caption" onClick={() => handleNavigation(item, index)}>
                                     <h5>
-                                       <a href={item.url}>{item.title}</a>
+                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>{item.title}</a>
                                     </h5>
                                  </div>
                                  <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
@@ -223,7 +222,7 @@ function TechnologyPosts() {
                                         <div key={index}>
                               <div className="picture">
                                  <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                    <a href={item.url}>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{height:"240px", width:"380px"}}/>
                                     </a>
                                  </div>
@@ -231,11 +230,11 @@ function TechnologyPosts() {
                               <div className="detail">
                                  <div className="caption" onClick={() => handleNavigation(item, index)}>
                                     <h5>
-                                       <a href={item.url}>{item.title}</a>
+                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>{item.title}</a>
                                     </h5>
                                  </div>
                                  <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                    <li> by <a href={item.url}> <strong> {item.authored_by}</strong> </a></li>
+                                    <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
                                  </ul>
                               </div>
                               </div>
@@ -250,7 +249,7 @@ function TechnologyPosts() {
                                         <div key={index}>
                               <div className="picture">
                                  <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                    <a href={item.url}>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{height:"240px", width:"380px"}}/>
                                     </a>
                                  </div>
@@ -258,7 +257,7 @@ function TechnologyPosts() {
                               <div className="detail">
                                  <div className="caption" onClick={() => handleNavigation(item, index)}>
                                     <h5>
-                                       <a href={item.url}>{item.title}</a>
+                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>{item.title}</a>
                                     </h5>
                                  </div>
                                  <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
@@ -270,7 +269,7 @@ function TechnologyPosts() {
                            </div>
                         </article>
                      </div>
-                     <AdvertisementLeft1 />
+                 <BannerAd2/>
                      <div className="row">
                         <article className="col-md-6 col-sm-6 col-xs-12">
                            <div className="grid-1">
@@ -280,7 +279,7 @@ function TechnologyPosts() {
                                         <div key={index}>
                               <div className="picture">
                                  <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                    <a href={item.url}>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{height:"240px", width:"380px"}}/>
                                     </a>
                                  </div>
@@ -288,7 +287,7 @@ function TechnologyPosts() {
                               <div className="detail">
                                  <div className="caption" onClick={() => handleNavigation(item, index)}>
                                     <h5>
-                                       <a href={item.url}>{item.title}</a>
+                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>{item.title}</a>
                                     </h5>
                                  </div>
                                  <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
@@ -307,7 +306,7 @@ function TechnologyPosts() {
                                         <div key={index}>
                               <div className="picture">
                                  <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                    <a href={item.url}>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{height:"240px", width:"380px"}}/>
                                     </a>
                                  </div>
@@ -315,7 +314,7 @@ function TechnologyPosts() {
                               <div className="detail">
                                  <div className="caption" onClick={() => handleNavigation(item, index)}>
                                     <h5>
-                                       <a href={item.url}>{item.title}</a>
+                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>{item.title}</a>
                                     </h5>
                                  </div>
                                  <ul className="post-tools" onClick={() => handleNavigation(item, index)}>

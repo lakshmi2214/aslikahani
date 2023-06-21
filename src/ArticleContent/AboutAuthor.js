@@ -1,12 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect} from "react";
-// import Pic10 from '../images/users/author2.jpg';
 import '../css/style.css';
 import '../css/animate.min.css';
 import '../css/megaMenu.css';
 import '../css/colors/amethyst.css';
-// import '../css/colors/blue.css';
 import '../css/colors/carrat.css';
 import '../css/colors/defualt.css';
 import '../css/colors/golden.css';
@@ -52,9 +50,9 @@ function AboutAuthor() {
                               <span className="heading-ping"></span>
                                 </div>
                                 <div className="author-widget">
-                                <div className="auth-pic">
+                                {/* <div className="auth-pic">
                                 <img src={ data.author_image } className="img-responsive" alt=""/>
-                                </div>
+                                </div> */}
                             <div className="auth-meta">
                             <h4> {data.authored_by}</h4>
                                  <p>{data.about_author}</p>

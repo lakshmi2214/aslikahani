@@ -55,7 +55,7 @@ function RecentTechnology() {
                            <div role="tabpanel">
                               <ul className="nav nav-tabs nav-justified" role="tablist">
                                  <li className="active" role="presentation"> <a aria-controls="popular" aria-expanded="true" data-toggle="tab"
-                                    href="#popular" role="tab" style={{color:"white"}}>Popular / Recent</a> </li>
+                                    href="#popular" role="tab" style={{color:"white"}}>Popular</a> </li>
                                  {/* <li className="" role="presentation"> <a aria-controls="comments-count-count" aria-expanded="false"
                                     data-toggle="tab" href="#comments-count-count" role=
                                     "tab">recent</a> </li> */}
@@ -69,9 +69,9 @@ function RecentTechnology() {
                                         <div key={index}>
                                        <li>
                                           <div className="pic" onClick={() => handleNavigation(item, index)}> 
-                                          <a href={item.url}>
+                                          <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>
                                             <img alt="" className="img-responsive" src={item.image} style={{height:"83px", width:"83px"}}/></a> </div>
-                                          <div className="caption" onClick={() => handleNavigation(item, index)}> <a href={item.url}>{item.title}</a> </div>
+                                          <div className="caption" onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>{item.title}</a> </div>
                                           <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
                                              <li>  {item.created_at} </li>
                                           </ul>
@@ -84,9 +84,9 @@ function RecentTechnology() {
                                         return(
                                         <div key={index}>
                                           <div className="pic" onClick={() => handleNavigation(item, index)}> 
-                                          <a href={item.url}>
+                                          <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>
                                             <img alt="" className="img-responsive" src={item.image} style={{height:"83px", width:"83px"}}/></a> </div>
-                                          <div className="caption" onClick={() => handleNavigation(item, index)}> <a href={item.url}>{item.title}</a> </div>
+                                          <div className="caption" onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>{item.title}</a> </div>
                                           <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
                                              <li>  {item.created_at} </li>
                                           </ul>
@@ -99,9 +99,9 @@ function RecentTechnology() {
                                         return(
                                         <div key={index}> 
                                           <div className="pic" onClick={() => handleNavigation(item, index)}> 
-                                          <a href={item.url}>
+                                          <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>
                                             <img alt="" className="img-responsive" src={item.image} style={{height:"83px", width:"83px"}}/></a> </div>
-                                            <div className="caption" onClick={() => handleNavigation(item, index)}> <a href={item.url}>{item.title}</a> </div>
+                                            <div className="caption" onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>{item.title}</a> </div>
                                           <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
                                              <li>  {item.created_at} </li>
                                           </ul>
@@ -114,9 +114,9 @@ function RecentTechnology() {
                                         return(
                                         <div key={index}>
                                           <div className="pic" onClick={() => handleNavigation(item, index)}> 
-                                          <a href={item.url}>
+                                          <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>
                                             <img alt="" className="img-responsive" src={item.image} style={{height:"83px", width:"83px"}}/></a> </div>
-                                          <div className="caption" onClick={() => handleNavigation(item, index)}> <a href={item.url}>{item.title}</a> </div>
+                                          <div className="caption" onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>{item.title}</a> </div>
                                           <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
                                              <li>  {item.created_at} </li>
                                           </ul>
@@ -133,10 +133,10 @@ function RecentTechnology() {
                                         return(
                                         <div key={index}>
                                           <div className="pic" onClick={() => handleNavigation(item, index)}> 
-                                          <a href={item.url}>
+                                          <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>
                                             <img alt="" className="img-responsive" src={item.image} style={{height:"83px", width:"83px"}}/></a> 
                                             </div>
-                                          <div className="caption" onClick={() => handleNavigation(item, index)}> <a href={item.url}>{item.title}</a> </div>
+                                          <div className="caption" onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/technology/'+item.url}>{item.title}</a> </div>
                                           <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
                                             </ul>
                                           </div>

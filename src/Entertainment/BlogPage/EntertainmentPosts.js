@@ -1,6 +1,4 @@
 import React from "react";
-import IA3 from '../../images/ads/3.jpg';
-import ADF728 from '../../images/ads/adforest728.jpg';
 import '../../css/style.css';
 import '../../css/animate.min.css';
 import '../../css/megaMenu.css';
@@ -27,8 +25,8 @@ import '../../css/owl.carousel.css';
 import { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import AdvertisementLeft1 from '../../Home/Content/AdvertisementLeft1';
-import AdvertisementLeft2 from "../../Home/Content/AdvertisementLeft2";
+import BannerAd1 from "../../Advertisements/BannerAd1";
+import BannerAd2 from "../../Advertisements/BannerAd2";
 
 function EntertainmentPosts() {
 
@@ -60,7 +58,7 @@ function EntertainmentPosts() {
                                      <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>
                                  <img alt="" className="img-responsive" src={item.image} style={{height:"240px",widtth:"300px"}}/>
                                  </a>                                    
                               </div>
@@ -68,11 +66,11 @@ function EntertainmentPosts() {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                 <li> by <a href={item.url}> <strong> {item.authored_by}</strong> </a></li>
+                                 <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
                               </ul>
                            </div>
                            </div>
@@ -87,7 +85,7 @@ function EntertainmentPosts() {
                                      <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}> 
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>
                                  <img alt="" className="img-responsive" src={item.image} style={{height:"240px",widtth:"300px"}}/>
                                  </a>                                   
                               </div>
@@ -95,11 +93,11 @@ function EntertainmentPosts() {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                 <li> by <a href={item.url}> <strong> {item.authored_by}</strong> </a></li>
+                                 <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
                               </ul>
                            </div>
                            </div>
@@ -114,7 +112,7 @@ function EntertainmentPosts() {
                                      <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>
                                  <img alt="" className="img-responsive" src={item.image} style={{height:"240px",widtth:"300px"}}/>
                                  </a>
                               </div>
@@ -122,7 +120,7 @@ function EntertainmentPosts() {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools"onClick={() => handleNavigation(item, index)}>
@@ -141,7 +139,7 @@ function EntertainmentPosts() {
                                      <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>
                                  <img alt="" className="img-responsive" src={item.image} style={{height:"240px",width:"370px"}}/>
                                  </a>
                               </div>
@@ -149,7 +147,7 @@ function EntertainmentPosts() {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
@@ -161,7 +159,7 @@ function EntertainmentPosts() {
                         </div>
                      </article>
                   </div>
-                 <AdvertisementLeft1 />
+                <BannerAd1/>
                   <div className="row">
                      <article className="col-md-6 col-sm-6 col-xs-12">
                         <div className="grid-1">
@@ -171,7 +169,7 @@ function EntertainmentPosts() {
                                      <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>
                                  <img alt="" className="img-responsive" src={item.image} style={{height:"240px", width:"380px"}}/>
                                  </a>
                               </div>
@@ -179,7 +177,7 @@ function EntertainmentPosts() {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
@@ -198,7 +196,7 @@ function EntertainmentPosts() {
                                      <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>
                                  <img alt="" className="img-responsive" src={item.image} style={{height:"240px", width:"380px"}}/>
                                  </a>
                               </div>
@@ -206,7 +204,7 @@ function EntertainmentPosts() {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
@@ -225,7 +223,7 @@ function EntertainmentPosts() {
                                      <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>
                                  <img alt="" className="img-responsive" src={item.image} style={{height:"240px", width:"380px"}}/>
                                  </a>
                               </div>
@@ -233,11 +231,11 @@ function EntertainmentPosts() {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                 <li> by <a href={item.url}> <strong> {item.authored_by}</strong> </a></li>
+                                 <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
                               </ul>
                            </div>
                            </div>
@@ -252,7 +250,7 @@ function EntertainmentPosts() {
                                      <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>
                                  <img alt="" className="img-responsive" src={item.image} style={{height:"240px", width:"380px"}}/>
                                  </a>
                               </div>
@@ -260,7 +258,7 @@ function EntertainmentPosts() {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
@@ -272,17 +270,17 @@ function EntertainmentPosts() {
                         </div>
                      </article>
                   </div>
-                  <AdvertisementLeft2 />
+                  <BannerAd2/>
                   <div className="row">
                      <article className="col-md-6 col-sm-6 col-xs-12">
                         <div className="grid-1">
-                        {data?.locations?.Slider.slice(7,8).map((item,index)=>{
+                        {data?.locations?.Slider.slice(6,7).map((item,index)=>{
                                     console.log(item);
                                      return(
                                      <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>
                                  <img alt="" className="img-responsive" src={item.image} style={{height:"240px", width:"380px"}}/>
                                  </a>
                               </div>
@@ -290,7 +288,7 @@ function EntertainmentPosts() {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
@@ -309,7 +307,7 @@ function EntertainmentPosts() {
                                      <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>
                                  <img alt="" className="img-responsive" src={item.image} style={{height:"240px", width:"380px"}}/>
                                  </a>
                               </div>
@@ -317,7 +315,7 @@ function EntertainmentPosts() {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>

@@ -71,7 +71,7 @@ useEffect(()=>{
                            <div className="grid-1">
                               <div className="picture">
                                  <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                    <a href={item.url}>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{height:"185px"}}/>
                                     </a>
                                     
@@ -80,7 +80,7 @@ useEffect(()=>{
                               <div className="detail">
                                  <div className="caption">
                                     <h5 onClick={() => handleNavigation(item, index)}>
-                                       <a href={item.url}>{item.title}</a>
+                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
                                     </h5>
                                  </div>
                                  <ul className="post-tools">
@@ -93,20 +93,19 @@ useEffect(()=>{
                            </div>
                         </article>
                         </div>
-            )})}
+                       )})}
          
                         <div className="col-md-5 col-sm-5 col-xs-12">
                            <ul className="small-grid">
                               <li>
-   {data?.locations?.LatestPost.slice(1,2).map((item,index)=>{
-         
-            console.log(item);
-            return(
-               <div key={index}>
+                        {data?.locations?.LatestPost.slice(1,5).map((item,index)=>{
+                       console.log(item);
+                       return(
+                        <div key={index}>
 
                                  <div className="small-post">
                                     <div className="post-content">
-                                       <h3 onClick={() => handleNavigation(item, index)}> <a href={item.url}>{item.title} </a> </h3>
+                                       <h3 onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title} </a> </h3>
                                        <ul className="post-tools">
                
                                           <li onClick={() => handleNavigation(item, index)}>  {item.created_at} </li>
@@ -117,57 +116,7 @@ useEffect(()=>{
             )})}
                               </li>
                               <li>
-      {data?.locations?.LatestPost.slice(2,3).map((item,index)=>{
-            console.log(item);
-            return(
-               <div key={index}>
-
-                                 <div className="small-post">
-                                    <div className="post-content">
-                                       <h3 onClick={() => handleNavigation(item, index)}> <a href={item.url}>{item.title}</a> </h3>
-                                       <ul className="post-tools">
-                                          <li onClick={() => handleNavigation(item, index)}>  {item.created_at} </li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                                 </div>
-            )
-         })}
-                              </li>
-                              <li>
-         {data?.locations?.LatestPost.slice(3,4).map((item,index)=>{
-            console.log(item);
-            return(
-               <div key={index}>
-
-                                 <div className="small-post">
-                                    <div className="post-content">
-                                       <h3 onClick={() => handleNavigation(item, index)}> <a href={item.url}>{item.title}</a> </h3>
-                                       <ul className="post-tools">
-                                          <li onClick={() => handleNavigation(item, index)}>  {item.created_at} </li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                                 </div>
-            )
-         })}
-                              </li>
-                              <li>
-   {data?.locations?.Slider.slice(4,5).map((item,index)=>{
-            console.log(item);
-            return(
-               <div key={index}>
-
-                                 <div className="small-post">
-                                    <div className="post-content">
-                                       <h3 onClick={() => handleNavigation(item, index)}> <a href={item.url}>{item.title}</a> </h3>
-                                       <ul className="post-tools">
-                                          <li onClick={() => handleNavigation(item, index)}>  {item.created_at} </li>
-                                       </ul>
-                                    </div>
-                                 </div>
-                                 </div>
-            )})}
+      
                               </li>
                            </ul>
                         </div>

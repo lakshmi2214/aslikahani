@@ -36,7 +36,7 @@ function About() {
                         <div class="footer-detail">
                            <ul class="personal-info">
                               <li><i class="fa fa-map-marker"></i> #280/1 2nd Floor, 18th Cross, Malleshwaram.</li>
-                              <li><i class="fa fa-envelope"></i> Support@domain.com </li>
+                              <li><i class="fa fa-envelope"></i> aslikahani.media@gmail.com </li>
                            </ul>
                         </div>
                         <div class="social-media-icons">
@@ -44,8 +44,8 @@ function About() {
                            <li><a href=" https://www.facebook.com/aslikahani.in"><i className="ti-facebook"></i> </a></li>
                         <li><a href="https://twitter.com/aslikahani_in"><i className="ti-twitter"></i></a></li>
                         <li><a href="https://www.youtube.com/@AsliKahani_in"><i className="ti-youtube"></i></a></li>
-                        <li><a hre=" https://www.instagram.com/aslikahani.in/"><i className="ti-instagram"></i></a></li>
-                        <li><a hre="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><i class="fa fa-spotify"></i></a></li>
+                        <li><a href=" https://www.instagram.com/aslikahani.in/"><i className="ti-instagram"></i></a></li>
+                        <li><a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><i class="fa fa-spotify"></i></a></li>
                               {/* <li> <a href=""><i class="ti-linkedin"></i></a></li>
                               <li> <a href=""><i class="ti-google"></i></a></li>
                               <li> <a href=""><i class="ti-vimeo"></i></a></li>

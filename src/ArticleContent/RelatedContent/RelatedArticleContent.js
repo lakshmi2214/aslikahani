@@ -25,27 +25,37 @@ import '../../css/zerogrid.css';
 import '../../css/royal-slider/rs-default.css';
 import '../../css/owl.carousel.css';
 
-import {useParams, useLocation} from "react-router-dom";
+import { useLocation} from "react-router-dom";
 
 
 function RelatedArticleContent() {
    
-   const param = useParams();
-   const location = useLocation();
-   console.log(param);
-   console.log(location.state);
+//    const param = useParams();
+//    const location = useLocation();
+//    console.log("res"+param);
+
+//   console.log(location.state);
+
+const location = useLocation();
 
    const [data,setData] = useState([]);
 
    useEffect(()=>{
-      const url = `https://newsbackend-388608.as.r.appspot.com/api/v1/articles/get?url=${location.state?.item.url}`
+    if(location) {
+            var tmp = location.pathname.slice(location.pathname.lastIndexOf("/") , location.pathname.length) ;
+            // setData(tmp) 
+            tmp = tmp.substring(1, tmp.length);
+          }
+      const url = `https://newsbackend-388608.as.r.appspot.com/api/v1/articles/get?url=${tmp}`
       fetch(url).then(res => res.json())
       .then(res => {
+        setData(res)
       console.log(res)
-      setData(res);
+      
      })
-      .catch(err => setData(err))
-  })
+    //   .catch(err => setData(err))
+    //  
+  },[])
 
   return(
         <>
@@ -53,7 +63,7 @@ function RelatedArticleContent() {
                     
          
                      <div className="picture">
-                       <img alt="" className="img-responsive" src={data.image} style={{height:"350px",width:"760px"}}/>  
+                       <img alt="" className="img-responsive" src={data.image} style={{height:"500px",width:"760px"}}/>  
                      </div>
                      <div className="catname">
                      <br></br>
@@ -65,11 +75,10 @@ function RelatedArticleContent() {
                      </ul>
                      <p> {data.description}</p> 
                      <div dangerouslySetInnerHTML={{ __html: data.body }}></div>
-
                      
                         
                       </div>
-                               </div>
+                               </div> 
         </>
     );
 }

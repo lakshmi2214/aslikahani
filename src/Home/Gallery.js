@@ -31,7 +31,7 @@ import '../css/owl.carousel.css';
 import '../css/zerogrid.css';
 import '../fonts/glyphicons-halflings-regular.svg';
 import '../css/royal-slider/rs-default.css';
-import AdvertisementLeft1 from "./Content/AdvertisementLeft1";
+import BannerAd2 from "../Advertisements/BannerAd2";
 
 function Gallery() {
     return(
@@ -39,7 +39,7 @@ function Gallery() {
         <section class="photo-gallery-section">
          <div class="container-flude">
             <div class="row">
-               <AdvertisementLeft1 />
+              <BannerAd2/>
                </div>
             </div>
       

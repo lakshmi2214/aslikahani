@@ -8,7 +8,7 @@ function SliderWidgetEntertainment() {
    const handleNavigation = (item, index) => {
       console.log(item);
 
-      navigate(`/home/a/${index}`, { state: item });
+      navigate(`/entertainment/${item.url}`, { state: {item} });
    }
    const [data,setData] = useState([])
  
@@ -38,7 +38,7 @@ function SliderWidgetEntertainment() {
                                      <div key={index}>
                                  <div className="picture">
                                     <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                       <a href={item.url}>
+                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>
                                        <img alt="" className="img-responsive" src={item.image} style={{height:"250px", width:"330px"}}/>
                                        </a>
                                     </div>
@@ -46,7 +46,7 @@ function SliderWidgetEntertainment() {
                                  <div className="detail">
                                     <div className="caption"  onClick={() => handleNavigation(item, index)}>
                                        <h5>
-                                          <a href={item.url}>{item.title}</a>
+                                          <a href={process.env.REACT_APP_DOMAIN_NAME+'/entertainment/'+item.url}>{item.title}</a>
                                        </h5>
                                     </div>
                                     <ul className="post-tools" onClick={() => handleNavigation(item, index)}>

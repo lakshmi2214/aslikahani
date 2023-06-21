@@ -1,14 +1,14 @@
 import React from 'react';
 import Navbar from '../Utility/Navbar';
 import BlogTravel from '../Travel/BlogTravel';
-import FooterTravel from '../Travel/FooterTravel';
+import FooterCategory from '../FooterCategory/FooterCategory';
 
 function Travel() {
   return (
     <div>
         <Navbar />
         <BlogTravel />
-        <FooterTravel />
+        <FooterCategory />
     </div>
   )
 }

@@ -35,7 +35,7 @@ function RecentEntertainment() {
    const handleNavigation = (item, index) => {
       console.log(item);
 
-      navigate(`/home/a/${index}`, { state: item });
+      navigate(`/entertainment/${item.url}`, { state: {item} });
    }
    const [data,setData] = useState([])
  
@@ -55,7 +55,7 @@ function RecentEntertainment() {
                            <div role="tabpanel">
                               <ul className="nav nav-tabs nav-justified" role="tablist">
                                  <li className="active" role="presentation"> <a aria-controls="popular" aria-expanded="true" data-toggle="tab"
-                                    href="#popular" role="tab" style={{color:"white"}}>Popular / Recent</a> </li>
+                                    href="#popular" role="tab" style={{color:"white"}}>Popular</a> </li>
                                  {/* <li className="" role="presentation"> <a aria-controls="comments-count-count" aria-expanded="false"
                                     data-toggle="tab" href="#comments-count-count" role=
                                     "tab">recent</a> </li> */}

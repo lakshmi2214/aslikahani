@@ -1,14 +1,14 @@
 import React from 'react'
 import Navbar from '../Utility/Navbar';
 import BlogLifestyle from '../LifeStyle/BlogLifestyle';
-import FooterLifestyle from '../LifeStyle/FooterLifestyle';
+import FooterCategory from '../FooterCategory/FooterCategory';
 
 function LifeStyle() {
   return (
     <div>
         <Navbar />
       <BlogLifestyle />
-      <FooterLifestyle />
+      <FooterCategory />
     </div>
   )
 }

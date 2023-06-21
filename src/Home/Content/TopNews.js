@@ -59,7 +59,7 @@ function TopNews() {
                            <div className="picture">
                            
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                  <img alt="" className="img-responsive" src={item.image}/>
                                  </a>
                               </div>
@@ -67,7 +67,7 @@ function TopNews() {
                            <div className="detail">
                               <div className="caption">
                                  <h5 onClick={() => handleNavigation(item, index)}>
-                                    <a href={item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               
@@ -93,7 +93,7 @@ function TopNews() {
                            <div className="detail">
                               <div className="caption">
                                  <h5 onClick={() => handleNavigation(item, index)}>
-                                    <a href={item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                            </div>
@@ -108,7 +108,7 @@ function TopNews() {
          <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                  <img alt="" className="img-responsive" src={item.image}/>
                                  </a>
                               </div>
@@ -116,7 +116,7 @@ function TopNews() {
                            <div className="detail">
                               <div className="caption">
                                  <h5 onClick={() => handleNavigation(item, index)}>
-                                    <a href={item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               </div>
@@ -134,7 +134,7 @@ function TopNews() {
                            <div className="picture">
 
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                  <img alt="" className="img-responsive" src={item.image}/>
                                  </a>
                               </div>
@@ -142,7 +142,7 @@ function TopNews() {
                            <div className="detail">
                               <div className="caption">
                                  <h5 onClick={() => handleNavigation(item, index)}>
-                                    <a href={item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               </div>
@@ -157,7 +157,7 @@ function TopNews() {
          <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                  <img alt="" className="img-responsive" src={item.image}/>
                                  </a>
                               </div>
@@ -165,7 +165,7 @@ function TopNews() {
                            <div className="detail">
                               <div className="caption">
                                  <h5 onClick={() => handleNavigation(item, index)}>
-                                    <a href={item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               </div>

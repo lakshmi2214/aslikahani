@@ -1,13 +1,13 @@
 import React from 'react'
 import Navbar from '../Utility/Navbar'
 import BlogEntertainment from '../Entertainment/BlogEntertainment'
-import FooterEntertainment from '../Entertainment/FooterEntertainment'
+import FooterCategory from '../FooterCategory/FooterCategory'
 function Entertainment() {
   return (
     <div>
         <Navbar />
         <BlogEntertainment />
-        <FooterEntertainment />
+        <FooterCategory />
     </div>
   )
 }

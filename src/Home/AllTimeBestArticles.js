@@ -66,15 +66,15 @@ function AllTimeBestArticles() {
                            <ul>
                               <li className="col-md-5 col-sm-3 col-xs-12 nopadding">
                                  <div className="thumb" onClick={() => handleNavigation(item, index)} >
-                                    <a href={item.url}>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                     <img src={item.image} alt="" style={{height:"150px", width:"200px"}} />
                                     </a>
                                  </div>
                               </li>
                               <li className="col-md-7 col-sm-9 col-xs-12">
                                  <div className="desc post-content" onClick={() => handleNavigation(item, index)}>
-                                    <h5><a href={item.url}>{item.title}</a></h5>
-                                    <ul className="post-tools"><a href={item.url}>
+                                    <h5><a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a></h5>
+                                    <ul className="post-tools"><a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                        <li> {item.created_at} </li></a>
                                     </ul>
                                  </div>
@@ -93,15 +93,15 @@ function AllTimeBestArticles() {
                            <ul>
                               <li className="col-md-5 col-sm-3 col-xs-12 nopadding">
                                  <div className="thumb" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                     <img src={item.image} alt="" style={{height:"150px", width:"200px"}}/>
                                  </a>
                                  </div>
                               </li>
                               <li className="col-md-7 col-sm-9 col-xs-12">
                                  <div className="desc post-content" onClick={() => handleNavigation(item, index)}>
-                                    <h5><a href={item.url}>{item.title}</a></h5>
-                                    <ul className="post-tools"><a href={item.url}>
+                                    <h5><a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a></h5>
+                                    <ul className="post-tools"><a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                        <li> {item.created_at} </li></a>                                       
                                     </ul>
                                  </div>
@@ -120,15 +120,15 @@ function AllTimeBestArticles() {
                            <ul>
                               <li className="col-md-5 col-sm-3 col-xs-12 nopadding">
                                  <div className="thumb" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                     <img src={item.image} alt="" style={{height:"150px", width:"200px"}}/>
                                  </a>
                                  </div>
                               </li>
                               <li className="col-md-7 col-sm-9 col-xs-12">
                                  <div className="desc post-content" onClick={() => handleNavigation(item, index)}>
-                                    <h5><a href={item.url}>{item.title}</a></h5>
-                                    <ul className="post-tools"><a href={item.url}>
+                                    <h5><a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a></h5>
+                                    <ul className="post-tools"><a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                        <li> {item.created_at} </li></a>
                                        </ul>
                                  </div>
@@ -148,15 +148,15 @@ function AllTimeBestArticles() {
                            <ul>
                               <li className="col-md-5 col-sm-3 col-xs-12 nopadding">
                                  <div className="thumb" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                     <img src={item.image} alt="" style={{height:"150px", width:"200px"}}/>
                                  </a>
                                  </div>
                               </li>
                               <li className="col-md-7 col-sm-9 col-xs-12">
                                  <div className="desc post-content" onClick={() => handleNavigation(item, index)}>
-                                    <h5><a href={item.url}>{item.title}</a></h5>
-                                    <ul className="post-tools"><a href={item.url}>
+                                    <h5><a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a></h5>
+                                    <ul className="post-tools"><a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                        <li> {item.created_at}</li></a>
                                     </ul>
                                  </div>
@@ -176,15 +176,15 @@ function AllTimeBestArticles() {
                            <ul>
                               <li className="col-md-5 col-sm-3 col-xs-12 nopadding">
                                  <div className="thumb" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                     <img src={item.image} alt="" style={{height:"150px", width:"200px"}}/>
                                  </a>
                                  </div>
                               </li>
                               <li className="col-md-7 col-sm-9 col-xs-12">
                                  <div className="desc post-content" onClick={() => handleNavigation(item, index)}>
-                                    <h5><a href={item.url}>{item.title}</a></h5>
-                                    <ul className="post-tools"><a href={item.url}>
+                                    <h5><a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a></h5>
+                                    <ul className="post-tools"><a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                        <li> {item.created_at} </li></a>
                                       </ul>
                                  </div>
@@ -203,15 +203,15 @@ function AllTimeBestArticles() {
                            <ul>
                               <li className="col-md-5 col-sm-3 col-xs-12 nopadding">
                                  <div className="thumb" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                     <img src={item.image} alt="" style={{height:"150px", width:"200px"}}/>
                                  </a>
                                  </div>
                               </li>
                               <li className="col-md-7 col-sm-9 col-xs-12">
                                  <div className="desc post-content" onClick={() => handleNavigation(item, index)}>
-                                    <h5><a href={item.url}>{item.title}</a></h5>
-                                    <ul className="post-tools"><a href={item.url}>
+                                    <h5><a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a></h5>
+                                    <ul className="post-tools"><a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                        <li> {item.created_at} </li></a>
                                     </ul>
                                  </div>
@@ -232,15 +232,15 @@ function AllTimeBestArticles() {
                            <ul>
                               <li className="col-md-5 col-sm-3 col-xs-12 nopadding">
                                  <div className="thumb" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                     <img src={item.image} alt="" style={{height:"150px", width:"200px"}}/>
                                  </a>
                                  </div>
                               </li>
                               <li className="col-md-7 col-sm-9 col-xs-12">
                                  <div className="desc post-content" onClick={() => handleNavigation(item, index)}>
-                                    <h5><a href={item.url}>{item.title}</a></h5>
-                                    <ul className="post-tools"><a href={item.url}>
+                                    <h5><a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a></h5>
+                                    <ul className="post-tools"><a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                        <li>  {item.created_at}</li></a>
                                        </ul>
                                  </div>
@@ -262,15 +262,15 @@ function AllTimeBestArticles() {
                            <ul>
                               <li className="col-md-5 col-sm-3 col-xs-12 nopadding">
                                  <div className="thumb" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                     <img src={item.image} alt="" style={{height:"150px", width:"200px"}}/>
                                  </a>
                                  </div>
                               </li>
                               <li className="col-md-7 col-sm-9 col-xs-12">
                                  <div className="desc post-content" onClick={() => handleNavigation(item, index)}>
-                                    <h5><a href={item.url}>{item.title}</a></h5>
-                                    <ul className="post-tools"><a href={item.url}>
+                                    <h5><a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a></h5>
+                                    <ul className="post-tools"><a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                        <li> {item.created_at}</li></a>
                                     </ul>
                                  </div>
@@ -292,14 +292,14 @@ function AllTimeBestArticles() {
                            <ul>
                               <li className="col-md-5 col-sm-3 col-xs-12 nopadding">
                                  <div className="thumb" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                     <img src={item.image} alt="" style={{height:"150px", width:"200px"}}/>
                                  </a></div>
                               </li>
                               <li className="col-md-7 col-sm-9 col-xs-12">
                                  <div className="desc post-content" onClick={() => handleNavigation(item, index)}>
-                                    <h5><a href={item.url}>{item.title}</a></h5>
-                                    <ul className="post-tools"><a href={item.url}>
+                                    <h5><a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a></h5>
+                                    <ul className="post-tools"><a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
                                        <li>{item.created_at}</li></a>
                                     </ul>
                                  </div>

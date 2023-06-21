@@ -21,11 +21,11 @@ import '../../css/font-awesome.min.css';
 import '../../css/zerogrid.css';
 import '../../css/royal-slider/rs-default.css';
 import '../../css/owl.carousel.css';
-import AdvertisementLeft1 from "./AdvertisementLeft1";
-import AdvertisementLeft2 from "./AdvertisementLeft2";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import BannerAd1 from "../../Advertisements/BannerAd1";
+import BannerAd2 from "../../Advertisements/BannerAd2";
 
 function ArtPosts() {
 
@@ -51,7 +51,7 @@ function ArtPosts() {
       <div className="row">
                      <article className="col-md-6 col-sm-6 col-xs-12">
                         <div className="grid-1">
-                        {data?.locations?.Popular.slice(1,2).map((item,index)=>{
+                        {data?.locations?.Popular.slice(2,3).map((item,index)=>{
                                     console.log(item);
                                      return(
                                      <div key={index}>
@@ -78,7 +78,7 @@ function ArtPosts() {
                      </article>
                      <article className="col-md-6 col-sm-6 col-xs-12">
                         <div className="grid-1">
-                        {data?.locations?.Popular.slice(2,3).map((item,index)=>{
+                        {data?.locations?.Popular.slice(3,4).map((item,index)=>{
                                     console.log(item);
                                      return(
                                      <div key={index}>
@@ -158,7 +158,7 @@ function ArtPosts() {
                         </div>
                      </article>
                   </div>
-                  <AdvertisementLeft1 />
+                  <BannerAd1 />
                   <div className="row">
                      <article className="col-md-6 col-sm-6 col-xs-12">
                         <div className="grid-1">
@@ -269,7 +269,7 @@ function ArtPosts() {
                         </div>
                      </article>
                   </div>
-                 <AdvertisementLeft2 />
+                 <BannerAd2 />
                   <div className="row">
                      <article className="col-md-6 col-sm-6 col-xs-12">
                         <div className="grid-1">

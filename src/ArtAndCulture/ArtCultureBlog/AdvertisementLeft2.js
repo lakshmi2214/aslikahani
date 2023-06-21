@@ -23,7 +23,7 @@ function AdvertisementLeft2() {
    },[])
     return(
         <>
-        <div className="ad-div text-center" style={{border:"1px solid black"}}>
+        <div className="ad-div text-center">
             <div>Advertisement</div>
             {data.categories?.slice(0,1).map((item,index)=>{
     return(

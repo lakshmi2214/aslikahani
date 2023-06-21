@@ -1,14 +1,14 @@
 import React from 'react'
 import Navbar from '../Utility/Navbar'
 import BlogArt from '../ArtAndCulture/BlogArt'
-import FooterArt from '../ArtAndCulture/FooterArt'
+import FooterCategory from '../FooterCategory/FooterCategory'
 
 function ArtCulture() {
   return (
     <div>
         <Navbar/>
         <BlogArt />
-        <FooterArt />
+        <FooterCategory />
     </div>
   )
 }

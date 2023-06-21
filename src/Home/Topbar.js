@@ -39,8 +39,7 @@ function Topbar(){
                         <li><a href=" https://www.facebook.com/aslikahani.in"><i className="ti-facebook"></i> </a></li>
                         <li><a href="https://twitter.com/aslikahani_in"><i className="ti-twitter"></i></a></li>
                         <li><a href="https://www.youtube.com/@AsliKahani_in"><i className="ti-youtube"></i></a></li>
-                        <li><a hre=" https://www.instagram.com/aslikahani.in/"><i className="ti-instagram"></i></a></li>
-                        <li><a hre="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><i class="fa fa-spotify"></i></a></li>
+                        <li><a href=" https://www.instagram.com/aslikahani.in/"><i className="ti-instagram"></i></a></li>
                         {/*<li><a href=""><i className="ti-pinterest"></i></a></li>
                          <li><a href=""><i className="ti-linkedin"></i></a></li>
                         <li><a href=""><i className="ti-google"></i></a></li> */}
@@ -49,7 +48,9 @@ function Topbar(){
                      </ul>
                   </div>
                   <div className="col-md-6 col-sm-9 col-xs-12">
-                     
+                  <ul className="">
+                  <li><a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><span>Aslikahani Podcast</span><span> </span><i class="fa fa-spotify"></i></a></li>
+                  </ul>
                   </div>
                </div>
             </div>

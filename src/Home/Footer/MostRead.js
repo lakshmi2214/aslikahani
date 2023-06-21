@@ -22,34 +22,73 @@ import '../../css/owl.carousel.css';
 import '../../css/zerogrid.css';
 import '../../fonts/glyphicons-halflings-regular.svg';
 import '../../css/royal-slider/rs-default.css';
+import { useEffect } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function MostRead() {
+   const navigate = useNavigate()
+   const handleNavigation = (item, index) => {
+      console.log(item);
+
+      navigate(`/business/${item.url}`, { state: {item} });
+   }
+   const [data,setData] = useState([])
+ 
+ useEffect(()=>{
+     const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json"
+     fetch(url).then(res => res.json())
+     .then(res => {
+     console.log(res)
+     setData(res)
+    })
+    .catch(err => setData(err))
+   },[])
     return(
         <>
         <div class="col-xs-12 col-md-3 col-sm-6 ">
                      <h2>Most Read Articles</h2>
                      <ul class="tabs-posts">
+                        <br></br>
+                     {data?.locations?.Recent.slice(0,1).map((item,index)=>{
+                                     console.log(item);
+                                      return(
+                                      <div key={index}>
                         <li>
-                           <div class="caption"> <a href="standard-post.html">Get a stern talking-to from your parents with Kit Kat's Lunar</a> </div>
-                           <ul class="post-tools">
-                              <li>  January 21, 2016 </li>
-                              <li title="Comments"> <i class="ti-thought"></i> 953 </li>
+                           <div class="caption1" onClick={() => handleNavigation(item, index)}> 
+                           <a href={item.url}>{item.title}</a> </div>
+                           <ul class="post-tools" onClick={() => handleNavigation(item, index)}>
+                              <li>  {item.created_at} </li>
                            </ul>
                         </li>
+                        </div>
+                                      )})}
+                        {data?.locations?.Recent.slice(1,2).map((item,index)=>{
+                         console.log(item);
+                         return(
+                           <div key={index}>
                         <li>
-                           <div class="caption"> <a href="standard-post.html">The assault on federally supported </a> </div>
-                           <ul class="post-tools">
-                              <li>  February 28, 2016 </li>
-                              <li title="Comments"> <i class="ti-thought"></i> 105 </li>
+                           <div class="caption1" onClick={() => handleNavigation(item, index)}> 
+                           <a href={item.url}>{item.title}</a> </div>
+                           <ul class="post-tools" onClick={() => handleNavigation(item, index)}>
+                              <li>  {item.created_at} </li>
                            </ul>
                         </li>
+                        </div>
+                                      )})}
+                                      {data?.locations?.Recent.slice(1,2).map((item,index)=>{
+                         console.log(item);
+                         return(
+                           <div key={index}>
                         <li>
-                           <div class="caption"> <a href="standard-post.html">Taco Bell's newest creation may be the grossest fast food invention yet</a> </div>
-                           <ul class="post-tools">
-                              <li>  Oct 01, 2016 </li>
-                              <li title="Comments"><a href=""> <i class="ti-thought"></i> 35</a> </li>
+                           <div class="caption1" onClick={() => handleNavigation(item, index)}> 
+                           <a href={item.url}>{item.title}</a> </div>
+                           <ul class="post-tools" onClick={() => handleNavigation(item, index)}>
+                              <li>  {item.created_at} </li>
                            </ul>
                         </li>
+                        </div>
+                        )})}
                      </ul>
                   </div>
         </>

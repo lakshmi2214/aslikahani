@@ -3,8 +3,8 @@ import EducationPosts from "./EducationBlog/EducationPosts";
 import RecentEducation from "./EducationBlog/RecentEducation";
 import SliderWidgetEducation from "./EducationBlog/SliderWidgetEducation";
 import ArchivePostEducation from "./EducationBlog/ArchivePostEducation";
-import AdvertisementRightConnect from "../Home/Content/AdvertisementRightConnect"
-import AdvertisementRight2 from "../Home/Content/AdvertisementRight2"
+import ChaiTheoryAd from "../Advertisements/ChaiTheoryAd";
+import SristarAd1 from "../Advertisements/SristarAd1";
 function BlogEducation() {
     return(
 <>
@@ -18,9 +18,10 @@ function BlogEducation() {
                </div>
                <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
                   <aside>
-                    <AdvertisementRightConnect />
-                   <AdvertisementRight2 /> 
-                     <RecentEducation />
+                    <ChaiTheoryAd/>
+                    
+                    <RecentEducation />
+                    <SristarAd1/>
                      <SliderWidgetEducation />
                     <ArchivePostEducation />
                   </aside>
