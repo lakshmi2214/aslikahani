@@ -27,10 +27,10 @@ import { useNavigate } from "react-router-dom";
 
 function SristarAd2() {
    const navigate = useNavigate()
-   const handleNavigation = (item, index) => {
+   const handleNavigation = (item) => {
       console.log(item);
 
-      navigate(`/artandculture`, { state: {item }});
+      navigate(`/`, { state: {item }});
    }
    const [data,setData] = useState([])
  
@@ -49,8 +49,6 @@ function SristarAd2() {
         
                   
                          <div className="heading">
-                           {/* <h2 className="main-heading">Advertizement</h2>
-                           <span className="heading-ping"></span> */}
                         </div> 
                         {data.categories?.slice(0,1).map((item,index)=>{
     return(

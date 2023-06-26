@@ -27,36 +27,32 @@ import '../css/royal-slider/rs-default.css';
 
 
 
-function Topbar(){
-    return(
-        <div>
-                 <section className="topbar">
-         <div className="container">
-            <div className="row">
-               <div className="col-md-12 col-sm-12 col-xs-12 nopadding">
-                  <div className="col-md-6 col-sm-3 col-xs-12">
-                     <ul className="social-media-icons-top">
-                        <li><a href=" https://www.facebook.com/aslikahani.in"><i className="ti-facebook"></i> </a></li>
-                        <li><a href="https://twitter.com/aslikahani_in"><i className="ti-twitter"></i></a></li>
-                        <li><a href="https://www.youtube.com/@AsliKahani_in"><i className="ti-youtube"></i></a></li>
-                        <li><a href=" https://www.instagram.com/aslikahani.in/"><i className="ti-instagram"></i></a></li>
-                        {/*<li><a href=""><i className="ti-pinterest"></i></a></li>
-                         <li><a href=""><i className="ti-linkedin"></i></a></li>
-                        <li><a href=""><i className="ti-google"></i></a></li> */}
-                        {/* <li><a href=""><i className="ti-vimeo"></i></a></li>
-                        <li><a href=""><i className="ti-themify-favicon"></i></a></li> */}
-                     </ul>
-                  </div>
-                  <div className="col-md-6 col-sm-9 col-xs-12">
-                  <ul className="">
-                  <li><a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><span>Aslikahani Podcast</span><span> </span><i class="fa fa-spotify"></i></a></li>
-                  </ul>
+function Topbar() {
+   return (
+      <div>
+         <section className="topbar">
+            <div className="container">
+               <div className="row">
+                  <div className="col-md-12 col-sm-12 col-xs-12 nopadding">
+                     <div className="col-md-6 col-sm-3 col-xs-12">
+                        <ul className="social-media-icons-top">
+                           <li><a href=" https://www.facebook.com/aslikahani.in"><i className="ti-facebook"></i> </a></li>
+                           <li><a href="https://twitter.com/aslikahani_in"><i className="ti-twitter"></i></a></li>
+                           <li><a href="https://www.youtube.com/@AsliKahani_in"><i className="ti-youtube"></i></a></li>
+                           <li><a href=" https://www.instagram.com/aslikahani.in/"><i className="ti-instagram"></i></a></li>
+
+                        </ul>
+                     </div>
+                     <div className="col-md-6 col-sm-9 col-xs-12">
+                        <ul className="">
+                           <li><a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><span>Aslikahani Podcast</span><span> </span><i class="fa fa-spotify"></i></a></li>
+                        </ul>
+                     </div>
                   </div>
                </div>
             </div>
-         </div>
-      </section>
-        </div>
-    );
+         </section>
+      </div>
+   );
 }
 export default Topbar;

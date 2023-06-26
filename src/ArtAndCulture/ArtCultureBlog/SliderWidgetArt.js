@@ -8,7 +8,7 @@ function SliderWidgetArt() {
    const handleNavigation = (item, index) => {
       console.log(item);
 
-      navigate(`/artandculture/${item.url}`, { state: {item} });
+      navigate(`/art-and-culture/${item.url}`, { state: {item} });
    }
    const [data,setData] = useState([])
  

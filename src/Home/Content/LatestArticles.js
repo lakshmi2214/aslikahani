@@ -22,47 +22,31 @@ import '../../css/owl.carousel.css';
 import '../../css/zerogrid.css';
 import '../../fonts/glyphicons-halflings-regular.svg';
 import '../../css/royal-slider/rs-default.css';
-
-
-import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 
-function LatestArticles() {
+function LatestArticles(props) {
    const navigate = useNavigate();
-   const handleNavigation = (item, index) => {
+   const handleNavigation = (item) => {
     console.log(item);
  
      navigate(`/home/${item.url}`, { state: {item }});
    }
-     const [data,setData] = useState([])
-   
-useEffect(()=>{
-    const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json"
-    fetch(url).then(res => res.json())
-    .then(res => {
-    console.log(res)
-    setData(res)
-   })
-    .catch(err => setData(err))
-},[])
- 
-    return(
+    
+ return(
         <>
              <div className="section">
                      <div className="row">
                         <div className="col-md-12 col-xs-12 col-sm-12">
                            <div className="heading">
                               <h2 className="main-heading">Latest Articles</h2>
-                              
-                              
-                           </div>
+                              </div>
                         </div>
                      </div>
                      <div className="row">
                      
       
-    {data?.locations?.LatestPost.slice(0,1).map((item,index)=>{
+    {props.dataObject?.locations?.LatestPost.slice(0,1).map((item,index)=>{
             console.log(item);
             return(
                <div key={index}>
@@ -98,7 +82,7 @@ useEffect(()=>{
                         <div className="col-md-5 col-sm-5 col-xs-12">
                            <ul className="small-grid">
                               <li>
-                        {data?.locations?.LatestPost.slice(1,5).map((item,index)=>{
+                        {props.dataObject?.locations?.LatestPost.slice(1,5).map((item,index)=>{
                        console.log(item);
                        return(
                         <div key={index}>

@@ -46,9 +46,9 @@ function FooterCategory() {
                      <li>                     
                            <div className="pic">
                            
-                             <a href={item.url}>
+                             <a href={process.env.REACT_APP_DOMAIN_NAME+ '/home/' +item.url}>
                             <img alt="" className="img-responsive" src={ item.image }/></a> </div>
-                           <div className="caption"> <a href={item.url}>{item.title}</a> </div>
+                           <div className="caption"> <a href={process.env.REACT_APP_DOMAIN_NAME+ '/home/' +item.url}>{item.title}</a> </div>
                            <ul className="post-tools">
                            </ul>
                         </li>
@@ -61,9 +61,9 @@ function FooterCategory() {
                          <li>                     
                            <div className="pic">
                            
-                             <a href={item.url}>
+                             <a href={process.env.REACT_APP_DOMAIN_NAME+ '/home/' +item.url}>
                             <img alt="" className="img-responsive" src={ item.image }/></a> </div>
-                           <div className="caption"> <a href={item.url}>{item.title}</a> </div>
+                           <div className="caption"> <a href={process.env.REACT_APP_DOMAIN_NAME+ '/home/' +item.url}>{item.title}</a> </div>
                            <ul className="post-tools">
                            </ul>
                         </li>
@@ -84,7 +84,7 @@ function FooterCategory() {
                                       <div key={index}>
                         <li>
                            <div class="caption1" onClick={() => handleNavigation(item, index)}> 
-                           <a href={item.url}>{item.title}</a> </div>
+                           <a href={process.env.REACT_APP_DOMAIN_NAME+ '/home/' +item.url}>{item.title}</a> </div>
                            <ul class="post-tools" onClick={() => handleNavigation(item, index)}>
                               <li>  {item.created_at} </li>
                            </ul>
@@ -97,7 +97,7 @@ function FooterCategory() {
                            <div key={index}>
                         <li>
                            <div class="caption1" onClick={() => handleNavigation(item, index)}> 
-                           <a href={item.url}>{item.title}</a> </div>
+                           <a href={process.env.REACT_APP_DOMAIN_NAME+ '/home/' +item.url}>{item.title}</a> </div>
                            <ul class="post-tools" onClick={() => handleNavigation(item, index)}>
                               <li>  {item.created_at} </li>
                            </ul>
@@ -110,7 +110,7 @@ function FooterCategory() {
                            <div key={index}>
                         <li>
                            <div class="caption1" onClick={() => handleNavigation(item, index)}> 
-                           <a href={item.url}>{item.title}</a> </div>
+                           <a href={process.env.REACT_APP_DOMAIN_NAME+ '/home/' +item.url}>{item.title}</a> </div>
                            <ul class="post-tools" onClick={() => handleNavigation(item, index)}>
                               <li>  {item.created_at} </li>
                            </ul>
