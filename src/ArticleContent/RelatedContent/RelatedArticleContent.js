@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useEffect} from "react";
+import { useEffect } from "react";
 // import Pic1 from '../../images/posts/64.jpg';
 // import Pic2 from '../../images/250.png';
 import '../../css/style.css';
@@ -25,61 +25,48 @@ import '../../css/zerogrid.css';
 import '../../css/royal-slider/rs-default.css';
 import '../../css/owl.carousel.css';
 
-import { useLocation} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 
 function RelatedArticleContent() {
-   
-//    const param = useParams();
-//    const location = useLocation();
-//    console.log("res"+param);
+  const location = useLocation();
 
-//   console.log(location.state);
+  const [data, setData] = useState([]);
 
-const location = useLocation();
-
-   const [data,setData] = useState([]);
-
-   useEffect(()=>{
-    if(location) {
-            var tmp = location.pathname.slice(location.pathname.lastIndexOf("/") , location.pathname.length) ;
-            // setData(tmp) 
-            tmp = tmp.substring(1, tmp.length);
-          }
-      const url = `https://newsbackend-388608.as.r.appspot.com/api/v1/articles/get?url=${tmp}`
-      fetch(url).then(res => res.json())
+  useEffect(() => {
+    if (location) {
+      var tmp = location.pathname.slice(location.pathname.lastIndexOf("/"), location.pathname.length);
+      // setData(tmp) 
+      tmp = tmp.substring(1, tmp.length);
+    }
+    const url = `https://newsbackend-388608.as.r.appspot.com/api/v1/articles/get?url=${tmp}`
+    fetch(url).then(res => res.json())
       .then(res => {
         setData(res)
-      console.log(res)
-      
-     })
-    //   .catch(err => setData(err))
-    //  
-  },[])
+        console.log(res)
 
-  return(
-        <>
-        <div className="col-md-7 col-sm-7 col-xs-12 ">
-                    
-         
-                     <div className="picture">
-                       <img alt="" className="img-responsive" src={data.image} style={{height:"500px",width:"760px"}}/>  
-                     </div>
-                     <div className="catname">
-                     <br></br>
-                        <br></br>
-                         <h2>{data.title}</h2> 
-                     <ul className="post-tools nolineheight">
-                      <li> by <a href=""> <strong> {data.authored_by}</strong> </a></li> 
-                         <li> {data.created_at} </li> 
-                     </ul>
-                     <p> {data.description}</p> 
-                     <div dangerouslySetInnerHTML={{ __html: data.body }}></div>
-                     
-                        
-                      </div>
-                               </div> 
-        </>
-    );
+      })
+  }, [])
+
+  return (
+    <>
+      <div className="col-md-7 col-sm-7 col-xs-12 ">
+        <div className="picture">
+          <img alt="" className="img-responsive" src={data.image} style={{ height: "500px", width: "760px" }} />
+        </div>
+        <div className="catname">
+          <br></br>
+          <br></br>
+          <h2>{data.title}</h2>
+          <ul className="post-tools nolineheight">
+            <li> by <a href=""> <strong> {data.authored_by}</strong> </a></li>
+            <li> {data.created_at} </li>
+          </ul>
+          <p> {data.description}</p>
+          <div dangerouslySetInnerHTML={{ __html: data.body }}></div>
+        </div>
+      </div>
+    </>
+  );
 }
 export default RelatedArticleContent;

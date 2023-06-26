@@ -30,41 +30,39 @@ function SristarAd2() {
    const handleNavigation = (item, index) => {
       console.log(item);
 
-      navigate(`/artandculture`, { state: {item }});
+      navigate(`/art-and-culture`, { state: { item } });
    }
-   const [data,setData] = useState([])
- 
- useEffect(()=>{
-     const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/category/list"
-     fetch(url).then(res => res.json())
-     .then(res => {
-     console.log(res)
-     setData(res)
-    })
-    .catch(err => setData(err))
-   },[])
-    return(
-        <>
-        <div className="widget widget-bg">
-        
-                  
-                         <div className="heading">
-                           {/* <h2 className="main-heading">Advertizement</h2>
-                           <span className="heading-ping"></span> */}
-                        </div> 
-                        {data.categories?.slice(0,1).map((item,index)=>{
-    return(
-        item.advertisements.TopPosterad1.slice(1,2).map((item,index)=>{
-            console.log(item)
-            return(
-               
-                <div key={index}>
-                        <div className="ad-div style-box">
-                           <a href={item.url}>
-                           <img src={item.image} className="img-responsive " alt="" style={{height:"400px",width:"330px"}}/>
-                           </a>
-                        </div>
-                        <div className="detail">
+   const [data, setData] = useState([])
+
+   useEffect(() => {
+      const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/category/list"
+      fetch(url).then(res => res.json())
+         .then(res => {
+            console.log(res)
+            setData(res)
+         })
+         .catch(err => setData(err))
+   }, [])
+   return (
+      <>
+         <div className="widget widget-bg">
+
+
+            <div className="heading">
+            </div>
+            {data.categories?.slice(0, 1).map((item, index) => {
+               return (
+                  item.advertisements.TopPosterad1.slice(1, 2).map((item, index) => {
+                     console.log(item)
+                     return (
+
+                        <div key={index}>
+                           <div className="ad-div style-box">
+                              <a href={item.url}>
+                                 <img src={item.image} className="img-responsive " alt="" style={{ height: "250px", width: "330px" }} />
+                              </a>
+                           </div>
+                           <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
                                     <a href={item.url}>{item.description}</a>
@@ -72,10 +70,12 @@ function SristarAd2() {
                               </div>
                            </div>
                         </div>
-            )}))})}
-                
-                     </div>
-        </>
-    )
+                     )
+                  }))
+            })}
+
+         </div>
+      </>
+   )
 }
 export default SristarAd2;
