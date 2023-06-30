@@ -57,7 +57,7 @@ function Home() {
   }, []);
   return (
     <>
-<Navbar addObject={value}/>
+{/* <Navbar addObject={value}/> */}
       <Grid dataObject={result} />
       <section className="main-content">
         <div className="container">

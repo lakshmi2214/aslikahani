@@ -19,6 +19,7 @@ import '../../css/font-awesome.min.css';
 import '../../css/zerogrid.css';
 import '../../css/royal-slider/rs-default.css';
 import '../../css/owl.carousel.css';
+// import ReactPlayer from "react-player/youtube";
 
 import { useLocation } from "react-router-dom";
 
@@ -60,7 +61,7 @@ function RelatedArticleContent() {
           <p> {data.description}</p>
           <div dangerouslySetInnerHTML={{ __html: data.body }}></div>
         </div>
-        {/* npm install react-player --save <iframe width="420" height="315" src="https://www.youtube.com/embed/A6XUVjK9W4o" frameborder="0" allowfullscreen></iframe> */}
+        {/* <ReactPlayer url="https://www.youtube.com/watch?v=eoOaKN4qCKw" controls={true}/> */}
        </div>
     </>
   );

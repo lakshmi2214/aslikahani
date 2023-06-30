@@ -34,7 +34,7 @@ function Education() {
   }, []);
   return (
     <div>
-      <Navbar addObject={value} />
+      {/* <Navbar addObject={value} /> */}
       <section className="main-content">
         <div className="container">
           <div className="row">
