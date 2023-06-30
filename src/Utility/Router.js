@@ -1,5 +1,5 @@
-import React from "react";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../NavPages/Home";
 import Entertainment from "../NavPages/Entertainment";
 import Education from "../NavPages/Education";
@@ -9,21 +9,33 @@ import Travel from "../NavPages/Travel";
 import LifeStyle from "../NavPages/LifeStyle";
 import ArtCulture from "../NavPages/ArtCulture";
 import ArticleContent from "../ArticleContent/ArticleContent";
+import Navbar from "./Navbar";
+
 function Router() {
-    return(
+    const [value, setvalue] = useState([]);
+    useEffect(() => {
+        const url1 = "https://newsbackend-388608.as.r.appspot.com/api/v1/category/list";
+        fetch(url1).then(response => response.json()
+        )
+          .then(response => {
+            setvalue(response)
+          })
+    }, []);
+    
+    return (
         <>
-        <BrowserRouter>
-          <Routes>
-            
-            <Route path="/" exact element={<Home />}/>
-            <Route path="/home" exact element={<Home />}/>
-            <Route path="/entertainment" exact element={<Entertainment />}/>
-            <Route path="/education" exact element={<Education />}/>
-            <Route path="/technology" exact element={<Technology/>}/>
-            <Route path="/business" exact element={<Business />}/>
-            <Route path="/travel" exact element={<Travel />}/> 
-            <Route path="/lifestyle" exact element={<LifeStyle />}/>
-            <Route path="/art-and-culture" exact element={<ArtCulture />}/>
+            <BrowserRouter>
+            <Navbar addObject={value} />
+                <Routes>
+                    <Route path="/" exact element={<Home />} />
+                    <Route path="/home" exact element={<Home />} />
+                    <Route path="/entertainment" exact element={<Entertainment />} />
+                    <Route path="/education" exact element={<Education />} />
+                    <Route path="/technology" exact element={<Technology />} />
+                    <Route path="/business" exact element={<Business />} />
+                    <Route path="/travel" exact element={<Travel />} />
+                    <Route path="/lifestyle" exact element={<LifeStyle />} />
+                    <Route path="/art-and-culture" exact element={<ArtCulture />} />
 
              <Route path="/home/:id" element={<ArticleContent />} />
              <Route path="/entertainment/:id" element={<ArticleContent />} />
