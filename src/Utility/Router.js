@@ -9,13 +9,11 @@ import Travel from "../NavPages/Travel";
 import LifeStyle from "../NavPages/LifeStyle";
 import ArtCulture from "../NavPages/ArtCulture";
 import ArticleContent from "../ArticleContent/ArticleContent";
-import ApiCategory from "../API/ApiCategory";
 
 function Router() {
     return (
         <>
             <BrowserRouter>
-                <ApiCategory />
                 <Routes>
                     <Route path="/" exact element={<Home />} />
                     <Route path="/home" exact element={<Home />} />

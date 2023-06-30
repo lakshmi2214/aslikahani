@@ -7,34 +7,50 @@ import SliderWidgetLifestyle from '../LifeStyle/SliderWidgetLifestyle';
 import ArchiveLifestyle from '../LifeStyle/ArchiveLifestyle';
 import { useState, useEffect } from 'react';
 import SristarAd1 from '../Advertisements/SristarAd1';
+import Navbar from '../Utility/Navbar';
+import LifestylePost1 from '../LifeStyle/LifestylePost1';
+import BannerAd1 from '../Advertisements/BannerAd1';
+import BannerAd2 from '../Advertisements/BannerAd2';
+import LifestylePost2 from '../LifeStyle/LifestylePost2';
 
 function LifeStyle() {
   const [result, setResult] = useState([]);
+  const [value, setvalue] = useState([]);
   useEffect(() => {
     const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json";
     fetch(url).then(response => response.json())
       .then(response => {
         setResult(response)
       })
-      .catch(error => console.log(error));
+      const url1 = "https://newsbackend-388608.as.r.appspot.com/api/v1/category/list";
+      fetch(url1).then(response => response.json()
+      )
+        .then(response => {
+          setvalue(response)
+        })
   }, []);
   return (
     <div>
+      <Navbar addObject= {value} />
       <section className="main-content">
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-sm-12 col-xs-12">
               <div className="section">
                 <LifestylePosts dataObject={result} />
+                <BannerAd1 addObject={value} />
+                <LifestylePost1 dataObject={result} />
+                <BannerAd2 addObject={value} />
+                <LifestylePost2 dataObject={result} />
               </div>
             </div>
             <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
               <aside>
-                <ChaiTheoryAd />
+                <ChaiTheoryAd addObject={value}/>
                 <RecentLifestyle dataObject={result} />
-                <SristarAd1 />
+                <SristarAd1 addObject={value} />
                 <SliderWidgetLifestyle dataObject={result} />
-                <ArchiveLifestyle />
+                <ArchiveLifestyle addObject={value} />
               </aside>
             </div>
           </div>

@@ -7,9 +7,14 @@ import SristarAd1 from '../Advertisements/SristarAd1';
 import SliderWidgetTechnology from '../Technology/SliderWidgetTechnology';
 import ArchivePostTechnology from '../Technology/ArchivePostTechnology';
 import { useState, useEffect } from 'react';
+import Navbar from '../Utility/Navbar';
+import BannerAd1 from '../Advertisements/BannerAd1';
+import TechnologyPost1 from '../Technology/TechnologyPost1';
+import BannerAd2 from '../Advertisements/BannerAd2';
+import TechnologyPost2 from '../Technology/TechnologyPost2';
 function Technology() {
   const [result, setResult] = useState([]);
-
+  const [value, setvalue] = useState([]);
   // similar to componentDidMount
   useEffect(() => {
     const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json";
@@ -18,23 +23,33 @@ function Technology() {
         // console.log(response)
         setResult(response)
       })
-      .catch(error => console.log(error));
+      const url1 = "https://newsbackend-388608.as.r.appspot.com/api/v1/category/list";
+      fetch(url1).then(response => response.json()
+      )
+        .then(response => {
+          setvalue(response)
+        })
   }, []);
   return (
     <div>
+      <Navbar addObject={value} />
       <section className="main-content">
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-sm-12 col-xs-12">
               <div className="section">
                 <TechnologyPosts dataObject={result} />
+                <BannerAd1 addObject={value} />
+                <TechnologyPost1 dataObject={result} />
+                <BannerAd2 addObject={value} />
+                <TechnologyPost2 dataObject={result} />
               </div>
             </div>
             <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
               <aside>
-                <ChaiTheoryAd />
+                <ChaiTheoryAd addObject={value}/>
                 <RecentTechnology dataObject={result} />
-                <SristarAd1 />
+                <SristarAd1 addObject={value}/>
                 <SliderWidgetTechnology dataObject={result} />
                 <ArchivePostTechnology />
               </aside>

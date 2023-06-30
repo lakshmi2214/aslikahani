@@ -27,7 +27,7 @@ import { useNavigate } from "react-router-dom";
 
 function NationalNews(props) {
    const navigate = useNavigate();
-   const handleNavigation = (item, index) => {
+   const handleNavigation = (item) => {
       console.log(item);
 
       navigate(`/home/${item.url}`, { state: { item } });
@@ -48,7 +48,7 @@ function NationalNews(props) {
                <article className="col-md-6 col-sm-6 col-xs-12">
                   <div className="grid-1">
 
-                     {national?.locations?.NationalNews.slice(0, 1).map((item, index) => {
+                     {national?.locations?.NationalNews.slice(0, 2).map((item, index) => {
                         console.log(item);
                         return (
                            <div key={index}>
@@ -79,7 +79,7 @@ function NationalNews(props) {
                </article>
                <article className="col-md-6 col-sm-6 col-xs-12">
                   <div className="grid-1">
-                     {national?.locations?.NationalNews.slice(1, 2).map((item, index) => {
+                     {national?.locations?.NationalNews.slice(1, 3).map((item, index) => {
                         console.log(item);
                         return (
                            <div key={index}>
@@ -105,65 +105,6 @@ function NationalNews(props) {
                         )
                      })}
 
-                  </div>
-               </article>
-               <article className="col-md-6 col-sm-6 col-xs-12">
-                  <div className="grid-1">
-                     {national?.locations?.NationalNews.slice(2, 3).map((item, index) => {
-                        console.log(item);
-                        return (
-                           <div key={index}>
-                              <div className="picture">
-                                 <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>
-                                       <img alt="" className="img-responsive" src={item.image}
-                                          style={{ height: "190px" }} />
-                                    </a>
-                                 </div>
-                              </div>
-                              <div className="detail">
-                                 <div className="caption">
-                                    <h5 onClick={() => handleNavigation(item, index)}>
-                                       <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>{item.title}</a>
-                                    </h5>
-                                 </div>
-                                 <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                    <li> by <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}> <strong> {item.authored_by}</strong> </a></li>
-
-                                 </ul>
-                              </div>
-                           </div>
-                        )
-                     })}
-                  </div>
-               </article>
-               <article className="col-md-6 col-sm-6 col-xs-12">
-                  <div className="grid-1">
-                     {national?.locations?.NationalNews.slice(0, 1).map((item, index) => {
-                        console.log(item);
-                        return (
-                           <div key={index}>
-                              <div className="picture" onClick={() => handleNavigation(item, index)}>
-                                 <div className="category-image">
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>
-                                       <img alt="" className="img-responsive" src={item.image}
-                                          style={{ height: "190px" }} />
-                                    </a>
-                                 </div>
-                              </div>
-                              <div className="detail">
-                                 <div className="caption">
-                                    <h5 onClick={() => handleNavigation(item, index)}>
-                                       <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>{item.title}</a>
-                                    </h5>
-                                 </div>
-                                 <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                    <li> by <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}> <strong> {item.authored_by}</strong> </a></li>
-                                 </ul>
-                              </div>
-                           </div>
-                        )
-                     })}
                   </div>
                </article>
             </div>

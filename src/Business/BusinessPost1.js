@@ -23,17 +23,45 @@ import '../css/royal-slider/rs-default.css';
 import '../css/owl.carousel.css';
 import { useNavigate } from "react-router-dom";
 
-function TravelPosts(props) {
+function BusinessPost1(props) {
 
    const navigate = useNavigate()
    const handleNavigation = (item) => {
       console.log(item);
 
-      navigate(`/travel/${item.url}`, { state: { item } });
+      navigate(`/business/${item.url}`, { state: { item } });
    }
    return (
       <>
          <div className="row">
+            <article className="col-md-6 col-sm-6 col-xs-12">
+               <div className="grid-1">
+                  {props.dataObject?.locations?.AllTimeBestArticle.slice(1, 3).map((item, index) => {
+                     console.log(item);
+                     return (
+                        <div key={index}>
+                           <div className="picture">
+                              <div className="category-image" onClick={() => handleNavigation(item, index)}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME + '/business/' + item.url}>
+                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
+                                 </a>
+                              </div>
+                           </div>
+                           <div className="detail">
+                              <div className="caption" onClick={() => handleNavigation(item, index)}>
+                                 <h5>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME + '/business/' + item.url}>{item.title}</a>
+                                 </h5>
+                              </div>
+                              <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
+                                 <li> by <a href=""> <strong> {item.authored_by}</strong> </a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     )
+                  })}
+               </div>
+            </article>
             <article className="col-md-6 col-sm-6 col-xs-12">
                <div className="grid-1">
                   {props.dataObject?.locations?.AdminChoice.slice(2, 4).map((item, index) => {
@@ -42,19 +70,19 @@ function TravelPosts(props) {
                         <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={process.env.REACT_APP_DOMAIN_NAME+ "/travel/" +item.url}>
-                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", widtth: "300px" }} />
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME + '/business/' + item.url}>
+                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
                                  </a>
                               </div>
                            </div>
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME+ "/travel/" +item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME + '/business/' + item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                 <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+ "/travel/" +item.url}> <strong> {item.authored_by}</strong> </a></li>
+                                 <li> by <a href=""> <strong> {item.authored_by}</strong> </a></li>
                               </ul>
                            </div>
                         </div>
@@ -62,36 +90,9 @@ function TravelPosts(props) {
                   })}
                </div>
             </article>
-            <article className="col-md-6 col-sm-6 col-xs-12">
-               <div className="grid-1">
-                  {props.dataObject?.locations?.NationalNews.slice(0, 2).map((item, index) => {
-                     console.log(item);
-                     return (
-                        <div key={index}>
-                           <div className="picture">
-                              <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={process.env.REACT_APP_DOMAIN_NAME+ "/travel/" +item.url}>
-                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", widtth: "300px" }} />
-                                 </a>
-                              </div>
-                           </div>
-                           <div className="detail">
-                              <div className="caption" onClick={() => handleNavigation(item, index)}>
-                                 <h5>
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME+ "/travel/" +item.url}>{item.title}</a>
-                                 </h5>
-                              </div>
-                              <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                 <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+ "/travel/" +item.url}> <strong> {item.authored_by}</strong> </a></li>
-                              </ul>
-                           </div>
-                        </div>
-                     )
-                  })}
-               </div>
-            </article>
-           </div>
+           
+         </div>
       </>
    )
 }
-export default TravelPosts;
+export default BusinessPost1;

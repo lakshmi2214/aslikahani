@@ -8,11 +8,10 @@ function Navbar(props) {
 
     return (
         <>
-            <div className="backgroundMenu" >
-
+            <div className="backgroundMenu1">
                 <Link to={"/home"}><img src={logosmall} style={{ height: "50px", width: "220px", paddingRight: "50px", paddingTop: "5px" }} />
                 </Link>
-                {props.dataObject?.categories?.slice(0, 8).map((item, index) => {
+                 {props.addObject?.categories?.slice(0, 8).map((item, index) => {
                     console.log(item);
                     return (
 
@@ -20,8 +19,11 @@ function Navbar(props) {
                             <Link to={process.env.REACT_APP_DOMAIN_NAME + '/' + item.url} style={{ color: "black", textDecoration: "none" }}>{item.name}</Link>
                         </div>
                     )
-                })}
-            </div>
+                })} 
+                
+                </div>
+
+           
 
         </>
     )

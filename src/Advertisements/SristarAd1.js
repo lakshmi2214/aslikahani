@@ -21,28 +21,16 @@ import '../css/font-awesome.min.css';
 import '../css/zerogrid.css';
 import '../css/royal-slider/rs-default.css';
 import '../css/owl.carousel.css';
-import { useEffect } from "react";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SristarAd1() {
+function SristarAd1(props) {
    const navigate = useNavigate()
-   const handleNavigation = (item, index) => {
+   const handleNavigation = (item) => {
       console.log(item);
 
-      navigate(`/home`, { state: { item } });
+      navigate(`${item.url}`, { state: { item } });
    }
-   const [data, setData] = useState([])
-
-   useEffect(() => {
-      const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/category/list"
-      fetch(url).then(res => res.json())
-         .then(res => {
-            console.log(res)
-            setData(res)
-         })
-         .catch(err => setData(err))
-   }, [])
+  
    return (
       <>
          <div className="widget widget-bg">
@@ -50,7 +38,7 @@ function SristarAd1() {
 
             <div className="heading">
             </div>
-            {data.categories?.slice(0, 1).map((item, index) => {
+            {props.addObject?.categories?.slice(0, 1).map((item, index) => {
                return (
                   item.advertisements.TopPosterad1.slice(0, 1).map((item, index) => {
                      console.log(item)

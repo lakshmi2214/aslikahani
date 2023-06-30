@@ -5,9 +5,15 @@ import ChaiTheoryAd from '../Advertisements/ChaiTheoryAd'
 import RecentEntertainment from '../Entertainment/RecentEntertainment'
 import SristarAd1 from '../Advertisements/SristarAd1'
 import ArchivePostEnetrtainment from '../Entertainment/ArchivePostEntertainment'
+import Navbar from '../Utility/Navbar'
 import { useState, useEffect } from 'react'
+import BannerAd1 from '../Advertisements/BannerAd1'
+import EntertainmentPost1 from '../Entertainment/EntertainmentPost1'
+import BannerAd2 from '../Advertisements/BannerAd2'
+import EntertainmentPost2 from '../Entertainment/EntertainmentPost2'
 function Entertainment() {
   const [result, setResult] = useState([]);
+  const [value, setvalue] = useState([]);
 
   // similar to componentDidMount
   useEffect(() => {
@@ -17,23 +23,33 @@ function Entertainment() {
         // console.log(response)
         setResult(response)
       })
-      .catch(error => console.log(error));
+    const url1 = "https://newsbackend-388608.as.r.appspot.com/api/v1/category/list";
+    fetch(url1).then(response => response.json()
+    )
+      .then(response => {
+        setvalue(response)
+      })
   }, []);
   return (
     <div>
+      <Navbar addObject={value} />
       <section className="main-content">
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-sm-12 col-xs-12">
               <div className="section">
                 <EntertainmentPosts dataObject={result} />
+                <BannerAd1 addObject={result} />
+                <EntertainmentPost1 dataObject={result} />
+                <BannerAd2 addObject={result} />
+                <EntertainmentPost2 dataObject={result} />
               </div>
             </div>
             <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
               <aside>
-                <ChaiTheoryAd />
+                <ChaiTheoryAd addObject={value} />
                 <RecentEntertainment dataObject={result} />
-                <SristarAd1 />
+                <SristarAd1 addObject={value} />
                 <ArchivePostEnetrtainment />
               </aside>
             </div>

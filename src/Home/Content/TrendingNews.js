@@ -45,7 +45,7 @@ function TrendingNews(props) {
          <div className="section">
             <div className="col-md-12 col-xs-12 col-sm-12 nopadding">
                <div className="heading">
-                  <h2 className="main-heading">Trending News</h2>
+                  <h2 className="main-heading">Trending Articles</h2>
                </div>
             </div>
             <article className="col-md-12 col-sm-12 col-xs-12 nopadding">

@@ -62,13 +62,13 @@ function AdminChoice(props) {
                                              </a>
                                           </div>
                                        </div>
-                                       <div className="detail">
-                                          <div className="caption" onClick={() => handleNavigation(item, index)}>
+                                       <div className="detail" > 
+                                          <div className="caption" style={{left:"10px"}} onClick={() => handleNavigation(item, index)}>
                                              <h5>
                                                 <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>{item.title}</a>
                                              </h5>
                                           </div>
-                                          <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
+                                          <ul className="post-tools" style={{left:"10px"}} onClick={() => handleNavigation(item, index)}>
                                              <li> by <a href=""> <strong> {item.authored_by}</strong> </a></li>
                                              <li>  {item.created_at} </li>
                                           </ul>
@@ -95,12 +95,12 @@ function AdminChoice(props) {
                                           </div>
                                        </div>
                                        <div className="detail">
-                                          <div className="caption" onClick={() => handleNavigation(item, index)}>
+                                          <div className="caption" style={{left:"10px"}} onClick={() => handleNavigation(item, index)}>
                                              <h5>
                                                 <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>{item.title}</a>
                                              </h5>
                                           </div>
-                                          <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
+                                          <ul className="post-tools" style={{left:"10px"}} onClick={() => handleNavigation(item, index)}>
                                              <li> by <a href=""> <strong> {item.authored_by}</strong> </a></li>
                                              <li>  {item.created_at} </li>
                                           </ul>
@@ -127,12 +127,12 @@ function AdminChoice(props) {
                                           </div>
                                        </div>
                                        <div className="detail">
-                                          <div className="caption" onClick={() => handleNavigation(item, index)}>
+                                          <div className="caption" style={{left:"10px"}} onClick={() => handleNavigation(item, index)}>
                                              <h5>
                                                 <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>{item.title}</a>
                                              </h5>
                                           </div>
-                                          <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
+                                          <ul className="post-tools" style={{left:"10px"}} onClick={() => handleNavigation(item, index)}>
                                              <li> by <a href=""> <strong> {item.authored_by}</strong> </a></li>
                                              <li>  {item.created_at} </li>
                                           </ul>

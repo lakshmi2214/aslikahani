@@ -22,8 +22,6 @@ import '../css/zerogrid.css';
 import '../css/royal-slider/rs-default.css';
 import '../css/owl.carousel.css';
 import { useNavigate } from "react-router-dom";
-import BannerAd2 from "../Advertisements/BannerAd2";
-import BannerAd1 from "../Advertisements/BannerAd1";
 
 function LifestylePosts(props) {
 
@@ -44,7 +42,7 @@ function LifestylePosts(props) {
                         <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+ "/lifestyle/" +item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", widtth: "300px" }} />
                                  </a>
                               </div>
@@ -52,11 +50,11 @@ function LifestylePosts(props) {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+ "/lifestyle/" +item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                 <li> by <a href={item.url}> <strong> {item.authored_by}</strong> </a></li>
+                                 <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+ "/lifestyle/" +item.url}> <strong> {item.authored_by}</strong> </a></li>
                               </ul>
                            </div>
                         </div>
@@ -72,7 +70,7 @@ function LifestylePosts(props) {
                         <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+ "/lifestyle/" +item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", widtth: "300px" }} />
                                  </a>
                               </div>
@@ -80,11 +78,11 @@ function LifestylePosts(props) {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+ "/lifestyle/" +item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                 <li> by <a href={item.url}> <strong> {item.authored_by}</strong> </a></li>
+                                 <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+ "/lifestyle/" +item.url}> <strong> {item.authored_by}</strong> </a></li>
                               </ul>
                            </div>
                         </div>
@@ -93,124 +91,7 @@ function LifestylePosts(props) {
                </div>
             </article>
          </div>
-         <BannerAd1 />
-         <div className="row">
-            <article className="col-md-6 col-sm-6 col-xs-12">
-               <div className="grid-1">
-                  {props.dataObject?.locations?.Slider.slice(2, 4).map((item, index) => {
-                     console.log(item);
-                     return (
-                        <div key={index}>
-                           <div className="picture">
-                              <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
-                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
-                                 </a>
-                              </div>
-                           </div>
-                           <div className="detail">
-                              <div className="caption" onClick={() => handleNavigation(item, index)}>
-                                 <h5>
-                                    <a href={item.url}>{item.title}</a>
-                                 </h5>
-                              </div>
-                              <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                 <li> by <a href=""> <strong> {item.authored_by}</strong> </a></li>
-                              </ul>
-                           </div>
-                        </div>
-                     )
-                  })}
-               </div>
-            </article>
-            <article className="col-md-6 col-sm-6 col-xs-12">
-               <div className="grid-1">
-                  {props.dataObject?.locations?.AdminChoice.slice(2, 4).map((item, index) => {
-                     console.log(item);
-                     return (
-                        <div key={index}>
-                           <div className="picture">
-                              <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
-                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
-                                 </a>
-                              </div>
-                           </div>
-                           <div className="detail">
-                              <div className="caption" onClick={() => handleNavigation(item, index)}>
-                                 <h5>
-                                    <a href={item.url}>{item.title}</a>
-                                 </h5>
-                              </div>
-                              <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                 <li> by <a href=""> <strong> {item.authored_by}</strong> </a></li>
-                              </ul>
-                           </div>
-                        </div>
-                     )
-                  })}
-               </div>
-            </article>
-         </div>
-         <BannerAd2 />
-         <div className="row">
-            <article className="col-md-6 col-sm-6 col-xs-12">
-               <div className="grid-1">
-                  {props.dataObject?.locations?.Slider.slice(7, 8).map((item, index) => {
-                     console.log(item);
-                     return (
-                        <div key={index}>
-                           <div className="picture">
-                              <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
-                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
-                                 </a>
-                              </div>
-                           </div>
-                           <div className="detail">
-                              <div className="caption" onClick={() => handleNavigation(item, index)}>
-                                 <h5>
-                                    <a href={item.url}>{item.title}</a>
-                                 </h5>
-                              </div>
-                              <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                 <li> by <a href=""> <strong> {item.authored_by}</strong> </a></li>
-                              </ul>
-                           </div>
-                        </div>
-                     )
-                  })}
-               </div>
-            </article>
-            <article className="col-md-6 col-sm-6 col-xs-12">
-               <div className="grid-1">
-                  {props.dataObject?.locations?.LatestPost.slice(2, 3).map((item, index) => {
-                     console.log(item);
-                     return (
-                        <div key={index}>
-                           <div className="picture">
-                              <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={item.url}>
-                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
-                                 </a>
-                              </div>
-                           </div>
-                           <div className="detail">
-                              <div className="caption" onClick={() => handleNavigation(item, index)}>
-                                 <h5>
-                                    <a href={item.url}>{item.title}</a>
-                                 </h5>
-                              </div>
-                              <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                 <li> by <a href=""> <strong> {item.authored_by}</strong> </a></li>
-                              </ul>
-                           </div>
-                        </div>
-                     )
-                  })}
-               </div>
-            </article>
-         </div>
+        
       </>
    )
 }

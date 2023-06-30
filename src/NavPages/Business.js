@@ -6,33 +6,50 @@ import ChaiTheoryAd from '../Advertisements/ChaiTheoryAd';
 import RecentBusiness from '../Business/RecentBusiness';
 import SliderWidgetBusiness from '../Business/SliderWidgetBusiness';
 import SristarAd1 from '../Advertisements/SristarAd1';
+import Navbar from '../Utility/Navbar';
+import BannerAd1 from '../Advertisements/BannerAd1';
+import BusinessPost1 from '../Business/BusinessPost1';
+import BannerAd2 from '../Advertisements/BannerAd2';
+import BusinessPost2 from '../Business/BusinessPost2';
+
 
 function Business() {
   const [result, setResult] = useState([]);
+  const [value, setvalue] = useState([]);
   useEffect(() => {
     const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json";
     fetch(url).then(response => response.json())
       .then(response => {
         setResult(response)
       })
-      .catch(error => console.log(error));
+      const url1 = "https://newsbackend-388608.as.r.appspot.com/api/v1/category/list";
+      fetch(url1).then(response => response.json()
+      )
+        .then(response => {
+          setvalue(response)
+        })
   }, []);
 
   return (
     <div>
+      <Navbar addObject ={value} />
       <section className="main-content">
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-sm-12 col-xs-12">
               <div className="section">
                 <BusinessPosts dataObject={result} />
-              </div>
+                <BannerAd1 addObject={value} />
+                <BusinessPost1 dataObject={result} />
+                <BannerAd2 addObject={value} />
+                <BusinessPost2 dataObject ={result} />
+              </div> 
             </div>
             <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
               <aside>
-                <ChaiTheoryAd />
+                <ChaiTheoryAd addObject={value} />
                 <RecentBusiness dataObject={result} />
-                <SristarAd1 />
+                <SristarAd1 addObject={value} />
                 <SliderWidgetBusiness dataObject={result} />
               </aside>
             </div>
@@ -44,4 +61,4 @@ function Business() {
   )
 }
 
-export default Business
+export default Business;

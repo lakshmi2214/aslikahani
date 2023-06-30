@@ -10,8 +10,6 @@ function FooterCategory(props) {
 
     navigate(`/home/${item.url}`, { state: { item } });
   }
-
-
   return (
     <div>
       <footer>

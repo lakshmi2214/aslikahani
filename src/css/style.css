@@ -4038,7 +4038,7 @@ footer {
 footer .footer-top ul.twitter-widget .caption a.url {
 	display: block;
 	font-weight: 700;
-	color: #f44a56;
+	/* color: #f44a56; */
 	margin-top: 5px;
 	text-transform: none;
 }

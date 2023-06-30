@@ -36,9 +36,11 @@ import SliderPostWidget from "../Home/Content/SliderPostWidget";
 import AdminChoice from "../Home/AdminChoice/AdminChoice";
 import AllTimeBestArticles from "../Home/AllTimeBestArticles";
 import Footer from "../Home/Footer/Footer";
+import Navbar from "../Utility/Navbar";
 
 function Home() {
   const [result, setResult] = useState([]);
+  const [value, setvalue] = useState([]);
   useEffect(() => {
     const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json";
     fetch(url).then(response => response.json()
@@ -46,11 +48,16 @@ function Home() {
       .then(response => {
         setResult(response)
       })
-      .catch(error => console.log(error));
+      const url1 = "https://newsbackend-388608.as.r.appspot.com/api/v1/category/list";
+    fetch(url1).then(response => response.json()
+    )
+      .then(response => {
+        setvalue(response)
+      })
   }, []);
   return (
     <>
-
+<Navbar addObject={value}/>
       <Grid dataObject={result} />
       <section className="main-content">
         <div className="container">
@@ -59,7 +66,7 @@ function Home() {
               <LatestArticles dataObject={result} />
               <NationalNews dataObject={result} />
               <TrendingNews dataObject={result} />
-              <BannerAd1 />
+              <BannerAd1 addObject={value} />
             </div>
             <div className="col-md-2 col-sm-2 hidden-xs hidden-sm nopadding">
               <div className="category-sidebar sidebar-middle">
@@ -68,9 +75,9 @@ function Home() {
             </div>
             <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
               <aside>
-                <ChaiTheoryAd />
+                <ChaiTheoryAd addObject={value}/>
                 <PopularRecent dataObject={result} />
-                <SristarAd1 />
+                <SristarAd1 addObject={value}/>
                 <div className="widget widget-bg ">
                   <SliderPostWidget dataObject={result} />
                 </div>
@@ -81,7 +88,7 @@ function Home() {
       </section>
       <AdminChoice dataObject={result} />
       <AllTimeBestArticles dataObject={result} />
-      <BannerAd1 />
+      <BannerAd1 addObject={value}/>
       <Footer dataObject={result} />
     </>
   );
