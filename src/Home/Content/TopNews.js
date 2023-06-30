@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import '../../css/style.css';
 import '../../css/animate.min.css';
 import '../../css/megaMenu.css';
@@ -23,22 +22,37 @@ import '../../css/owl.carousel.css';
 import '../../css/zerogrid.css';
 import '../../fonts/glyphicons-halflings-regular.svg';
 import '../../css/royal-slider/rs-default.css';
- 
-function TopNews(props) {
+
+import { useState, useEffect } from "react";
+ import { useNavigate } from "react-router-dom";
+
+
+function TopNews() {
    const navigate = useNavigate();
-  const handleNavigation = (item) => {
+  const handleNavigation = (item, index) => {
    console.log(item);
 
     navigate(`/home/${item.url}`, { state: {item} });
   }
-  
+  const [data,setData] = useState([]);
+
+  useEffect(()=>{
+   const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json"
+   fetch(url).then(res => res.json())
+   .then(res => {
+   console.log(res)
+   setData(res)
+  })
+   .catch(err => setData(err))
+},[])
+
     return(
         <>
          <div className="category-widget">
-                        <h4>Top Articles</h4>
+                        <h4>Top News</h4>
                         
                         <div className="grid-1">
-   {props.dataObject?.locations?.TopNews.slice(0,6).map((item,index)=>{
+   {data?.locations?.TopNews.slice(0,1).map((item,index)=>{
             console.log(item);
             return(
          <div key={index}>
@@ -56,11 +70,110 @@ function TopNews(props) {
                                     <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
+                              
                            </div>
+                           </div>
+    )    
+   })}
+
+                            
+                           </div>
+                    <div className="grid-1">
+   {data?.locations?.TopNews.slice(1,2).map((item,index)=>{
+            console.log(item);
+            return(
+         <div key={index}>
+                           <div className="picture">
+                              <div className="category-image" onClick={() => handleNavigation(item, index)}>
+                                 <a href="standard-post.html">
+                                 <img alt="" className="img-responsive" src={item.image}/>
+                                 </a>
+                              </div>
+                           </div>
+                           <div className="detail">
+                              <div className="caption">
+                                 <h5 onClick={() => handleNavigation(item, index)}>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
+                                 </h5>
+                              </div>
+                           </div>
+                           </div>
+    )    
+   })}
+                       </div>
+                        <div className="grid-1">
+      {data?.locations?.TopNews.slice(2,3).map((item,index)=>{
+            console.log(item);
+            return(
+         <div key={index}>
+                           <div className="picture">
+                              <div className="category-image" onClick={() => handleNavigation(item, index)}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
+                                 <img alt="" className="img-responsive" src={item.image}/>
+                                 </a>
+                              </div>
+                           </div>
+                           <div className="detail">
+                              <div className="caption">
+                                 <h5 onClick={() => handleNavigation(item, index)}>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
+                                 </h5>
+                              </div>
+                              </div>
+                              </div>
+    )    
+   })}
+
+
                         </div>
-                     )})}
-                  </div>
-               </div>
+                        <div className="grid-1">
+                        {data?.locations?.TopNews.slice(1,2).map((item,index)=>{
+            console.log(item);
+            return(
+         <div key={index}>
+                           <div className="picture">
+
+                              <div className="category-image" onClick={() => handleNavigation(item, index)}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
+                                 <img alt="" className="img-responsive" src={item.image}/>
+                                 </a>
+                              </div>
+                           </div>
+                           <div className="detail">
+                              <div className="caption">
+                                 <h5 onClick={() => handleNavigation(item, index)}>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
+                                 </h5>
+                              </div>
+                              </div>
+                              </div>
+    )})}    
+ 
+                        </div>
+                        <div className="grid-1">
+         {data?.locations?.TopNews.slice(2,3).map((item,index)=>{
+            console.log(item);
+            return(
+         <div key={index}>
+                           <div className="picture">
+                              <div className="category-image" onClick={() => handleNavigation(item, index)}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
+                                 <img alt="" className="img-responsive" src={item.image}/>
+                                 </a>
+                              </div>
+                           </div>
+                           <div className="detail">
+                              <div className="caption">
+                                 <h5 onClick={() => handleNavigation(item, index)}>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
+                                 </h5>
+                              </div>
+                              </div>
+                              </div>
+    )    
+   })}
+                        </div>
+                     </div>
         </>
     );
 }

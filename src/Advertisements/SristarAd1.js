@@ -21,36 +21,50 @@ import '../css/font-awesome.min.css';
 import '../css/zerogrid.css';
 import '../css/royal-slider/rs-default.css';
 import '../css/owl.carousel.css';
+import { useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SristarAd1(props) {
+function SristarAd1() {
    const navigate = useNavigate()
-   const handleNavigation = (item) => {
+   const handleNavigation = (item, index) => {
       console.log(item);
 
-      navigate(`${item.url}`, { state: { item } });
+      navigate(`/artandculture`, { state: {item }});
    }
-  
-   return (
-      <>
-         <div className="widget widget-bg">
-
-
-            <div className="heading">
-            </div>
-            {props.addObject?.categories?.slice(0, 1).map((item, index) => {
-               return (
-                  item.advertisements.TopPosterad1.slice(0, 1).map((item, index) => {
-                     console.log(item)
-                     return (
-
-                        <div key={index}>
-                           <div className="ad-div style-box">
-                              <a href={item.url}>
-                                 <img src={item.image} className="img-responsive " alt="" style={{ height: "300px", width: "300px" }} />
-                              </a>
-                           </div>
-                           <div className="detail">
+   const [data,setData] = useState([])
+ 
+ useEffect(()=>{
+     const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/category/list"
+     fetch(url).then(res => res.json())
+     .then(res => {
+     console.log(res)
+     setData(res)
+    })
+    .catch(err => setData(err))
+   },[])
+    return(
+        <>
+        <div className="widget widget-bg">
+        
+                  
+                         <div className="heading">
+                           {/* <h2 className="main-heading">Advertizement</h2>
+                           <span className="heading-ping"></span> */}
+                        </div> 
+                        {data.categories?.slice(0,1).map((item,index)=>{
+    return(
+        item.advertisements.TopPosterad1.slice(0,1).map((item,index)=>{
+            console.log(item)
+            return(
+               
+                <div key={index}>
+                        <div className="ad-div style-box">
+                           <a href={item.url}>
+                           <img src={item.image} className="img-responsive " alt="" style={{height:"300px",width:"300px"}}/>
+                           </a>
+                        </div>
+                        <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
                                     <a href={item.url}>{item.description}</a>
@@ -58,12 +72,10 @@ function SristarAd1(props) {
                               </div>
                            </div>
                         </div>
-                     )
-                  }))
-            })}
-
-         </div>
-      </>
-   )
+            )}))})}
+                
+                     </div>
+        </>
+    )
 }
 export default SristarAd1;

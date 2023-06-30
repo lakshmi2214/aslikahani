@@ -625,7 +625,6 @@ p .readmore {
 
 .megaMenu .drop-down-medium .list-items a:hover, .megaMenu .drop-down-large .list-items a:hover, .megaMenu .drop-down-medium .list-items ol li:hover:after, .megaMenu .drop-down-large .list-items ol li:hover:after, .megaMenu .drop-down-medium .nav-tabs.vertical li.active a, .megaMenu .drop-down-medium .nav-tabs.vertical li:hover a, .megaMenu .drop-down-medium .nav-tabs.vertical li:active a, .megaMenu .drop-down-medium .nav-tabs.vertical li:focus a, .megaMenu .drop-down-large .nav-tabs.vertical li.active a, .megaMenu .drop-down-large .nav-tabs.vertical li:hover a, .megaMenu .drop-down-large .nav-tabs.vertical li:active a, .megaMenu .drop-down-large .nav-tabs.vertical li:focus a {
 	color: #f44a56;
-	border: 1px solid black;
 }
 
 .megaMenu .drop-down-medium, .megaMenu .drop-down-large, .megaMenu .drop-down-medium.nav-tabs, .megaMenu .drop-down-large.nav-tabs {
@@ -1030,7 +1029,6 @@ p .readmore {
 
 .full-width-slider {
 	background-color: #F1f1f1;
-	display: block;
 }
 
 .full-width-slider .detail {
@@ -2832,21 +2830,11 @@ p .readmore {
 	font-weight: 500;
 	margin-top: 0;
 	text-transform: capitalize;
-	/* width:352px; */
 }
 
 .caption a:hover {
 	color: #f44a56;
 }
-.caption1:hover {
-	color: #f44a56;
-	/* text-decoration: none; */
-}
-.caption-hover:hover {
-	color: #f44a56;
-	/* text-decoration: none; */
-}
-
 
 .small-caption a {
 	color: #444;
@@ -3522,9 +3510,6 @@ p .readmore {
 
 
 /* TABS*/
-.tab-posts{
-	padding-top: 10px;
-}
 
 ul.tabs-posts {
 	margin: 0px;
@@ -3538,7 +3523,6 @@ ul.tabs-posts>li {
 	overflow: hidden;
 	position: relative;
 }
-
 
 .tabs-posts .post-tools li {
 	border: none;
@@ -3600,7 +3584,7 @@ ul.nav-tabs.nav-justified> li {
 }
 
 .nav-tabs.nav-justified> li> a:hover {
-	border: 10px solid #444;
+	border: 1px solid #444;
 }
 
 .tag-list {
@@ -3632,7 +3616,7 @@ ul.nav-tabs.nav-justified> li {
 
 .tabs-posts li .caption a:hover {
 	text-decoration: underline;
-	color: #f44a56;
+	color: #242424;
 }
 
 
@@ -4038,7 +4022,7 @@ footer {
 footer .footer-top ul.twitter-widget .caption a.url {
 	display: block;
 	font-weight: 700;
-	/* color: #f44a56; */
+	color: #f44a56;
 	margin-top: 5px;
 	text-transform: none;
 }
@@ -4505,7 +4489,7 @@ footer .social-media-icons ul {
 
 .section .tabs .nav-tabs.nav-justified {
 	margin-bottom: 30px;
-	border-bottom: 13px solid #f44a56;
+	border-bottom: 3px solid #f44a56;
 }
 
 .section .nav-tabs.nav-justified> li> a {
