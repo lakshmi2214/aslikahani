@@ -71,6 +71,21 @@ function Home() {
               <TrendingNews dataObject={result} />
               <BannerAd1 addObject={value} />
             </div>
+            <div className="col-md-2 col-sm-2 hidden-xs hidden-sm nopadding">
+                  <div className="category-sidebar sidebar-middle">
+                    <TopNews dataObject={result}/>
+                  </div>
+               </div>
+               <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
+                  <aside>
+                       <ChaiTheoryAd addObject={value}/>
+                      <PopularRecent dataObject={result}/> 
+                      <SristarAd1 addObject={value}/>
+                     <div className="widget widget-bg ">                       
+                      <SliderPostWidget dataObject={result}/>
+                     </div>
+                  </aside>
+               </div>
          </div>
          </div>
       </section>
