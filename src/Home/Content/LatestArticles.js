@@ -22,107 +22,93 @@ import '../../css/owl.carousel.css';
 import '../../css/zerogrid.css';
 import '../../fonts/glyphicons-halflings-regular.svg';
 import '../../css/royal-slider/rs-default.css';
-
-
-import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 
-function LatestArticles() {
+function LatestArticles(props) {
    const navigate = useNavigate();
-   const handleNavigation = (item, index) => {
-    console.log(item);
- 
-     navigate(`/home/${item.url}`, { state: {item }});
+   const handleNavigation = (item) => {
+      console.log(item);
+
+      navigate(`/home/${item.url}`, { state: { item } });
    }
-     const [data,setData] = useState([])
-   
-useEffect(()=>{
-    const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json"
-    fetch(url).then(res => res.json())
-    .then(res => {
-    console.log(res)
-    setData(res)
-   })
-    .catch(err => setData(err))
-},[])
- 
-    return(
-        <>
-             <div className="section">
-                     <div className="row">
-                        <div className="col-md-12 col-xs-12 col-sm-12">
-                           <div className="heading">
-                              <h2 className="main-heading">Latest Articles</h2>
-                              
-                              
-                           </div>
-                        </div>
-                     </div>
-                     <div className="row">
-                     
-      
-    {data?.locations?.LatestPost.slice(0,1).map((item,index)=>{
-            console.log(item);
-            return(
-               <div key={index}>
+
+   return (
+      <>
+         <div className="section">
+            <div className="row">
+               <div className="col-md-12 col-xs-12 col-sm-12">
+                  <div className="heading">
+                     <h2 className="main-heading">Latest Articles</h2>
+                  </div>
+               </div>
+            </div>
+            <div className="row">
+
+
+               {props.dataObject?.locations?.LatestPost.slice(0, 1).map((item, index) => {
+                  console.log(item);
+                  return (
+                     <div key={index}>
 
                         <article className="col-md-7 col-sm-7 col-xs-12">
                            <div className="grid-1">
                               <div className="picture">
                                  <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
-                                    <img alt="" className="img-responsive" src={item.image} style={{height:"185px"}}/>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>
+                                       <img alt="" className="img-responsive" src={item.image} style={{ height: "185px" }} />
                                     </a>
-                                    
-                                    </div>
+
+                                 </div>
                               </div>
                               <div className="detail">
                                  <div className="caption">
                                     <h5 onClick={() => handleNavigation(item, index)}>
-                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
+                                       <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>{item.title}</a>
                                     </h5>
                                  </div>
                                  <ul className="post-tools">
                                     <li onClick={() => handleNavigation(item, index)}> by <a href=""> <strong> {item.authored_by}</strong> </a></li>
                                     <li onClick={() => handleNavigation(item, index)}> {item.created_at}  </li>
-                                   
+
                                  </ul>
                                  <p onClick={() => handleNavigation(item, index)}>{item.description}  </p>
                               </div>
                            </div>
                         </article>
-                        </div>
-                       )})}
-         
-                        <div className="col-md-5 col-sm-5 col-xs-12">
-                           <ul className="small-grid">
-                              <li>
-                        {data?.locations?.LatestPost.slice(1,5).map((item,index)=>{
-                       console.log(item);
-                       return(
-                        <div key={index}>
+                     </div>
+                  )
+               })}
+
+               <div className="col-md-5 col-sm-5 col-xs-12">
+                  <ul className="small-grid">
+                     <li>
+                        {props.dataObject?.locations?.LatestPost.slice(1, 5).map((item, index) => {
+                           console.log(item);
+                           return (
+                              <div key={index}>
 
                                  <div className="small-post">
                                     <div className="post-content">
-                                       <h3 onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title} </a> </h3>
+                                       <h3 onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>{item.title} </a> </h3>
                                        <ul className="post-tools">
-               
+
                                           <li onClick={() => handleNavigation(item, index)}>  {item.created_at} </li>
                                        </ul>
                                     </div>
                                  </div>
-                                 </div>
-            )})}
-                              </li>
-                              <li>
-      
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-        </>
-    )
+                              </div>
+                           )
+                        })}
+                     </li>
+                     <li>
+
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </>
+   )
 }
 export default LatestArticles;

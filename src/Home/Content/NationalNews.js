@@ -22,167 +22,94 @@ import '../../css/owl.carousel.css';
 import '../../css/zerogrid.css';
 import '../../fonts/glyphicons-halflings-regular.svg';
 import '../../css/royal-slider/rs-default.css';
-import Post2 from '../../images/posts/15.jpg';
-import Post3 from '../../images/posts/16.jpg';
-import Post4 from '../../images/posts/17.jpg';
-import Post5 from '../../images/posts/19.jpg';
-
-import { useState, useEffect } from "react";
- import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
-function NationalNews() {
+function NationalNews(props) {
    const navigate = useNavigate();
-  const handleNavigation = (item, index) => {
-   console.log(item);
+   const handleNavigation = (item) => {
+      console.log(item);
 
-    navigate(`/home/${item.url}`, { state: {item} });
-  }
-  const [data,setData] = useState([]);
+      navigate(`/home/${item.url}`, { state: { item } });
+   }
 
-  useEffect(()=>{
-   const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json"
-   fetch(url).then(res => res.json())
-   .then(res => {
-   console.log(res)
-   setData(res)
-  })
-   .catch(err => setData(err))
-},[])
+   const national = props.dataObject;
 
-    return(
-        <>
-        <div className="section">
-                     <div className="col-md-12 col-xs-12 col-sm-12 nopadding">
-                        <div className="heading">
-                           <h2 className="main-heading">National News</h2>
-                           
-                        </div>
-                     </div>
-                     <div className="row">
-                        <article className="col-md-6 col-sm-6 col-xs-12">
-                           <div className="grid-1">
-                              
-      {data?.locations?.NationalNews.slice(0,1).map((item,index)=>{
-            console.log(item);
-            return(
-               <div key={index}>
-                  <div className="picture">
-                                 <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
-                                    <img alt="" className="img-responsive" src={item.image} 
-                                    style={{height:"190px"}}/>
-                                    </a>
-                                 </div>
-                                 </div>
-                                 <div className="detail">
-                                 <div className="caption">
-                                    <h5 onClick={() => handleNavigation(item, index)}>
-                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
-                                    </h5>
-                                 </div>
-                                 <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                    <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
-                                 </ul>
-                              </div>
-                                 </div>
-            )})}
-      
-                              
-                           </div>
-                        </article>
-                        <article className="col-md-6 col-sm-6 col-xs-12">
-                           <div className="grid-1">
-   {data?.locations?.NationalNews.slice(1,2).map((item,index)=>{
-            console.log(item);
-            return(
-               <div key={index}>
+   return (
+      <>
+         <div className="section">
+            <div className="col-md-12 col-xs-12 col-sm-12 nopadding">
+               <div className="heading">
+                  <h2 className="main-heading">Articles</h2>
+
+               </div>
+            </div>
+            <div className="row">
+               <article className="col-md-6 col-sm-6 col-xs-12">
+                  <div className="grid-1">
+
+                     {national?.locations?.NationalNews.slice(0, 2).map((item, index) => {
+                        console.log(item);
+                        return (
+                           <div key={index}>
                               <div className="picture">
                                  <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
-                                    <img alt="" className="img-responsive" src={item.image}
-                                    style={{height:"190px"}}/>
-                                    </a>
-                             </div>
-                              </div>
-                              <div className="detail">
-                                 <div className="caption">
-                                    <h5 onClick={() => handleNavigation(item, index)}>
-                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
-                                    </h5>
-                                 </div>
-                                 <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                    <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
-                                </ul>
-                              </div>
-                              </div>
-            )
-         })}
-         
-                           </div>
-                        </article>
-                        <article className="col-md-6 col-sm-6 col-xs-12">
-                           <div className="grid-1">
-                           {data?.locations?.NationalNews.slice(2,3).map((item,index)=>{
-            console.log(item);
-            return(
-               <div key={index}>
-                              <div className="picture">
-                                 <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
-                                    <img alt="" className="img-responsive" src={item.image} 
-                                    style={{height:"190px"}}/>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>
+                                       <img alt="" className="img-responsive" src={item.image}
+                                          style={{ height: "190px" }} />
                                     </a>
                                  </div>
                               </div>
                               <div className="detail">
                                  <div className="caption">
                                     <h5 onClick={() => handleNavigation(item, index)}>
-                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
+                                       <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>{item.title}</a>
                                     </h5>
                                  </div>
                                  <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                    <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
-                                 
+                                    <li> by <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}> <strong> {item.authored_by}</strong> </a></li>
                                  </ul>
                               </div>
-                              </div>
-            )
-         })}
                            </div>
-                        </article>
-                        <article className="col-md-6 col-sm-6 col-xs-12">
-                           <div className="grid-1">
-       {data?.locations?.NationalNews.slice(0,1).map((item,index)=>{
-            console.log(item);
-            return(
-               <div key={index}>
-                              <div className="picture" onClick={() => handleNavigation(item, index)}>
-                                 <div className="category-image">
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
-                                    <img alt="" className="img-responsive" src={item.image}
-                                    style={{height:"190px"}}/>
-                                    </a>
-                                 </div>
-                              </div>
-                              <div className="detail">
-                                 <div className="caption">
-                                    <h5 onClick={() => handleNavigation(item, index)}>
-                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
-                                    </h5>
-                                 </div>
-                                 <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                    <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
-                                 </ul>
-                              </div>
-                              </div>
-            )
-         })}
-                           </div>
-                        </article>
-                     </div>
+                        )
+                     })}
+
+
                   </div>
-        </>
-    );
+               </article>
+               <article className="col-md-6 col-sm-6 col-xs-12">
+                  <div className="grid-1">
+                     {national?.locations?.NationalNews.slice(1, 3).map((item, index) => {
+                        console.log(item);
+                        return (
+                           <div key={index}>
+                              <div className="picture">
+                                 <div className="category-image" onClick={() => handleNavigation(item, index)}>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>
+                                       <img alt="" className="img-responsive" src={item.image}
+                                          style={{ height: "190px" }} />
+                                    </a>
+                                 </div>
+                              </div>
+                              <div className="detail">
+                                 <div className="caption">
+                                    <h5 onClick={() => handleNavigation(item, index)}>
+                                       <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>{item.title}</a>
+                                    </h5>
+                                 </div>
+                                 <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
+                                    <li> by <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}> <strong> {item.authored_by}</strong> </a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        )
+                     })}
+
+                  </div>
+               </article>
+            </div>
+         </div>
+      </>
+   );
 }
 export default NationalNews;
