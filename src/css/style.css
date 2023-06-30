@@ -2830,6 +2830,7 @@ p .readmore {
 	font-weight: 500;
 	margin-top: 0;
 	text-transform: capitalize;
+	width:352px;
 }
 
 .caption a:hover {

@@ -1,9 +1,7 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 
-function Grid() {
+function Grid(props) {
 
   const navigate = useNavigate();
   const handleNavigation = (item) => {
@@ -12,17 +10,7 @@ function Grid() {
     navigate(`/home/${item.url}`, { state: {item} });
   }
 
-   const [data,setData] = useState([])
-
-useEffect(()=>{
-    const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json"
-    fetch(url).then(res => res.json())
-    .then(res => {
-    console.log(res)
-    setData(res);
-   })
-    .catch(err => setData(err))
-},[])
+   const grid =  props.dataObject;
     return(
         <>
         
@@ -37,7 +25,7 @@ useEffect(()=>{
                            <div className="grid-item">
                                     
 
-   {data?.locations?.Slider.slice(0,1).map((item,index)=>{
+   {grid?.locations?.Slider.slice(0,1).map((item,index)=>{
          
          
             console.log(item);
@@ -64,7 +52,7 @@ useEffect(()=>{
    <div className="wrap-col">
       <div className="grid-item">
 
-      {data?.locations?.Slider.slice(1,2).map((item,index)=>{
+      {grid?.locations?.Slider.slice(1,2).map((item,index)=>{
             console.log(item);
             return(
 
@@ -86,7 +74,7 @@ useEffect(()=>{
 
    <div className="wrap-col">
       <div className="grid-item">
-      {data?.locations?.Slider.slice(2,3).map((item,index)=>{
+      {grid?.locations?.Slider.slice(2,3).map((item,index)=>{
             console.log(item);
             return(
 
@@ -111,7 +99,7 @@ useEffect(()=>{
 <div className="col-1-4">
    <div className="wrap-col">
       <div className="grid-item">
-     {data?.locations?.Slider.slice(3,4)?.map((item,index)=>{
+     {grid?.locations?.Slider.slice(3,4)?.map((item,index)=>{
 
      
             console.log(item);
@@ -135,7 +123,7 @@ useEffect(()=>{
 <div className="wrap-col">
  <div className="grid-item">
   
- {data?.locations?.Slider.slice(5,6).map((item,index)=>{
+ {grid?.locations?.Slider.slice(5,6).map((item,index)=>{
             console.log(item);
             return(
 
