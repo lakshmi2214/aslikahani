@@ -12,7 +12,7 @@ function Navbar(props) {
 
                 <Link to={"/home"}><img src={logosmall} style={{ height: "50px", width: "220px", paddingRight: "50px", paddingTop: "5px" }} />
                 </Link>
-                {props.dataObject?.categories?.slice(0, 8).map((item, index) => {
+                {props.addObject?.categories?.slice(0, 8).map((item, index) => {
                     console.log(item);
                     return (
 

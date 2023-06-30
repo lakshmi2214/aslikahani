@@ -1,5 +1,5 @@
-import React from "react";
-import '../../css/style.css';
+import React, { useState } from "react";
+import { useEffect } from "react";
 import '../../css/animate.min.css';
 import '../../css/megaMenu.css';
 import '../../css/colors/amethyst.css';
@@ -20,29 +20,49 @@ import '../../css/zerogrid.css';
 import '../../css/royal-slider/rs-default.css';
 import '../../css/owl.carousel.css';
 
-function RelatedArticleContent(props) {
+import { useLocation } from "react-router-dom";
+
+
+function RelatedArticleContent() {
+  const location = useLocation();
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    if (location) {
+      var tmp = location.pathname.slice(location.pathname.lastIndexOf("/"), location.pathname.length);
+      // setData(tmp) 
+      tmp = tmp.substring(1, tmp.length);
+    }
+    const url = `https://newsbackend-388608.as.r.appspot.com/api/v1/articles/get?url=${tmp}`
+    fetch(url).then(res => res.json())
+      .then(res => {
+        setData(res)
+        console.log(res)
+
+      })
+  }, [])
+
   return (
     <>
       <div className="col-md-7 col-sm-7 col-xs-12 ">
-
-        <div className="catname">
-
-          <h2>{props.dataObject.title}</h2>
+        <div className="picture">
+          <h2>{data.title}</h2>
           <ul className="post-tools nolineheight">
-            <li> by <a href=""> <strong> {props.dataObject.authored_by}</strong> </a></li>
-            <li> {props.dataObject.created_at} </li>
+            <li> by <a href=""> <strong> {data.authored_by}</strong> </a></li>
+            <li> {data.created_at} </li>
           </ul>
-          <div className="picture">
-            <img alt="" className="img-responsive" src={props.dataObject.image} style={{ height: "500px", width: "760px" }} />
-          </div>
-          <br></br>
-          <p> {props.dataObject.description}</p>
-          <div dangerouslySetInnerHTML={{ __html: props.dataObject.body }}></div>
-
-
+          <img alt="" className="img-responsive" src={data.image} style={{ height: "500px", width: "760px" }} />
         </div>
-      </div>
+        <div className="catname">
+          <br></br>
+          <br></br>
+          <p> {data.description}</p>
+          <div dangerouslySetInnerHTML={{ __html: data.body }}></div>
+        </div>
+        {/*npm install react-player --save <iframe width="420" height="315" src="https://www.youtube.com/embed/A6XUVjK9W4o" frameborder="0" allowfullscreen></iframe> */}
+       </div>
     </>
   );
-}
+} 
 export default RelatedArticleContent;

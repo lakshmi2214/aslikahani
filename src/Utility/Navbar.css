@@ -19,11 +19,11 @@
     background-color: white;
     font-size: 18px;
     font-weight: 700;
-    padding-top: 16px;
+    padding-top: 17px;
     padding-right: 18px;
-    padding-left: 18px;
+    padding-left: 18px; 
     text-decoration: none;
-
+    height:58px;
 }
 
 .navbar:hover {
