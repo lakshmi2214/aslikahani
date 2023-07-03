@@ -57,7 +57,7 @@ function ArtCulture() {
           </div>
         </div>
       </section>
-      {/* <FooterCategory dataObject={result} /> */}
+      <FooterCategory/>
     </>
   );
 }

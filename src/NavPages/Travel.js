@@ -57,7 +57,7 @@ function Travel() {
           </div>
         </div>
       </section>
-      {/* <FooterCategory dataObject={result} /> */}
+      <FooterCategory />
     </div>
   )
 }

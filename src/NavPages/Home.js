@@ -69,7 +69,7 @@ function Home() {
                   <LatestArticles dataObject={result}/>
                   <NationalNews dataObject={result}/>             
                   <TrendingNews dataObject={result}/>
-              <BannerAd1 addObject={value}/>
+              
                </div>
                <div className="col-md-2 col-sm-2 hidden-xs hidden-sm nopadding">
                   <div className="category-sidebar sidebar-middle">
@@ -88,11 +88,12 @@ function Home() {
                </div>
             </div>
          </div>
+         <BannerAd1 addObject={value}/>
       </section>
      <AdminChoice dataObject={result}/>
       <AllTimeBestArticles dataObject={result}/>
       <BannerAd2 addObject={value}/>
-      <Footer dataObject={result} />
+      <Footer/>
         </>
     );
 }

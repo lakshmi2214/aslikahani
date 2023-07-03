@@ -56,7 +56,7 @@ function Business() {
           </div>
         </div>
       </section>
-      {/* <FooterCategory dataObject={result} /> */}
+       {/* <FooterCategory  />  */}
     </div>
   )
 }

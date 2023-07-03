@@ -56,7 +56,7 @@ function LifeStyle() {
           </div>
         </div>
       </section>
-      {/* <FooterCategory dataObject={result} /> */}
+      <FooterCategory />
     </div>
   )
 }

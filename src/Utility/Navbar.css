@@ -1,61 +1,107 @@
-.backgroundMenu {
-    border: 1px solid rgb(171, 170, 170);
-    height: 60px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    background-color: white;
-    color: black;
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+
+
+
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 50px;
+	padding: 0 2rem;
+	background-color: white;
+	color: var(--textColor);
+    border: 1px solid rgb(180, 179, 179);
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 2;
 }
 
-.navbar {
+nav Link {
+	margin: 0 1rem;
+	color: var(--textColor);
+	text-decoration: none;
+}
+.bar{
     background-color: white;
     font-size: 18px;
     font-weight: 700;
-    padding-top: 17px;
-    padding-right: 18px;
+    padding-top: 9px;
+    padding-right: 16px;
     padding-left: 18px; 
     text-decoration: none;
-    height:58px;
-    color:black;
+    height:40px;
+    color: black;
 }
 
-.navbar:hover {
+.bar:hover {
     background-color: red;
     color: white;
     text-decoration: none;
+    border-radius: 5px;
 }
 
-@media screen and (min-width: 0px) and (max-width: 800px) {
-    .backgroundMenu {
-        border: 1px solid rgb(171, 170, 170);
-        height: 600px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        background-color: white;
-        color: black;
-        text-align: center;
-        position: relative;
+header .nav-btn {
+	padding: 5px;
+	cursor: pointer;
+	border: 1px solid black;
+	outline: none;
+	color: var(--textColor);
+	visibility: hidden;
+	opacity: 0;
+    color: black;
+	font-size: 1.8rem;
+}
 
+header div,
+nav {
+	display: flex;
+	align-items: center;
+}
 
+@media only screen and (max-width: 1024px) {
+	header .nav-btn {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	header nav {
+		position: fixed;
+		top: -92vh;
+		left: 0;
+		height: 80%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: white;
+        z-index: 17;
+	}
+    .bar{
+    background-color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-left: 18px; 
+    text-decoration: none;
+    height:40px;
+    color: black;
     }
+   
 
-    .navbar {
-        background-color: white;
-        position: relative;
-        color:black;
-    }
+	header .responsive_nav {
+		transform: translateY(100vh);
+	}
 
-    .navbar:hover {
-        background-color: red;
-        color: white;
-        text-decoration: none;
-    }
+	nav .nav-close-btn {
+		position: absolute;
+		top: 1rem;
+		right: 2rem;
+	}
+
+	
 }

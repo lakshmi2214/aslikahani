@@ -62,7 +62,7 @@ function AdminChoice(props) {
                                              </a>
                                           </div>
                                        </div>
-                                       <div className="detail">
+                                       <div className="detail" style={{paddingLeft:"10px"}}>
                                           <div className="caption" onClick={() => handleNavigation(item, index)}>
                                              <h5>
                                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
@@ -94,7 +94,7 @@ function AdminChoice(props) {
                                              </a>
                                           </div>
                                        </div>
-                                       <div className="detail">
+                                       <div className="detail"style={{paddingLeft:"10px"}} >
                                           <div className="caption" onClick={() => handleNavigation(item, index)}>
                                              <h5>
                                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
@@ -126,7 +126,7 @@ function AdminChoice(props) {
                                              </a>
                                           </div>
                                        </div>
-                                       <div className="detail">
+                                       <div className="detail" style={{paddingLeft:"10px"}}>
                                           <div className="caption" onClick={() => handleNavigation(item, index)}>
                                              <h5>
                                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>

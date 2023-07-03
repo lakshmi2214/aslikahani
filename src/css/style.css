@@ -1029,6 +1029,7 @@ p .readmore {
 
 .full-width-slider {
 	background-color: #F1f1f1;
+	margin-top: -100px;
 }
 
 .full-width-slider .detail {
@@ -3805,7 +3806,7 @@ footer h2 {
     color: #FFF;
 }
 .footer-top {
-	padding: 60px 0;
+	padding: 15px 0;
 }
 
 .footer-link ul {

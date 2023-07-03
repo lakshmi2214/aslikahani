@@ -51,7 +51,7 @@ function TopNews(props) {
                            </div>
                         </div>
                         <div className="detail">
-                           <div className="caption">
+                           <div className="caption1">
                               <h5 onClick={() => handleNavigation(item, index)}>
                                  <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>{item.title}</a>
                               </h5>
