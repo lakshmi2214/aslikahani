@@ -11,6 +11,9 @@ import BannerAd1 from '../Advertisements/BannerAd1';
 import TravelPost1 from '../Travel/TravelPost1';
 import BannerAd2 from '../Advertisements/BannerAd2';
 import TravelPost2 from '../Travel/TravelPost2';
+import Navbar from '../Utility/Navbar';
+
+
 function Travel() {
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);

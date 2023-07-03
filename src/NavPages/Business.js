@@ -10,6 +10,8 @@ import BannerAd1 from '../Advertisements/BannerAd1';
 import BusinessPost1 from '../Business/BusinessPost1';
 import BannerAd2 from '../Advertisements/BannerAd2';
 import BusinessPost2 from '../Business/BusinessPost2';
+import Navbar from '../Utility/Navbar';
+
 
 
 function Business() {
