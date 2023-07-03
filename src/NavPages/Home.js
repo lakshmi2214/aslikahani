@@ -86,7 +86,7 @@ function Home() {
                      </div>
                   </aside>
                </div>
-            </div>
+         </div>
          </div>
          <BannerAd1 addObject={value}/>
       </section>

@@ -7,7 +7,6 @@ import RecentTravel from '../Travel/RecentTravel';
 import SristarAd1 from '../Advertisements/SristarAd1';
 import SliderWidgetTravel from '../Travel/SliderWidgetTravel';
 import ArchivePostTravel from '../Travel/ArchivePostTravel';
-import Navbar from '../Utility/Navbar';
 import BannerAd1 from '../Advertisements/BannerAd1';
 import TravelPost1 from '../Travel/TravelPost1';
 import BannerAd2 from '../Advertisements/BannerAd2';

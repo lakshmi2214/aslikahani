@@ -6,7 +6,6 @@ import ChaiTheoryAd from '../Advertisements/ChaiTheoryAd';
 import RecentBusiness from '../Business/RecentBusiness';
 import SliderWidgetBusiness from '../Business/SliderWidgetBusiness';
 import SristarAd1 from '../Advertisements/SristarAd1';
-import Navbar from '../Utility/Navbar';
 import BannerAd1 from '../Advertisements/BannerAd1';
 import BusinessPost1 from '../Business/BusinessPost1';
 import BannerAd2 from '../Advertisements/BannerAd2';
