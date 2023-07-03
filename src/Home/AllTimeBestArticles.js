@@ -29,7 +29,7 @@ function AllTimeBestArticles(props) {
    const handleNavigation = (item) => {
       console.log(item);
 
-      navigate(`/home/${item.url}`, { state: { item } });
+      navigate(`/${item.category}/${item.url}`, { state: { item } });
    }
    return (
       <>
@@ -53,15 +53,15 @@ function AllTimeBestArticles(props) {
                                        <ul>
                                           <li className="col-md-5 col-sm-3 col-xs-12 nopadding">
                                              <div className="thumb" onClick={() => handleNavigation(item, index)} >
-                                                <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>
-                                                   <img src={item.image} alt="" style={{ height: "150px", width: "200px" }} />
+                                                <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
+                                                   <img src={item.image} alt=""   />
                                                 </a>
                                              </div>
                                           </li>
                                           <li className="col-md-7 col-sm-9 col-xs-12">
                                              <div className="desc post-content" onClick={() => handleNavigation(item, index)}>
-                                                <h5><a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>{item.title}</a></h5>
-                                                <ul className="post-tools"><a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>
+                                                <h5><a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a></h5>
+                                                <ul className="post-tools"><a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                                    <li> {item.created_at} </li></a>
                                                 </ul>
                                              </div>
@@ -81,15 +81,15 @@ function AllTimeBestArticles(props) {
                                        <ul>
                                           <li className="col-md-5 col-sm-3 col-xs-12 nopadding">
                                              <div className="thumb" onClick={() => handleNavigation(item, index)}>
-                                                <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>
-                                                   <img src={item.image} alt="" style={{ height: "150px", width: "200px" }} />
+                                                <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
+                                                   <img src={item.image} alt=""  />
                                                 </a>
                                              </div>
                                           </li>
                                           <li className="col-md-7 col-sm-9 col-xs-12">
                                              <div className="desc post-content" onClick={() => handleNavigation(item, index)}>
-                                                <h5><a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>{item.title}</a></h5>
-                                                <ul className="post-tools"><a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>
+                                                <h5><a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a></h5>
+                                                <ul className="post-tools"><a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                                    <li> {item.created_at} </li></a>
                                                 </ul>
                                              </div>
@@ -109,15 +109,15 @@ function AllTimeBestArticles(props) {
                                        <ul>
                                           <li className="col-md-5 col-sm-3 col-xs-12 nopadding">
                                              <div className="thumb" onClick={() => handleNavigation(item, index)}>
-                                                <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>
-                                                   <img src={item.image} alt="" style={{ height: "150px", width: "200px" }} />
+                                                <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
+                                                   <img src={item.image} alt=""  />
                                                 </a>
                                              </div>
                                           </li>
                                           <li className="col-md-7 col-sm-9 col-xs-12">
                                              <div className="desc post-content" onClick={() => handleNavigation(item, index)}>
-                                                <h5><a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>{item.title}</a></h5>
-                                                <ul className="post-tools"><a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>
+                                                <h5><a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a></h5>
+                                                <ul className="post-tools"><a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                                    <li> {item.created_at} </li></a>
                                                 </ul>
                                              </div>

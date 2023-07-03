@@ -17,7 +17,7 @@ function Business() {
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
   useEffect(() => {
-    const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json";
+    const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=6&format=json";
     fetch(url).then(response => response.json())
       .then(response => {
         setResult(response)
@@ -32,7 +32,7 @@ function Business() {
 
   return (
     <div>
-      <Navbar addObject ={value} />
+      <Navbar/>
       <section className="main-content">
         <div className="container">
           <div className="row">
@@ -56,7 +56,7 @@ function Business() {
           </div>
         </div>
       </section>
-      <FooterCategory dataObject={result} />
+      {/* <FooterCategory dataObject={result} /> */}
     </div>
   )
 }

@@ -29,7 +29,7 @@ function SliderWidgetBusiness(props) {
    const handleNavigation = (item) => {
       console.log(item);
 
-      navigate(`/business/${item.url}`, { state: { item } });
+      navigate(`/${item.category}/${item.url}`, { state: { item } });
    }
    return (
       <>
@@ -40,13 +40,13 @@ function SliderWidgetBusiness(props) {
             </div>
             <div className="item">
                <div className="latest-news-grid grid-1">
-                  {props.dataObject?.locations?.SliderWidget.slice(0, 1).map((item, index) => {
+                  {props.dataObject?.locations?.BussGeneral.slice(0, 1).map((item, index) => {
                      console.log(item);
                      return (
                         <div key={index}>
                            <div className="picture">
                               <div className="category-image">
-                                 <a href={process.env.REACT_APP_DOMAIN_NAME + '/business/' + item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{ height: "250px", width: "330px" }} />
                                  </a>
                               </div>
@@ -54,7 +54,7 @@ function SliderWidgetBusiness(props) {
                            <div className="detail">
                               <div className="caption">
                                  <h5>
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME + '/business/' + item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools">

@@ -14,16 +14,15 @@ function Router() {
         <>
         <BrowserRouter>
           <Routes>
-            
             <Route path="/" exact element={<Home />}/>
-            <Route path="/home" exact element={<Home />}/>
-            <Route path="/entertainment" exact element={<Entertainment />}/>
-            <Route path="/education" exact element={<Education />}/>
-            <Route path="/technology" exact element={<Technology/>}/>
-            <Route path="/business" exact element={<Business />}/>
-            <Route path="/travel" exact element={<Travel />}/> 
-            <Route path="/lifestyle" exact element={<LifeStyle />}/>
-            <Route path="/art-and-culture" exact element={<ArtCulture />}/>
+            <Route path="/Home" exact element={<Home />}/>
+            <Route path="/Entertainment" exact element={<Entertainment />}/>
+            <Route path="/Education" exact element={<Education />}/>
+            <Route path="/Technology" exact element={<Technology/>}/>
+            <Route path="/Business" exact element={<Business />}/>
+            <Route path="/Travel" exact element={<Travel />}/> 
+            <Route path="/Lifestyle" exact element={<LifeStyle />}/>
+            <Route path="/Art-and-Culture" exact element={<ArtCulture />}/>
 
              <Route path="/home/:id" element={<ArticleContent />} />
              <Route path="/entertainment/:id" element={<ArticleContent />} />
@@ -32,12 +31,8 @@ function Router() {
              <Route path="/travel/:id" element={<ArticleContent />} />
              <Route path="/lifestyle/:id" element={<ArticleContent />} /> 
              <Route path="/art-and-culture/:id" element={<ArticleContent />} /> 
-        
-
-               
-            </Routes>
-           
-            </BrowserRouter>
+        </Routes>
+    </BrowserRouter>
         </>
     );
 }

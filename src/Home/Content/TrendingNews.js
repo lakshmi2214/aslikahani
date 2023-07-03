@@ -34,10 +34,10 @@ import { useNavigate } from "react-router-dom";
 
 function TrendingNews(props) {
    const navigate = useNavigate();
-   const handleNavigation = (item, index) => {
+   const handleNavigation = (item) => {
       console.log(item);
 
-      navigate(`/home/${item.url}`, { state: { item } });
+      navigate(`/${item.category}/${item.url}`, { state: { item } });
    }
 
    return (
@@ -45,7 +45,7 @@ function TrendingNews(props) {
          <div className="section">
             <div className="col-md-12 col-xs-12 col-sm-12 nopadding">
                <div className="heading">
-                  <h2 className="main-heading">Trending News</h2>
+                  <h2 className="main-heading">Trending Articles</h2>
                </div>
             </div>
             <article className="col-md-12 col-sm-12 col-xs-12 nopadding">
@@ -57,15 +57,15 @@ function TrendingNews(props) {
                         <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{ height: "300px" }} /></a>
                               </div>
                            </div>
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
-                                 <h5><a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>{item.title}</a></h5>
+                                 <h5><a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a></h5>
                                  <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                    <li> by <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}> <strong>{item.authored_by}</strong> </a></li>
+                                    <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}> <strong>{item.authored_by}</strong> </a></li>
                                     <li>  {item.created_at} </li>
                                  </ul>
                               </div>
@@ -89,10 +89,10 @@ function TrendingNews(props) {
                                  return (
                                     <div key={index}>
                                        <div className="small-post">
-                                          <div className="small-thumb"> <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>
+                                          <div className="small-thumb"> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                              <img alt="" src={item.image} className="" style={{ height: "85px", width: "85px" }} /></a> </div>
                                           <div className="post-content">
-                                             <h3> <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>{item.title}</a> </h3>
+                                             <h3> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a> </h3>
                                              <ul className="post-tools">
                                              </ul>
                                           </div>
@@ -115,12 +115,12 @@ function TrendingNews(props) {
                                     <div key={index}>
                                        <div className="small-post">
                                           <div className="small-thumb">
-                                             <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>
+                                             <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                                 <img alt="" src={item.image} style={{ height: "85px", width: "85px" }} className="" />
                                              </a>
                                           </div>
                                           <div className="post-content">
-                                             <h3> <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>{item.title}</a> </h3>
+                                             <h3> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a> </h3>
                                              <ul className="post-tools">
                                              </ul>
                                           </div>

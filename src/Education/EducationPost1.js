@@ -29,20 +29,20 @@ function EducationPost1(props) {
    const handleNavigation = (item) => {
       console.log(item);
 
-      navigate(`/education/${item.url}`, { state: { item } });
+      navigate(`/${item.category}/${item.url}`, { state: { item } });
    }
    return (
       <>
          <div className="row">
             <article className="col-md-6 col-sm-6 col-xs-12">
                <div className="grid-1">
-                  {props.dataObject?.locations?.Recent.slice(0, 2).map((item, index) => {
+                  {props.dataObject?.locations?.EduGeneral.slice(4, 6).map((item, index) => {
                      console.log(item);
                      return (
                         <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={process.env.REACT_APP_DOMAIN_NAME + '/education/' + item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
                                  </a>
                               </div>
@@ -50,7 +50,7 @@ function EducationPost1(props) {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME + '/education/' + item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
@@ -64,13 +64,13 @@ function EducationPost1(props) {
             </article>
            <article className="col-md-6 col-sm-6 col-xs-12">
                <div className="grid-1">
-                  {props.dataObject?.locations?.SliderWidget.slice(1, 3).map((item, index) => {
+                  {props.dataObject?.locations?.EduGeneral.slice(6, 8).map((item, index) => {
                      console.log(item);
                      return (
                         <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={process.env.REACT_APP_DOMAIN_NAME + '/education/' + item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
                                  </a>
                               </div>
@@ -78,7 +78,7 @@ function EducationPost1(props) {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME + '/education/' + item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>

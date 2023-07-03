@@ -18,7 +18,7 @@ function ArtCulture() {
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
   useEffect(() => {
-    const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json";
+    const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=9&format=json";
     fetch(url).then(response => response.json())
       .then(response => {
         setResult(response)
@@ -32,7 +32,7 @@ function ArtCulture() {
   }, []);
   return (
     <>
-    <Navbar addObject={value} />
+    <Navbar/>
       <section className="main-content">
         <div className="container">
           <div className="row">
@@ -57,7 +57,7 @@ function ArtCulture() {
           </div>
         </div>
       </section>
-      <FooterCategory dataObject={result} />
+      {/* <FooterCategory dataObject={result} /> */}
     </>
   );
 }

@@ -30,7 +30,7 @@ function LatestArticles(props) {
    const handleNavigation = (item) => {
     console.log(item);
  
-     navigate(`/home/${item.url}`, { state: {item }});
+     navigate(`/${item.category}/${item.url}`, { state: {item }});
    }
     
  return(
@@ -55,7 +55,7 @@ function LatestArticles(props) {
                            <div className="grid-1">
                               <div className="picture">
                                  <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{height:"185px"}}/>
                                     </a>
                                     
@@ -64,7 +64,7 @@ function LatestArticles(props) {
                               <div className="detail">
                                  <div className="caption">
                                     <h5 onClick={() => handleNavigation(item, index)}>
-                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a>
+                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
                                     </h5>
                                  </div>
                                  <ul className="post-tools">
@@ -89,7 +89,7 @@ function LatestArticles(props) {
 
                                  <div className="small-post">
                                     <div className="post-content">
-                                       <h3 onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title} </a> </h3>
+                                       <h3 onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title} </a> </h3>
                                        <ul className="post-tools">
                
                                           <li onClick={() => handleNavigation(item, index)}>  {item.created_at} </li>

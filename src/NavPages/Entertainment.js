@@ -17,7 +17,7 @@ function Entertainment() {
 
   // similar to componentDidMount
   useEffect(() => {
-    const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json";
+    const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=3&format=json";
     fetch(url).then(response => response.json())
       .then(response => {
         // console.log(response)
@@ -32,23 +32,23 @@ function Entertainment() {
   }, []);
   return (
     <div>
-      <Navbar addObject={value}/>
+      <Navbar/>
       <section className="main-content">
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-sm-12 col-xs-12">
               <div className="section">
                 <EntertainmentPosts dataObject={result} />
-                <BannerAd1 addObject={result} />
-                <EntertainmentPost1 dataObject={result} />
-                <BannerAd2 addObject={result} />
-                <EntertainmentPost2 dataObject={result} />
+                <BannerAd1 addObject={value} />
+                 <EntertainmentPost1 dataObject={result} /> 
+                <BannerAd2 addObject={value} />
+                 <EntertainmentPost2 dataObject={result} /> 
               </div>
             </div>
             <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
               <aside>
                 <ChaiTheoryAd addObject= {value} />
-                <RecentEntertainment dataObject={result} />
+                <RecentEntertainment dataObject={result} /> 
                 <SristarAd1 addObject= {value} />
                 <ArchivePostEnetrtainment />
               </aside>
@@ -56,7 +56,7 @@ function Entertainment() {
           </div>
         </div>
       </section>
-      <FooterCategory dataObject={result} />
+      {/* <FooterCategory dataObject={result} /> */}
     </div>
   )
 }

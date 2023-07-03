@@ -6,7 +6,7 @@ function SliderWidgetArt(props) {
    const handleNavigation = (item) => {
       console.log(item);
 
-      navigate(`/art-and-culture/${item.url}`, { state: { item } });
+      navigate(`/Art-and-Culture/${item.url}`, { state: { item } });
    }
 
 
@@ -19,13 +19,13 @@ function SliderWidgetArt(props) {
             </div>
             <div className="item">
                <div className="latest-news-grid grid-1">
-                  {props.dataObject?.locations?.SliderWidget.slice(0, 1).map((item, index) => {
+                  {props.dataObject?.locations?.ArtCultureGeneral.slice(10, 11).map((item, index) => {
                      console.log(item);
                      return (
                         <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={process.env.REACT_APP_DOMAIN_NAME + '/art-and-culture/' + item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/Art-and-Culture/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{ height: "250px", width: "330px" }} />
                                  </a>
                               </div>
@@ -33,7 +33,7 @@ function SliderWidgetArt(props) {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME + '/art-and-culture/' + item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/Art-and-Culture/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>

@@ -29,7 +29,7 @@ function LifestylePost1(props) {
    const handleNavigation = (item) => {
       console.log(item);
 
-      navigate(`/lifestyle/${item.url}`, { state: { item } });
+      navigate(`/${item.category}/${item.url}`, { state: { item } });
    }
    return (
       <>
@@ -37,13 +37,13 @@ function LifestylePost1(props) {
          <div className="row">
             <article className="col-md-6 col-sm-6 col-xs-12">
                <div className="grid-1">
-                  {props.dataObject?.locations?.Slider.slice(2, 4).map((item, index) => {
+                  {props.dataObject?.locations?.LifestyleGeneral.slice(4, 6).map((item, index) => {
                      console.log(item);
                      return (
                         <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={process.env.RECT_APP_DOMAIN_NAME+ "/lifestyle/" +item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
                                  </a>
                               </div>
@@ -51,7 +51,7 @@ function LifestylePost1(props) {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={process.env.RECT_APP_DOMAIN_NAME+ "/lifestyle/" +item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
@@ -65,13 +65,13 @@ function LifestylePost1(props) {
             </article>
             <article className="col-md-6 col-sm-6 col-xs-12">
                <div className="grid-1">
-                  {props.dataObject?.locations?.AdminChoice.slice(2, 4).map((item, index) => {
+                  {props.dataObject?.locations?.LifestyleGeneral.slice(6, 8).map((item, index) => {
                      console.log(item);
                      return (
                         <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={process.env.RECT_APP_DOMAIN_NAME+ "/lifestyle/" +item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
                                  </a>
                               </div>
@@ -79,7 +79,7 @@ function LifestylePost1(props) {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={process.env.RECT_APP_DOMAIN_NAME+ "/lifestyle/" +item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>

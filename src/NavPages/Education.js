@@ -19,7 +19,7 @@ function Education() {
   const [value, setvalue] = useState([]);
   // similar to componentDidMount
   useEffect(() => {
-    const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json";
+    const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=4&format=json";
     fetch(url).then(response => response.json())
       .then(response => {
         // console.log(response)
@@ -34,14 +34,14 @@ function Education() {
   }, []);
   return (
     <div>
-      <Navbar addObject={value} />
+      <Navbar/>
       <section className="main-content">
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-sm-12 col-xs-12">
               <div className="section">
                 <EducationPosts dataObject={result} />
-                <BannerAd1 addObject={result} />
+                <BannerAd1 addObject={value} />
                 <EducationPost1 dataObject={result} />
                 <BannerAd2 addObject={value} />
                 <EducationPost2 dataObject={result} />
@@ -59,9 +59,9 @@ function Education() {
           </div>
         </div>
       </section>
-      <FooterCategory dataObject={result} />
+      {/* <FooterCategory dataObject={result} /> */}
     </div>
   )
 }
 
-export default Education
+export default Education;

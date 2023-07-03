@@ -7,7 +7,7 @@ function Grid(props) {
   const handleNavigation = (item) => {
    console.log(item);
 
-    navigate(`/home/${item.url}`, { state: {item} });
+    navigate(`/${item.category}/${item.url}`, { state: {item} });
   }
 
    const grid =  props.dataObject;
@@ -34,7 +34,7 @@ function Grid(props) {
          
     <div className="post-content"  >
     <div className="catname"></div>
-    <h5> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item?.title}</a> </h5>
+    <h5> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item?.title}</a> </h5>
        <ul className="post-tools">
      <li>  {item.created_at} </li>
     </ul>
@@ -59,7 +59,7 @@ function Grid(props) {
          <div key={index}>
       <div className="post-content" onClick={() => handleNavigation(item, index)}>
         <div className="catname"></div>
-     <h5 onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a> </h5>
+     <h5 onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a> </h5>
       <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
         <li> {item.created_at} </li>
        </ul>
@@ -81,7 +81,7 @@ function Grid(props) {
           <div key={index}> 
          <div className="post-content" onClick={() => handleNavigation(item, index)}>
             <div className="catname"></div>
-      <h5 onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a> </h5>
+      <h5 onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a> </h5>
          <ul className="post-tools">
             <li onClick={() => handleNavigation(item, index)}>  {item.created_at} </li>
                  </ul>
@@ -108,7 +108,7 @@ function Grid(props) {
              <div key={index}> 
          <div className="post-content" onClick={() => handleNavigation(item, index)}>
           <div className="catname"></div>
-          <h5 onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a> </h5>
+          <h5 onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a> </h5>
             <ul className="post-tools">
              <li onClick={() => handleNavigation(item, index)}> {item.created_at} </li>
             </ul>
@@ -130,7 +130,7 @@ function Grid(props) {
           <div key={index}> 
       <div className="post-content" onClick={() => handleNavigation(item, index)}>
          <div className="catname"></div>
-            <h5 onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/home/'+item.url}>{item.title}</a> </h5>
+            <h5 onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a> </h5>
                <ul className="post-tools">
                   <li onClick={() => handleNavigation(item, index)}>{item.created_at}</li>
               </ul>

@@ -17,7 +17,7 @@ function Travel() {
   const [value, setvalue] = useState([]);
   // similar to componentDidMount
   useEffect(() => {
-    const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json";
+    const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=7&format=json";
     fetch(url).then(response => response.json())
       .then(response => {
         // console.log(response)
@@ -32,7 +32,7 @@ function Travel() {
   }, []);
   return (
     <div>
-      <Navbar addObject={value} />
+      <Navbar/>
       <section className="main-content">
         <div className="container">
           <div className="row">
@@ -40,24 +40,24 @@ function Travel() {
               <div className="section">
                 <TravelPosts dataObject={result} />
                 <BannerAd1 addObject ={value} />
-                <TravelPost1 dataObject ={result} />
+                <TravelPost1 dataObject ={result} /> 
                 <BannerAd2 addObject ={value} />
-                <TravelPost2 dataObject ={result} />
+                 <TravelPost2 dataObject ={result} />
               </div>
             </div>
             <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
               <aside>
                 <ChaiTheoryAd addObject={value} />
-                <RecentTravel dataObject={result} />
+                <RecentTravel dataObject={result} /> 
                 <SristarAd1 addObject={value} />
-                <SliderWidgetTravel dataObject={result} />
+                 <SliderWidgetTravel dataObject={result} /> 
                 <ArchivePostTravel />
               </aside>
             </div>
           </div>
         </div>
       </section>
-      <FooterCategory dataObject={result} />
+      {/* <FooterCategory dataObject={result} /> */}
     </div>
   )
 }

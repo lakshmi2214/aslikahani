@@ -29,7 +29,7 @@ function RecentEntertainment(props) {
    const handleNavigation = (item) => {
       console.log(item);
 
-      navigate(`/entertainment/${item.url}`, { state: { item } });
+      navigate(`/${item.category}/${item.url}`, { state: { item } });
    }
    return (
       <>
@@ -44,18 +44,18 @@ function RecentEntertainment(props) {
                   <div className="small-grid-container">
                      <ul className="small-grid">
                         <li>
-                           {props.dataObject?.locations?.Popular.slice(0, 4).map((item, index) => {
+                           {props.dataObject?.locations?.General.slice(12, 16).map((item, index) => {
                               console.log(item);
                               return (
                                  <div key={index}>
                                     <div className="small-post">
                                        <div className="small-thumb">
-                                          <a href={process.env.REACT_APP_DOMAIN_NAME + '/entertainment/' + item.url}>
+                                          <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                              <img alt="" src={item.image} style={{ height: "85px", width: "85px" }} className="" />
                                           </a>
                                        </div>
                                        <div className="post-content">
-                                          <h3> <a href={process.env.REACT_APP_DOMAIN_NAME + '/entertainment/' + item.url}>{item.title}</a> </h3>
+                                          <h3> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a> </h3>
                                           <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
                                              <li>  {item.created_at} </li>
                                           </ul>

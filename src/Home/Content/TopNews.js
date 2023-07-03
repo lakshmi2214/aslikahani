@@ -29,13 +29,13 @@ function TopNews(props) {
    const handleNavigation = (item) => {
       console.log(item);
 
-      navigate(`/home/${item.url}`, { state: { item } });
+      navigate(`/${item.category}/${item.url}`, { state: { item } });
    }
 
    return (
       <>
          <div className="category-widget">
-            <h4>Top News</h4>
+            <h4>Top Articles</h4>
 
             <div className="grid-1">
                {props.dataObject?.locations?.TopNews.slice(0, 6).map((item, index) => {

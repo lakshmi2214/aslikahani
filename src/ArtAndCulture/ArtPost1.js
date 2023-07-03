@@ -29,7 +29,7 @@ function ArtPost1(props) {
    const handleNavigation = (item) => {
       console.log(item);
 
-      navigate(`/art-and-culture/${item.url}`, { state: { item } });
+      navigate(`/Art-and-Culture/${item.url}`, { state: { item } });
    }
 
    return (
@@ -37,13 +37,13 @@ function ArtPost1(props) {
          <div className="row">
             <article className="col-md-6 col-sm-6 col-xs-12">
                <div className="grid-1">
-                  {props.dataObject?.locations?.TopNews.slice(3, 5).map((item, index) => {
+                  {props.dataObject?.locations?.ArtCultureGeneral.slice(4, 6).map((item, index) => {
                      console.log(item);
                      return (
                         <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={process.env.REACT_APP_DOMAIN_NAME + '/art-and-culture/' + item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/Art-and-Culture/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
                                  </a>
                               </div>
@@ -51,7 +51,7 @@ function ArtPost1(props) {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME + '/art-and-culture/' + item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/Art-and-Culture/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
@@ -66,13 +66,13 @@ function ArtPost1(props) {
 
             <article className="col-md-6 col-sm-6 col-xs-12">
                <div className="grid-1">
-                  {props.dataObject?.locations?.LatestPost.slice(0, 2).map((item, index) => {
+                  {props.dataObject?.locations?.ArtCultureGeneral.slice(6, 8).map((item, index) => {
                      console.log(item);
                      return (
                         <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={process.env.REACT_APP_DOMAIN_NAME + '/art-and-culture/' + item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/Art-and-Culture/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
                                  </a>
                               </div>
@@ -80,11 +80,11 @@ function ArtPost1(props) {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME + '/art-and-culture/' + item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/Art-and-Culture/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                 <li> by <a href={process.env.REACT_APP_DOMAIN_NAME + '/art-and-culture/' + item.url}> <strong> {item.authored_by}</strong> </a></li>
+                                 <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/Art-and-Culture/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
                               </ul>
                            </div>
                         </div>

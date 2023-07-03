@@ -6,7 +6,7 @@ function SliderWidgetEducation(props) {
    const handleNavigation = (item) => {
       console.log(item);
 
-      navigate(`/education/${item.url}`, { state: { item } });
+      navigate(`/${item.category}/${item.url}`, { state: { item } });
    }
    return (
       <>
@@ -17,13 +17,13 @@ function SliderWidgetEducation(props) {
             </div>
             <div className="item">
                <div className="latest-news-grid grid-1">
-                  {props.dataObject?.locations?.SliderWidget.slice(0, 1).map((item, index) => {
+                  {props.dataObject?.locations?.EduGeneral.slice(10,11).map((item, index) => {
                      console.log(item);
                      return (
                         <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                 <a href={process.env.REACT_APP_DOMAIN_NAME + '/education' + item.url}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                     <img alt="" className="img-responsive" src={item.image} style={{ height: "250px", width: "330px" }} />
                                  </a>
                               </div>
@@ -31,7 +31,7 @@ function SliderWidgetEducation(props) {
                            <div className="detail">
                               <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME + '/education' + item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>

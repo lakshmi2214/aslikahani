@@ -29,20 +29,20 @@ function TravelPost2(props) {
     const handleNavigation = (item) => {
         console.log(item);
 
-        navigate(`/travel/${item.url}`, { state: { item } });
+        navigate(`/${item.category}/${item.url}`, { state: { item } });
     }
     return (
         <>
             <div className="row">
                 <article className="col-md-6 col-sm-6 col-xs-12">
                     <div className="grid-1">
-                        {props.dataObject?.locations?.NationalNews.slice(2, 3).map((item, index) => {
+                        {props.dataObject?.locations?.TravelGeneral.slice(2, 3).map((item, index) => {
                             console.log(item);
                             return (
                                 <div key={index}>
                                     <div className="picture">
                                         <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                            <a href={process.env.RECT_APP_DOMAIN_NAME+ "/travel/" +item.url}>
+                                            <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                                 <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
                                             </a>
                                         </div>
@@ -50,7 +50,7 @@ function TravelPost2(props) {
                                     <div className="detail">
                                         <div className="caption" onClick={() => handleNavigation(item, index)}>
                                             <h5>
-                                                <a href={process.env.RECT_APP_DOMAIN_NAME+ "/travel/" +item.url}>{item.title}</a>
+                                                <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
                                             </h5>
                                         </div>
                                         <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
@@ -64,13 +64,13 @@ function TravelPost2(props) {
                 </article>
                 <article className="col-md-6 col-sm-6 col-xs-12">
                     <div className="grid-1">
-                        {props.dataObject?.locations?.AdminChoice.slice(0, 1).map((item, index) => {
+                        {props.dataObject?.locations?.TravelGeneral.slice(3, 4).map((item, index) => {
                             console.log(item);
                             return (
                                 <div key={index}>
                                     <div className="picture">
                                         <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                            <a href={process.env.RECT_APP_DOMAIN_NAME+ "/travel/" +item.url}>
+                                            <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                                 <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
                                             </a>
                                         </div>
@@ -78,7 +78,7 @@ function TravelPost2(props) {
                                     <div className="detail">
                                         <div className="caption" onClick={() => handleNavigation(item, index)}>
                                             <h5>
-                                                <a href={process.env.RECT_APP_DOMAIN_NAME+ "/travel/" +item.url}>{item.title}</a>
+                                                <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
                                             </h5>
                                         </div>
                                         <ul className="post-tools" onClick={() => handleNavigation(item, index)}>

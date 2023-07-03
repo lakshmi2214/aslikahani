@@ -26,10 +26,10 @@ import { useNavigate } from "react-router-dom";
 
 function SliderPostWidget(props) {
    const navigate = useNavigate();
-   const handleNavigation = (item, index) => {
+   const handleNavigation = (item) => {
       console.log(item);
 
-      navigate(`/home/${item.url}`, { state: { item } });
+      navigate(`/${item.category}/${item.url}`, { state: { item } });
    }
    return (
       <>
@@ -46,7 +46,7 @@ function SliderPostWidget(props) {
                         <div className="picture">
                            <div className="category-image" onClick={() => handleNavigation(item, index)}>
 
-                              <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>
+                              <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                  <img alt="" className="img-responsive" src={item.image} style={{ height: "250px", width: "400px" }} />
                               </a>
                            </div>
@@ -54,7 +54,7 @@ function SliderPostWidget(props) {
                         <div className="detail">
                            <div className="caption" onClick={() => handleNavigation(item, index)}>
                               <h5>
-                                 <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>{item.title}</a>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
                               </h5>
                            </div>
                            <ul className="post-tools" onClick={() => handleNavigation(item, index)}>

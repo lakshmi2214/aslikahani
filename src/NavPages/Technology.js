@@ -17,7 +17,7 @@ function Technology() {
   const [value, setvalue] = useState([]);
   // similar to componentDidMount
   useEffect(() => {
-    const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json";
+    const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=5&format=json";
     fetch(url).then(response => response.json())
       .then(response => {
         // console.log(response)
@@ -32,7 +32,7 @@ function Technology() {
   }, []);
   return (
     <div>
-      <Navbar addObject={value} />
+      <Navbar/>
       <section className="main-content">
         <div className="container">
           <div className="row">
@@ -57,7 +57,7 @@ function Technology() {
           </div>
         </div>
       </section>
-      <FooterCategory dataObject={result} />
+      {/* <FooterCategory dataObject={result} /> */}
     </div>
   )
 }

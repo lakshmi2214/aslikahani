@@ -4,25 +4,23 @@ import "./Navbar.css";
 import logosmall from "../images/logo-small.jpg";
 
 
-function Navbar(props) {
+function Navbar() {
 
     return (
         <>
             <div className="backgroundMenu" >
 
-                <Link to={"/home"}><img src={logosmall} style={{ height: "50px", width: "220px", paddingRight: "50px", paddingTop: "5px" }} />
-                </Link>
-                {props.addObject?.categories?.slice(0, 8).map((item, index) => {
-                    console.log(item);
-                    return (
-
-                        <div key={index} className="navbar">
-                            <Link to={process.env.REACT_APP_DOMAIN_NAME + '/' + item.url} style={{ color: "black", textDecoration: "none" }}>{item.name}</Link>
-                        </div>
-                    )
-                })}
+            <Link to={"/Home"}><img src={logosmall} style={{ height: "50px", width: "220px", paddingRight: "50px", paddingTop: "5px" }} /></Link>
+            <Link to={"/Home"}  className="navbar">Home</Link>
+            <Link to={"/Entertainment"} className="navbar">Entertainment</Link>
+            <Link to={"/Education"}  className="navbar">Education</Link>
+            <Link to={"/Technology"}  className="navbar">Technology</Link>
+            <Link to={"/Business"}  className="navbar">Business</Link>
+            <Link to={"/Travel"}  className="navbar">Travel</Link>
+            <Link to={"/Lifestyle"}  className="navbar">LifeStyle</Link>
+            <Link to={"/Art-and-Culture"}  className="navbar">Art & Culture</Link>
+                    
             </div>
-
         </>
     )
 }
