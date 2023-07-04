@@ -1,6 +1,6 @@
 import React from "react";
 import logosmall from '../images/logo-small.jpg';
-import I7 from '../images/posts/Travel_with_Family.jpg';
+import I8 from '../images/posts/Fashion_Transformed.jpg';
 import I1 from '../images/posts/KATHAL.jpg';
 import '../css/style.css'
 function FooterCategory() {
@@ -35,7 +35,7 @@ function FooterCategory() {
                         <li>
                           <div className="pic">
                             <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/navigating-job-mobility-in-the-economy'}>
-                              <img alt="aslikahaniimage" className="img-responsive" src={I7} /></a> </div>
+                              <img alt="aslikahaniimage" className="img-responsive" src={I8} /></a> </div>
                           <div className="caption1"> <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/navigating-job-mobility-in-the-economy'}>Navigating Job Mobility In The Economy</a>
                           </div>
                           <ul className="post-tools">

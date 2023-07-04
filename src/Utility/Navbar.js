@@ -15,17 +15,17 @@ function Navbar() {
 
 	return (
 		<header>
-			<Link to={"/home"}><img src={logosmall} style={{ height: "45px", width: "220px", paddingRight: "50px", marginLeft:"40px", paddingTop:"2px", paddingBottom:"2px" }}></img></Link>
+			<Link to={"/Home"}><img src={logosmall} style={{ height: "45px", width: "220px", paddingRight: "50px", marginLeft:"40px", paddingTop:"2px", paddingBottom:"2px" }}></img></Link>
 			<nav ref={navRef}>
 				
-            <Link to={"/home"} className="bar">Home</Link>
-               <Link to={"/entertainment"} className="bar">Entertainment</Link>
-               <Link to={"/education"} className="bar">Education</Link>
-               <Link to={"/technology"} className="bar">Technology</Link>
-               <Link to={"/business"} className="bar">Business</Link>
-               <Link to={"/travel"} className="bar">Travel</Link>
-               <Link to={"/lifestyle"} className="bar">LifeStyle</Link>
-               <Link to={"/art-and-culture"} className="bar">Art and Culture</Link>
+               <Link to={"/Home"} className="bar">Home</Link>
+               <Link to={"/Entertainment"} className="bar">Entertainment</Link>
+               <Link to={"/Education"} className="bar">Education</Link>
+               <Link to={"/Technology"} className="bar">Technology</Link>
+               <Link to={"/Business"} className="bar">Business</Link>
+               <Link to={"/Travel"} className="bar">Travel</Link>
+               <Link to={"/Lifestyle"} className="bar">LifeStyle</Link>
+               <Link to={"/Art-and-Culture"} className="bar">Art and Culture</Link>
           
 			</nav>
 			<button

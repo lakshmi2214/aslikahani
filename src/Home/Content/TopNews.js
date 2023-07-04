@@ -45,15 +45,15 @@ function TopNews(props) {
                         <div className="picture">
 
                            <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                              <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>
+                              <a href={process.env.REACT_APP_DOMAIN_NAME + '/'+item.category+'/' + item.url}>
                                  <img alt="" className="img-responsive" src={item.image} />
                               </a>
                            </div>
                         </div>
                         <div className="detail">
-                           <div className="caption1">
-                              <h5 onClick={() => handleNavigation(item, index)}>
-                                 <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/' + item.url}>{item.title}</a>
+                           <div className="caption">
+                              <h5 onClick={() => handleNavigation(item, index)} style={{width:"150px"}}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME + '/'+item.category+'/' + item.url}>{item.title}</a>
                               </h5>
                            </div>
                         </div>

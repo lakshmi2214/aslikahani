@@ -1332,7 +1332,7 @@ p .readmore {
 
 .category-widget .detail .caption h5 {
 	font-size: 16px;
-	text-align: center;
+	text-align: left;
 }
 
 .category-widget .detail ul {
@@ -2818,7 +2818,7 @@ p .readmore {
 
 .caption {
 	position: relative;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 .caption a {
@@ -2831,8 +2831,10 @@ p .readmore {
 	font-weight: 500;
 	margin-top: 0;
 	text-transform: capitalize;
-	width:352px;
+	width:300px;
 }
+
+
 
 .caption a:hover {
 	color: #f44a56;
@@ -2861,7 +2863,7 @@ p .readmore {
 }
 
 .grid-1 .detail {
-	overflow: hidden;
+	/* overflow: hidden; */
 	padding: 15px 0;
 	position: relative;
 }

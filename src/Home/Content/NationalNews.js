@@ -60,9 +60,9 @@ function NationalNews(props) {
                                     </a>
                                  </div>
                               </div>
-                              <div className="detail">
+                              <div className="detail" >
                                  <div className="caption">
-                                    <h5 onClick={() => handleNavigation(item, index)}>
+                                    <h5 onClick={() => handleNavigation(item, index)} style={{width:"300px",fontSize: "18px",fontweight: "500",color:"black"}}>
                                        <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
                                     </h5>
                                  </div>
@@ -93,7 +93,7 @@ function NationalNews(props) {
                               </div>
                               <div className="detail">
                                  <div className="caption">
-                                    <h5 onClick={() => handleNavigation(item, index)}>
+                                    <h5 onClick={() => handleNavigation(item, index)} style={{width:"280px",fontSize: "18px",fontweight: "500",color:"black"}}>
                                        <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
                                     </h5>
                                  </div>
