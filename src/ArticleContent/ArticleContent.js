@@ -11,12 +11,12 @@ function ArticleContent() {
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
   useEffect(() => {
-    const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json";
-    fetch(url).then(response => response.json())
-      .then(response => {
-        setResult(response)
-      })
-      .catch(error => console.log(error));
+    // const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json";
+    // fetch(url).then(response => response.json())
+    //   .then(response => {
+    //     setResult(response)
+    //   })
+    //   .catch(error => console.log(error));
     const url1 = "https://newsbackend-388608.as.r.appspot.com/api/v1/category/list";
     fetch(url1).then(response => response.json()
     )
@@ -43,7 +43,7 @@ function ArticleContent() {
           </div>
         </div>
       </section>
-      <FooterCategory dataObject={result} />
+      <FooterCategory/>
     </div>
   )
 }

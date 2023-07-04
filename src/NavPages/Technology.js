@@ -20,7 +20,6 @@ function Technology() {
     const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=5&format=json";
     fetch(url).then(response => response.json())
       .then(response => {
-        // console.log(response)
         setResult(response)
       })
       const url1 = "https://newsbackend-388608.as.r.appspot.com/api/v1/category/list";

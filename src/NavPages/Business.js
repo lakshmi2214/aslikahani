@@ -57,7 +57,7 @@ function Business() {
           </div>
         </div>
       </section>
-       {/* <FooterCategory  />  */}
+        <FooterCategory  /> 
     </div>
   )
 }

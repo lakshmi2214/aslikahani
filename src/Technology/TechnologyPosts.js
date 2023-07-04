@@ -35,7 +35,7 @@ function TechnologyPosts(props) {
          <div className="row">
             <article className="col-md-6 col-sm-6 col-xs-12">
                <div className="grid-1">
-                  {props.dataObject?.locations?.TecGeneral.slice(0, 2).map((item, index) => {
+                  {props.dataObject?.locations?.TecGeneral?.slice(0, 2).map((item, index) => {
                      console.log(item);
                      return (
                         <div key={index}>
@@ -63,7 +63,7 @@ function TechnologyPosts(props) {
             </article>
             <article className="col-md-6 col-sm-6 col-xs-12">
                <div className="grid-1">
-                  {props.dataObject?.locations?.TecGeneral.slice(2, 4).map((item, index) => {
+                  {props.dataObject?.locations?.TecGeneral?.slice(2, 4).map((item, index) => {
                      console.log(item);
                      return (
                         <div key={index}>
