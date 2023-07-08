@@ -21,37 +21,30 @@ import '../css/font-awesome.min.css';
 import '../css/zerogrid.css';
 import '../css/royal-slider/rs-default.css';
 import '../css/owl.carousel.css';
-import { useNavigate } from "react-router-dom";
+
 
 function SristarAd1(props) {
-   const navigate = useNavigate()
-   const handleNavigation = (item) => {
-      console.log(item);
-
-      navigate(`${item.url}`, { state: { item } });
-   }
-   
+  
    return (
       <>
          <div className="widget widget-bg">
-            <div className="heading">
-            </div>
-            {props.addObject.categories?.slice(0, 1).map((item, index) => {
+            
+            {props.addObject?.categories?.slice(0, 1).map((item) => {
                return (
-                  item.advertisements.TopPosterad1.slice(0, 1).map((item, index) => {
+                  item.advertisements.TopPosterad1?.slice(0,1).map((item, index) => {
                      console.log(item)
-                     return (
 
+                     return (
                         <div key={index}>
                            <div className="ad-div style-box">
-                              <a href={item.url}>
-                                 <img src={item.image} className="img-responsive " alt="" style={{ height: "300px", width: "300px" }} />
+                              <a href={item.url} target='blank'>
+                                 <img src={item.image} className="img-responsive " alt="" />
                               </a>
                            </div>
                            <div className="detail">
-                              <div className="caption" onClick={() => handleNavigation(item, index)}>
+                              <div className="caption" >
                                  <h5>
-                                    <a href={item.url}>{item.description}</a>
+                                    <a href={item.url} target='blank'>{item.description}</a>
                                  </h5>
                               </div>
                            </div>

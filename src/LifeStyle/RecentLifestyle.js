@@ -44,7 +44,7 @@ function RecentLifestyle(props) {
                   <div className="small-grid-container">
                      <ul className="small-grid">
                         <li>
-                           {props.dataObject?.locations?.LifestyleGeneral.slice(10, 11).map((item, index) => {
+                           {props.dataObject?.locations?.LifestyleGeneral.slice(10, 14).map((item, index) => {
                               console.log(item);
                               return (
                                  <div key={index}>

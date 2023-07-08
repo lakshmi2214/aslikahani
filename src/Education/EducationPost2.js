@@ -43,7 +43,7 @@ function EducationPost2(props) {
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
                                  <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
-                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
+                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", widtth: "300px" }} />
                                  </a>
                               </div>
                            </div>
@@ -54,7 +54,7 @@ function EducationPost2(props) {
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                 <li> by <a href=""> <strong> {item.authored_by}</strong> </a></li>
+                                 <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
                               </ul>
                            </div>
                         </div>
@@ -71,7 +71,7 @@ function EducationPost2(props) {
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
                                  <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
-                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
+                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", widtth: "300px" }} />
                                  </a>
                               </div>
                            </div>
@@ -82,7 +82,7 @@ function EducationPost2(props) {
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                 <li> by <a href=""> <strong> {item.authored_by}</strong> </a></li>
+                                 <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
                               </ul>
                            </div>
                         </div>
@@ -90,7 +90,8 @@ function EducationPost2(props) {
                   })}
                </div>
             </article>
-         </div>
+           </div>
+        
       </>
    )
 }

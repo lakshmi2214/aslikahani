@@ -1,13 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
 function BannerAd2(props) {
-    const navigate = useNavigate()
-    const handleNavigation = (item) => {
-        console.log(item);
-
-        navigate(`${item.url}`, { state: { item } });
-    }
+   
     return (
         <>
             <div className="ad-div text-center">
@@ -19,7 +13,7 @@ function BannerAd2(props) {
                             return (
 
                                 <div key={index}>
-                                    <a href={item.url}  onClick={() => handleNavigation(item, index)}>
+                                    <a href={item.url} target='blank' >
                                         <img src={item.image} className="img-responsive" alt="" />
                                     </a>
                                 </div>

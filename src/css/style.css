@@ -270,6 +270,22 @@ p .readmore {
 
 /*HEADING STYLE*/
 
+@media screen and (min-width: 320px) and (max-width: 767px){
+	.heading {
+		display: table;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 767px){
+	.heading .item {
+		display: table;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+	}
+}
 .heading {
 	position: relative;
 	overflow: hidden;

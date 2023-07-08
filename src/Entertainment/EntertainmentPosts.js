@@ -36,7 +36,7 @@ function EntertainmentPosts(props) {
          <div className="row">
             <article className="col-md-6 col-sm-6 col-xs-12">
                <div className="grid-1">
-                  {props.dataObject?.locations?.General.slice(1,3).map((item, index) => {
+                  {props.dataObject?.locations?.General.slice(0,2).map((item, index) => {
                      console.log(item);
                      return (
                         <div key={index}>
@@ -64,7 +64,7 @@ function EntertainmentPosts(props) {
             </article>
             <article className="col-md-6 col-sm-6 col-xs-12">
                <div className="grid-1">
-                  {props.dataObject?.locations?.General.slice(4, 6).map((item, index) => {
+                  {props.dataObject?.locations?.General.slice(2, 4).map((item, index) => {
                      console.log(item);
                      return (
                         <div key={index}>
