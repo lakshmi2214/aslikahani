@@ -24,56 +24,63 @@ import '../fonts/glyphicons-halflings-regular.svg';
 import '../css/royal-slider/rs-default.css';
 import { useNavigate } from "react-router-dom";
 
-function RecentEntertainment(props) {
+
+function SliderWidgetEntertainment(props) {
    const navigate = useNavigate();
    const handleNavigation = (item) => {
       console.log(item);
 
       navigate(`/${item.category}/${item.url}`, { state: { item } });
    }
+
+   
+
    return (
       <>
-         <div className="widget widget-bg">
-            <div className="tabs">
-               <div role="tabpanel">
-                  <ul className="nav nav-tabs nav-justified" role="tablist">
-                     <li className="active" role="presentation" > <a aria-controls="popularRecent" aria-expanded="true" data-toggle="tab"
-                        href="#popularRecent" role="tab" style={{ color: "white" }}>Popular </a> </li>
-                  </ul>
-                  <br></br>
-                  <div className="small-grid-container">
-                     <ul className="small-grid">
-                        <li>
-                           {props.dataObject?.locations?.General.slice(12, 16).map((item, index) => {
-                              console.log(item);
-                              return (
-                                 <div key={index}>
-                                    <div className="small-post">
-                                       <div className="small-thumb">
-                                          <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
-                                             <img alt="" src={item.image} style={{ height: "85px", width: "85px" }} className="" />
-                                          </a>
-                                       </div>
-                                       <div className="post-content">
-                                          <h3> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a> </h3>
-                                          <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                             <li>  {item.created_at} </li>
-                                          </ul>
-                                       </div>
-                                    </div>
-                                 </div>
-                              )
-                           })}
-
-                        </li>
-
-                     </ul>
-                  </div>
+         <div className="section">
+            <div className="col-md-12 col-xs-12 col-sm-12 nopadding">
+               <div className="heading">
+                  <h2 className="main-heading">Post Widget</h2>
 
                </div>
             </div>
+            <div className="row">
+               <article className="col-md-6 col-sm-6 col-xs-12">
+                  <div className="grid-1">
+
+                  {props.dataObject?.locations?.General.slice(4,5).map((item, index) => {
+                     console.log(item);
+                     return (
+                           <div key={index}>
+                              <div className="picture">
+                                 <div className="category-image" onClick={() => handleNavigation(item, index)}>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
+                                       <img alt="" className="img-responsive" src={item.image}
+                                          style={{ height: "190px" }} />
+                                    </a>
+                                 </div>
+                              </div>
+                              <div className="detail" >
+                                 <div className="caption">
+                                    <h5 onClick={() => handleNavigation(item, index)} style={{width:"300px",fontSize: "18px",fontweight: "500",color:"black"}}>
+                                       <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
+                                    </h5>
+                                 </div>
+                                 <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
+                                    <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
+                                 </ul>
+                              </div>
+                           </div>
+                        )
+                     })}
+
+
+                  </div>
+               </article>
+               
+              </div>
          </div>
       </>
    );
 }
-export default RecentEntertainment;
+export default SliderWidgetEntertainment;

@@ -25,73 +25,73 @@ import { useNavigate } from "react-router-dom";
 
 function TravelPost1(props) {
 
-    const navigate = useNavigate()
-    const handleNavigation = (item) => {
-        console.log(item);
+   const navigate = useNavigate()
+   const handleNavigation = (item) => {
+      console.log(item);
 
-        navigate(`/${item.category}/${item.url}`, { state: { item } });
-    }
-    return (
-        <>
-            <div className="row">
-                <article className="col-md-6 col-sm-6 col-xs-12">
-                    <div className="grid-1">
-                        {props.dataObject?.locations?.TravelGeneral.slice(4, 6).map((item, index) => {
-                            console.log(item);
-                            return (
-                                <div key={index}>
-                                    <div className="picture">
-                                        <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                            <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
-                                                <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className="detail">
-                                        <div className="caption" onClick={() => handleNavigation(item, index)}>
-                                            <h5>
-                                                <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
-                                            </h5>
-                                        </div>
-                                        <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                            <li> by <a href=""> <strong> {item.authored_by}</strong> </a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            )
-                        })}
-                    </div>
-                </article>
-                <article className="col-md-6 col-sm-6 col-xs-12">
-                    <div className="grid-1">
-                        {props.dataObject?.locations?.TravelGeneral.slice(0, 2).map((item, index) => {
-                            console.log(item);
-                            return (
-                                <div key={index}>
-                                    <div className="picture">
-                                        <div className="category-image" onClick={() => handleNavigation(item, index)}>
-                                            <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
-                                                <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className="detail">
-                                        <div className="caption" onClick={() => handleNavigation(item, index)}>
-                                            <h5>
-                                                <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
-                                            </h5>
-                                        </div>
-                                        <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                            <li> by <a href=""> <strong> {item.authored_by}</strong> </a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            )
-                        })}
-                    </div>
-                </article>
-            </div>
-        </>
-    )
+      navigate(`/${item.category}/${item.url}`, { state: { item } });
+   }
+   return (
+      <>
+         <div className="row">
+            <article className="col-md-6 col-sm-6 col-xs-12">
+               <div className="grid-1">
+                  {props.dataObject?.locations?.TravelGeneral?.slice(4, 6).map((item, index) => {
+                     console.log(item);
+                     return (
+                        <div key={index}>
+                           <div className="picture">
+                              <div className="category-image" onClick={() => handleNavigation(item, index)}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
+                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", widtth: "300px" }} />
+                                 </a>
+                              </div>
+                           </div>
+                           <div className="detail">
+                              <div className="caption" onClick={() => handleNavigation(item, index)}>
+                                 <h5>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
+                                 </h5>
+                              </div>
+                              <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
+                                 <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     )
+                  })}
+               </div>
+            </article>
+            <article className="col-md-6 col-sm-6 col-xs-12">
+               <div className="grid-1">
+                  {props.dataObject?.locations?.TravelGeneral?.slice(2, 4).map((item, index) => {
+                     console.log(item);
+                     return (
+                        <div key={index}>
+                           <div className="picture">
+                              <div className="category-image" onClick={() => handleNavigation(item, index)}>
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
+                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", widtth: "300px" }} />
+                                 </a>
+                              </div>
+                           </div>
+                           <div className="detail">
+                              <div className="caption" onClick={() => handleNavigation(item, index)}>
+                                 <h5>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
+                                 </h5>
+                              </div>
+                              <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
+                                 <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     )
+                  })}
+               </div>
+            </article>
+           </div>
+      </>
+   )
 }
 export default TravelPost1;

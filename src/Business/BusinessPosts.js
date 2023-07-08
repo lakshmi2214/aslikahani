@@ -73,18 +73,18 @@ function BusinessPosts(props) {
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
                                  <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
-                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "370px" }} />
+                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", widtth: "300px" }} />
                                  </a>
                               </div>
                            </div>
                            <div className="detail">
-                              <div className="caption">
+                              <div className="caption" onClick={() => handleNavigation(item, index)}>
                                  <h5>
                                     <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
                                  </h5>
                               </div>
-                              <ul className="post-tools">
-                                 <li> by <a href=""> <strong> {item.authored_by}</strong> </a></li>
+                              <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
+                                 <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
                               </ul>
                            </div>
                         </div>

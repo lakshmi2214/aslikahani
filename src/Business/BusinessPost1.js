@@ -34,16 +34,17 @@ function BusinessPost1(props) {
    return (
       <>
          <div className="row">
+            
             <article className="col-md-6 col-sm-6 col-xs-12">
                <div className="grid-1">
-                  {props.dataObject?.locations?.BussGeneral.slice(1, 3).map((item, index) => {
+                  {props.dataObject?.locations?.BussGeneral.slice(4, 6).map((item, index) => {
                      console.log(item);
                      return (
                         <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
                                  <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
-                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
+                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", widtth: "300px" }} />
                                  </a>
                               </div>
                            </div>
@@ -54,7 +55,7 @@ function BusinessPost1(props) {
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                 <li> by <a href=""> <strong> {item.authored_by}</strong> </a></li>
+                                 <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
                               </ul>
                            </div>
                         </div>
@@ -62,16 +63,17 @@ function BusinessPost1(props) {
                   })}
                </div>
             </article>
+          
             <article className="col-md-6 col-sm-6 col-xs-12">
                <div className="grid-1">
-                  {props.dataObject?.locations?.BussGeneral.slice(2, 4).map((item, index) => {
+                  {props.dataObject?.locations?.BussGeneral.slice(6, 8).map((item, index) => {
                      console.log(item);
                      return (
                         <div key={index}>
                            <div className="picture">
                               <div className="category-image" onClick={() => handleNavigation(item, index)}>
                                  <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
-                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", width: "380px" }} />
+                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", widtth: "300px" }} />
                                  </a>
                               </div>
                            </div>
@@ -82,7 +84,7 @@ function BusinessPost1(props) {
                                  </h5>
                               </div>
                               <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                 <li> by <a href=""> <strong> {item.authored_by}</strong> </a></li>
+                                 <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
                               </ul>
                            </div>
                         </div>
@@ -90,8 +92,7 @@ function BusinessPost1(props) {
                   })}
                </div>
             </article>
-           
-         </div>
+                     </div>
       </>
    )
 }
