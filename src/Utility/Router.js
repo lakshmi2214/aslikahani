@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../NavPages/Home";
 import Entertainment from "../NavPages/Entertainment";
@@ -9,6 +9,9 @@ import Travel from "../NavPages/Travel";
 import LifeStyle from "../NavPages/LifeStyle";
 import ArtCulture from "../NavPages/ArtCulture";
 import ArticleContent from "../ArticleContent/ArticleContent";
+import SubscriptionPage from "../NavPages/SubscriptionPage";
+import Magzine from "../NavPages/Magzine";
+import Flipbook from "../ArticleContent/Magzine/Flipbook";
 
 function Router() {
     
@@ -25,6 +28,9 @@ function Router() {
             <Route path="/Travel" exact element={<Travel />}/> 
             <Route path="/Lifestyle" exact element={<LifeStyle />}/>
             <Route path="/Art-and-Culture" exact element={<ArtCulture />}/>
+             <Route path="/subscription" element={<SubscriptionPage />} />
+             <Route path="/magzine" element={<Magzine />} />
+            
 
              <Route path="/Home/:id" element={<ArticleContent />} />
              <Route path="/Entertainment/:id" element={<ArticleContent />} />
@@ -34,6 +40,7 @@ function Router() {
              <Route path="/Travel/:id" element={<ArticleContent />} />
              <Route path="/Lifestyle/:id" element={<ArticleContent />} /> 
              <Route path="/Art-and-Culture/:id" element={<ArticleContent />} /> 
+             <Route path="/magzine/:id" element={<Flipbook />} /> 
         </Routes>
     </BrowserRouter>
         </>

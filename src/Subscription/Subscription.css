@@ -1,0 +1,112 @@
+.subscription-background {
+    min-height: 110px;
+    width: 100%;
+    border: 1px solid rgb(144, 142, 142);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.aslikahani-logo {
+    height: 120px;
+    width: 433px;
+}
+
+.sub-part {
+    height: 120px;
+    width: 800px;
+
+}
+
+
+
+.aslikahani-logo-size {
+    height: 40%;
+    width: 90%;
+    margin-top: 34px;
+    margin-left: 20px;
+}
+.subscribe-image {
+    margin-top: 15px;
+    cursor: pointer;
+}
+@media screen and (min-width: 320px) and (max-width: 800px) {
+    .subscription-background {
+        min-height: 100px;
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .aslikahani-logo {
+        height: 80px;
+        width: 100%;
+    }
+    .aslikahani-logo-size {
+      margin-left: 60px;
+        width: 70%;
+       
+    }
+
+    .sub-part {
+        height: 110px;
+        width: 100%;
+
+    }
+
+    
+    .subscribe-image {
+        width: 95%;
+        margin-top: -1px;
+        margin-left: 11px;
+    }
+
+}
+
+
+/* SubscriptionDoor */
+
+
+.blackSub-logo{
+    width: 850px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border:1px solid red;
+    height:1500px;
+}
+.left{
+    height:1500px;
+    border:1px solid black;
+}
+.right{
+    border:1px solid black;
+    height:1500px;
+    width:500px;
+}
+.latest-edition{
+
+    height:40px;
+    width:80%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size:x-large;
+    font-weight: 600;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
+}
+.box-size{
+    margin-left: 20px;
+    width:98%;
+}

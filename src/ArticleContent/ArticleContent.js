@@ -17,7 +17,7 @@ function ArticleContent() {
     //     setResult(response)
     //   })
     //   .catch(error => console.log(error));
-    const url1 = "https://newsbackend-388608.as.r.appspot.com/api/v1/category/list";
+    const url1 = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/category/list`;
     fetch(url1).then(response => response.json()
     )
       .then(response => {

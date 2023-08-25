@@ -11,7 +11,8 @@ function Footer(props) {
 
       navigate(`/home/${item.url}`, { state: { item } });
    }
-   return (
+   return 
+   (
       <>
          <footer class="footer-white">
             <div class="footer-top">
@@ -65,7 +66,7 @@ function Footer(props) {
                         </ul>
                         <div class="copyright"> <span>&copy; 2023 All rights reserved. Aslikahani</span> </div>
                      </div>
-                  </div>
+                  </div>  
                </div>
             </div>
          </footer>

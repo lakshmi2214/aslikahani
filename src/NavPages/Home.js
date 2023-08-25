@@ -38,12 +38,13 @@ import AdminChoice from "../Home/AdminChoice/AdminChoice";
 import AllTimeBestArticles from "../Home/AllTimeBestArticles";
 import Footer from "../Home/Footer/Footer";
 import Navbar from "../Utility/Navbar";
+import Subscriptiontag from "../Subscription/Subscriptiontag";
 
 function Home() {
    const [result, setResult] = useState([]);
     const [value, setvalue] = useState([]);
    useEffect(() => {
-      const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json";
+      const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/articles/list?category=10&format=json`;
       fetch(url).then(response => response.json()
       )
       .then(response => {
@@ -51,7 +52,7 @@ function Home() {
       })
       .catch(error => console.log(error));
 
-           const url1 = "https://newsbackend-388608.as.r.appspot.com/api/v1/category/list";
+           const url1 = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/category/list`;
       fetch(url1).then(response => response.json()
       )
       .then(response => {
@@ -60,6 +61,7 @@ function Home() {
     }, []);
     return(
         <>
+        {/* <Subscriptiontag/> */}
       <Navbar />  
      <Grid dataObject={result}/>
                  <section className="main-content">

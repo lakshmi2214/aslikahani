@@ -1,11 +1,4 @@
 import React from "react";
-import Post6 from '../../images/posts/21.jpg';
-import Post7 from '../../images/small-posts/small-4.jpg';
-import Post8 from '../../images/small-posts/small-5.jpg';
-import Post9 from '../../images/small-posts/small-6.jpg';
-import Post10 from '../../images/small-posts/small-1.jpg';
-import Post11 from '../../images/small-posts/small-2.jpg';
-import Post12 from '../../images/small-posts/small-3.jpg';
 import '../../css/style.css';
 import '../../css/animate.min.css';
 import '../../css/megaMenu.css';

@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import "./Navbar.css";
 import logosmall from "../images/logo-small.jpg";
 import { Link } from "react-router-dom"
@@ -15,7 +15,7 @@ function Navbar() {
 
 	return (
 		<header>
-			<Link to={"/Home"}><img src={logosmall} className="navlogo" style={{ height: "45px", width: "220px", paddingRight: "50px", paddingTop: "2px", paddingBottom: "2px" }}></img></Link>
+			<Link to={"/Home"}><img src={logosmall} className="navlogo" alt="logo" style={{ height: "45px", width: "220px", paddingRight: "50px", paddingTop: "2px", paddingBottom: "2px" }}></img></Link>
 			<a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj" target="blank">
 			<div className="pod">Aslikahani the Podcast
 			<span> </span><i class="fa fa-spotify"></i></div></a>

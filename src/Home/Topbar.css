@@ -1,0 +1,6 @@
+.magzinebook{
+    cursor: pointer;
+}
+.magzinebook:hover{
+    color: red;
+}

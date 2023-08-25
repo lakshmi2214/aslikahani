@@ -35,7 +35,7 @@ function RelatedArticleContent() {
       // setData(tmp) 
       tmp = tmp.substring(1, tmp.length);
     }
-    const url = `https://newsbackend-388608.as.r.appspot.com/api/v1/articles/get?url=${tmp}`
+    const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/articles/get?url=${tmp}`
     fetch(url).then(res => res.json())
       .then(res => {
         setData(res)
