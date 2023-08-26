@@ -29,7 +29,7 @@ function MagzinePost1(props) {
    const handleNavigation = (item) => {
       console.log(item);
 
-      navigate(`/${item.category}/${item.url}`, { state: { item } });
+      navigate(`/emagzine/${item.url}/preview`, { state: { item } });
    }
    return (
       <>
@@ -37,25 +37,25 @@ function MagzinePost1(props) {
             
             <article className="col-md-6 col-sm-6 col-xs-12">
                <div className="grid-1">
-                  {props.dataObject?.locations?.BussGeneral.slice(4, 5).map((item, index) => {
+                  {props.dataObject?.map((item, index) => {
                      console.log(item);
                      return (
                         <div key={index}>
                            <div className="picture">
                               <div className="category-image"onClick={() => handleNavigation(item, index)} >
-                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/magzine/1'}>
-                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", widtth: "300px" }} />
+                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/emagzine/'+item.url+'/preview'}>
+                                    <img alt="" className="img-responsive" src={item.cover_image} style={{ height: "240px", widtth: "300px" }} />
                                  </a>
                               </div>
                            </div>
                            <div className="detail">
                               <div className="caption" >
                                  <h5>
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
+                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/emagzine/'+item.url+'/preview'}>{item.title}</a>
                                  </h5>
                               </div>
                               <ul className="post-tools" >
-                                 <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
+                                 <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/emagzine/'+item.url+'/preview'}> <strong> {item.authored_by}</strong> </a></li>
                               </ul>
                            </div>
                         </div>

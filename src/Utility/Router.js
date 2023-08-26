@@ -29,7 +29,7 @@ function Router() {
             <Route path="/Lifestyle" exact element={<LifeStyle />}/>
             <Route path="/Art-and-Culture" exact element={<ArtCulture />}/>
              <Route path="/subscription" element={<SubscriptionPage />} />
-             <Route path="/magzine" element={<Magzine />} />
+             <Route path="/emagzine" element={<Magzine />} />
             
 
              <Route path="/Home/:id" element={<ArticleContent />} />
@@ -40,7 +40,7 @@ function Router() {
              <Route path="/Travel/:id" element={<ArticleContent />} />
              <Route path="/Lifestyle/:id" element={<ArticleContent />} /> 
              <Route path="/Art-and-Culture/:id" element={<ArticleContent />} /> 
-             <Route path="/magzine/:id" element={<Flipbook />} /> 
+             <Route path="/emagzine/:id/:id" element={<Flipbook />} /> 
         </Routes>
     </BrowserRouter>
         </>

@@ -18,7 +18,7 @@ function Magzine(){
     const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
   useEffect(() => {
-    const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/articles/list?category=6&format=json`;
+    const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/emagzines/list`;
     fetch(url).then(response => response.json())
       .then(response => {
         setResult(response)
