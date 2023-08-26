@@ -34,9 +34,9 @@ function ArticleContent() {
             <div className="col-md-5 col-sm-12 col-xs-12" id="side-bar-right-2">
               <div className="theiaStickySidebar">
                 <aside>
-                  <SristarAd2 addObject={value} />
-                  <ChaiTheoryAd addObject={value} />
-                  <SristarAd1 addObject={value} />
+                  {/* <SristarAd2 addObject={value} /> */}
+                  {/* <ChaiTheoryAd addObject={value} /> */}
+                  {/* <SristarAd1 addObject={value} /> */}
                 </aside>
               </div>
             </div>
