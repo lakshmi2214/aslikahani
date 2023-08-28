@@ -16,14 +16,14 @@ function Navbar() {
 	return (
 		<header>
 			<Link to={"/Home"}><img src={logosmall} className="navlogo" alt="logo" style={{ height: "45px", width: "220px", paddingLeft: "35px", paddingTop: "2px", paddingBottom: "2px" }}></img></Link>
-			<a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj" target="blank">
-			<div className="pod">Aslikahani the Podcast
-			<span> </span><i class="fa fa-spotify"></i></div></a>
+
+			<div className="pod" > <a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj" target="blank" style={{ color: "black" }}>Podcast
+				<span > </span><i class="fa fa-spotify"></i></a> | <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagzine'} style={{ color: "black" }}> EMagzine</a> </div>
 			<div className="socialmedia-mobile">
-			<a href=" https://www.facebook.com/aslikahani.in" target="blank"><i className= "ti-facebook"></i> </a>
-			<a href="https://twitter.com/aslikahani_in" target="blank"><i className="ti-twitter"></i></a>
-			<a href="https://www.youtube.com/@AsliKahani_in" target="blank"><i className="ti-youtube"></i></a>
-			<a href=" https://www.instagram.com/aslikahani.in/" target="blank"><i className="ti-instagram"></i></a>
+				<a href=" https://www.facebook.com/aslikahani.in" target="blank"><i className="ti-facebook"></i> </a>
+				<a href="https://twitter.com/aslikahani_in" target="blank"><i className="ti-twitter"></i></a>
+				<a href="https://www.youtube.com/@AsliKahani_in" target="blank"><i className="ti-youtube"></i></a>
+				<a href=" https://www.instagram.com/aslikahani.in/" target="blank"><i className="ti-instagram"></i></a>
 			</div>
 			<nav ref={navRef}>
 
