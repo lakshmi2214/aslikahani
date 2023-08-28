@@ -1,23 +1,14 @@
-// import logo from './logo.svg';
-import React, { useEffect, useState } from "react";
-import './Flipbook.css';
-import cover from "./Jpeg/1 Cover Page.jpg";
-import two from "./Jpeg/02.jpg";
-import three from "./Jpeg/03.jpg";
-import four from "./Jpeg/04.jpg";
-import five from "./Jpeg/05.jpg";
-import six from "./Jpeg/06.jpg";
-import seven from "./Jpeg/07.jpg";
-import eight from "./Jpeg/08.jpg";
-import nine from "./Jpeg/09.jpg";
-import ten from "./Jpeg/10.jpg";
-import eleven from "./Jpeg/11.jpg";
+import React from 'react';
+import HTMLFlipBook from "react-pageflip";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import "./Flipbook.css";
+import logosmall from "../../images/logo-small.jpg";
 
-
-function App() {
+function Flipbook() {
+    
     const location = useLocation();
-    const [data, setData] = useState([]);
+    const [datavalue, setDatavalue] = useState([]);
     useEffect(() => {
         if (location) {
             var urlcomponent = location.pathname.split('/');
@@ -27,85 +18,50 @@ function App() {
         const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/emagzines/get?url=${tmp}`
         fetch(url).then(res => res.json())
             .then(res => {
-                setData(res)
+                setDatavalue(res)
                 console.log(res)
             })
     }, [])
 
-  return (
-    <div className='body'>
-      <div class="book">
-        <input type="checkbox" id="c1"/>
-          <input type="checkbox" id="c2"/>
-            <input type="checkbox" id="c3"/>
-              <div id="cover">
-                
-                <img src={cover}/>
-              {/* <label class="back-btn" for="c1">Back</label> */}
-             
-              </div>
-              <div class="flip-book">
+     
+    // var audio = new Audio("../Magzine/Jpeg/page.mp3")
+    // const Page = React.forwardRef((props, ref) => {
 
-                
-                <div class="flip" id="p1">
-                  <div class="back">
-                    <img src={two}/>
-                      <label class="back-btn" for="c1">Back</label>
-                  </div>
-                  <div class="front">
-                    <img src={three}/>
-                    <label class="next-btn" for="c1">Next</label>
-                  </div>
-                </div>
-                <div class="flip" id="p2">
-                  <div class="back">
-                    <img src={four}/>
-                      <label class="back-btn" for="c2">Back</label>
-                  </div>
-                  <div class="front">
-                    <img src={five}/>
-                    <label class="next-btn" for="c2">Next</label>
-                  </div>
-                </div>
+    //     <div className="page page-cover" ref={ref}>
+    //         <p>page header</p>
+    //         <p>{props.children}</p>
+    //         <p>Page number: {props.number}</p>
+    //     </div>
 
-                <div class="flip" id="p3">
-                  <div class="back">
-                    <img src={six}/>
-                      <label class="back-btn" for="c3">Back</label>
-                  </div>
-                  <div class="front">
-                    <img src={seven}/>
-                    <label class="next-btn" for="c3">Next</label>
-                  </div>
-                </div>
+    // });
+    
+    return (
+        <div className='head-box'>
 
-                <div class="flip" id="p4">
-                  <div class="back">
-                    <img src={eight}/>
-                      <label class="back-btn" for="c4">Back</label>
-                  </div>
-                  <div class="front">
-                    <img src={nine}/>
-                    <label class="next-btn" for="c4">Next</label>
-                  </div>
-                </div>
+            <div style={{height:"10px", width:"100%"}}> </div>
+<div><img src={logosmall} class="rounded mx-auto d-block" alt="logo" style={{height:"50px", width:"250px", marginBottom:"10px"}}/></div>
+            <HTMLFlipBook  width={360}
+            height={550}
+            // maxWidth={1000}
+            
+>
+                {datavalue.map((item, index) => {
+                    console.log(item)
+                    return (
+                     
+                            <div key={index} className='box' style={{maxWidth:"100%"}}>
 
-                <div class="flip" id="p5">
-                  <div class="back">
-                    <img src={ten}/>
-                      <label class="back-btn" for="c5">Back</label>
-                  </div>
-                  <div class="front">
-                    <img src={eleven}/>
-                    <label class="next-btn" for="c5">Next</label>
-                  </div>
-                </div>
+                                <img src={item.images} style={{ height: "550px", width:"360px" }} 
+                              />
 
-                </div>
-              </div>
-            </div>
-        
-          );
+                            </div>
+                       
+                    )
+                })}
+
+            </HTMLFlipBook>
+            <div style={{height:"50px", width:"100%"}}> </div>
+        </div>
+    )
 }
-
-          export default App;
+export default Flipbook;

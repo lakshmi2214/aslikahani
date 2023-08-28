@@ -15,7 +15,7 @@ header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 15;
 }
 
 nav Link {
@@ -25,14 +25,15 @@ nav Link {
 }
 .bar{
     background-color: white;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 17px;
+    font-weight: 500;
     padding-top: 9px;
     padding-right: 16px;
     padding-left: 18px; 
     text-decoration: none;
     height:40px;
-    color: black;
+    color: rgb(38, 37, 37);
+	z-index: 6;
 }
 
 .bar:hover {
@@ -63,6 +64,7 @@ nav {
 }
 .pod{
 	display:none;
+	color: rgb(60, 59, 59);
 }
 .socialmedia-mobile{
 	display: none;

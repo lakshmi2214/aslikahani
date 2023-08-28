@@ -19,7 +19,6 @@ import '../../css/font-awesome.min.css';
 import '../../css/zerogrid.css';
 import '../../css/royal-slider/rs-default.css';
 import '../../css/owl.carousel.css';
-import './Article.css'
 // import ReactPlayer from "react-player/youtube";
 
 import { useLocation } from "react-router-dom";
@@ -36,7 +35,7 @@ function RelatedArticleContent() {
       // setData(tmp) 
       tmp = tmp.substring(1, tmp.length);
     }
-    const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/emagzines/2`
+    const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/articles/get?url=${tmp}`
     fetch(url).then(res => res.json())
       .then(res => {
         setData(res)
@@ -47,57 +46,7 @@ function RelatedArticleContent() {
 
   return (
     <>
-
-{/* <div class="container mt-5">
-  <div class="row">
-    <div class="col-md-3">
-      <img src={data.cover_image} alt="Product Image" class="img-fluid"/>
-    </div>
-    <div class="col-md-6">
-    <h2>{data.title}</h2>
-      <p>{data.created_at}</p>
-      <p class="text-muted"> {data.description}</p>
-      <p> Author Name: {data.authored_by}</p>
-      <p> About Author: {data.about_author}</p>
-      <p> Time to read: {data.time_to_read} Hour</p>
-      <button class="btn btn-primary">Preview</button>
-    </div>
-  </div>
-</div> */}
-<div class="single-product mt-150 mb-150">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-5">
-					<div class="single-product-img">
-						<img src={data.cover_image} alt="" />
-					</div>
-				</div>
-				<div class="col-md-7">
-					<div class="single-product-content">
-						<h1>{data.title}</h1>
-						<p class="single-product-pricing text-muted">{data.created_at}</p>
-						<p>{data.description}</p>
-						{/* <div class="single-product-form">
-							<form action="index.html">
-								<input type="number" placeholder="0"/>
-							</form>
-							<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
-							<p><strong>Categories: </strong>Fruits, Organic</p>
-						</div> */}
-						{/* <h4>Share:</h4> */}
-						<div class="author">
-            <p><b>Author Name:</b>  <span>{data.authored_by}</span></p>
-      <p><b>About Author: </b> {data.about_author}</p>
-      <p> <b>Time to read:</b> {data.time_to_read} Hour</p>
-      <button class="btn btn-primary">Preview</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-      {/* <div className="col-md-7 col-sm-7 col-xs-12 ">
+      <div className="col-md-7 col-sm-7 col-xs-12 ">
         <div className="picture">
           <h2>{data.title}</h2>
           <ul className="post-tools nolineheight">
@@ -111,9 +60,9 @@ function RelatedArticleContent() {
           <br></br>
           <p> {data.description}</p>
           <div dangerouslySetInnerHTML={{ __html: data.body }}></div>
-        </div> */}
+        </div>
         {/* <ReactPlayer url="https://www.youtube.com/watch?v=eoOaKN4qCKw" controls={true}/> */}
-       {/* </div> */}
+       </div>
     </>
   );
 } 

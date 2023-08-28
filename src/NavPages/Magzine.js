@@ -12,6 +12,7 @@ import BannerAd2 from '../Advertisements/BannerAd2';
 import BusinessPost2 from '../Business/BusinessPost2';
 import Navbar from '../Utility/Navbar';
 import MagzinePost1 from "../E-magzine/MagzinePost1";
+import MagzinePreview from "../E-magzine/MagzinePreview";
 
 function Magzine(){
 
@@ -41,7 +42,8 @@ function Magzine(){
             <div className="col-md-8 col-sm-12 col-xs-12">
               <div className="section">
                 <MagzinePost1 dataObject={result} />
-                <BannerAd1 addObject={value} />
+                {/* <BannerAd1 addObject={value} /> */}
+             
                 {/* <BusinessPost1 dataObject={result} /> */}
                 {/* <BannerAd2 addObject={value} /> */}
                 {/* <BusinessPost2 dataObject ={result} /> */}

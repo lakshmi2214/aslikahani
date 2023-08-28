@@ -11,12 +11,12 @@ function ArticleContent() {
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
   useEffect(() => {
-    // const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json";
-    // fetch(url).then(response => response.json())
-    //   .then(response => {
-    //     setResult(response)
-    //   })
-    //   .catch(error => console.log(error));
+    const url = "https://newsbackend-388608.as.r.appspot.com/api/v1/articles/list?category=10&format=json";
+    fetch(url).then(response => response.json())
+      .then(response => {
+        setResult(response)
+      })
+      .catch(error => console.log(error));
     const url1 = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/category/list`;
     fetch(url1).then(response => response.json()
     )
@@ -34,9 +34,9 @@ function ArticleContent() {
             <div className="col-md-5 col-sm-12 col-xs-12" id="side-bar-right-2">
               <div className="theiaStickySidebar">
                 <aside>
-                  {/* <SristarAd2 addObject={value} /> */}
-                  {/* <ChaiTheoryAd addObject={value} /> */}
-                  {/* <SristarAd1 addObject={value} /> */}
+                  <SristarAd2 addObject={value} />
+                  <ChaiTheoryAd addObject={value} />
+                  <SristarAd1 addObject={value} />
                 </aside>
               </div>
             </div>
