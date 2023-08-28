@@ -2146,6 +2146,7 @@ p .readmore {
 
 .main-content {
 	width: 100%;
+	margin-top: -61px;
 	/*background: url(../images/content_background.png);*/
 }
 
