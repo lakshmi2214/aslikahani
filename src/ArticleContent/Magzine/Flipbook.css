@@ -1,8 +1,8 @@
-#total-magzine{
+#total-magzine {
   background-image: url("./Jpeg/magzine-background-grey.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height:100vh;
+  height: 100vh;
 }
 
 .image-viewer {
@@ -135,6 +135,29 @@
   top: 0;
 }
 
+/* sideflip-btns */
+
+.sideflip-btn {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  width: 100%;
+ 
+  justify-content: space-between;
+  position: absolute;
+  top: 48%;
+}
+
+.glyphicon-chevron-left {
+  font-size: x-large;
+  cursor: pointer;
+}
+
+.glyphicon-chevron-right {
+  font-size: x-large;
+  cursor: pointer;
+}
+
 /* downward-buttons */
 
 .downwards-bar {
@@ -148,93 +171,82 @@
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  border:1px solid black
-}
-.btn1{
-  height:0px;
-  width:0px;
- 
-  margin-left: auto;
-  margin-right: auto;
- margin-top: -25%;
- background-color: white;
- 
+  border: 1px solid black
 }
 
-.btn2{
-  height:38px;
-  width:38px;
-  cursor: pointer;
- border: 1px solid white;
+.btn1 {
+  height: 0px;
+  width: 0px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -25%;
+  background-color: white;
+
 }
-.fa-chevron-left{
+
+.btn2 {
+  height: 38px;
+  width: 38px;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.fa-chevron-left {
   height: 38px;
   width: 38px;
   padding-top: 13px;
   padding-left: 13px;
   color: white;
-  border: 1px solid white; 
+  border: 1px solid white;
   background-color: rgb(75, 73, 73);
 }
 
 
-.btn3{
-  height:38px;
-  width:38px;
+.btn3 {
+  height: 38px;
+  width: 38px;
   cursor: pointer;
   border: 1px solid white;
 }
-.fa-chevron-right{
-  
+
+.fa-chevron-right {
+
   height: 38px;
   width: 38px;
   padding-top: 13px;
   padding-left: 14px;
-   color: white;
-   border: 1px solid white;
+  color: white;
+  border: 1px solid white;
   background-color: rgb(75, 73, 73);
 }
-.btn4{
-  height:38px;
-  width:38px;
+
+.btn4 {
+  height: 38px;
+  width: 38px;
   cursor: pointer;
   border: 1px solid white;
 }
-.fa-search-plus{
-  height:38px;
-  width:38px;
+
+.fa-search-plus {
+  height: 38px;
+  width: 38px;
   padding-top: 13px;
   padding-left: 13px;
   color: white;
   border: 1px solid white;
   background-color: rgb(75, 73, 73);
 }
-.btn5{
-  height:38px;
-  width:38px;
+
+.btn5 {
+  height: 38px;
+  width: 38px;
   cursor: pointer;
   border: 1px solid white;
- 
-}
-.fa-search-minus{
-  height: 38px;
-    width: 38px;
-    padding-top: 13px;
-    padding-left: 12px;
-    border: 1px solid white;
-  color: white;
- 
-  background-color: rgb(75, 73, 73);
+
 }
 
-.btn6{
-  height:38px;
-  width:38px;
-  cursor: pointer;
-  border: 1px solid white;
- 
-}
-.fa-arrows-alt{
+.fa-search-minus {
   height: 38px;
   width: 38px;
   padding-top: 13px;
@@ -242,25 +254,46 @@
   border: 1px solid white;
   color: white;
 
-background-color: rgb(75, 73, 73);
+  background-color: rgb(75, 73, 73);
 }
-.fa-share-alt{
-  height:38px;
-  width:38px;
- padding-left: 12px;
+
+.btn6 {
+  height: 38px;
+  width: 38px;
+  cursor: pointer;
+  border: 1px solid white;
+
+}
+
+.fa-arrows-alt {
+  height: 38px;
+  width: 38px;
+  padding-top: 13px;
+  padding-left: 12px;
+  border: 1px solid white;
+  color: white;
+
+  background-color: rgb(75, 73, 73);
+}
+
+.fa-share-alt {
+  height: 38px;
+  width: 38px;
+  padding-left: 12px;
   padding-top: 13px;
   color: white;
   margin-top: 1px;
   background-color: rgb(75, 73, 73);
   border: 1px solid white;
- cursor: pointer;
+  cursor: pointer;
 }
-.exit{
+
+.exit {
   font-size: x-large;
   cursor: pointer;
   position: absolute;
-  top:2%;
-  right:2%;
+  top: 2%;
+  right: 2%;
 }
 
 
@@ -284,29 +317,29 @@ background-color: rgb(75, 73, 73);
 }
 
 .pop-up-share-icons {
-   position: relative; 
+  position: relative;
   margin-left: auto;
   margin-right: auto;
-    width:fit-content;
+  width: fit-content;
   background-color: white;
   border-radius: 20px;
   padding-right: 5px;
   padding-left: 5px;
-  
+
   box-shadow: 0px 0px 25px black;
   transform: translate(-50%, -50%) scale(1.2);
   transition: top 0s 0.2s ease-in-out,
-  opacity 0.2s 0s ease-in-out,
-  transform 0.2s 0s ease-in-out;
- 
-  
+    opacity 0.2s 0s ease-in-out,
+    transform 0.2s 0s ease-in-out;
+
+
 }
 
 .pop-up-share-icons-close {
   position: absolute;
-  left:92%;
-  border:none;
-/* background-color: white; */
+  left: 92%;
+  border: none;
+  /* background-color: white; */
   height: 0px;
   display: inline;
 }
@@ -397,12 +430,12 @@ header .close:hover {
 }
 
 .icons .li {
-  color: #0072b1 ;
+  color: #0072b1;
   border-color: #f5bccf;
 }
 
 .icons .li:hover {
-  color: #0072b1 ;
+  color: #0072b1;
 }
 
 .icons .wt {
@@ -466,7 +499,7 @@ header .close:hover {
 
 .field button {
   /* color: ; */
-  padding:0px;
+  padding: 0px;
   border: 1px solid #f2f3fb;
   background: white;
   width: 15%;

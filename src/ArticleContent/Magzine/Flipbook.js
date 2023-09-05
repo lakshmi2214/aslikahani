@@ -10,6 +10,8 @@ import { FacebookShareButton, TwitterShareButton, WhatsappShareButton, LinkedinS
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import 'react-medium-image-zoom/dist/styles.css'
 import { FullScreen } from '@chiragrupani/fullscreen-react';
+import useSound from 'use-sound';
+import page from "./Jpeg/page.mp3"
 
 function Flipbook() {
     const location = useLocation();
@@ -36,13 +38,13 @@ function Flipbook() {
     const Page = React.forwardRef((props, ref) => {
 
         return (
-            // <TransformWrapper>
-            //     <TransformComponent>
+            <TransformWrapper >
+                <TransformComponent>
                     <div className="demoPage" ref={ref}>
                         <p>{props.children}</p>
                     </div>
-            //     </TransformComponent>
-            // </TransformWrapper>
+                 </TransformComponent>
+             </TransformWrapper>
         );
     });
 
@@ -104,9 +106,12 @@ function Flipbook() {
 
     //full screen
     let [isFullScreen, setFullScreen] = useState(false);
-
-
     const book = useRef();
+
+    //audio clip for page flip
+
+    const [play] = useSound(page);
+    
     return (
         <div >
             <FullScreen
@@ -114,6 +119,20 @@ function Flipbook() {
                 onChange={(isFull = true) => {
                     setFullScreen(isFull)
                 }}>
+                      <div className='sideflip-btn'>
+                        <div className='sideflip-btn1'>
+                                <div onClick={() => {
+                                                      book.current.pageFlip().flipPrev();
+                                                      play();
+                                                      }} className='prev-btn'>  <span class="glyphicon glyphicon-chevron-left"></span></div>
+                            </div>
+                            <div className='sideflip-btn2'>
+                                <div onClick={() => {
+                                                      book.current.pageFlip().flipNext();
+                                                      play();
+                                                      }} className='next-btn'><span class="glyphicon glyphicon-chevron-right"></span></div>
+                            </div>
+                    </div>
                 <div id='total-magzine' >
                     <div className="image-viewer">
                         <div style={{ marginTop: "1%", marginBottom: "1%" }}><img src={logosmall} class="rounded mx-auto d-block" alt="logo" style={{ height: "50px", width: "250px" }} /></div>
@@ -127,20 +146,26 @@ function Flipbook() {
                                 return (
 
                                     <div key={index} className='box' style={{ maxWidth: "100%" }}>
-                                        <Page>
-                                            <img src={item.images} alt="Zoomable" className='api-images' />
+                                        <Page >
+                                            <img src={item.images} alt="Zoomable" className='api-images' onClick={ play}/>
                                         </Page>
                                     </div>
                                 )
                             })}
                         </HTMLFlipBook>
-
+                  
                         <div className='downwards-bar' style={{ marginBottom: "2%", marginTop: "2%" }}>
                             <div className='btn2'>
-                                <div onClick={() => book.current.pageFlip().flipPrev()} className='prev-btn'><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+                                <div onClick={() => {
+                                                      book.current.pageFlip().flipPrev();
+                                                      play();
+                                                      }} className='prev-btn'><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
                             </div>
                             <div className='btn3'>
-                                <div onClick={() => book.current.pageFlip().flipNext()} className='next-btn'><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                                <div onClick={() => {
+                                                      book.current.pageFlip().flipNext();
+                                                      play();
+                                                      }} className='next-btn'><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
                             </div>
                             <div className='btn4'>
                                 <div onClick={handleZoomIn}><i class="fa fa-search-plus" aria-hidden="true"></i></div>
