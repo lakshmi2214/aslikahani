@@ -3,13 +3,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  pointer-events: none;
 }
 
 .image-viewer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+display: flex;
+flex-direction: column;
+align-items: center;
+pointer-events: none;
 }
 
 .zoom-buttons {
@@ -20,6 +21,7 @@
 .demoPage {
   max-width: 100%;
   transition: width 0.3s ease-in-out;
+  pointer-events: none;
 }
 
 .api-images {
@@ -41,7 +43,6 @@
 .box {
   box-shadow: 0 0 5px 2px #3b3b3b;
 }
-
 
 
 
@@ -142,12 +143,24 @@
   flex-direction: row;
   height: 40px;
   width: 100%;
- 
-  justify-content: space-between;
+  justify-content:space-between; 
   position: absolute;
   top: 48%;
+  
+  /* border: 1px solid black; */
 }
-
+/* .sideflip-btn1{
+  height:40px;
+  width:40px;
+  border:1px solid red;
+  
+} */
+/* .sideflip-btn2{
+  height:40px;
+  width:40px;
+  border:1px solid red;
+ 
+} */
 .glyphicon-chevron-left {
   font-size: x-large;
   cursor: pointer;

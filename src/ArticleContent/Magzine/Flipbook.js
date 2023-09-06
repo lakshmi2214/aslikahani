@@ -36,12 +36,13 @@ function Flipbook() {
     //Flipbook
 
     const Page = React.forwardRef((props, ref) => {
-
+      
+        const book = useRef();
         return (
             <TransformWrapper >
-                <TransformComponent>
-                    <div className="demoPage" ref={ref}>
-                        <p>{props.children}</p>
+                <TransformComponent >
+                    <div className="demoPage" ref={ref} style={{pointerEvents:"none"}}>
+                        <p style={{pointerEvents:"none"}}>{props.children}</p>
                     </div>
                  </TransformComponent>
              </TransformWrapper>
@@ -113,7 +114,7 @@ function Flipbook() {
     const [play] = useSound(page);
     
     return (
-        <div >
+        <div>
             <FullScreen
                 isFullScreen={isFullScreen}
                 onChange={(isFull = true) => {
@@ -135,19 +136,22 @@ function Flipbook() {
                     </div>
                 <div id='total-magzine' >
                     <div className="image-viewer">
-                        <div style={{ marginTop: "1%", marginBottom: "1%" }}><img src={logosmall} class="rounded mx-auto d-block" alt="logo" style={{ height: "50px", width: "250px" }} /></div>
+                        <div style={{ marginTop: "1%", marginBottom: "1%" }}><a href={`https://aslikahani.com`}><img src={logosmall} class="rounded mx-auto d-block" alt="logo" style={{ height: "50px", width: "250px" }} /></a></div>
                         <HTMLFlipBook
                             width={380}
                             height={500}
                             style={imageStyles}
-                            ref={book}>
+                            ref={book}
+                           
+                            >
                             {datavalue.map((item, index) => {
                                 console.log(item)
                                 return (
 
-                                    <div key={index} className='box' style={{ maxWidth: "100%" }}>
-                                        <Page >
-                                            <img src={item.images} alt="Zoomable" className='api-images' onClick={ play}/>
+                                    <div key={index} className='box' style={{ maxWidth: "100%" , pointerEvents:"none"}} onClick={null}>
+                                        <Page number="1" 
+                                        style={{PointerEvent:"none"}}> 
+                                            <img src={item.images} alt="Zoomable" className='api-images' style={{pointerEvents:"none"}} onClick={null}/>
                                         </Page>
                                     </div>
                                 )

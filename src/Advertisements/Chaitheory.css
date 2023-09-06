@@ -1,0 +1,9 @@
+.last-icon{
+color:black;
+font-size:large;
+cursor: pointer;
+margin-top: 10px;
+}
+.last-icon:hover{
+    color:red;
+}
