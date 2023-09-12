@@ -16,7 +16,7 @@ function MagzinePreview(){
       // setData(tmp) 
       tmp = tmp.substring(1, tmp.length);
     }
-    const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/emagzines/2`
+    const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/emagzines/get?url=${tmp}&meta=true`
     fetch(url).then(res => res.json())
       .then(res => {
         setData(res)

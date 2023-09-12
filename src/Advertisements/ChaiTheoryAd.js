@@ -3,7 +3,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import React from 'react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import "./Chaitheory.css";
 // import Swiper from 'react-id-swiper';
 
@@ -11,14 +11,17 @@ function ChaiTheoryAd(props) {
   return(                    
       <div className="widget widget-bg">
                <Swiper
-        slidesPerView={1}
         spaceBetween={30}
-        loop={true}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
         }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
+        navigation={false}
+        modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
          <SwiperSlide>
