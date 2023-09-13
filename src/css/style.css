@@ -2879,6 +2879,13 @@ p .readmore {
 	width: 100%;
 }
 
+.post1{
+	/* border: 1px solid red; */
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
 .grid-1 .detail {
 	/* overflow: hidden; */
 	padding: 15px 0;
@@ -4884,6 +4891,12 @@ footer .social-media-icons ul {
 	}
 	.grid-1 {
 		margin-bottom: 20px;
+	}
+	.post1{
+		/* border: 1px solid red; */
+		width: 100%;
+		display: flex;
+		flex-direction: column;
 	}
 	.grid-1 .desc h5 {
 		margin-top: 10px;

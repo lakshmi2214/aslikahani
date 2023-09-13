@@ -18,7 +18,7 @@ function Navbar() {
 			<Link to={"/Home"}><img src={logosmall} className="navlogo" alt="logo" style={{ height: "45px", width: "220px", paddingLeft: "35px", paddingTop: "2px", paddingBottom: "2px" }}></img></Link>
 
 			<div className="pod" > <a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj" target="blank" style={{ color: "black" }}>Podcast
-				<span > </span><i class="fa fa-spotify"></i></a> | <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagzine'} style={{ color: "black" }}> EMagzine</a> </div>
+				<span > </span><i class="fa fa-spotify"></i></a> | <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine'} style={{ color: "black" }}> EMagazine</a> </div>
 			<div className="socialmedia-mobile">
 				<a href=" https://www.facebook.com/aslikahani.in" target="blank"><i className="ti-facebook"></i> </a>
 				<a href="https://twitter.com/aslikahani_in" target="blank"><i className="ti-twitter"></i></a>

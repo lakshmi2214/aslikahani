@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState,  useEffect } from 'react';
 import HTMLFlipBook from "react-pageflip";
-import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useRef } from 'react';
 import './Flipbook.css'; // Create this CSS file for styling

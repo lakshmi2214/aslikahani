@@ -54,6 +54,7 @@ function RelatedArticleContent() {
             <li> {data.created_at} </li>
           </ul>
           <img alt="" className="img-responsive" src={data.image} style={{ height: "500px", width: "760px" }} />
+       <span class="text-muted h6">{data.credit_line} </span>
         </div>
         <div className="catname">
           <br></br>

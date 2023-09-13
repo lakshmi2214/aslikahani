@@ -13,7 +13,7 @@ import SubscriptionPage from "../NavPages/SubscriptionPage";
 import Magzine from "../NavPages/Magzine";
 import Flipbook from "../ArticleContent/Magzine/Flipbook";
 import MagzinePreview from "../E-magzine/MagzinePreview";
-import Turn from "../ArticleContent/Magzine/Turn";
+// import Turn from "../ArticleContent/Magzine/Turn";
 
 function Router() {
     
@@ -31,7 +31,7 @@ function Router() {
             <Route path="/Lifestyle" exact element={<LifeStyle />}/>
             <Route path="/Art-and-Culture" exact element={<ArtCulture />}/>
              <Route path="/subscription" element={<SubscriptionPage />} />
-             <Route path="/emagzine" element={<Magzine />} />
+             <Route path="/emagazine" element={<Magzine />} />
              {/* <Route path="/turn" element={< Turn/>}/> */}
             
 
@@ -43,8 +43,8 @@ function Router() {
              <Route path="/Travel/:id" element={<ArticleContent />} />
              <Route path="/Lifestyle/:id" element={<ArticleContent />} /> 
              <Route path="/Art-and-Culture/:id" element={<ArticleContent />} /> 
-             <Route path="/emagzine/:id" element={<MagzinePreview/>}/>
-             <Route path="/emagzine/:id/:id" element={<Flipbook />} /> 
+             <Route path="/emagazine/:id" element={<MagzinePreview/>}/>
+             <Route path="/emagazine/:id/:id" element={<Flipbook />} /> 
         </Routes>
     </BrowserRouter>
         </>
