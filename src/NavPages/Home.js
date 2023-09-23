@@ -38,7 +38,7 @@ import AdminChoice from "../Home/AdminChoice/AdminChoice";
 import AllTimeBestArticles from "../Home/AllTimeBestArticles";
 import Footer from "../Home/Footer/Footer";
 import Navbar from "../Utility/Navbar";
-import Subscriptiontag from "../Subscription/Subscriptiontag";
+// import Subscriptiontag from "../Subscription/Subscriptiontag";
 
 function Home() {
    const [result, setResult] = useState([]);
@@ -63,6 +63,8 @@ function Home() {
         <>
         {/* <Subscriptiontag/> */}
       <Navbar />  
+      <br/><br/>
+      <BannerAd1 addObject={value}/>
      <Grid dataObject={result}/>
                  <section className="main-content">
          <div className="container">

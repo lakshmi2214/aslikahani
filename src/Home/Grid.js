@@ -40,7 +40,7 @@ function Grid(props) {
     </ul>
     </div>
     <div className="post-thumb" onClick={() => handleNavigation(item, index)}>
-     <img alt="" src={item.image}  style={{height:"417px"}}/> </div>
+     <img alt="" src={item.image}  style={{height:"419.5px"}}/> </div>
     </div>
     )})}
 </div>
@@ -48,7 +48,7 @@ function Grid(props) {
 </div>
 
 
-<div className="col-1-4">
+<div className="col-1-4 w-100">
    <div className="wrap-col">
       <div className="grid-item">
 
@@ -64,7 +64,7 @@ function Grid(props) {
         <li> {item.created_at} </li>
        </ul>
      </div><a href={item.url}>
-     <div className="post-thumb" onClick={() => handleNavigation(item, index)}> <img alt="" src={item.image} style={{height:"208px"}}/></div></a> 
+     <div className="post-thumb grid-thumb" onClick={() => handleNavigation(item, index)}> <img alt="" src={item.image} /></div></a> 
       </div>
      )})}
    
@@ -72,7 +72,7 @@ function Grid(props) {
 </div>
 
 
-   <div className="wrap-col">
+   <div className="wrap-col"style={{marginTop:"0.5%"}}>
       <div className="grid-item">
       {grid?.locations?.Slider.slice(2,3).map((item,index)=>{
             console.log(item);
@@ -86,7 +86,7 @@ function Grid(props) {
             <li onClick={() => handleNavigation(item, index)}>  {item.created_at} </li>
                  </ul>
          </div><a href={item.url}>
-      <div className="post-thumb" onClick={() => handleNavigation(item, index)}> <img alt="" src={ item.image } style = {{height:"208px"}}/> </div>
+      <div className="post-thumb grid-thumb" onClick={() => handleNavigation(item, index)}> <img alt="" src={ item.image } /> </div>
       </a> </div>
       )})}
      
@@ -94,7 +94,6 @@ function Grid(props) {
 </div>
    </div> 
 </div>
-
 
 <div className="col-1-4">
    <div className="wrap-col">
@@ -106,21 +105,21 @@ function Grid(props) {
             return(
 
              <div key={index}> 
-         <div className="post-content" onClick={() => handleNavigation(item, index)}>
+         <div className="post-content" onClick={() => handleNavigation(item, index)} >
           <div className="catname"></div>
           <h5 onClick={() => handleNavigation(item, index)}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a> </h5>
             <ul className="post-tools">
              <li onClick={() => handleNavigation(item, index)}> {item.created_at} </li>
             </ul>
          </div><a href={item.url}>
-         <div className="post-thumb" onClick={() => handleNavigation(item, index)}> <img alt="" src={item.image} style ={{height:"208px"}}/> </div>
+         <div className="post-thumb grid-thumb" onClick={() => handleNavigation(item, index)}> <img alt="" src={item.image} /> </div>
         </a> </div>
          )})}
      </div>
    </div>
 
 
-<div className="wrap-col">
+<div className="wrap-col"style={{marginTop:"0.5%"}}>
  <div className="grid-item">
   
  {grid?.locations?.Slider.slice(5,6).map((item,index)=>{
@@ -135,7 +134,7 @@ function Grid(props) {
                   <li onClick={() => handleNavigation(item, index)}>{item.created_at}</li>
               </ul>
          </div><a href={item.url}>
-           </a> <div className="post-thumb" onClick={() => handleNavigation(item, index)}> <img alt="" src={item.image} style={{height:"208px"}}/></div>
+           </a> <div className="post-thumb grid-thumb" onClick={() => handleNavigation(item, index)}> <img alt="" src={item.image} /></div>
       </div>
       )})}
      
@@ -143,6 +142,8 @@ function Grid(props) {
                            </div>
                          </div>
                         </div>
+                       
+
                      </div>
                   </div>
                </div>

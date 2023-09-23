@@ -29,8 +29,8 @@ import "./Topbar.css";
 function Topbar() {
    return (
       <div>
-         <section className="topbar">
-            <div className="container">
+         <section className="topbar w-100">
+            <div className="container-fluid">
                <div className="row">
                   <div className="col-md-12 col-sm-12 col-xs-12 nopadding">
                      <div className="col-md-6 col-sm-3 col-xs-12">
