@@ -164,7 +164,7 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    -webkit-appearance: button;
+    /* -webkit-appearance: button; */
     cursor: pointer
 }
 
@@ -197,7 +197,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 input[type="search"] {
-    -webkit-appearance: textfield;
+    /* -webkit-appearance: textfield; */
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box
@@ -1417,7 +1417,9 @@ body {
     font-size: 14px;
     line-height: 1.42857143;
     color: #333;
-    background-color: #fff
+    background-color: #fff;
+    /* margin-left: 3%;
+    margin-right: 3%; */
 }
 
 input,
@@ -3381,9 +3383,9 @@ textarea.form-control {
     height: auto
 }
 
-input[type="search"] {
+/* input[type="search"] {
     -webkit-appearance: none
-}
+} */
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 
@@ -7259,7 +7261,7 @@ button.close {
     cursor: pointer;
     background: transparent;
     border: 0;
-    -webkit-appearance: none
+    /* -webkit-appearance: none */
 }
 
 .modal-open {

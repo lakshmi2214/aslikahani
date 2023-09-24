@@ -14,7 +14,7 @@ function FooterCategory() {
  <div className="row">
  <div className="col-md-3 col-sm-6 col-xs-12">
  <div className="footer-block">
- <img src={ logosmall } style={{height:"50px",width:"300px",paddingRight:"50px",paddingTop:"5px"}}/>
+ <img src={ logosmall } style={{height:"50px",width:"300px",paddingRight:"50px",paddingTop:"5px"}} alt="footerImg"/>
  <p>A captivating platform that takes you on a journey through the realms of imagination, inspiration and cultural richness. Asli Kahani, meaning "Real Story" in Hindi, is a celebration of narratives that connect us, embracing diverse voices and bringing forth compelling tales from around the country.</p>
  </div>
  </div>
@@ -45,22 +45,22 @@ function FooterCategory() {
                   <br></br>
                 </ul>
               </div>
-              <div class="col-xs-12 col-md-3 col-sm-6 ">
+              <div className="col-xs-12 col-md-3 col-sm-6 ">
               <h2>Most Read Articles</h2>
-                     <ul class="tabs-posts twitter-widget">
+                     <ul className="tabs-posts twitter-widget">
                         <li>
-                           <div class="caption1">
-                            <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/a-beginners-guide-to-books'} class="url"> A Beginners' Guide To Books 
+                           <div className="caption1">
+                            <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/a-beginners-guide-to-books'} className="url"> A Beginners' Guide To Books 
                               </a>
                            </div>
                         </li>
                         <li>
-                           <div class="caption1"><a href= {process.env.REACT_APP_DOMAIN_NAME + '/home/nurturing-maternal-mental-health'} class="url">Nurturing Maternal Mental Health
+                           <div className="caption1"><a href= {process.env.REACT_APP_DOMAIN_NAME + '/home/nurturing-maternal-mental-health'} className="url">Nurturing Maternal Mental Health
                            </a>
                            </div>
                         </li>
                         <li>
-                           <div class="caption1"><a href={process.env.REACT_APP_DOMAIN_NAME + '/home/tracing-the-stories-behind-common-phrases'} class="url">Tracing The Stories Behind Common Phrases
+                           <div className="caption1"><a href={process.env.REACT_APP_DOMAIN_NAME + '/home/tracing-the-stories-behind-common-phrases'} className="url">Tracing The Stories Behind Common Phrases
                            </a>
                            </div>
                         </li>
@@ -81,7 +81,7 @@ function FooterCategory() {
                         <li><a href="https://twitter.com/aslikahani_in"><i className="ti-twitter"></i></a></li>
                         <li><a href="https://www.youtube.com/@AsliKahani_in"><i className="ti-youtube"></i></a></li>
                         <li><a href=" https://www.instagram.com/aslikahani.in/"><i className="ti-instagram"></i></a></li>
-                        <li><a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><i class="fa fa-spotify"></i></a></li>
+                        <li><a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><i className="fa fa-spotify"></i></a></li>
                         
                           </ul>
                     </div>

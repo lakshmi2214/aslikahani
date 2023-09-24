@@ -26,30 +26,30 @@ import '../../css/royal-slider/rs-default.css';
 function About() {
    return (
       <>
-         <div class="col-md-3 col-sm-6 col-xs-12 no-padding">
+         <div className="col-md-3 col-sm-6 col-xs-12 no-padding">
             <h2>About Us</h2>
-            <div class="footer-block">
+            <div className="footer-block">
                <p>A captivating platform that takes you on a journey through the realms of imagination,
                   inspiration and cultural richness. Asli Kahani, meaning "Real Story" in Hindi, is a celebration
                   of narratives that connect us, embracing diverse voices and bringing forth compelling tales from around the country.
                </p>
-               <div class="footer-detail">
-                  <ul class="personal-info">
-                     <li><i class="fa fa-map-marker"></i> #280/1 2nd Floor, 18th Cross, Malleshwaram.</li>
-                     <li><i class="fa fa-envelope"></i> aslikahani.media@gmail.com </li>
+               <div className="footer-detail">
+                  <ul className="personal-info">
+                     <li><i className="fa fa-map-marker"></i> #280/1 2nd Floor, 18th Cross, Malleshwaram.</li>
+                     <li><i className="fa fa-envelope"></i> aslikahani.media@gmail.com </li>
                   </ul>
                </div>
-               <div class="social-media-icons">
+               <div className="social-media-icons">
                   <ul>
                      <li><a href=" https://www.facebook.com/aslikahani.in"><i className="ti-facebook"></i> </a></li>
                      <li><a href="https://twitter.com/aslikahani_in"><i className="ti-twitter"></i></a></li>
                      <li><a href="https://www.youtube.com/@AsliKahani_in"><i className="ti-youtube"></i></a></li>
                      <li><a href=" https://www.instagram.com/aslikahani.in/"><i className="ti-instagram"></i></a></li>
-                     <li><a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><i class="fa fa-spotify"></i></a></li>
-                     {/* <li> <a href=""><i class="ti-linkedin"></i></a></li>
-                              <li> <a href=""><i class="ti-google"></i></a></li>
-                              <li> <a href=""><i class="ti-vimeo"></i></a></li>
-                              <li> <a href=""><i class="ti-pinterest"></i></a></li> */}
+                     <li><a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><i className="fa fa-spotify"></i></a></li>
+                     {/* <li> <a href=""><i className="ti-linkedin"></i></a></li>
+                              <li> <a href=""><i className="ti-google"></i></a></li>
+                              <li> <a href=""><i className="ti-vimeo"></i></a></li>
+                              <li> <a href=""><i className="ti-pinterest"></i></a></li> */}
                   </ul>
                </div>
             </div>

@@ -56,7 +56,7 @@ function LatestArticles(props) {
                               <div className="picture">
                                  <div className="category-image" onClick={() => handleNavigation(item, index)}>
                                     <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
-                                    <img alt="" className="img-responsive" src={item.image} style={{height:"185px"}}/>
+                                    <img alt="" className="img-responsive" src={item.image} style={{height:"250px"}}/>
                                     </a>
                                     
                                     </div>
@@ -68,7 +68,7 @@ function LatestArticles(props) {
                                     </h5>
                                  </div>
                                  <ul className="post-tools">
-                                    <li onClick={() => handleNavigation(item, index)}> by <a href=""> <strong> {item.authored_by}</strong> </a></li>
+                                    <li onClick={() => handleNavigation(item, index)}> by <a > <strong> {item.authored_by}</strong> </a></li>
                                     <li onClick={() => handleNavigation(item, index)}> {item.created_at}  </li>
                                    
                                  </ul>

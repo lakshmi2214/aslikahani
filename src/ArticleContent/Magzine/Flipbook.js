@@ -124,18 +124,18 @@ function Flipbook() {
                                 <div onClick={() => {
                                                       book.current.pageFlip().flipPrev();
                                                       play();
-                                                      }} className='prev-btn'>  <span class="glyphicon glyphicon-chevron-left"></span></div>
+                                                      }} className='prev-btn'>  <span className="glyphicon glyphicon-chevron-left"></span></div>
                             </div>
                             <div className='sideflip-btn2'>
                                 <div onClick={() => {
                                                       book.current.pageFlip().flipNext();
                                                       play();
-                                                      }} className='next-btn'><span class="glyphicon glyphicon-chevron-right"></span></div>
+                                                      }} className='next-btn'><span className="glyphicon glyphicon-chevron-right"></span></div>
                             </div>
                     </div>
                 <div id='total-magzine' >
                     <div className="image-viewer">
-                        <div style={{ marginTop: "1%", marginBottom: "1%" }}><a href={`https://aslikahani.com`}><img src={logosmall} class="rounded mx-auto d-block" alt="logo" style={{ height: "50px", width: "250px" }} /></a></div>
+                        <div style={{ marginTop: "1%", marginBottom: "1%" }}><a href={`https://aslikahani.com`}><img src={logosmall} className="rounded mx-auto d-block" alt="logo" style={{ height: "50px", width: "250px" }} /></a></div>
                         <HTMLFlipBook
                             width={380}
                             height={500}
@@ -162,64 +162,64 @@ function Flipbook() {
                                 <div onClick={() => {
                                                       book.current.pageFlip().flipPrev();
                                                       play();
-                                                      }} className='prev-btn'><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+                                                      }} className='prev-btn'><i className="fa fa-chevron-left" aria-hidden="true"></i></div>
                             </div>
                             <div className='btn3'>
                                 <div onClick={() => {
                                                       book.current.pageFlip().flipNext();
                                                       play();
-                                                      }} className='next-btn'><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                                                      }} className='next-btn'><i className="fa fa-chevron-right" aria-hidden="true"></i></div>
                             </div>
                             <div className='btn4'>
-                                <div onClick={handleZoomIn}><i class="fa fa-search-plus" aria-hidden="true"></i></div>
+                                <div onClick={handleZoomIn}><i className="fa fa-search-plus" aria-hidden="true"></i></div>
                             </div>
                             <div className='btn5'>
-                                <div onClick={handleZoomOut}><i class="fa fa-search-minus" aria-hidden="true"></i></div>
+                                <div onClick={handleZoomOut}><i className="fa fa-search-minus" aria-hidden="true"></i></div>
                             </div>
 
                             <div className='btn6'>
-                                <div onClick={() => setFullScreen(true)}><i class="fa fa-arrows-alt" aria-hidden="true"></i></div>
+                                <div onClick={() => setFullScreen(true)}><i className="fa fa-arrows-alt" aria-hidden="true"></i></div>
                             </div>
                             <div onClick={() => { openPopup() }}>
-                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                <i className="fa fa-share-alt" aria-hidden="true"></i>
                             </div>
                         </div>
 
                         {isFullScreen &&
-                            <div onClick={() => setFullScreen(false)}><i class="fa fa-times exit" aria-hidden="true"></i></div>
+                            <div onClick={() => setFullScreen(false)}><i className="fa fa-times exit" aria-hidden="true"></i></div>
                         }
                     </div>
                 </div>
                 <div className='btn1'>
                     {isOpen && (
-                        <div class='pop-up-share-icons' style={{ position: "absolute", top: "40%" }} >
+                        <div className='pop-up-share-icons' style={{ position: "absolute", top: "40%" }} >
                             <button onClick={closePopup} className='pop-up-share-icons-close'>
-                                <i class="fa fa-times" aria-hidden="true"></i>
+                                <i className="fa fa-times" aria-hidden="true"></i>
                             </button>
-                            <div class="content">
+                            <div className="content">
                                 <p>Share this link via</p>
-                                <ul class="icons">
+                                <ul className="icons">
                                     <FacebookShareButton url={shareUrl} title={title} >
-                                        <a href="" className='fb' ><i class="fab fa-facebook-f"></i></a>
+                                        <a href="" className='fb' ><i className="fab fa-facebook-f"></i></a>
                                     </FacebookShareButton>
                                     <TwitterShareButton url={shareUrl} title={title}>
-                                        <a href="" className='tw'><i class="fab fa-twitter"></i></a>
+                                        <a href="" className='tw'><i className="fab fa-twitter"></i></a>
                                     </TwitterShareButton>
                                     <LinkedinShareButton url={shareUrl} title={title}>
-                                        <a href="" className='li'><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="" className='li'><i className="fab fa-linkedin-in"></i></a>
                                     </LinkedinShareButton>
                                     <WhatsappShareButton url={shareUrl} title={title} style={{ color: "green" }}>
-                                        <a href="" className='wt'><i class="fab fa-whatsapp"></i></a>
+                                        <a href="" className='wt'><i className="fab fa-whatsapp"></i></a>
                                     </WhatsappShareButton>
                                     <TelegramShareButton url={shareUrl} title={title}>
-                                        <a href="" className='tl'><i class="fab fa-telegram-plane"></i></a>
+                                        <a href="" className='tl'><i className="fab fa-telegram-plane"></i></a>
                                     </TelegramShareButton>
                                 </ul>
                                 <p>Or copy link</p>
-                                <div class="field">
-                                    <i class="url-icon uil uil-link"></i>
+                                <div className="field">
+                                    <i className="url-icon uil uil-link"></i>
                                     <input type="text" readonly value="https://aslikahani.com/emagzine/asli-kahani-edition-20/preview" clipboardCopy />
-                                    <button onClick={handleCopyClick}><i class="fa-solid fa-copy"></i></button>
+                                    <button onClick={handleCopyClick}><i className="fa-solid fa-copy"></i></button>
                                     {copied && <div className='link-copied-to-clipboard'>link copied to clipboard!</div>}
                                 </div>
                             </div>

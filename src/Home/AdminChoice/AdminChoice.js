@@ -98,6 +98,7 @@ function AdminChoice(props) {
                                           <div className="caption" onClick={() => handleNavigation(item, index)}>
                                              <h5>
                                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
+                                                <br/> <br/>
                                              </h5>
                                           </div>
                                           <ul className="post-tools" onClick={() => handleNavigation(item, index)}>

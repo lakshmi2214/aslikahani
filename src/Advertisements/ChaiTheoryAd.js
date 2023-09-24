@@ -92,7 +92,7 @@ export default ChaiTheoryAd;
 //             <div key={index}>
               
                   
-//                   <div class="ad-div style-box">
+//                   <div className="ad-div style-box">
 
 //                      <a href={item.url} target='blank'>
 //                         <img src={item.image} className="img-responsive d-block w-100 " alt="" />

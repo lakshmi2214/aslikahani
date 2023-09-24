@@ -56,7 +56,7 @@ function NationalNews(props) {
                                  <div className="category-image" onClick={() => handleNavigation(item, index)}>
                                     <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                        <img alt="" className="img-responsive" src={item.image}
-                                          style={{ height: "190px" }} />
+                                          style={{ height: "200px" }} />
                                     </a>
                                  </div>
                               </div>
@@ -87,7 +87,7 @@ function NationalNews(props) {
                                  <div className="category-image" onClick={() => handleNavigation(item, index)}>
                                     <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                        <img alt="" className="img-responsive" src={item.image}
-                                          style={{ height: "190px" }} />
+                                          style={{ height: "200px" }} />
                                     </a>
                                  </div>
                               </div>

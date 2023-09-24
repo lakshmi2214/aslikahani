@@ -940,6 +940,8 @@ p .readmore {
 
 .zerogrid-section {
 	padding: 0;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 .zerogrid-section img {
@@ -1161,6 +1163,13 @@ p .readmore {
 	.sampleBlock {
 		font-size: 14px;
 	}
+	
+.zerogrid-section {
+	/* padding: 0;
+	border: 1px solid red; */
+	margin-left: 0%;
+	margin-right: 0%;
+}
 }
 
 
@@ -3089,8 +3098,9 @@ p .readmore {
 
 .small-grid .small-thumb {
 	float: left;
-	margin-right: 15px;
+	/* margin-right: 15px; */
 	overflow: hidden;
+	width: 34%;
 }
 
 .small-thumb img {
@@ -3245,7 +3255,7 @@ p .readmore {
 
 .authors ul li {
 	display: inline-block;
-	float: left;
+	/* float: left; */
 	margin: 0;
 	padding: 0 2px 2px 0;
 }
@@ -3362,9 +3372,9 @@ p .readmore {
 	color: #FFF;
 }
 
-.widget .video-section-widget iframe {
-	/*height:280px;*/
-}
+/* .widget .video-section-widget iframe {
+	height:280px;
+} */
 
 .widget .video-section-widget iframe {
 	height: 100%;
@@ -3790,7 +3800,7 @@ section.ad-section {
 	margin-bottom: 0;
 }
 
-.contact-form-style-2 {}
+/* .contact-form-style-2 {} */
 
 .contact-form-style-2 .contact-form .form-group input {
 	height: 40px;
@@ -4822,7 +4832,7 @@ footer .social-media-icons ul {
 	}
 	.small-grid .small-thumb {
 		margin-right: 10px;
-		width: 75px;
+		width: 30%;
 	}
 	.listing .desc p {
 		display: none;
@@ -5021,6 +5031,10 @@ footer .social-media-icons ul {
 	.full-with-slider-section .owl-theme .owl-nav .owl-next {
 		top: 35%;
 	}
+	.bannerAd1{
+		margin-top: auto;
+    margin-bottom: -10%;
+	}
 }
 
 .grid-thumb{
@@ -5033,4 +5047,12 @@ footer .social-media-icons ul {
 .grids-4{
 	border: 1px solid red;
 	height: 700px;
+}
+.bannerAd1{
+	/* border: 1px solid red; */
+	width: 100%;
+	height: 130px;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 0.2% ;
 }

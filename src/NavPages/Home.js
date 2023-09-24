@@ -38,6 +38,8 @@ import AdminChoice from "../Home/AdminChoice/AdminChoice";
 import AllTimeBestArticles from "../Home/AllTimeBestArticles";
 import Footer from "../Home/Footer/Footer";
 import Navbar from "../Utility/Navbar";
+// import Nav from "../Utility/Nav";
+// import Navbars from "../Utility/Navbars";
 // import Subscriptiontag from "../Subscription/Subscriptiontag";
 
 function Home() {
@@ -63,8 +65,10 @@ function Home() {
         <>
         {/* <Subscriptiontag/> */}
       <Navbar />  
-      <br/><br/>
-      <BannerAd1 addObject={value}/>
+      {/* <Nav /> */}
+      {/* <Navbars /> */}
+      <div className="bannerAd1">
+      <BannerAd1 addObject={value}/></div>
      <Grid dataObject={result}/>
                  <section className="main-content">
          <div className="container">
