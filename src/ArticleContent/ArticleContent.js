@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react'
 import Navbar from '../Utility/Navbar'
 import SristarAd1 from '../Advertisements/SristarAd1'
 import SristarAd2 from '../Advertisements/SristarAd2'
+import LogoColumn from '../Home/LogoColumn'
 
 function ArticleContent() {
   const [result, setResult] = useState([]);
@@ -26,6 +27,7 @@ function ArticleContent() {
   }, []);
   return (
     <div>
+      <LogoColumn />
       <Navbar />
       <section className="main-content">
         <div className="container">

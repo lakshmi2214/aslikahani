@@ -12,6 +12,7 @@ import BannerAd1 from '../Advertisements/BannerAd1';
 import TechnologyPost1 from '../Technology/TechnologyPost1';
 import BannerAd2 from '../Advertisements/BannerAd2';
 import TechnologyPost2 from '../Technology/TechnologyPost2';
+import LogoColumn from '../Home/LogoColumn';
 function Technology() {
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
@@ -31,6 +32,7 @@ function Technology() {
   }, []);
   return (
     <div>
+      <LogoColumn />
       <Navbar/>
       <section className="main-content">
         <div className="container">

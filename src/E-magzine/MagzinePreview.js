@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import './Article.css'
 import Navbar from "../Utility/Navbar";
 import FooterCategory from "../FooterCategory/FooterCategory";
+import LogoColumn from "../Home/LogoColumn";
 
 function MagzinePreview(){
     const location = useLocation();
@@ -26,6 +27,7 @@ function MagzinePreview(){
   }, []);
     return(
         <>
+		<LogoColumn />
 		<Navbar/>
         <div className="single-product mt-150 mb-150">
 		<div className="container">

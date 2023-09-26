@@ -12,6 +12,7 @@ import BannerAd1 from '../Advertisements/BannerAd1';
 import EducationPost1 from '../Education/EducationPost1';
 import BannerAd2 from '../Advertisements/BannerAd2';
 import EducationPost2 from '../Education/EducationPost2';
+import LogoColumn from '../Home/LogoColumn';
 
 
 function Education() {
@@ -34,6 +35,7 @@ function Education() {
   }, []);
   return (
     <div>
+      <LogoColumn />
       <Navbar/>
       <section className="main-content">
         <div className="container">

@@ -11,6 +11,7 @@ import BusinessPost1 from '../Business/BusinessPost1';
 import BannerAd2 from '../Advertisements/BannerAd2';
 import BusinessPost2 from '../Business/BusinessPost2';
 import Navbar from '../Utility/Navbar';
+import LogoColumn from '../Home/LogoColumn';
 
 
 
@@ -33,6 +34,7 @@ function Business() {
 
   return (
     <div>
+      <LogoColumn />
       <Navbar/>
       <section className="main-content">
         <div className="container">

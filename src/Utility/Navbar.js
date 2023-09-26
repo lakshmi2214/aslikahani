@@ -15,6 +15,7 @@ function Navbar() {
 
 	return (
 		<header>
+			{/* <Link to={"/"}><img src={logosmall} className="navlogo" alt="logo" style={{ height: "45px", width: "220px", paddingTop: "2px", paddingBottom: "2px" }}></img></Link> */}
 			<div className="pod" > <a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj" target="blank" style={{ color: "black" }}>Podcast
 				<span > </span><i class="fa fa-spotify"></i></a> | <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine'} style={{ color: "black" }}> EMagazine</a> </div>
 			<div className="socialmedia-mobile">

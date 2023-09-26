@@ -20,6 +20,7 @@ import '../../css/zerogrid.css';
 import '../../css/royal-slider/rs-default.css';
 import '../../css/owl.carousel.css';
 // import ReactPlayer from "react-player/youtube";
+// import ReactPlayer from 'react-player/lazy'
 
 import { useLocation } from "react-router-dom";
 
@@ -62,7 +63,12 @@ function RelatedArticleContent() {
           <p> {data.description}</p>
           <div dangerouslySetInnerHTML={{ __html: data.body }}></div>
         </div>
-        {/* <ReactPlayer url="https://www.youtube.com/watch?v=eoOaKN4qCKw" controls={true}/> */}
+        {/* <div className="col-md-12" style={{border:"1px solid red"}}>
+        <ReactPlayer url="https://www.youtube.com/watch?v=eoOaKN4qCKw" controls={true}/>
+        </div> */}
+        <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+</div>
        </div>
     </>
   );

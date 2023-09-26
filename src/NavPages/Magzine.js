@@ -13,6 +13,7 @@ import BusinessPost2 from '../Business/BusinessPost2';
 import Navbar from '../Utility/Navbar';
 import MagzinePost1 from "../E-magzine/MagzinePost1";
 import MagzinePreview from "../E-magzine/MagzinePreview";
+import LogoColumn from "../Home/LogoColumn";
 
 function Magzine(){
 
@@ -35,6 +36,7 @@ function Magzine(){
 
     return(
         <>
+        <LogoColumn />
         <Navbar/>
         <section className="main-content">
         <div className="container">

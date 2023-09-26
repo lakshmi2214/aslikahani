@@ -17,19 +17,30 @@ function Flipbook() {
 
     //Api fetching
     const [datavalue, setDatavalue] = useState([]);
+    const [tmp, setTmp] = useState([]); 
 
+//   const [data, setData] = useState([]);
+ 
     useEffect(() => {
         if (location) {
             var urlcomponent = location.pathname.split('/');
             var tmp = urlcomponent[urlcomponent.length - 2];
-
+            setTmp(tmp);
         }
         const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/emagzines/get?url=${tmp}`
         fetch(url).then(res => res.json())
             .then(res => {
+               
                 setDatavalue(res)
-                console.log(res)
+                
             })
+            // const url1 = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/emagzines/get?url=${tmp}&meta=true`
+            // fetch(url1).then(res => res.json())
+            //   .then(res => {
+            //     setData(res)
+            //     console.log(res)
+        
+            //   })
     }, [])
 
     //Flipbook
@@ -68,7 +79,7 @@ function Flipbook() {
 
     const [isOpen, setIsOpen] = useState(false);
 
-    const shareUrl = 'https://aslikahani.com/emagzine/asli-kahani-edition-20/preview';
+    const shareUrl = process.env.REACT_APP_DOMAIN_NAME+`/emagazine/${tmp}/preview`;
     const title = 'ASLIKAHANI';
 
     const openPopup = () => {
@@ -84,7 +95,7 @@ function Flipbook() {
 
     //copy to clipboard
 
-    const textToCopy = "https://aslikahani.com/emagzine/asli-kahani-edition-20/preview";
+    const textToCopy = process.env.REACT_APP_DOMAIN_NAME+`/emagazine/${tmp}/preview`;
 
     const [copied, setCopied] = useState(false);
 
@@ -135,7 +146,7 @@ function Flipbook() {
                     </div>
                 <div id='total-magzine' >
                     <div className="image-viewer">
-                        <div style={{ marginTop: "1%", marginBottom: "1%" }}><a href={`https://aslikahani.com`}><img src={logosmall} className="rounded mx-auto d-block" alt="logo" style={{ height: "50px", width: "250px" }} /></a></div>
+                        <div style={{ marginTop: "1%", marginBottom: "1%" }}><a href="/"><img src={logosmall} className="rounded mx-auto d-block" alt="logo" style={{ height: "50px", width: "250px" }} /></a></div>
                         <HTMLFlipBook
                             width={380}
                             height={500}
@@ -218,7 +229,10 @@ function Flipbook() {
                                 <p>Or copy link</p>
                                 <div className="field">
                                     <i className="url-icon uil uil-link"></i>
-                                    <input type="text" readonly value="https://aslikahani.com/emagzine/asli-kahani-edition-20/preview" clipboardCopy />
+                                    {/* <input type="text" readonly value="https://aslikahani.com/emagzine/asli-kahani-edition-20/preview" clipboardCopy /> */}
+                                    <input type="text" readonly value={process.env.REACT_APP_DOMAIN_NAME+`/emagazine/${tmp}/preview`} clipboardCopy />
+                                                                        
+                                    {/* {process.env.REACT_APP_DOMAIN_NAME+'/emagazine/'+data.url+'/preview' */}
                                     <button onClick={handleCopyClick}><i className="fa-solid fa-copy"></i></button>
                                     {copied && <div className='link-copied-to-clipboard'>link copied to clipboard!</div>}
                                 </div>

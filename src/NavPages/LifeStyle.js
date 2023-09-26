@@ -12,6 +12,7 @@ import LifestylePost1 from '../LifeStyle/LifestylePost1';
 import BannerAd1 from '../Advertisements/BannerAd1';
 import BannerAd2 from '../Advertisements/BannerAd2';
 import LifestylePost2 from '../LifeStyle/LifestylePost2';
+import LogoColumn from '../Home/LogoColumn';
 
 function LifeStyle() {
   const [result, setResult] = useState([]);
@@ -31,6 +32,7 @@ function LifeStyle() {
   }, []);
   return (
     <div>
+      <LogoColumn />
       <Navbar/>
       <section className="main-content">
         <div className="container">

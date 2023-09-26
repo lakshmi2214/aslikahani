@@ -38,6 +38,7 @@ import AdminChoice from "../Home/AdminChoice/AdminChoice";
 import AllTimeBestArticles from "../Home/AllTimeBestArticles";
 import Footer from "../Home/Footer/Footer";
 import Navbar from "../Utility/Navbar";
+import LogoColumn from "../Home/LogoColumn";
 // import Nav from "../Utility/Nav";
 // import Navbars from "../Utility/Navbars";
 // import Subscriptiontag from "../Subscription/Subscriptiontag";
@@ -64,6 +65,7 @@ function Home() {
     return(
         <>
         {/* <Subscriptiontag/> */}
+        <LogoColumn />
       <Navbar />  
       {/* <Nav /> */}
       {/* <Navbars /> */}

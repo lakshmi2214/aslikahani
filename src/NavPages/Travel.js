@@ -12,6 +12,7 @@ import TravelPost1 from '../Travel/TravelPost1';
 import BannerAd2 from '../Advertisements/BannerAd2';
 import TravelPost2 from '../Travel/TravelPost2';
 import Navbar from '../Utility/Navbar';
+import LogoColumn from '../Home/LogoColumn';
 
 
 function Travel() {
@@ -34,6 +35,7 @@ function Travel() {
   }, []);
   return (
     <div>
+      <LogoColumn />
       <Navbar/>
       <section className="main-content">
         <div className="container">

@@ -11,6 +11,7 @@ import BannerAd1 from '../Advertisements/BannerAd1'
 import EntertainmentPost1 from '../Entertainment/EntertainmentPost1'
 import BannerAd2 from '../Advertisements/BannerAd2'
 import EntertainmentPost2 from '../Entertainment/EntertainmentPost2'
+import LogoColumn from '../Home/LogoColumn'
 function Entertainment() {
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
@@ -32,6 +33,7 @@ function Entertainment() {
   }, []);
   return (
     <div>
+      <LogoColumn />
       <Navbar/>
       <section className="main-content">
         <div className="container">

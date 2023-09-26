@@ -12,6 +12,7 @@ import BannerAd1 from '../Advertisements/BannerAd1';
 import ArtPost1 from '../ArtAndCulture/ArtPost1';
 import BannerAd2 from '../Advertisements/BannerAd2';
 import ArtPost2 from '../ArtAndCulture/ArtPost2';
+import LogoColumn from '../Home/LogoColumn';
 
 function ArtCulture() {
 
@@ -32,6 +33,7 @@ function ArtCulture() {
   }, []);
   return (
     <>
+    <LogoColumn />
     <Navbar/>
       <section className="main-content">
         <div className="container">

@@ -40,7 +40,7 @@ function Grid(props) {
     </ul>
     </div>
     <div className="post-thumb" onClick={() => handleNavigation(item, index)}>
-     <img alt="" src={item.image}  style={{height:"419.5px"}}/> </div>
+     <img alt="" src={item.image}  style={{height:"420.5px"}}/> </div>
     </div>
     )})}
 </div>

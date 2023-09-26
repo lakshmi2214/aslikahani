@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import logosmall from "../images/logo-small.jpg";
 
 function LogoColumn() {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
@@ -30,9 +31,13 @@ function LogoColumn() {
 
   return (
     <div>
-        <div className='col-md-5' >
+        <div className='col-md-5'>
       <p>{formattedDate}</p>
       <p >{formattedTime} |<span className='pointer'>  Explore Trending Articles </span></p>
+      </div>
+      <div className='col-sm-5 logo'>
+        <a href='/'>
+     <img src={logosmall} className="navlogo" alt="logo" ></img></a>
       </div>
     </div>
   );

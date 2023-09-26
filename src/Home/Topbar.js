@@ -57,7 +57,7 @@ function Topbar() {
                </div>
             </div>
          </section>
-         <LogoColumn />
+         {/* <LogoColumn /> */}
       </div>
    );
 }
