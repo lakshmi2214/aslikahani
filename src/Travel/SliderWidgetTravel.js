@@ -53,10 +53,10 @@ function SliderWidgetTravel(props) {
                      return (
                            <div key={index}>
                               <div className="picture">
-                                 <div className="category-image" onClick={() => handleNavigation(item, index)}>
+                                 <div className="category-image postwidget-img" onClick={() => handleNavigation(item, index)}>
                                     <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                        <img alt="" className="img-responsive" src={item.image}
-                                          style={{ height: "190px" }} />
+                                          style={{ height: "250px", width:"400px" }} />
                                     </a>
                                  </div>
                               </div>

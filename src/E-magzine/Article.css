@@ -25,7 +25,29 @@
         width: 100%;
         padding: 3%;
     }
+    .postwidget-img{
+        border: 1px solid red;
+        width: 360px;
+    }
 }
 .post-widget-img{
+    width: 360px;
+}
+.preview{
+    color: white;
+    text-decoration: none;
+}
+.preview:hover{
+    text-decoration: none;
+}
+.preview{
+    color: white;
+    text-decoration: none;
+}
+.preview:hover{
+    text-decoration: none;
+}
+
+.postwidget-img{
     width: 360px;
 }

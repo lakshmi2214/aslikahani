@@ -25,7 +25,7 @@ import '../css/zerogrid.css';
 import '../fonts/glyphicons-halflings-regular.svg';
 import '../css/royal-slider/rs-default.css';
 import "./Topbar.css";
-import LogoColumn from "./LogoColumn";
+// import LogoColumn from "./LogoColumn";
 // import logosmall from "../images/logo-small.jpg";
 
 function Topbar() {

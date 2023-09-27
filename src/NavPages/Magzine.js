@@ -3,16 +3,16 @@ import FooterCategory from '../FooterCategory/FooterCategory';
 import { useState, useEffect } from 'react';
 // import BusinessPosts from '../Business/BusinessPosts';
 import ChaiTheoryAd from '../Advertisements/ChaiTheoryAd';
-import RecentBusiness from '../Business/RecentBusiness';
-import SliderWidgetBusiness from '../Business/SliderWidgetBusiness';
+// import RecentBusiness from '../Business/RecentBusiness';
+// import SliderWidgetBusiness from '../Business/SliderWidgetBusiness';
 import SristarAd1 from '../Advertisements/SristarAd1';
-import BannerAd1 from '../Advertisements/BannerAd1';
-import BusinessPost1 from '../Business/BusinessPost1';
-import BannerAd2 from '../Advertisements/BannerAd2';
-import BusinessPost2 from '../Business/BusinessPost2';
+// import BannerAd1 from '../Advertisements/BannerAd1';
+// import BusinessPost1 from '../Business/BusinessPost1';
+// import BannerAd2 from '../Advertisements/BannerAd2';
+// import BusinessPost2 from '../Business/BusinessPost2';
 import Navbar from '../Utility/Navbar';
 import MagzinePost1 from "../E-magzine/MagzinePost1";
-import MagzinePreview from "../E-magzine/MagzinePreview";
+// import MagzinePreview from "../E-magzine/MagzinePreview";
 import LogoColumn from "../Home/LogoColumn";
 
 function Magzine(){

@@ -58,7 +58,7 @@ function SliderPostWidget(props) {
                               </h5>
                            </div>
                            <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                              <li> by <a href=""> <strong> {item.authored_by}</strong> </a></li>
+                              <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
                               <li>  {item.created_at} </li>
                            </ul>
                         </div>

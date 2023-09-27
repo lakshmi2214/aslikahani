@@ -24,7 +24,7 @@ function MagzinePreview(){
         console.log(res)
 
       })
-  }, []);
+  }, );
     return(
         <>
 		<LogoColumn />
@@ -42,19 +42,11 @@ function MagzinePreview(){
 						<h1>{data.title}</h1>
 						<p className="single-product-pricing text-muted">{data.created_at}</p>
 						<p>{data.description}</p>
-						{/* <div className="single-product-form">
-							<form action="index.html">
-								<input type="number" placeholder="0"/>
-							</form>
-							<a href="cart.html" className="cart-btn"><i className="fas fa-shopping-cart"></i> Add to Cart</a>
-							<p><strong>Categories: </strong>Fruits, Organic</p>
-						</div> */}
-						{/* <h4>Share:</h4> */}
 						<div className="author">
             <p><b>Author Name:</b>  <span>{data.authored_by}</span></p>
       <p><b>About Author: </b> {data.about_author}</p>
       <p> <b>Time to read:</b> {data.time_to_read} Hour</p>
-      <button className="btn btn-primary " ><a href= {process.env.REACT_APP_DOMAIN_NAME+'/emagazine/'+data.url+'/preview'} style={{color:"white"}}>Preview</a></button>
+      <button className="btn btn-primary " ><a href= {process.env.REACT_APP_DOMAIN_NAME+'/emagazine/'+data.url+'/preview'} className="preview"> <span className="preview">Preview </span></a></button>
 						</div>
 					</div>
 				</div>

@@ -13,8 +13,8 @@ function BannerAd1(props) {
                             return (
 
                                 <div key={index}>
-                                    <a href={item.url} target="_blank">
-                                        <img src={item.image} className="img-responsive" alt="" />
+                                    <a href={item.url} target="_blank" rel="noreferrer">
+                                        <img src={item.image} className="img-responsive" alt="itm-img" />
                                     </a>
                                 </div>
                             )

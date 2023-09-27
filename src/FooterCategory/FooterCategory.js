@@ -94,10 +94,10 @@ function FooterCategory() {
     <div className="row">
     <div className="col-md-12 col-sm-12 col-xs-12">
     <ul>
-                        <li><a href="#">Privacy Policy </a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="/">Privacy Policy </a></li>
+                        <li><a href="/">About Us</a></li>
+                        <li><a href="/">FAQ</a></li>
+                        <li><a href="/">Blog</a></li>
                      </ul>
                      <div className="copyright"> <span>&copy; 2023 All rights reserved. Aslikahani</span> </div>
     </div>
