@@ -25,6 +25,9 @@ import '../css/zerogrid.css';
 import '../fonts/glyphicons-halflings-regular.svg';
 import '../css/royal-slider/rs-default.css';
 import "./Topbar.css";
+// import LanguageSwitcher from "./LanguageSwitcher";
+// import Translator from "./Translator";
+// import Languages from "./i18n";
 // import LogoColumn from "./LogoColumn";
 // import logosmall from "../images/logo-small.jpg";
 
@@ -57,6 +60,8 @@ function Topbar() {
                </div>
             </div>
          </section>
+         {/* <LanguageSwitcher /> */}
+         {/* <Translator /> */}
          {/* <LogoColumn /> */}
       </div>
    );

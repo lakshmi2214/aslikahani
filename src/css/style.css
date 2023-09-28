@@ -940,8 +940,10 @@ p .readmore {
 
 .zerogrid-section {
 	padding: 0;
-	margin-left: 5%;
-	margin-right: 5%;
+	/* margin-left: 5%;
+	margin-right: 5%; */
+	margin-left: 12%;
+    margin-right: 13%;
 }
 
 .zerogrid-section img {

@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans&family=Roboto:wght@300;400&display=swap');
-
+body{
+  margin-left: auto;
+  margin-right: auto;
+}
 .navbar {
   background-color: #f79500;
   height: 80px;
