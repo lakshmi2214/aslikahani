@@ -18,15 +18,14 @@ function Grid(props) {
         <section className="zerogrid-section">
          <div className="container-fluid">
             <div className="row">
-           
+            <div className="col-md-3 sideBanner">
+              <img src={sideBanner} alt="side banner" />
+            </div>
                <div className="col-md-12 col-xs-12 col-sm-12">
               
                   <div className="zerogrid">
                      <div className="row">
                         <div className="col-2-4">
-                        <div className="sideBanner">
-              <img src={sideBanner} alt="side banner"/>
-            </div>
                            <div className="wrap-col">
                            <div className="grid-item">
                                     
@@ -146,18 +145,24 @@ function Grid(props) {
      
               
                            </div>
-                           <div className="asideBanner">
-              <img src={sideBanner} alt="side banner"/>
+                         
+                           <div className="col-sm-4 asideBanner">
+              <img src={sideBanner} alt="side banner" />
             </div>
+                         
                          </div>
+                        
                         </div>
                        
 
                      </div>
                   </div>
+                 
                </div>
+               
             </div>
-         </div>
+           
+         </div>        
       </section>
 
      

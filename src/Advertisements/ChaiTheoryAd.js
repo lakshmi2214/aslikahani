@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import React from 'react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import "./Chaitheory.css";
+import Weather from './Weather';
 // import Swiper from 'react-id-swiper';
 
 function ChaiTheoryAd(props) {
@@ -72,9 +73,10 @@ function ChaiTheoryAd(props) {
                   </div>
                 
       )}))})}
+      
                   </SwiperSlide>
              </Swiper>
-       
+             <Weather />
     </div>       
          
       
