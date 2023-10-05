@@ -1,5 +1,5 @@
 import React from "react";
-import "./Subscription.css";
+// import "./Subscription.css";
 import logosmall from "../images/logo-small.jpg";
 import subscribeImage from "./subscribe.jpeg";
 import { useNavigate } from "react-router-dom";

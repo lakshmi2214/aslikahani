@@ -25,7 +25,8 @@ import '../css/zerogrid.css';
 import '../fonts/glyphicons-halflings-regular.svg';
 import '../css/royal-slider/rs-default.css';
 import "./Topbar.css";
-import Translation from "./Translation";
+// import Translation from "./Translation";
+// import Translator from "./Translator";
 // import LanguageTranslator from "./LanguageTranslator";
 // import LanguageSwitcher from "./LanguageSwitcher";
 // import Translator from "./Translator";
@@ -50,9 +51,9 @@ function Topbar() {
                         </ul>
                         {/* <Translator /> */}
                      </div>
-                     <div className="col-md-2" style={{border:"1px solid red", marginLeft:"10%"}}>
+                     <div className="col-md-2" style={{marginLeft:"10%"}}>
                      {/* <img src={logosmall} alt="logo" style={{ height: "20px", width: "180px" }} /> */}
-                     <Translation />
+                     {/* <Translation /> */}
                      </div>
                      <div className="col-md-4 col-sm-9 col-xs-12">
                         <ul >
@@ -64,7 +65,7 @@ function Topbar() {
                </div>
             </div>
          </section>
-        
+        {/* <Translator /> */}
          {/* <LanguageSwitcher /> */}
          
          {/* <LogoColumn /> */}

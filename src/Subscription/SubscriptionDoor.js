@@ -1,6 +1,6 @@
 import React from "react";
 import blackSub from "./SUBSCRIBE1.jpeg";
-import "./Subscription.css";
+// import "./Subscription.css";
 import box from "./Subscribebox.jpeg";
 
 function SubscriptionDoor(){

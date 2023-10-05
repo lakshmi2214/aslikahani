@@ -61,6 +61,12 @@ function Home() {
       .then(response => {
         setvalue(response)
       })
+      // const url2 = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/category/list`;
+      // fetch(url2).then(response => response.json()
+      // )
+      // .then(response => {
+      //   setvalue(response)
+      // })
     }, []);
     return(
         <>

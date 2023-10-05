@@ -18,16 +18,19 @@
     height: 70%;
     /* position:absolute; */
     /* z-index: 1; */
-    margin-left: -9%; 
-    top: 200px;
+    /* margin-left: -11.5%;  */
+    margin-left: -167px;
+    /* left: 0; */
+    top: 250px;
     z-index: 2  ;
+    padding: 10px;
   }
   .asideBanner{
     position: fixed;
-    width:9%;
-    height: 70%;
-    top: 200px;
+    width:8%;
+    height: 60%;
+    top: 250px;
     z-index: 2;
-    margin-left: 290px;
+    margin-left: 315px;
   }
        
