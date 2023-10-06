@@ -14,23 +14,46 @@
 } */
 .sideBanner{
     position: fixed;
-    width:9.2%;
+    width:8%;
     height: 70%;
-    /* position:absolute; */
-    /* z-index: 1; */
-    /* margin-left: -11.5%;  */
-    margin-left: -167px;
-    /* left: 0; */
-    top: 250px;
+    /* left: 167px; */
+    /* left: 30%; */
+    float: left;
+    top: 140px;
     z-index: 2  ;
-    padding: 10px;
+    /* padding: 10px; */
+    margin-right: -150px;
+    display: none;
+    border: 1px solid red;
   }
   .asideBanner{
     position: fixed;
     width:8%;
     height: 60%;
-    top: 250px;
+    top: 140px;
     z-index: 2;
-    margin-left: 315px;
+    margin-right: 315px;
+    display: none;
   }
-       
+  @media (min-width: 768px) {
+    .sideBanner{
+        display: block;
+    }
+    .asideBanner{
+        display: block;
+    }
+   
+  } 
+  .translation{
+    position: relative;
+    height: 30px;
+    /* border: 1px solid red; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    padding-left: 3%;
+  }
+  @media screen and (min-width: 320px) and (max-width: 767px){
+    .translation{       
+        margin-left: 30%;
+      }
+  }

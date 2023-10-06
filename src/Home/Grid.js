@@ -20,16 +20,23 @@ function Grid(props) {
             <div className="row">
 
 
-            <div className=" sideBanner">
+            <div className=" sideBanner col-md-1">
+               {/* <span className="sidebanners"> */}
+                  {/* <a href="/home"> */}
               <img src={sideBanner} alt="side banner" />
+              {/* </a>
+              </span> */}
             </div>
 
             
-               <div className="col-md-12 col-xs-12 col-sm-12">
+               <div className="col-md-10 col-xs-12 col-sm-12">
               
                   <div className="zerogrid">
                      <div className="row">
                         <div className="col-2-4">
+                        {/* <div className="asideBanner" style={{marginRight:"100%"}}>
+              <img src={sideBanner} alt="side banner" />
+            </div> */}
                            <div className="wrap-col">
                            <div className="grid-item">
                                     
@@ -150,7 +157,7 @@ function Grid(props) {
               
                            </div>
                          
-                           <div className="asideBanner">
+                           <div className="asideBanner col-md-1">
               <img src={sideBanner} alt="side banner" />
             </div>
                          

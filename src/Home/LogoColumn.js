@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import logosmall from "../images/logo-small.jpg";
+import Translator from './Translator';
 
 function LogoColumn() {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
@@ -35,9 +36,13 @@ function LogoColumn() {
       <p>{formattedDate}</p>
       <p >{formattedTime} |<span className='pointer'>  Explore Trending Articles </span></p>
       </div>
-      <div className='col-sm-5 logo'>
+      <div className='col-sm-4 logo'>
         <a href='/'>
      <img src={logosmall} className="navlogo" alt="logo" ></img></a>
+      </div>
+      <div className='col-sm-3 translation'>
+        <span className='span'>
+      <Translator /></span>
       </div>
     </div>
   );

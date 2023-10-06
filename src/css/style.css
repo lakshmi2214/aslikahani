@@ -168,6 +168,10 @@ section {
 	margin-bottom: 20px;
 	position: relative;
 	overflow: hidden;
+	margin-left: 40px;
+	/* margin-left: 6%; */
+	margin-right: -5%;
+	/* border: 1px solid red; */
 }
 .main-content div.section:last-child {
 	margin-bottom:0;	
@@ -3220,6 +3224,9 @@ p .readmore {
 
 #sidebar .headings {
 	margin-left: 0px;
+}
+#sidebar aside{
+	margin-left: -2%;
 }
 
 #sidebar iframe {
