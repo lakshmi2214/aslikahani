@@ -55,7 +55,7 @@ function RelatedArticleContent() {
             <li> {data.created_at} </li>
           </ul>
           <img alt="" className="img-responsive" src={data.image} style={{ height: "500px", width: "760px" }} />
-       <span className="text-muted h6">{data.credit_line} </span>
+          <span className="text-muted h6">{data.credit_line} </span>
         </div>
         <div className="catname">
           <br></br>
@@ -66,11 +66,17 @@ function RelatedArticleContent() {
         {/* <div className="col-md-12" style={{border:"1px solid red"}}>
         <ReactPlayer url="https://www.youtube.com/watch?v=eoOaKN4qCKw" controls={true}/>
         </div> */}
-        <div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
-</div>
-       </div>
+
+        {data.video_url != null ?
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src={data.video_url} allowfullscreen></iframe>
+          </div>
+          : ""
+        }
+
+
+      </div>
     </>
   );
-} 
+}
 export default RelatedArticleContent;
