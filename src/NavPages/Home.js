@@ -42,7 +42,8 @@ import LogoColumn from "../Home/LogoColumn";
 // import Nav from "../Utility/Nav";
 // import Navbars from "../Utility/Navbars";
 // import Subscriptiontag from "../Subscription/Subscriptiontag";
-
+import sideBanner from "../images/banner2.jpg"
+// import rightBanner from "../images/banner1.jpg"
 function Home() {
    const [result, setResult] = useState([]);
     const [value, setvalue] = useState([]);
@@ -76,12 +77,18 @@ function Home() {
       {/* <Nav /> */}
       {/* <Navbars /> */}
       <div className="bannerAd1">
-      <BannerAd1 addObject={value}/></div>
+      <BannerAd1 addObject={value}/>
+      </div>
+      {/* <div className=" sideBanner col-md-1 col-xs-12 col-sm-12 position-fixed">              
+              <img src={sideBanner} alt="side banner" />              
+            </div> */}
      <Grid dataObject={result}/>
+     <br/>
                  <section className="main-content">
          <div className="container">
             <div className="row">
                <div className="col-md-6 col-sm-12 col-xs-12">
+                  <br/>
                   <LatestArticles dataObject={result}/>
                   <NationalNews dataObject={result}/>             
                   <TrendingNews dataObject={result}/>
@@ -89,23 +96,29 @@ function Home() {
                </div>
                <div className="col-md-2 col-sm-2 hidden-xs hidden-sm nopadding">
                   <div className="category-sidebar sidebar-middle">
+                     <br/>
                     <TopNews dataObject={result}/>
                   </div>
                </div>
                <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
                   <aside>
+                  
                        <ChaiTheoryAd addObject={value}/>
                       <PopularRecent dataObject={result}/> 
                       <SristarAd1 addObject={value}/>
                      <div className="widget widget-bg ">                       
                       <SliderPostWidget dataObject={result}/>
                      </div>
+                     
                   </aside>
+                  {/* <div className="asideBanner col-sm-1">              
+              <img src={sideBanner} alt="side banner"/>              
+            </div> */}
                </div>
          </div>
          </div>
          <BannerAd1 addObject={value}/>
-      </section>
+         </section>
      <AdminChoice dataObject={result}/>
       <AllTimeBestArticles dataObject={result}/>
       <BannerAd2 addObject={value}/>

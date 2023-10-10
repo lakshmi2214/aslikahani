@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import sideBanner from "../images/sidebanner.jpg"
+// import sideBanner from "../images/banner2.jpg"
 
 function Grid(props) {
 
@@ -16,28 +16,24 @@ function Grid(props) {
         <>
         
         <section className="zerogrid-section">
-         <div className="container-fluid">
-            <div className="row">
+         <div>
+            <div>
 
 
-            <div className=" sideBanner col-md-1">
-               {/* <span className="sidebanners"> */}
-                  {/* <a href="/home"> */}
-              <img src={sideBanner} alt="side banner" />
-              {/* </a>
-              </span> */}
-            </div>
+            {/* <div className=" sideBanner col-md-1">             
+              <img src={sideBanner} alt="side banner" />              
+            </div> */}
 
             
                <div className="col-md-10 col-xs-12 col-sm-12">
               
                   <div className="zerogrid">
-                     <div className="row">
+                     <div>
                         <div className="col-2-4">
                         {/* <div className="asideBanner" style={{marginRight:"100%"}}>
               <img src={sideBanner} alt="side banner" />
             </div> */}
-                           <div className="wrap-col">
+                           <div className="wrap-col grid-2" >
                            <div className="grid-item">
                                     
 
@@ -157,12 +153,12 @@ function Grid(props) {
               
                            </div>
                          
-                           <div className="asideBanner col-md-1">
-              <img src={sideBanner} alt="side banner" />
-            </div>
+                          
                          
                          </div>
-                        
+                         {/* <div className="asideBanner col-md-1 col-xs-12 col-sm-12">
+              <img src={sideBanner} alt="side banner" />
+            </div> */}
                         </div>
                        
 

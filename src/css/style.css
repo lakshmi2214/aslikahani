@@ -946,8 +946,8 @@ p .readmore {
 	padding: 0;
 	/* margin-left: 5%;
 	margin-right: 5%; */
-	margin-left: 12%;
-    margin-right: 13%;
+	margin-left: 15%;
+    margin-right: -3%;
 }
 
 .zerogrid-section img {
@@ -3360,7 +3360,7 @@ p .readmore {
 }
 
 .widget .grid-1 .detail {
-	padding: 20px;
+	padding: 7px;
 	background-color: #FFF;
 }
 

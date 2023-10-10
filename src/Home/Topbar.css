@@ -1,3 +1,4 @@
+
 .magzinebook{
     cursor: pointer;
 }
@@ -13,28 +14,37 @@
     z-index: 10;
 } */
 .sideBanner{
-    position: fixed;
-    width:8%;
-    height: 70%;
-    /* left: 167px; */
-    /* left: 30%; */
-    float: left;
-    top: 140px;
-    z-index: 2  ;
-    /* padding: 10px; */
-    margin-right: -150px;
-    display: none;
-    border: 1px solid red;
+  position: fixed;
+  width:8%;
+  height: 75%;
+  float: left;
+  top: 140px;
+  z-index: 2;
+  /* margin-left: 315px; */
+  display: none;  
+    /* border: 1px solid red; */
   }
+   /* .sideBanner img{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  } */
   .asideBanner{
     position: fixed;
     width:8%;
-    height: 60%;
+    height: 75%;
+    float: left;
     top: 140px;
     z-index: 2;
-    margin-right: 315px;
+    padding-left: 100px;
+    margin-left: 255px;
     display: none;
   }
+  /* .asideBanner img{
+    border: 1px solid red;
+    padding: 13%;
+    margin-left: 344px;
+  } */
   @media (min-width: 768px) {
     .sideBanner{
         display: block;
@@ -52,8 +62,15 @@
     margin-right: auto; */
     padding-left: 3%;
   }
+  .articl{
+    margin-left: -18px;
+  }
   @media screen and (min-width: 320px) and (max-width: 767px){
     .translation{       
         margin-left: 30%;
       }
+  }
+  .grid-2{
+    width: 100%;
+    margin-left: 7%;
   }

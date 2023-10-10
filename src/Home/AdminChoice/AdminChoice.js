@@ -49,7 +49,7 @@ function AdminChoice(props) {
                      </div>
                      <div className="item" style={{ height: "300px", width: "400px", display: "inline-block" }}>
                         <div className="latest-news-grid grid-1">
-                           <article className="col-md-12 col-sm-12 col-xs-12">
+                           <article className="col-md-12 col-sm-12 col-xs-12 article">
                               {props.dataObject?.locations?.AdminChoice.slice(0, 1).map((item, index) => {
                                  console.log(item);
                                  return (
@@ -98,7 +98,7 @@ function AdminChoice(props) {
                                           <div className="caption" onClick={() => handleNavigation(item, index)}>
                                              <h5>
                                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
-                                                <br/> <br/>
+                                                {/* <br/> <br/> */}
                                              </h5>
                                           </div>
                                           <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
@@ -114,7 +114,7 @@ function AdminChoice(props) {
                      </div>
                      <div className="item" style={{ height: "300px", width: "400px", display: "inline-block" }}>
                         <div className="latest-news-grid grid-1">
-                           <article className="col-md-12 col-sm-12 col-xs-12">
+                           <article className="col-md-12 col-sm-12 col-xs-12 articl">
                               {props.dataObject?.locations?.AdminChoice.slice(2, 3).map((item, index) => {
                                  console.log(item);
                                  return (
