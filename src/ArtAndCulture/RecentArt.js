@@ -57,7 +57,7 @@ function RecentArt(props) {
                                              <img alt="" src={item.image} style={{ height: "85px", width: "85px" }} className="" />
                                           </a>
                                        </div>
-                                       <div className="post-content">
+                                       <div className="post-content post-contents">
                                           <h3> <a href={process.env.REACT_APP_DOMAIN_NAME+'/Art-and-Culture/'+item.url}>{item.title}</a> </h3>
                                           <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
                                              <li>  {item.created_at} </li>

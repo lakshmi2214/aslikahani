@@ -5,6 +5,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import React from 'react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import "./Chaitheory.css";
+import WeatherForecast from '../WeatherForecast/WeatherForecast';
+import CurrentWeather from '../WeatherForecast/CurrentWeather';
+import CurrentWeatherReport from '../WeatherForecast/CurrentWeatherReport';
+import Weather from '../WeatherForecast/Weather';
+import WeatherApp from '../WeatherForecast/WeatherApp';
 // import App from '../Weather/App';
 // import Weather from './Weather';
 // import WeatherReport from './WeatherReport';
@@ -85,6 +90,11 @@ function ChaiTheoryAd(props) {
          {/* <App /> */}
              {/* <Weather />
              <WeatherReport /> */}
+             {/* <WeatherForecast /> */}
+             {/* <CurrentWeather /> */}
+             {/* <CurrentWeatherReport /> */}
+             {/* <Weather /> */}
+             <WeatherApp />
     </div>       
          
       

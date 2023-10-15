@@ -5044,6 +5044,14 @@ footer .social-media-icons ul {
 		margin-top: auto;
     margin-bottom: -10%;
 	}
+	/* .grid-thumb{
+	} */
+	.section {
+		margin-left: 6%;
+	}
+	.post-contents h3 {
+		margin-left: 30%;
+	}
 }
 
 .grid-thumb{

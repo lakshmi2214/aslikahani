@@ -41,7 +41,7 @@ function AdminChoice(props) {
             <div className="container">
                <div className="row">
                   <div className="col-md-12 col-xs-12 col-sm-12">
-                     <div className="col-md-12 col-xs-12 col-sm-12 nopadding">
+                     <div className="col-md-10 col-xs-12 col-sm-12 nopadding">
                         <div className="heading">
                            <h2 className="main-heading">Editor's Choice</h2>
                            <span className="heading-ping"></span>

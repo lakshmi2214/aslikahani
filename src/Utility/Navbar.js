@@ -3,6 +3,7 @@ import { FaBars } from "react-icons/fa";
 import "./Navbar.css";
 // import logosmall from "../images/logo-small.jpg";
 import { Link } from "react-router-dom"
+import Search from "./Search";
 
 function Navbar() {
 	const navRef = useRef();
@@ -12,7 +13,9 @@ function Navbar() {
 			"responsive_nav"
 		);
 	};
-
+	const handleSearch = (searchTerm) => {
+		alert(`Searching for: ${searchTerm}`);
+	  };
 	return (
 		<header>
 			{/* <Link to={"/"}><img src={logosmall} className="navlogo" alt="logo" style={{ height: "45px", width: "220px", paddingTop: "2px", paddingBottom: "2px" }}></img></Link> */}
@@ -42,6 +45,13 @@ function Navbar() {
 				onClick={showNavbar}>
 				<FaBars />
 			</button>
+			{/* <div class="main">
+	<input type="text" name="input" class="input" placeholder="Search Something....."/>
+	<div class="icon">
+		<i class="fa fa-search" aria-hidden="true"></i>
+	</div>
+</div> */}
+<Search onSearch={handleSearch} />
 		</header>
 	);
 }
