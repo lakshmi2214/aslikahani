@@ -1,8 +1,9 @@
-import ReactWeather, { useOpenWeather } from 'react-open-weather';
+import ReactWeather, { useVisualCrossing } from 'react-open-weather';
+
 
 const WeatherApp = () => {
-  const { data, isLoading, errorMessage } = useOpenWeather({
-    key: 'f6cbd7f0b1f92dc61d65f42c85f50656',
+  const { data, isLoading, errorMessage } = useVisualCrossing({
+    key: 'K5Q9L49GM6H3LP7JWE2TC87A2',
     lat: '48.137154',
     lon: '11.576124',
     lang: 'en',
