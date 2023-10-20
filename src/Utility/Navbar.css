@@ -79,9 +79,9 @@ header div,
 nav {
 	display: flex;
 	align-items: center;
-	/* margin-right: auto; */
+	margin-right: auto;
 	margin-left: auto;
-    margin-right: 7%;
+    /* margin-right: 7%; */
 }
 .pod{
 	display:none;
@@ -105,9 +105,11 @@ nav {
 
 	header nav {
 		position: fixed;
-		top: -86vh;
+		/* top: -86vh; */
+		top: 210px;
 		left: 0;
-		height: 40%;
+		/* height: 50%; */
+		height: 440px;
 		width: 100%;
 		display: flex;
 		flex-direction: column;

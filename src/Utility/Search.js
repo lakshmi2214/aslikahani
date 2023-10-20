@@ -1,26 +1,28 @@
 import React, { useState } from 'react';
-import './search.css'; // Create a CSS file for styling
+import './search.css';
+import { useNavigate } from 'react-router-dom';
 
-const Search = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState('');
+const Search = () => {
+  const[value, setValue] = useState(""); 
+  const navigate = useNavigate();
 
-  const handleInputChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
-
-  const handleSearch = () => {
-    onSearch(searchTerm);
+  const handleNavigation = () => {
+     navigate(`/search/${value}`);
   };
 
   return (
     <div className="search-bar">
-      <input
+      {/* <input
         type="text"
         placeholder="Search..."
         value={searchTerm}
-        onChange={handleInputChange}
-      />
-      <button onClick={handleSearch}>Search</button>
+        onChange={handleSearch}
+      /> */}
+      
+      <input value={value} onChange={(e) => {setValue(e.target.value)}} type="text" placeholder="Search.."  name="gsearch" ></input>
+      <button onClick={handleNavigation}>
+        <i className="fa fa-search"></i>
+      </button>
     </div>
   );
 };

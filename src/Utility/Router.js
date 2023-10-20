@@ -13,6 +13,7 @@ import SubscriptionPage from "../NavPages/SubscriptionPage";
 import Magzine from "../NavPages/Magzine";
 import Flipbook from "../ArticleContent/Magzine/Flipbook";
 import MagzinePreview from "../E-magzine/MagzinePreview";
+import SearchBar from "../NavPages/SearchBar";
 // import Turn from "../ArticleContent/Magzine/Turn";
 
 function Router() {
@@ -34,7 +35,7 @@ function Router() {
              <Route path="/emagazine" element={<Magzine />} />
              {/* <Route path="/turn" element={< Turn/>}/> */}
             
-
+           <Route path="/search/:keyword" element={<SearchBar />} />
              <Route path="/Home/:id" element={<ArticleContent />} />
              <Route path="/Entertainment/:id" element={<ArticleContent />} />
              <Route path="/Education/:id" element={<ArticleContent />} />

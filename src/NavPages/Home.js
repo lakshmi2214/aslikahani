@@ -43,6 +43,8 @@ import LogoColumn from "../Home/LogoColumn";
 // import Navbars from "../Utility/Navbars";
 // import Subscriptiontag from "../Subscription/Subscriptiontag";
 import sideBanner from "../images/banner2.jpg"
+import WeatherApp from "../WeatherForecast/WeatherApp";
+import Tags from "../Home/Tags";
 // import rightBanner from "../images/banner1.jpg"
 function Home() {
    const [result, setResult] = useState([]);
@@ -74,9 +76,12 @@ function Home() {
         {/* <Subscriptiontag/> */}
         <LogoColumn />
       <Navbar />  
-      {/* <Nav /> */}
-      {/* <Navbars /> */}
-      <div className="bannerAd1">
+
+      {/* <div className="col-md-12 col-xm-12 col-xs-12"> */}
+         <Tags dataObject={result}/>
+      {/* </div> */}
+      
+      <div className="col-md-12 bannerAd1">
       <BannerAd1 addObject={value}/>
       </div>
       {/* <div className=" sideBanner col-md-1 col-xs-12 col-sm-12 position-fixed">              
@@ -102,8 +107,11 @@ function Home() {
                </div>
                <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
                   <aside>
-                  
+                     <br/>
+                  <WeatherApp />
+                  <br/>
                        <ChaiTheoryAd addObject={value}/>
+                       
                       <PopularRecent dataObject={result}/> 
                       <SristarAd1 addObject={value}/>
                      <div className="widget widget-bg ">                       

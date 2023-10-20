@@ -1,20 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import logosmall from "../images/logo-small.jpg";
-import Translator from './Translator';
+// import Translator from './Translator';
+import Search from '../Utility/Search';
+// import LangTrans from './LangTrans';
+// import Translation from './Translation';
+import { useNavigate } from 'react-router-dom';
 
 function LogoColumn() {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
+    const navigate = useNavigate();
 
+  const handleNavigation = (item) => {
+    console.log(item);
+    // item value should be equal to the keyword being serarched.
+    navigate(`/search/${item}`);
+  };
+  const [article, setAricle] = useState([]);
   useEffect(() => {
-    // Update the currentDateTime state every second
     const intervalId = setInterval(() => {
       setCurrentDateTime(new Date());
     }, 1000);
-
+    
     // Clean up the interval when the component unmounts
     return () => clearInterval(intervalId);
   }, []);
-
+  
   const optionsDate = {
     year: 'numeric',
     month: 'long',
@@ -32,7 +42,7 @@ function LogoColumn() {
 
   return (
     <div>
-        <div className='col-md-5'>
+        <div className='col-md-5 date-time'>
       <p>{formattedDate}</p>
       <p >{formattedTime} |<span className='pointer'>  Explore Trending Articles </span></p>
       </div>
@@ -42,7 +52,8 @@ function LogoColumn() {
       </div>
       <div className='col-sm-3 translation'>
         <span className='span'>
-      <Translator /></span>
+      </span>
+        <Search onSearch={handleNavigation} />
       </div>
     </div>
   );

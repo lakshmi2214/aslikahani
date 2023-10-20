@@ -94,7 +94,7 @@ function ChaiTheoryAd(props) {
              {/* <CurrentWeather /> */}
              {/* <CurrentWeatherReport /> */}
              {/* <Weather /> */}
-             <WeatherApp />
+             {/* <WeatherApp /> */}
     </div>       
          
       
