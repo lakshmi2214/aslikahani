@@ -84,7 +84,7 @@ function TrendingNews(props) {
                                        <div className="small-post">
                                           <div className="small-thumb"> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                              <img alt="" src={item.image} className="" style={{ height: "85px", width: "85px" }} /></a> </div>
-                                          <div className="post-content post-contents">
+                                          <div className="post-content posts-contents">
                                              <h3> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a> </h3>
                                              <ul className="post-tools">
                                              </ul>
@@ -112,7 +112,7 @@ function TrendingNews(props) {
                                                 <img alt="" src={item.image} style={{ height: "85px", width: "85px" }} className="" />
                                              </a>
                                           </div>
-                                          <div className="post-content post-contents">
+                                          <div className="post-content posts-contents">
                                              <h3> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a> </h3>
                                              <ul className="post-tools">
                                              </ul>

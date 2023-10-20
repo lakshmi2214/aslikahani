@@ -15,7 +15,8 @@ function Tags(props) {
 {props.dataObject?.locations?.trendingTags?.map((item,index)=>{
     console.log(item);
     return(
-        <a href={process.env.REACT_APP_DOMAIN_NAME+'/search/'+item.tag_value}><span class="badge text-bg-danger tagname">{item.tag_name}</span></a>  
+        <a href={process.env.REACT_APP_DOMAIN_NAME+'/search/'+item.tag_value}>
+            <span class="badge text-bg-danger tagname">{item.tag_name}</span></a>  
         )
         })}
 

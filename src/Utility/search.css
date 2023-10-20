@@ -228,10 +228,10 @@
 }
 .hash-tagName{
   border-bottom: 1px solid rgb(180, 179, 179);
-  display: flex;
+  /* display: flex; */
   width: 100%;
   padding: 10px;
-  justify-content: center;
+  text-align: center;
 }
 .hash-tagName span{
   margin-left: 10px;
@@ -241,6 +241,7 @@
     font-weight: 600;
     font-size: medium;
     cursor: pointer;
+    margin-bottom: 5px;
 
 }
 /* .hash-tagName{

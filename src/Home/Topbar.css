@@ -62,9 +62,9 @@
     margin-right: auto; */
     padding-left: 3%;
   }
-  .articl{
+  /* .articl{
     margin-left: -18px;
-  }
+  } */
   @media screen and (min-width: 320px) and (max-width: 767px){
     /* .translation{       
         margin-left: 30%;
@@ -182,5 +182,5 @@
     flex-direction: row;
     width: 5%;
     justify-content: center;
-    
+
   }

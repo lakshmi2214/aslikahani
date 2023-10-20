@@ -3128,6 +3128,7 @@ p .readmore {
 	color: #777;
 	float: left;
 	font-size: 12px;
+	margin-left: 20px;
 }
 
 .post-tools li {
@@ -3170,6 +3171,7 @@ p .readmore {
 	position: relative;
 	overflow: hidden;
 	margin-bottom: 20px;
+	margin-left: -16px;
 }
 
 .latest-news-grid .detail {
@@ -4125,6 +4127,7 @@ footer .tag-list {
 
 .footer-detail ul {
 	padding: 0;
+	list-style: none;
 }
 
 
@@ -5052,6 +5055,10 @@ footer .social-media-icons ul {
 	.post-contents h3 {
 		margin-left: 30%;
 	}
+}
+.posts-contents h3 {
+	margin-left: 36%;
+	/* border: 1px solid red; */
 }
 
 .grid-thumb{
