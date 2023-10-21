@@ -44,9 +44,9 @@ function Topbar() {
                      <div className="col-md-4 col-sm-3 col-xs-5">
                         <ul className="social-media-icons-top">
                            <li><a href=" https://www.facebook.com/aslikahani.in"><i className="ti-facebook"></i> </a></li>
-                           <li><a href="https://twitter.com/aslikahani_in"><i className="ti-twitter"></i></a></li>
-                           <li><a href="https://www.youtube.com/@AsliKahani_in"><i className="ti-youtube"></i></a></li>
-                           <li><a href=" https://www.instagram.com/aslikahani.in/"><i className="ti-instagram"></i></a></li>
+                           <li><a href="https://twitter.com/kahaniasli"><i className="ti-twitter"></i></a></li>
+                           <li><a href="https://www.youtube.com/@AsliKahani"><i className="ti-youtube"></i></a></li>
+                           <li><a href=" https://www.instagram.com/aslikahani/"><i className="ti-instagram"></i></a></li>
 
                         </ul>
                         {/* <Translator /> */}

@@ -1,108 +1,30 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import "./nav.css";
-import logosmall from "../images/logo-small.jpg";
+import React, { useState } from 'react';
+import './nav.css';
 
-function Navbars() {
-    const [click, setClick] = useState(false);
+function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
 
-    const handleClick = () => setClick(!click);
-   
+  const toggleMenu = () => {
+    console.log("Toggle menu clicked"); // Add this for debugging
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <>
-
-<nav className="navbar">
-                <div className="nav-container">
-                    <NavLink  to="/" className="nav-logo">
-                        <img src={logosmall} alt="logo" style={{ height: "60px", width: "120px" }} />
-                    </NavLink>
-
-                    <ul className={click ? "nav-Education active" : "nav-Education"}>
-                        <li className="nav-item">
-                            <NavLink
-                               to="/home"
-                               className="nav-links"
-                                onClick={handleClick}   
-                            >
-                                Home
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink
-                               to="/Entertainment"
-                               className="nav-links"
-                                onClick={handleClick}
-                            >
-                                Entertainment 
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink
-                               to="/Education"
-                               className="nav-links"
-                                onClick={handleClick}
-                            >
-                                Education 
-								</NavLink>
-                               
-                        </li>        
-
-
-  
-                        <li className="nav-item">
-                            <NavLink
-                               to="/Technology"
-                               className="nav-links"
-                                onClick={handleClick}
-                            >
-                                Technology
-                            </NavLink>
-                        </li> 
-                        <li className="nav-item">
-                            <NavLink
-                               to="/Business"
-                               className="nav-links"
-                                onClick={handleClick}
-                            >
-                                Business
-                            </NavLink>
-                        </li>      
-                        <li className="nav-item">
-                            <NavLink
-                               to="/Travel"
-                               className="nav-links"
-                                onClick={handleClick}
-                            >
-                                Travel
-                            </NavLink>
-                        </li>                          
-                        <li className="nav-item">
-                            <NavLink
-                               to="/Lifestyle"
-                               className="nav-links"
-                                onClick={handleClick}
-                            >
-                                Lifestyle
-                            </NavLink>
-                        </li>   
-                        <li className="nav-item">
-                            <NavLink
-                               to="/Art-and-Culture"
-                               className="nav-links"
-                                onClick={handleClick}
-                            >
-                                Art and Culture
-                            </NavLink>
-                        </li>   		
-                    </ul>
-                    <div className="nav-icon" onClick={handleClick}>
-                        <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
-                    </div>
-                </div>
-            </nav>
-
-    </>
-  )
+    <nav className={`asli-navbar ${isOpen ? 'active' : ''}`}>
+      <div className="logo">Your Logo</div>
+      <ul className={`nav-linking ${isOpen ? 'open' : ''}`}>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <button className="toggle-buttons" onClick={toggleMenu}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </button>
+    </nav>
+  );
 }
 
-export default Navbars
+export default Navbar;

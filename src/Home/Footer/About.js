@@ -42,9 +42,9 @@ function About() {
                <div className="social-media-icons">
                   <ul>
                      <li><a href=" https://www.facebook.com/aslikahani.in"><i className="ti-facebook"></i> </a></li>
-                     <li><a href="https://twitter.com/aslikahani_in"><i className="ti-twitter"></i></a></li>
-                     <li><a href="https://www.youtube.com/@AsliKahani_in"><i className="ti-youtube"></i></a></li>
-                     <li><a href=" https://www.instagram.com/aslikahani.in/"><i className="ti-instagram"></i></a></li>
+                     <li><a href="https://twitter.com/kahaniasli"><i className="ti-twitter"></i></a></li>
+                     <li><a href="https://www.youtube.com/@AsliKahani"><i className="ti-youtube"></i></a></li>
+                     <li><a href=" https://www.instagram.com/aslikahani/"><i className="ti-instagram"></i></a></li>
                      <li><a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><i className="fa fa-spotify"></i></a></li>
                      {/* <li> <a href=""><i className="ti-linkedin"></i></a></li>
                               <li> <a href=""><i className="ti-google"></i></a></li>

@@ -41,19 +41,19 @@ function Instagram() {
             <div className="col-xs-12 col-md-3 col-sm-6 ">
                 <h2>Instagram Widget</h2>
                 <div className="insta-gallery">
-                    <a href="https://www.instagram.com/aslikahani.in/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I1} /> </a>
-                    <a href="https://www.instagram.com/aslikahani.in/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I2} /> </a>
-                    <a href="https://www.instagram.com/aslikahani.in/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I3} /> </a>
-                    <a href="https://www.instagram.com/aslikahani.in/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I4} /> </a>
-                    <a href="https://www.instagram.com/aslikahani.in/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I5} /> </a>
-                    <a href="https://www.instagram.com/aslikahani.in/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I7} /> </a>
+                    <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I1} /> </a>
+                    <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I2} /> </a>
+                    <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I3} /> </a>
+                    <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I4} /> </a>
+                    <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I5} /> </a>
+                    <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I7} /> </a>
                     
-                    <a href="https://www.instagram.com/aslikahani.in/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I11} /> </a>
-                    <a href="https://www.instagram.com/aslikahani.in/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I12} /> </a>
-                    <a href="https://www.instagram.com/aslikahani.in/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I13} /> </a>
-                    <a href="https://www.instagram.com/aslikahani.in/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I10} /> </a>
-                    <a href="https://www.instagram.com/aslikahani.in/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I15} /> </a>
-                    <a href="https://www.instagram.com/aslikahani.in/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I8} /> </a>
+                    <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I11} /> </a>
+                    <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I12} /> </a>
+                    <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I13} /> </a>
+                    <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I10} /> </a>
+                    <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I15} /> </a>
+                    <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I8} /> </a>
 
                 </div>
             </div>

@@ -52,16 +52,14 @@
     .asideBanner{
         display: block;
     }
-   
+    
   } 
-  .translation{
+  /* .translation{
     position: relative;
     height: 45px;
-    /* border: 1px solid red; */
-    /* margin-left: auto;
-    margin-right: auto; */
+    border: 1px solid red;
     padding-left: 3%;
-  }
+  } */
   /* .articl{
     margin-left: -18px;
   } */
@@ -69,7 +67,7 @@
     /* .translation{       
         margin-left: 30%;
       } */
-      .date-time p{
+      .dateTime p{
         /* margin-left: auto;
         margin-right: auto; */
         text-align: center;

@@ -3,6 +3,7 @@ import { FaBars } from "react-icons/fa";
 import "./Navbar.css";
 // import logosmall from "../images/logo-small.jpg";
 import { Link } from "react-router-dom"
+import { useState } from "react";
 // import Search from "./Search";
 
 function Navbar() {
@@ -13,9 +14,12 @@ function Navbar() {
 			"responsive_nav"
 		);
 	};
-	// const handleSearch = (searchTerm) => {
-	// 	alert(`Searching for: ${searchTerm}`);
-	//   };
+	const [isOpen, setIsOpen] = useState(false);
+
+	const toggleMenu = () => {
+	  console.log("Toggle menu clicked"); // Add this for debugging
+	  setIsOpen(!isOpen);
+	};
 	return (
 		<header>
 			{/* <Link to={"/"}><img src={logosmall} className="navlogo" alt="logo" style={{ height: "45px", width: "220px", paddingTop: "2px", paddingBottom: "2px" }}></img></Link> */}
@@ -23,26 +27,25 @@ function Navbar() {
 				<span > </span><i class="fa fa-spotify"></i></a> | <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine'} style={{ color: "black" }}> EMagazine</a> </div>
 			<div className="socialmedia-mobile">
 				<a href=" https://www.facebook.com/aslikahani.in" target="blank"><i className="ti-facebook"></i> </a>
-				<a href="https://twitter.com/aslikahani_in" target="blank"><i className="ti-twitter"></i></a>
-				<a href="https://www.youtube.com/@AsliKahani_in" target="blank"><i className="ti-youtube"></i></a>
-				<a href=" https://www.instagram.com/aslikahani.in/" target="blank"><i className="ti-instagram"></i></a>
+				<a href="https://twitter.com/kahaniasli" target="blank"><i className="ti-twitter"></i></a>
+				<a href="https://www.youtube.com/@AsliKahani" target="blank"><i className="ti-youtube"></i></a>
+				<a href=" https://www.instagram.com/aslikahani/" target="blank"><i className="ti-instagram"></i></a>
 			</div>
-			<nav ref={navRef}>
-
-				<Link to={"/Home"} className="bar">Home</Link>
-				<Link to={"/Entertainment"} className="bar">Entertainment</Link>
-				<Link to={"/Education"} className="bar">Education</Link>
-				<Link to={"/Technology"} className="bar">Technology</Link>
-				<Link to={"/Business"} className="bar">Business</Link>
-				<Link to={"/Travel"} className="bar">Travel</Link>
-				<Link to={"/Lifestyle"} className="bar">LifeStyle</Link>
-				<Link to={"/Art-and-Culture"} className="bar">Art and Culture</Link>
+			<nav className={`nav-linking ${isOpen ? 'open' : ''}`}>
+				<li><Link to={"/Home"} className="bar">Home</Link></li>
+				<li><Link to={"/Entertainment"} className="bar">Entertainment</Link></li>
+				<li><Link to={"/Education"} className="bar">Education</Link></li>
+				<li><Link to={"/Technology"} className="bar">Technology</Link></li>
+				<li><Link to={"/Business"} className="bar">Business</Link></li>
+				<li><Link to={"/Travel"} className="bar">Travel</Link></li>
+				<li><Link to={"/Lifestyle"} className="bar">LifeStyle</Link></li>
+				<li><Link to={"/Art-and-Culture"} className="bar">Art and Culture</Link></li>
 
 			</nav>
 
 			<button
 				className="nav-btn"
-				onClick={showNavbar}>
+				onClick={toggleMenu}>
 				<FaBars />
 			</button>
 

@@ -30,7 +30,7 @@ function Twitter() {
                      <h2>Twitter Widget</h2>
                      <ul className="tabs-posts twitter-widget">
                         <li>
-                           <div className="caption1"><a href="https://twitter.com/aslikahani_in" className="url"> PENNY SAVED IS A PENNY EARNED: TIPS ON SAVING MONEY 
+                           <div className="caption1"><a href="https://twitter.com/kahaniasli" className="url"> PENNY SAVED IS A PENNY EARNED: TIPS ON SAVING MONEY 
                               </a>
                            </div>
                            <ul className="post-tools">
@@ -38,7 +38,7 @@ function Twitter() {
                            </ul>
                         </li>
                         <li>
-                           <div className="caption1"><a href="https://twitter.com/aslikahani_in" className="url">BATTERY ELECTRIC VEHICLES - ROAD TO AN ELECTRIFYING FUTURE
+                           <div className="caption1"><a href="https://twitter.com/kahaniasli" className="url">BATTERY ELECTRIC VEHICLES - ROAD TO AN ELECTRIFYING FUTURE
                            </a>
                            </div>
                            <ul className="post-tools">
@@ -46,7 +46,7 @@ function Twitter() {
                            </ul>
                         </li>
                         <li>
-                           <div className="caption1"><a href="https://twitter.com/aslikahani_in" className="url">AN OVERVIEW OF COSMETIC SURGERY AND BEAUTY TREATMENTS 
+                           <div className="caption1"><a href="https://twitter.com/kahaniasli" className="url">AN OVERVIEW OF COSMETIC SURGERY AND BEAUTY TREATMENTS 
                            </a>
                            </div>
                            <ul className="post-tools">

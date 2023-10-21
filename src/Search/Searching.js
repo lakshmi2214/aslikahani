@@ -37,9 +37,9 @@ function Searching() {
         <div className="col-md-12 col-sm-12 col-xs-12">
                         <ul className="icon-links">
                            <li><a href=" https://www.facebook.com/aslikahani.in"><i className="ti-facebook"></i> </a></li>
-                           <li><a href="https://twitter.com/aslikahani_in"><i class="fa-brands fa-twitter"></i></a></li>
-                           <li><a href="https://www.youtube.com/@AsliKahani_in"><i class="fa-brands fa-youtube"></i></a></li>
-                           <li><a href=" https://www.instagram.com/aslikahani.in/"><i class="fa-brands fa-instagram"></i></a></li>
+                           <li><a href="https://twitter.com/kahaniasli"><i class="fa-brands fa-twitter"></i></a></li>
+                           <li><a href="https://www.youtube.com/@AsliKahani"><i class="fa-brands fa-youtube"></i></a></li>
+                           <li><a href=" https://www.instagram.com/aslikahani/"><i class="fa-brands fa-instagram"></i></a></li>
 
                         </ul>
                      </div>

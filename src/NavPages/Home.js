@@ -42,9 +42,10 @@ import LogoColumn from "../Home/LogoColumn";
 // import Nav from "../Utility/Nav";
 // import Navbars from "../Utility/Navbars";
 // import Subscriptiontag from "../Subscription/Subscriptiontag";
-import sideBanner from "../images/banner2.jpg"
+// import sideBanner from "../images/banner2.jpg"
 import WeatherApp from "../WeatherForecast/WeatherApp";
 import Tags from "../Home/Tags";
+import Navbars from "../Utility/Navbars";
 // import rightBanner from "../images/banner1.jpg"
 function Home() {
    const [result, setResult] = useState([]);
@@ -75,15 +76,16 @@ function Home() {
         <>
         {/* <Subscriptiontag/> */}
         <LogoColumn />
+        {/* <div className="col-md-12 col-xm-12 col-xs-12"> */}
       <Navbar />  
-
-      {/* <div className="col-md-12 col-xm-12 col-xs-12"> */}
-         <Tags dataObject={result}/>
       {/* </div> */}
+      <div className="col-md-12 col-xm-12 col-xs-12" style={{borderBottom:"1px solid rgb(180, 179, 179)"}}> 
+         <Tags dataObject={result}/>
+     </div>
       
-      <div className="col-md-12 bannerAd1">
+      <span className="col-md-12 bannerAd1">
       <BannerAd1 addObject={value}/>
-      </div>
+      </span>
       {/* <div className=" sideBanner col-md-1 col-xs-12 col-sm-12 position-fixed">              
               <img src={sideBanner} alt="side banner" />              
             </div> */}

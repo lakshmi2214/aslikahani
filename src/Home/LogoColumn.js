@@ -42,18 +42,19 @@ function LogoColumn() {
 
   return (
     <div>
-        <div className='col-md-5 date-time'>
-      <p>{formattedDate}</p>
-      <p >{formattedTime} |<span className='pointer'>  Explore Trending Articles </span></p>
+        <div className='col-md-5 dateTime'>
+      <p className='date'>{formattedDate}</p>
+      <p className='time'>{formattedTime} |<span className='pointer'>  Explore Trending Articles </span></p>
       </div>
       <div className='col-sm-4 logo'>
         <a href='/'>
      <img src={logosmall} className="navlogo" alt="logo" ></img></a>
       </div>
-      <div className='col-sm-3 translation'>
-        <span className='span'>
-      </span>
+      <div className='col-md-2 span'>
+        {/* <span className=''> */}
         <Search onSearch={handleNavigation} />
+      {/* </span> */}
+       
       </div>
     </div>
   );

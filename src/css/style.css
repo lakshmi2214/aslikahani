@@ -1175,6 +1175,7 @@ p .readmore {
 	border: 1px solid red; */
 	margin-left: 0%;
 	margin-right: 0%;
+	margin-top: -25px;
 }
 }
 
@@ -5050,10 +5051,11 @@ footer .social-media-icons ul {
 	/* .grid-thumb{
 	} */
 	.section {
-		margin-left: 6%;
+		margin-left: 0;
+		margin-right: .5px;
 	}
 	.post-contents h3 {
-		margin-left: 30%;
+		margin-left: 20%;
 	}
 }
 .posts-contents h3 {

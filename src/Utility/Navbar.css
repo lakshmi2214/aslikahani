@@ -90,17 +90,29 @@ nav {
 .socialmedia-mobile{
 	display: none;
 }
+.responsive_nav {
+    display: block;
+  }
 @media screen and (min-width: 320px) and (max-width: 767px){
 	header{
-		height:80px;
+		height:50px;
 	}
+	.span{
+		text-align: center;
+		height: 45px;
+	  }
 	header .nav-btn {
-		visibility: visible;
+		/* visibility: visible;
 		opacity: 1;
-		margin-top: 40px;
+		margin-top: 40px; */
 		/* padding-right: 42px; */
-		padding-right: 0;
-		margin-left: 90%;
+		/* padding-right: 0;
+		margin-left: 90%; */
+		visibility: visible;
+    opacity: 1;
+    /* border: 1px solid red; */
+    top: 3px;
+    right: 12px;
 	}
 
 	header nav {
@@ -117,7 +129,7 @@ nav {
 		justify-content: center;
 		gap: 1.5rem;
 		background-color: white;
-        z-index: 17;
+        /* z-index: 17; */
 	}
     .bar{
     background-color: white;
@@ -160,7 +172,7 @@ nav {
 }
 .socialmedia-mobile{
 	position: absolute;
-	top:12%;
+	top:18%;
 	right:12%;
 	display: block;
 	
@@ -174,15 +186,15 @@ nav {
 }
 .logo{
 	/* border: 1px solid red; */
-	margin-top: 2%;
-	margin-left: 27%;
-	margin-right: 20%;
+	margin-top: 5%;
+	text-align: center;
+	/* margin-left: 27%;
+	margin-right: 20%; */
 	margin-bottom: 2%;
 }
 
 }
-.logo img{
-	
+.logo img{	
 	margin-right: 10%;
 	height: 45px;
 	/* width: 60%; */
