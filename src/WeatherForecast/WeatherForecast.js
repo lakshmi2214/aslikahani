@@ -331,13 +331,13 @@ function WeatherForecast() {
         parent.insertBefore(elem, btn);
     }
     
-    function prefixZ(val) {
-        val = parseInt(val);
-        if (val < 10)
-            return "0" + val;
+    // function prefixZ(val) {
+    //     val = parseInt(val);
+    //     if (val < 10)
+    //         return "0" + val;
         
-        return val;
-    }
+    //     return val;
+    // }
     
     function setBackgroundImage(obj) {
         var wcode = obj.weather[0].id;
@@ -347,19 +347,19 @@ function WeatherForecast() {
             document.body.style.backgroundImage = "url(http://res.cloudinary.com/dngcku70s/image/upload/v1497182948/weather/thunderstorm_" + indx + ".jpg)";
         } else if (wcode >= 300 && wcode < 400) {
             // drizzle
-            var indx  = Math.floor(Math.random() * 2 + 1);
+             indx  = Math.floor(Math.random() * 2 + 1);
             document.body.style.backgroundImage = "url(http://res.cloudinary.com/dngcku70s/image/upload/v1497182948/weather/drizzle_" + indx + ".jpg)";
         } else if (wcode >= 500 && wcode < 600) {
             // rain
-            var indx = Math.floor(Math.random() * 2 + 1);
+             indx = Math.floor(Math.random() * 2 + 1);
             document.body.style.backgroundImage = "url(http://res.cloudinary.com/dngcku70s/image/upload/v1497182948/weather/rain_" + indx + ".jpg)";
         } else if (wcode >= 600 && wcode < 700) {
             // snow
-            var indx = Math.floor(Math.random() * 2 + 1);
+             indx = Math.floor(Math.random() * 2 + 1);
             document.body.style.backgroundImage = "url(http://res.cloudinary.com/dngcku70s/image/upload/v1497182948/weather/rain_" + indx + ".jpg)";
         } else if (wcode === 701) {
             // mist
-            var indx = Math.floor(Math.random() * 3 + 1);
+             indx = Math.floor(Math.random() * 3 + 1);
             document.body.style.backgroundImage = "url(http://res.cloudinary.com/dngcku70s/image/upload/v1497182948/weather/mist_" + indx + ".jpg)";
         } else if (wcode === 711) {
             // smoke
@@ -385,13 +385,13 @@ function WeatherForecast() {
         } else if (wcode === 771) {
             // squalls
             document.body.style.backgroundImage = "url(http://res.cloudinary.com/dngcku70s/image/upload/v1497182948/weather/squalls.jpg)";
-        } else if (wcode === 781 || wcode === 900 || wcode === 960 || wcode == 961) {
+        } else if (wcode === 781 || wcode === 900 || wcode === 960 || wcode === 961) {
             // tornado
-            var indx = Math.floor(Math.random() * 2 + 1);
+             indx = Math.floor(Math.random() * 2 + 1);
             document.body.style.backgroundImage = "url(http://res.cloudinary.com/dngcku70s/image/upload/v1497182948/weather/tornado_" + indx + ".jpg)";
         } else if (wcode === 800) {
             // clear sky
-            var indx = Math.floor(Math.random() * 3 + 1);
+             indx = Math.floor(Math.random() * 3 + 1);
             document.body.style.backgroundImage = "url(http://res.cloudinary.com/dngcku70s/image/upload/v1497182948/weather/clear_sky_" + indx + ".jpg)";
         } else if (wcode === 801) {
             // few clouds
@@ -515,7 +515,7 @@ function WeatherForecast() {
 			</div>
 			
 			<div class="description">
-				<img/>
+				{/* <img/> */}
 				
 				<div id="toggleBtn"><span>Toggle to &#8457;</span></div>
 			</div>

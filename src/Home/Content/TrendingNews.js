@@ -72,7 +72,7 @@ function TrendingNews(props) {
 
 
                </div>
-               <div className="row">
+               <div className="row" style={{width:"fit-content"}}>
                   <div className="col-md-6 col-sm-6 col-xs-12">
                      <div className="small-grid-container">
                         <ul className="small-grid">
@@ -82,7 +82,7 @@ function TrendingNews(props) {
                                  return (
                                     <div key={index}>
                                        <div className="small-post">
-                                          <div className="small-thumb"> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
+                                          <div className="small-thumb small-img"> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                              <img alt="" src={item.image} className="" style={{ height: "85px", width: "85px" }} /></a> </div>
                                           <div className="post-content posts-contents">
                                              <h3> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a> </h3>
@@ -107,7 +107,7 @@ function TrendingNews(props) {
                                  return (
                                     <div key={index}>
                                        <div className="small-post">
-                                          <div className="small-thumb">
+                                          <div className="small-thumb small-img">
                                              <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                                 <img alt="" src={item.image} style={{ height: "85px", width: "85px" }} className="" />
                                              </a>

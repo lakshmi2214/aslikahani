@@ -1,28 +1,19 @@
-import { useRef } from "react";
+// import { useRef } from "react";
 import { FaBars } from "react-icons/fa";
 import "./Navbar.css";
-// import logosmall from "../images/logo-small.jpg";
 import { Link } from "react-router-dom"
 import { useState } from "react";
-// import Search from "./Search";
+import './nav.css';
 
 function Navbar() {
-	const navRef = useRef();
-
-	const showNavbar = () => {
-		navRef.current.classList.toggle(
-			"responsive_nav"
-		);
-	};
 	const [isOpen, setIsOpen] = useState(false);
 
 	const toggleMenu = () => {
-	  console.log("Toggle menu clicked"); // Add this for debugging
-	  setIsOpen(!isOpen);
+		console.log("Toggle menu clicked");
+		setIsOpen(!isOpen);
 	};
 	return (
 		<header>
-			{/* <Link to={"/"}><img src={logosmall} className="navlogo" alt="logo" style={{ height: "45px", width: "220px", paddingTop: "2px", paddingBottom: "2px" }}></img></Link> */}
 			<div className="pod" > <a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj" target="blank" style={{ color: "black" }}>Podcast
 				<span > </span><i class="fa fa-spotify"></i></a> | <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine'} style={{ color: "black" }}> EMagazine</a> </div>
 			<div className="socialmedia-mobile">
@@ -32,6 +23,7 @@ function Navbar() {
 				<a href=" https://www.instagram.com/aslikahani/" target="blank"><i className="ti-instagram"></i></a>
 			</div>
 			<nav className={`nav-linking ${isOpen ? 'open' : ''}`}>
+			{/* <nav className={`nav-linking ${isOpen ? 'open transition' : ''}`}> */}
 				<li><Link to={"/Home"} className="bar">Home</Link></li>
 				<li><Link to={"/Entertainment"} className="bar">Entertainment</Link></li>
 				<li><Link to={"/Education"} className="bar">Education</Link></li>
@@ -44,18 +36,12 @@ function Navbar() {
 			</nav>
 
 			<button
-				className="nav-btn"
+				// className="nav-btn"
+				className={`nav-btn ${isOpen ? 'open' : ''}`}
 				onClick={toggleMenu}>
 				<FaBars />
 			</button>
 
-			{/* <div class="main">
-	<input type="text" name="input" class="input" placeholder="Search Something....."/>
-	<div class="icon">
-		<i class="fa fa-search" aria-hidden="true"></i>
-	</div>
-</div> */}
-{/* <Search onSearch={handleSearch} /> */}
 		</header>
 	);
 }

@@ -45,7 +45,7 @@ import LogoColumn from "../Home/LogoColumn";
 // import sideBanner from "../images/banner2.jpg"
 import WeatherApp from "../WeatherForecast/WeatherApp";
 import Tags from "../Home/Tags";
-import Navbars from "../Utility/Navbars";
+// import Navbars from "../Utility/Navbars";
 // import rightBanner from "../images/banner1.jpg"
 function Home() {
    const [result, setResult] = useState([]);
@@ -116,8 +116,8 @@ function Home() {
                        
                       <PopularRecent dataObject={result}/> 
                       <SristarAd1 addObject={value}/>
-                     <div className="widget widget-bg ">                       
-                      <SliderPostWidget dataObject={result}/>
+                     <div className="widget widget-bg">                       
+                   <span className="SliderPostWidget">   <SliderPostWidget dataObject={result}/></span>
                      </div>
                      
                   </aside>

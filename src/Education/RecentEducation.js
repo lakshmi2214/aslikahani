@@ -38,7 +38,7 @@ function RecentEducation(props) {
                <div role="tabpanel">
                   <ul className="nav nav-tabs nav-justified" role="tablist">
                      <li className="active" role="presentation" > <a aria-controls="popularRecent" aria-expanded="true" data-toggle="tab"
-                        href="#popularRecent" role="tab" style={{ color: "white" }}>Popular </a> </li>
+                        href="#popularRecent" role="tab" style={{ color: "white", backgroundColor:"#d32415" }}>Popular </a> </li>
                   </ul>
                   <br></br>
                   <div className="small-grid-container">
@@ -49,7 +49,7 @@ function RecentEducation(props) {
                               return (
                                  <div key={index}>
                                     <div className="small-post">
-                                       <div className="small-thumb">
+                                       <div className="small-thumb small-img">
                                           <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                                              <img alt="" src={item.image} style={{ height: "85px", width: "85px" }} className="" />
                                           </a>

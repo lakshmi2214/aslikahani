@@ -4806,6 +4806,9 @@ footer .social-media-icons ul {
 }*/
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+	/* .small-img a img{
+		margin-left: 10px;
+	} */
 	.megaMenu {
 		border-radius: 0;
 		background-color: #FFF;
@@ -4914,7 +4917,9 @@ footer .social-media-icons ul {
 		font-size: 18px;
 	}
 	.small-grid .small-thumb {
-		width: 70px;
+		/* width: 70px; */
+		width: 30%;
+		margin-left: 10px;
 	}
 	.heading-read-more a {
 		margin-top: 0;
@@ -5056,6 +5061,17 @@ footer .social-media-icons ul {
 	}
 	.post-contents h3 {
 		margin-left: 20%;
+	}
+	.small-thumb img {
+		margin-left: 15px;
+	}
+	.item{
+		width: -webkit-fill-available;
+		margin-left: 10px;
+	}
+	.SliderPostWidget{
+		position: relative;
+		left: 19px;
 	}
 }
 .posts-contents h3 {

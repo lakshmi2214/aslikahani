@@ -8,7 +8,7 @@ import SristarAd1 from '../Advertisements/SristarAd1';
 import ArchivePostArt from '../ArtAndCulture/ArchivePostArt';
 import FooterCategory from '../FooterCategory/FooterCategory';
 import Navbar from '../Utility/Navbar';
-import BannerAd1 from '../Advertisements/BannerAd1';
+// import BannerAd1 from '../Advertisements/BannerAd1';
 // import ArtPost1 from '../ArtAndCulture/ArtPost1';
 // import BannerAd2 from '../Advertisements/BannerAd2';
 // import ArtPost2 from '../ArtAndCulture/ArtPost2';
@@ -19,7 +19,7 @@ function SearchBar() {
 
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
-  const [article, setAricle] = useState([])
+  // const [article, setAricle] = useState([])
 
   useEffect(() => {
     const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/articles/list?category=9&format=json`;

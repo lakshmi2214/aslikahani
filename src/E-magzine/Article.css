@@ -26,7 +26,7 @@
         padding: 3%;
     }
     .postwidget-img{
-        border: 1px solid red;
+        /* border: 1px solid red; */
         width: 360px;
     }
 }

@@ -15,7 +15,7 @@ function LogoColumn() {
     // item value should be equal to the keyword being serarched.
     navigate(`/search/${item}`);
   };
-  const [article, setAricle] = useState([]);
+  // const [article, setAricle] = useState([]);
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentDateTime(new Date());

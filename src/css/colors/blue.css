@@ -8,7 +8,7 @@ a:hover, .topbar ul li a:hover, .megaMenu .caption h5 a:hover, .zerogrid-section
 
 /*BACKGROUND COLOR*/
 .btn-colored-blog, #menu-1.megaMenu .drop-down li> a::after, .category-widget h4, .video-section .rsDefault .rsThumb.rsNavSelected, .scrollup, .owl-theme .owl-nav div.owl-next:hover, .owl-theme .owl-nav div.owl-prev:hover, .auth-arti-no a, .grid-1 .catname span, .widget .pol-btn a:hover, .tag-list a:hover, .contact-detail-box .icon-box {
-	background-color: red;
+	background-color: #d32415;
 }
 
 /*BORDER TOP*/
@@ -29,7 +29,7 @@ a:hover, .topbar ul li a:hover, .megaMenu .caption h5 a:hover, .zerogrid-section
 
 /*BORDER BOTTOM 2PX*/
 .post-entry .social-share.social-share-style-2 li.post-share, #sidebar ul.nav-tabs {
-	border-bottom: 2px solid red;
+	border-bottom: 2px solid #d32415;
 }
 
 /*BORDER COLO*/
