@@ -28,7 +28,7 @@ import { useNavigate } from "react-router-dom";
 function LatestArticles(props) {
    const navigate = useNavigate();
    const handleNavigation = (item) => {
-    console.log(item);
+   //  console.log(item);
  
      navigate(`/${item.category}/${item.url}`, { state: {item }});
    }
@@ -47,7 +47,7 @@ function LatestArticles(props) {
                      
       
     {props.dataObject?.locations?.LatestPost.slice(0,1).map((item,index)=>{
-            console.log(item);
+            // console.log(item);
             return(
                <div key={index}>
 
@@ -83,7 +83,7 @@ function LatestArticles(props) {
                            <ul className="small-grid">
                               <li>
                         {props.dataObject?.locations?.LatestPost.slice(1,5).map((item,index)=>{
-                       console.log(item);
+                     //   console.log(item);
                        return(
                         <div key={index}>
 

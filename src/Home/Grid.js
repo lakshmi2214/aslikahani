@@ -6,7 +6,7 @@ function Grid(props) {
 
   const navigate = useNavigate();
   const handleNavigation = (item) => {
-   console.log(item);
+   // console.log(item);
 
     navigate(`/${item.category}/${item.url}`, { state: {item} });
   }
@@ -40,7 +40,7 @@ function Grid(props) {
    {grid?.locations?.Slider.slice(0,1).map((item,index)=>{
          
          
-            console.log(item);
+            // console.log(item);
             return(
          <div key={index}>  
          
@@ -65,7 +65,7 @@ function Grid(props) {
       <div className="grid-item">
 
       {grid?.locations?.Slider.slice(1,2).map((item,index)=>{
-            console.log(item);
+            // console.log(item);
             return(
 
          <div key={index}>
@@ -87,7 +87,7 @@ function Grid(props) {
    <div className="wrap-col"style={{marginTop:"0.5%"}}>
       <div className="grid-item">
       {grid?.locations?.Slider.slice(2,3).map((item,index)=>{
-            console.log(item);
+            // console.log(item);
             return(
 
           <div key={index}> 
@@ -113,7 +113,7 @@ function Grid(props) {
      {grid?.locations?.Slider.slice(3,4)?.map((item,index)=>{
 
      
-            console.log(item);
+            // console.log(item);
             return(
 
              <div key={index}> 
@@ -135,7 +135,7 @@ function Grid(props) {
  <div className="grid-item">
   
  {grid?.locations?.Slider.slice(5,6).map((item,index)=>{
-            console.log(item);
+            // console.log(item);
             return(
 
           <div key={index}> 

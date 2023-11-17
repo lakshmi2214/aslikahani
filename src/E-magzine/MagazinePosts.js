@@ -4,19 +4,19 @@ import { useNavigate } from "react-router-dom";
 function MagazinePosts(props) {
   const navigate = useNavigate()
   const handleNavigation = (item) => {
-    console.log(item);
+    // console.log(item);
 
     navigate(`/emagazine/${item.url}`, { state: { item } });
   }
   return (
     <div>
-      <div class="main-items-container">
+      <div className="main-items-container">
         {props.dataObject?.map((item, index) => {
-          console.log(item);
+          // console.log(item);
           return (
 
             <div key={index}>
-              <div class="item-container">
+              <div className="item-container">
                 <div className='img-posts' onClick={() => handleNavigation(item, index)}>
                   <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine/' + item.url}>
                     <img src={item.cover_image} alt="test image" /></a>
@@ -33,13 +33,14 @@ function MagazinePosts(props) {
           )
         })}
         {/* <h2>Item Name</h2>
-  <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus semper metus id fringilla. </div>
+  <div className="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus semper metus id fringilla. </div>
 </div> */}
 
 
 
 
       </div>
+      
     </div>
   )
 }

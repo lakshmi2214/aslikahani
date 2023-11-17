@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 function SidePostEntertainment(props) {
     const navigate = useNavigate();
     const handleNavigation = (item) => {
-        console.log(item);
+        // console.log(item);
 
         navigate(`/${item.category}/${item.url}`, { state: { item } });
     }
@@ -15,7 +15,7 @@ function SidePostEntertainment(props) {
                 <h3 style={{ marginBottom: "17px" }}><b className='post-Widget'>Post Widget</b></h3>
                 {/* <div className='col-md-12'> */}
                     {props.dataObject?.locations?.General.slice(4, 5).map((item, index) => {
-                        console.log(item);
+                        // console.log(item);
                         return (
                             <div key={index}>
                                 <div className='col-md-12' onClick={() => handleNavigation(item, index)}>

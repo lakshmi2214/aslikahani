@@ -32,7 +32,7 @@ function SristarAd1(props) {
             {props.addObject?.categories?.slice(0, 1).map((item) => {
                return (
                   item.advertisements.TopPosterad1?.slice(0,1).map((item, index) => {
-                     console.log(item)
+                     // console.log(item)
 
                      return (
                         <div key={index}>

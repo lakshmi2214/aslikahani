@@ -38,7 +38,7 @@ function Travel() {
       <Navbar />
       <br />
       <div className='col-md-12 col-xs-12 col-sm-12'>
-        <div className='col-md-8'>
+        <div className='col-md-8' style={{paddingLeft:"4%"}}>
           <div className='col' >
             <Travel1 dataObject={result} />
             <div className='col-md-12' style={{padding: "10px", textAlign: "center" }}>

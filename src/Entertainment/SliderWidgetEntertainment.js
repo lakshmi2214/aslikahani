@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 function SliderWidgetEntertainment(props) {
    const navigate = useNavigate()
    const handleNavigation = (item) => {
-      console.log(item);
+      // console.log(item);
 
       navigate(`/entertainment/${item.url}`, { state: item });
    }
@@ -18,7 +18,7 @@ function SliderWidgetEntertainment(props) {
             <div className="item">
                <div className="latest-news-grid grid-1">
                   {props.dataObject?.locations?.SliderWidget.slice(1, 2).map((item, index) => {
-                     console.log(item);
+                     // console.log(item);
                      return (
                         <div key={index}>
                            <div className="picture">

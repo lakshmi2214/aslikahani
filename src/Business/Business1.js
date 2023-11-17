@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 function Business1(props) {
     const navigate = useNavigate()
     const handleNavigation = (item) => {
-        console.log(item);
+        // console.log(item);
 
         navigate(`/${item.category}/${item.url}`, { state: { item } });
     }
@@ -15,7 +15,7 @@ function Business1(props) {
             <div className='posts'>
                 <div className='col-md-6 '>
                 {props.dataObject?.locations?.BussGeneral.slice(0,2).map((item, index) => {
-                     console.log(item);
+                    //  console.log(item);
                         return (
                             <div key={index}>
                                 <div className='article-image' onClick={() => handleNavigation(item, index)}>
@@ -37,7 +37,7 @@ function Business1(props) {
                 <div className='col'>
                     <div className='col-md-6'>
                         {props.dataObject?.locations?.BussGeneral.slice(2, 4).map((item, index) => {
-                            console.log(item);
+                            // console.log(item);
                             return (
                                 <div key={index}>
                                     <div className='article-image'>

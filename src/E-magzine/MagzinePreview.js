@@ -21,7 +21,7 @@ function MagzinePreview(){
     fetch(url).then(res => res.json())
       .then(res => {
         setData(res)
-        console.log(res)
+        // console.log(res)
 
       })
   }, );

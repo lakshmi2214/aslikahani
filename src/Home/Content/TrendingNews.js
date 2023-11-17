@@ -28,7 +28,7 @@ import { useNavigate } from "react-router-dom";
 function TrendingNews(props) {
    const navigate = useNavigate();
    const handleNavigation = (item) => {
-      console.log(item);
+      // console.log(item);
 
       navigate(`/${item.category}/${item.url}`, { state: { item } });
    }
@@ -45,7 +45,7 @@ function TrendingNews(props) {
 
                <div className="grid-1">
                   {props.dataObject?.locations?.TrendingNews.slice(0, 1).map((item, index) => {
-                     console.log(item);
+                     // console.log(item);
                      return (
                         <div key={index}>
                            <div className="picture">
@@ -78,7 +78,7 @@ function TrendingNews(props) {
                         <ul className="small-grid">
                            <li>
                               {props.dataObject?.locations?.TrendingNews.slice(1, 4).map((item, index) => {
-                                 console.log(item);
+                                 // console.log(item);
                                  return (
                                     <div key={index}>
                                        <div className="small-post">
@@ -103,7 +103,7 @@ function TrendingNews(props) {
                         <ul className="small-grid">
                            <li>
                               {props.dataObject?.locations?.TrendingNews.slice(4, 7).map((item, index) => {
-                                 console.log(item);
+                                 // console.log(item);
                                  return (
                                     <div key={index}>
                                        <div className="small-post">

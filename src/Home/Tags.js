@@ -3,16 +3,16 @@ import React from 'react'
 import button from "../images/button.jpg"
 
 function Tags(props) {
-    console.log(props);
+    // console.log(props);
   return (
     <>
     <div className="col-md-12 col-sm-12 col-xs-12">
                  <div className='hash-tagName'>
 {props.dataObject?.locations?.trendingTags?.map((item)=>{
-    console.log(item);
+    // console.log(item);
     return(
         <a href={process.env.REACT_APP_DOMAIN_NAME+'/search/'+item.tag_value}>
-            <div class="badge text-bg-danger tagname">{item.tag_name}</div></a>             
+            <div className="badge text-bg-danger tagname">{item.tag_name}</div></a>             
         )
         })}
      <span className='col-md-2'style={{float:"unset"}}>

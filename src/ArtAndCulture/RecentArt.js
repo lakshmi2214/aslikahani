@@ -27,7 +27,7 @@ import { useNavigate } from "react-router-dom";
 function RecentArt(props) {
    const navigate = useNavigate();
    const handleNavigation = (item) => {
-      console.log(item);
+      // console.log(item);
 
       navigate(`/Art-and-Culture/${item.url}`, { state: { item } });
    }
@@ -48,7 +48,7 @@ function RecentArt(props) {
                      <ul className="small-grid">
                         <li>
                            {props.dataObject?.locations?.ArtCultureGeneral.slice(0, 4).map((item, index) => {
-                              console.log(item);
+                              // console.log(item);
                               return (
                                  <div key={index}>
                                     <div className="small-post">

@@ -44,7 +44,8 @@ function Entertainment() {
         integrity="..."
         crossOrigin="anonymous"
       /> */}
-        <div className='col-md-8'>
+      {/* <div className='col-md-1 style'></div> */}
+        <div className='col-md-8'style={{paddingLeft:"4%"}}>
         <div className='mx-auto'>
           <div className='col' >
             <Entertainment1 dataObject={result} />

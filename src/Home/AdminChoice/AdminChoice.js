@@ -30,7 +30,7 @@ import { useNavigate } from "react-router-dom";
 function AdminChoice(props) {
    const navigate = useNavigate();
    const handleNavigation = (item) => {
-      console.log(item);
+      // console.log(item);
 
       navigate(`/${item.category}/${item.url}`, { state: { item } });
    }
@@ -51,7 +51,7 @@ function AdminChoice(props) {
                         <div className="latest-news-grid grid-1">
                            <article className="col-md-12 col-sm-12 col-xs-12 article">
                               {props.dataObject?.locations?.AdminChoice.slice(0, 1).map((item, index) => {
-                                 console.log(item);
+                                 // console.log(item);
                                  return (
                                     <div key={index}>
                                        <div className="picture">
@@ -83,7 +83,7 @@ function AdminChoice(props) {
                         <div className="latest-news-grid grid-1">
                            <article className="col-md-12 col-sm-12 col-xs-12">
                               {props.dataObject?.locations?.AdminChoice.slice(3, 4).map((item, index) => {
-                                 console.log(item);
+                                 // console.log(item);
                                  return (
                                     <div key={index}>
                                        <div className="picture">
@@ -116,7 +116,7 @@ function AdminChoice(props) {
                         <div className="latest-news-grid grid-1">
                            <article className="col-md-12 col-sm-12 col-xs-12 articl">
                               {props.dataObject?.locations?.AdminChoice.slice(2, 3).map((item, index) => {
-                                 console.log(item);
+                                 // console.log(item);
                                  return (
                                     <div key={index}>
                                        <div className="picture">

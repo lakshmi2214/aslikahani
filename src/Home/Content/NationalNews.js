@@ -28,7 +28,7 @@ import { useNavigate } from "react-router-dom";
 function NationalNews(props) {
    const navigate = useNavigate();
    const handleNavigation = (item) => {
-      console.log(item);
+      // console.log(item);
 
       navigate(`/${item.category}/${item.url}`, { state: { item } });
    }
@@ -49,7 +49,7 @@ function NationalNews(props) {
                   <div className="grid-1">
 
                      {national?.locations?.NationalNews.slice(0, 2).map((item, index) => {
-                        console.log(item);
+                        // console.log(item);
                         return (
                            <div key={index}>
                               <div className="picture">
@@ -80,7 +80,7 @@ function NationalNews(props) {
                <article className="col-md-6 col-sm-6 col-xs-12">
                   <div className="grid-1">
                      {national?.locations?.NationalNews.slice(1, 3).map((item, index) => {
-                        console.log(item);
+                        // console.log(item);
                         return (
                            <div key={index}>
                               <div className="picture">

@@ -28,7 +28,7 @@ import { useNavigate } from "react-router-dom";
 function SliderWidgetArt(props) {
    const navigate = useNavigate();
    const handleNavigation = (item) => {
-      console.log(item);
+      // console.log(item);
 
       navigate(`/${item.category}/${item.url}`, { state: { item } });
    }
@@ -49,7 +49,7 @@ function SliderWidgetArt(props) {
                   <div className="grid-1">
 
                   {props.dataObject?.locations?.ArtCultureGeneral.slice(4,5).map((item, index) => {
-                     console.log(item);
+                     // console.log(item);
                      return (
                            <div key={index}>
                               <div className="picture">

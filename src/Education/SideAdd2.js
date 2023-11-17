@@ -7,7 +7,7 @@ function SideAdd2(props) {
 {props.addObject?.categories?.slice(0, 1).map((item) => {
    return (
       item.advertisements.TopPosterAd2?.slice(0,1).map((item, index) => {
-         console.log(item)
+        //  console.log(item)
 
          return (
              <div key={index}>

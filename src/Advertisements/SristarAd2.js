@@ -34,7 +34,7 @@ function SristarAd2(props) {
                         {props.addObject?.categories?.slice(0,1).map((item,index)=>{
     return(
         item.advertisements.TopPosterad1.slice(1,2).map((item,index)=>{
-            console.log(item)
+            // console.log(item)
             return(
                
                 <div key={index}>

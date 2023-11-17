@@ -17,7 +17,7 @@ function Searching() {
         fetch(url).then(res => res.json())
           .then(res => {
             setData(res)
-            console.log(res)
+            // console.log(res)
     
           })
           
@@ -37,44 +37,60 @@ function Searching() {
         <div className="col-md-12 col-sm-12 col-xs-12">
                         <ul className="icon-links">
                            <li><a href=" https://www.facebook.com/aslikahani.in"><i className="ti-facebook"></i> </a></li>
-                           <li><a href="https://twitter.com/kahaniasli"><i class="fa-brands fa-twitter"></i></a></li>
-                           <li><a href="https://www.youtube.com/@AsliKahani"><i class="fa-brands fa-youtube"></i></a></li>
-                           <li><a href=" https://www.instagram.com/aslikahani/"><i class="fa-brands fa-instagram"></i></a></li>
+                           <li><a href="https://twitter.com/kahaniasli"><i className="fa-brands fa-twitter"></i></a></li>
+                           <li><a href="https://www.youtube.com/@AsliKahani"><i className="fa-brands fa-youtube"></i></a></li>
+                           <li><a href=" https://www.instagram.com/aslikahani/"><i className="fa-brands fa-instagram"></i></a></li>
 
                         </ul>
                      </div>
         <div className="keyword"></div>
                </div>
-               <div className='col-md-12 col-sm-12 col-xs-12'>
-               {data.map(item => {
-                return(
-                    <div className="col-md-12 grid-search"> 
-                     <div className='search-item'>  
-                     <div className="col-md-12 search-title">                      
-                    <h3>
-                     {/* <a href={item.url}>  */}
-                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
-                    {item.title}</a></h3>
-                    <h4> {item.created_at} </h4>
-                    <p> {item.description} </p>
-                    </div>
-                    {/* <div>
-                        <p>{item.description} </p>
-                    </div> */}
-                    </div>
-                    <div className='search-item'>
-    <img src={item.image} alt="" />
-  </div>
-                    </div>
-                )
-                
-               }) 
-               }
-               </div>
-                  
+               <div className="col-md-12" >
+  {data.map(item => {
+    return (
+      <div key={item.id}>
+        <div className="col-md-8 search-title">
+          <h3>
+            <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
+              {item.title}
+            </a>
+          </h3>
+          <h4> {item.created_at} </h4>
+          <p> {item.description} </p>
+        </div>
+        <div className="col-md-4 " style={{padding:"10px"}}>
+          <img src={item.image} alt="search-image" style={{width:"-webkit-fill-available"}}/>
+        </div>
+      </div>
+    );
+  })}
+</div>
+              
                </div>
             </article>
             </div>
+            {/* <div className="col-md-12" style={{ border: "1px solid red" }}>
+  {data.map(item => {
+    return (
+      <div key={item.id}>
+        <div className="col-md-8">
+          <h3>
+            <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
+              {item.title}
+            </a>
+          </h3>
+          <h4> {item.created_at} </h4>
+          <p> {item.description} </p>
+        </div>
+        <div className="col-md-4 search-item">
+          <img src={item.image} alt="" />
+        </div>
+      </div>
+    );
+  })}
+</div> */}
+
+
         </>
     )
  }

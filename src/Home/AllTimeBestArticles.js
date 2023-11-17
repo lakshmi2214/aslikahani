@@ -27,7 +27,7 @@ import { useNavigate } from "react-router-dom";
 function AllTimeBestArticles(props) {
    const navigate = useNavigate();
    const handleNavigation = (item) => {
-      console.log(item);
+      // console.log(item);
 
       navigate(`/${item.category}/${item.url}`, { state: { item } });
    }
@@ -46,7 +46,7 @@ function AllTimeBestArticles(props) {
                      <div className="row">
                         <div className="col-md-4 col-sm-6 col-xs-12">
                            {props.dataObject?.locations?.AllTimeBestArticle.slice(0, 2).map((item, index) => {
-                              console.log(item);
+                              // console.log(item);
                               return (
                                  <div key={index}>
                                     <div className="grid-box">
@@ -74,7 +74,7 @@ function AllTimeBestArticles(props) {
                         </div>
                         <div className="col-md-4 col-sm-6 col-xs-12">
                            {props.dataObject?.locations?.AllTimeBestArticle.slice(2, 4).map((item, index) => {
-                              console.log(item);
+                              // console.log(item);
                               return (
                                  <div key={index}>
                                     <div className="grid-box">
@@ -102,7 +102,7 @@ function AllTimeBestArticles(props) {
                         </div>
                         <div className="col-md-4 col-sm-6 col-xs-12">
                            {props.dataObject?.locations?.AllTimeBestArticle.slice(3, 5).map((item, index) => {
-                              console.log(item);
+                              // console.log(item);
                               return (
                                  <div key={index}>
                                     <div className="grid-box">

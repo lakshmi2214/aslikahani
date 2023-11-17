@@ -28,7 +28,7 @@ function MagzinePost1(props) {
 
    const navigate = useNavigate()
    const handleNavigation = (item) => {
-      console.log(item);
+      // console.log(item);
 
       navigate(`/emagazine/${item.url}`, { state: { item } });
    }
@@ -40,7 +40,7 @@ function MagzinePost1(props) {
             <article className="col-sm-2" >
                <div className="post1 ">
                   {props.dataObject?.map((item, index) => {
-                     console.log(item);
+                     // console.log(item);
                      return (
                         <div key={index}>
                            <div className="picture" style={{width:"fit-content"}}>

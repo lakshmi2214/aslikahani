@@ -13,10 +13,10 @@ function LangTrans() {
   return (
     <>
     
-    <div id="wrapper" class="translate">
-<div id="translator-wrapper" class="google-wrapper">
+    <div id="wrapper" className="translate">
+<div id="translator-wrapper" classNamr="google-wrapper">
     <select id="translate-language">
-        <option value="en" selected="selected" class="google-dropdown">English</option>
+        <option value="en" selected="selected" className="google-dropdown">English</option>
         <option value="id">Indonesian</option>
         <option value="af">Afrikaans</option>
         <option value="sq">Albanian</option>

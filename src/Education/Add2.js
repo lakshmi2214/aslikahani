@@ -6,7 +6,7 @@ function Add2(props) {
             {props.addObject?.categories?.slice(0, 1).map((item) => {
                 return (
                     item.advertisements.BottomBannerAd2.map((item, index) => {
-                        console.log(item)
+                        // console.log(item)
                         return (
                             <div key={index}>
                                 <div className='pt-3'>

@@ -25,7 +25,7 @@ function Magzine(){
     fetch(url).then(response => response.json())
       .then(response => {
         setResult(response)
-        console.log(response)
+        // console.log(response)
       })
       const url1 = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/category/list`;
       fetch(url1).then(response => response.json()
@@ -43,7 +43,7 @@ function Magzine(){
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-sm-12 col-xs-12">
-              <div className="section" >
+              <div className="sections" >
                 {/* style={{margin:"auto",width:"fit-content"}} */}
                 {/* <MagzinePost1 dataObject={result} /> */}
                 <MagazinePosts dataObject={result}/>

@@ -40,7 +40,7 @@ function RelatedArticleContent() {
     fetch(url).then(res => res.json())
       .then(res => {
         setData(res)
-        console.log(res)
+        // console.log(res)
 
       })
   }, [])
@@ -68,8 +68,8 @@ function RelatedArticleContent() {
         </div> */}
 
         {data.video_url != null ?
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src={data.video_url} allowfullscreen></iframe>
+          <div className="embed-responsive embed-responsive-16by9">
+            <iframe className="embed-responsive-item" src={data.video_url} allowfullscreen></iframe>
           </div>
           : ""
         }

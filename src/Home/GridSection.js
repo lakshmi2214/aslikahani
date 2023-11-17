@@ -13,7 +13,7 @@ function GridSection(props) {
     const grid = props.dataObject;
     return (
         <div>
-            <div class="col-md-12 full-width">
+            <div className="col-md-12 full-width">
                 <div className='posts'>
                     <div className='col-md-6 ' style={{ border: "1px solid red", padding: "0px" }}>
                         {grid?.locations?.Slider.slice(0, 1).map((item, index) => {

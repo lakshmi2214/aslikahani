@@ -27,7 +27,7 @@ function EntertainmentPost2(props) {
 
    const navigate = useNavigate()
    const handleNavigation = (item) => {
-      console.log(item);
+      // console.log(item);
 
       navigate(`/${item.category}/${item.url}`, { state: { item } });
    }
@@ -37,7 +37,7 @@ function EntertainmentPost2(props) {
             <article className="col-md-6 col-sm-6 col-xs-12">
                <div className="grid-1">
                   {props.dataObject?.locations?.General.slice(10,11).map((item, index) => {
-                     console.log(item);
+                     // console.log(item);
                      return (
                         <div key={index}>
                            <div className="picture">
@@ -65,7 +65,7 @@ function EntertainmentPost2(props) {
             <article className="col-md-6 col-sm-6 col-xs-12">
                <div className="grid-1">
                   {props.dataObject?.locations?.General.slice(11, 12).map((item, index) => {
-                     console.log(item);
+                     // console.log(item);
                      return (
                         <div key={index}>
                            <div className="picture">

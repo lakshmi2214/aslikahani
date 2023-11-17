@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 function Art3(props) {
     const navigate = useNavigate()
     const handleNavigation = (item) => {
-        console.log(item);
+        // console.log(item);
 
         navigate(`/${item.category}/${item.url}`, { state: { item } });
     }
@@ -14,7 +14,7 @@ function Art3(props) {
 <div className='posts'>
         <div className='col-md-6'>
         {props.dataObject?.locations?.ArtCultureGeneral.slice(8,9).map((item, index) => {
-                     console.log(item);
+                    //  console.log(item);
                      return (
                         <div key={index}>
             <div className='article-image'  onClick={() => handleNavigation(item, index)}>
@@ -36,7 +36,7 @@ function Art3(props) {
         <div className='col'>
         <div className='col-md-6'>
         {props.dataObject?.locations?.ArtCultureGeneral.slice(9, 10).map((item, index) => {
-                     console.log(item);
+                    //  console.log(item);
                      return (
                         <div key={index}>
             <div className='article-image'>

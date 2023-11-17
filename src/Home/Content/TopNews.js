@@ -27,7 +27,7 @@ import '../../css/royal-slider/rs-default.css';
 function TopNews(props) {
    const navigate = useNavigate();
    const handleNavigation = (item) => {
-      console.log(item);
+      // console.log(item);
 
       navigate(`/${item.category}/${item.url}`, { state: { item } });
    }
@@ -39,7 +39,7 @@ function TopNews(props) {
 
             <div className="grid-1">
                {props.dataObject?.locations?.TopNews.slice(0, 6).map((item, index) => {
-                  console.log(item);
+                  // console.log(item);
                   return (
                      <div key={index}>
                         <div className="picture">

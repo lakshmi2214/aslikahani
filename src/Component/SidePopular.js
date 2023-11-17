@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 function SidePopular(props) {
   const navigate = useNavigate();
   const handleNavigation = (item) => {
-    console.log(item);
+    // console.log(item);
 
     navigate(`/${item.category}/${item.url}`, { state: { item } });
   }
@@ -19,7 +19,7 @@ function SidePopular(props) {
             {/* <br/> */}
             <tr className="col-md-11">
               {props.dataObject?.locations?.TravelGeneral.slice(1, 5).map((item, index) => {
-                console.log(item);
+                // console.log(item);
                 return (
                   <div key={index} className='table-box'  onClick={() => handleNavigation(item, index)}>
                    <th scope="col-md-4">

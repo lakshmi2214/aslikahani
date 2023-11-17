@@ -27,7 +27,7 @@ function ArtPost2(props) {
 
    const navigate = useNavigate()
    const handleNavigation = (item) => {
-      console.log(item);
+      // console.log(item);
 
       navigate(`/Art-and-Culture/${item.url}`, { state: { item } });
    }
@@ -38,7 +38,7 @@ function ArtPost2(props) {
             <article className="col-md-6 col-sm-6 col-xs-12">
                <div className="grid-1">
                   {props.dataObject?.locations?.ArtCultureGeneral.slice(8, 9).map((item, index) => {
-                     console.log(item);
+                     // console.log(item);
                      return (
                         <div key={index}>
                            <div className="picture">
@@ -66,7 +66,7 @@ function ArtPost2(props) {
             <article className="col-md-6 col-sm-6 col-xs-12">
                <div className="grid-1">
                   {props.dataObject?.locations?.ArtCultureGeneral.slice(9, 10).map((item, index) => {
-                     console.log(item);
+                     // console.log(item);
                      return (
                         <div key={index}>
                            <div className="picture">

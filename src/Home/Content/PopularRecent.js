@@ -46,7 +46,7 @@ function PopularRecent(props) {
                      <ul className="small-grid">
                         <li>
                            {props.dataObject?.locations?.Popular.slice(0, 4).map((item, index) => {
-                              console.log(item);
+                              // console.log(item);
                               return (
                                  <div key={index}>
                                     <div className="small-post">

@@ -197,9 +197,13 @@ nav {
 .date{
 	margin-bottom: 0px;
 }
-
+.style{
+	display: none;
+  }
 }
-  
+  .style{
+	display: block;
+  }
 .logo img{	
 	margin-right: 10%;
 	height: 45px;

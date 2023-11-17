@@ -67,9 +67,16 @@
     .subscribe-plans{
         left: 0;
     }
+    /* .form-container{
+        border: 1px solid #989898; 
+        border-radius: 20px;
+    } */
 
 }
-
+.form-container{
+    border: 1px solid #989898; 
+    border-radius: 20px;
+}
 
 /* SubscriptionDoor */
 
@@ -136,6 +143,7 @@
 	padding: 15px;
 	max-width: 750px;
 	margin: 0 auto;
+   background-color: #dddada;
 }
 input,
 textarea {
@@ -167,9 +175,9 @@ textarea {
 }
 
 .input-container {
-	background: white;
+	background: #dddada;
 	padding: 16px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	position: relative;
 }
 
@@ -180,23 +188,24 @@ textarea {
 
 .input-container input,
 .input-container textarea {
-	font-size: 17px;
+	font-size: 21px;
 	color: #333;
 	outline: none;
 	width: 100%;
-	background: transparent;
+	background: white;
 	position: relative;
 	z-index: 2;
-    border: 1px solid black;
+    border: 1px solid #535252;
     border-radius: 10px;
+    font-family: sans-serif;
 }
 
 .input-container label {
-	/* color: grey; */
+	color: grey;
 	position: absolute;
 	left: 24px;
 	top: 16px;
-	z-index: 1;
+	z-index: 7;
 	font-size: 1.1rem;
 	transition: 0.5s;
 }

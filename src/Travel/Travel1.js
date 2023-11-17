@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 function Travel1(props) {
     const navigate = useNavigate()
     const handleNavigation = (item) => {
-        console.log(item);
+        // console.log(item);
 
         navigate(`/${item.category}/${item.url}`, { state: { item } });
     }
@@ -14,7 +14,7 @@ function Travel1(props) {
             <div className='posts'>
                 <div className='col-md-6 '>
                 {props.dataObject?.locations?.TravelGeneral.slice(0,2).map((item, index) => {
-                     console.log(item);
+                    //  console.log(item);
                         return (
                             <div key={index}>
                                 <div className='article-image' onClick={() => handleNavigation(item, index)}>
@@ -36,7 +36,7 @@ function Travel1(props) {
                 <div className='col'>
                     <div className='col-md-6'>
                         {props.dataObject?.locations?.TravelGeneral.slice(2, 4).map((item, index) => {
-                            console.log(item);
+                            // console.log(item);
                             return (
                                 <div key={index}>
                                     <div className='article-image'>

@@ -155,7 +155,7 @@ function Flipbook() {
                            
                             >
                             {datavalue.map((item, index) => {
-                                console.log(item)
+                                // console.log(item)
                                 return (
 
                                     <div key={index} className='box' style={{ maxWidth: "100%" , pointerEvents:"none"}} onClick={null}>
