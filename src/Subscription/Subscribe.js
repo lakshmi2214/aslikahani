@@ -9,9 +9,9 @@ import "./Subscription.css"
 // import SubscribeForm from './SubscribeForm';
 
 function Subscribe() {
-	function myFunction() {
-		alert("successfully!");
-	  }
+	// function myFunction() {
+	// 	alert("successfully!");
+	//   }
   return (
     <>
       <LogoColumn />
@@ -54,7 +54,7 @@ function Subscribe() {
 		<button
                       type="button"
                       className="btn btn-danger col-md-4"
-                      onClick={myFunction}
+                      onClick={()=>{ alert('Form Sumbitted Successfully'); }}
                       style={{ width: "35%", left: "32%", marginBottom: "5%" }}
                     >Submit</button>
 	</div>{/* <input type="submit" value="Submit"/> */}
