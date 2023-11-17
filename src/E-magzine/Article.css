@@ -30,6 +30,125 @@
         width: 360px;
     }
 }
+
+.content {
+    font-size: 14px;
+  }
+  
+  .main-container {
+    max-width: 1000px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 40px;
+    box-sizing: border-box;
+    /* border: 1px solid #000; */
+  }
+  
+  .main-items-container {
+    /* display: -ms-flexbox; */
+    /* display: flexbox; */
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    padding: 0;
+    margin: 10px 0;
+    list-style: none;
+    width: auto;
+    /* -webkit-box-flex: row wrap; */
+    justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    box-sizing: border-box;
+  }
+  .content-posts{
+    text-align: center;
+  }
+  .content-posts h5 a{
+    text-decoration: none;
+    color: black;
+  }
+  .content-posts li a{
+    text-decoration: none;
+    color: black;
+  }
+  .content-posts h5 a:hover{
+    color: red;
+  }
+  .content-posts li a:hover{
+    color: red;
+  }  
+  .section-posts{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  @media (min-width: 971px) {
+    
+    .item-container {
+      margin: 10px 2%;
+      width: 100%;
+      padding: 10px;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      /* border: 1px solid #000; */
+      box-sizing: border-box;
+    }
+    .item-container:nth-child(4n+1) {
+      margin-left: 0;
+    }
+    .item-container:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+  
+  @media (min-width: 550px) and (max-width: 970px) {
+       .item-container {
+      margin: 10px 2.50%;
+      width: 30%;
+      padding: 10px;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      /* border: 1px solid #000; */
+      box-sizing: border-box;
+    }
+    .item-container:nth-child(3n+1) {
+      margin-left: 0;
+    }
+    .item-container:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  
+  @media (max-width: 549px) {
+    .item-container {
+      margin: 10px 0;
+      width: initial;
+      padding: 10px;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      /* border: 1px solid #000; */
+      box-sizing: border-box;
+    }
+  }
+  .item-container {
+    margin: 20px;
+    width: initial;
+    padding: 10px;
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+  }
+  .img-posts img{
+    width: auto;
+    height: 260px;
+  }
+
+
+
+
 .post-widget-img{
     width: 360px;
 }

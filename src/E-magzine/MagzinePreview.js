@@ -45,8 +45,8 @@ function MagzinePreview(){
 						<div className="author">
             <p><b>Author Name:</b>  <span>{data.authored_by}</span></p>
       <p><b>About Author: </b> {data.about_author}</p>
-      <p> <b>Time to read:</b> {data.time_to_read} Hour</p>
-      <button className="btn btn-primary " ><a href= {process.env.REACT_APP_DOMAIN_NAME+'/emagazine/'+data.url+'/preview'} className="preview"> <span className="preview">Preview </span></a></button>
+      <p> <b>Time to read:</b> {data.time_to_read} Hour</p><br/>
+      <button className="btn btn-primary" style={{position:"relative", marginLeft:"10px", marginRight:"10px"}} ><a href= {process.env.REACT_APP_DOMAIN_NAME+'/emagazine/'+data.url+'/preview'} className="preview"> <span className="preview">Preview </span></a></button>
 						</div>
 					</div>
 				</div>

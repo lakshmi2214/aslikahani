@@ -1,17 +1,17 @@
 import React from 'react'
 import FooterCategory from '../FooterCategory/FooterCategory'
-import EntertainmentPosts from '../Entertainment/EntertainmentPosts'
-import ChaiTheoryAd from '../Advertisements/ChaiTheoryAd'
-import RecentEntertainment from '../Entertainment/RecentEntertainment'
-import SristarAd1 from '../Advertisements/SristarAd1'
-import ArchivePostEnetrtainment from '../Entertainment/ArchivePostEntertainment'
 import Navbar from '../Utility/Navbar'
 import { useState, useEffect } from 'react'
-import BannerAd1 from '../Advertisements/BannerAd1'
-import EntertainmentPost1 from '../Entertainment/EntertainmentPost1'
-import BannerAd2 from '../Advertisements/BannerAd2'
-import EntertainmentPost2 from '../Entertainment/EntertainmentPost2'
 import LogoColumn from '../Home/LogoColumn'
+import Entertainment1 from '../Entertainment/Entertainment1'
+import Entertainment2 from '../Entertainment/Entertainment2'
+import Add1 from '../Advertisements/Add1'
+import Add2 from '../Advertisements/Add2'
+import Entertainment3 from '../Entertainment/Entertainment3'
+import SideAdd1 from '../Advertisements/SideAdd1'
+import SidePopularEntertainment1 from '../Entertainment/SidePopularEntertainment1'
+import SideAdd2 from '../Advertisements/SideAdd2'
+import SidePostEntertainment from '../Entertainment/SidePostEntertainment'
 function Entertainment() {
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
@@ -33,32 +33,43 @@ function Entertainment() {
   }, []);
   return (
     <div>
+       
       <LogoColumn />
       <Navbar/>
-      <section className="main-content">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 col-sm-12 col-xs-12">
-              <div className="section">
-                <EntertainmentPosts dataObject={result} />
-                <BannerAd1 addObject={value} />
-                 <EntertainmentPost1 dataObject={result} /> 
-                <BannerAd2 addObject={value} />
-                 <EntertainmentPost2 dataObject={result} /> 
-              </div>
+      <br />
+      <div className='col-md-12 col-xs-12 col-sm-12'>
+      {/* <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="..."
+        crossOrigin="anonymous"
+      /> */}
+        <div className='col-md-8'>
+        <div className='mx-auto'>
+          <div className='col' >
+            <Entertainment1 dataObject={result} />
+            <div className='col-md-12' style={{padding: "10px", textAlign: "center" }}>
+              <Add1 addObject={value} />
             </div>
-            <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
-              <aside>
-                <ChaiTheoryAd addObject= {value} />
-                <RecentEntertainment dataObject={result} /> 
-                <SristarAd1 addObject= {value} />
-                <ArchivePostEnetrtainment />
-              </aside>
+            <Entertainment2 dataObject={result} />
+            <div className='col-md-12' style={{ padding: "10px", textAlign: "center" }}>
+              <Add2 addObject={value} />
             </div>
+            <Entertainment3 dataObject={result} />            
           </div>
+         
         </div>
-      </section>
+        </div>
+        <div className='col-md-4'>
+
+          <SideAdd1 addObject={value} />
+          <SidePopularEntertainment1 dataObject={result} />
+          <SideAdd2 addObject={value} />
+          <SidePostEntertainment dataObject={result} />
+        </div>
+      </div>
       <FooterCategory />
+    
     </div>
   )
 }

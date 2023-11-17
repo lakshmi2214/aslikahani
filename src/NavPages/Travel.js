@@ -1,18 +1,17 @@
 import React from 'react';
 import FooterCategory from '../FooterCategory/FooterCategory';
 import { useState, useEffect } from 'react';
-import TravelPosts from '../Travel/TravelPosts';
-import ChaiTheoryAd from '../Advertisements/ChaiTheoryAd';
-import RecentTravel from '../Travel/RecentTravel';
-import SristarAd1 from '../Advertisements/SristarAd1';
-import SliderWidgetTravel from '../Travel/SliderWidgetTravel';
-import ArchivePostTravel from '../Travel/ArchivePostTravel';
-import BannerAd1 from '../Advertisements/BannerAd1';
-import TravelPost1 from '../Travel/TravelPost1';
-import BannerAd2 from '../Advertisements/BannerAd2';
-import TravelPost2 from '../Travel/TravelPost2';
 import Navbar from '../Utility/Navbar';
 import LogoColumn from '../Home/LogoColumn';
+import Travel1 from '../Travel/Travel1';
+import Add1 from '../Advertisements/Add1';
+import Travel2 from '../Travel/Travel2';
+import Add2 from '../Advertisements/Add2';
+import Travel3 from '../Travel/Travel3';
+import SideAdd1 from '../Advertisements/SideAdd1';
+import SidePopularTravel from '../Travel/SidePopularTravel';
+import SideAdd2 from '../Advertisements/SideAdd2';
+import SidePostTravel from '../Travel/SidePostTravel';
 
 
 function Travel() {
@@ -36,32 +35,35 @@ function Travel() {
   return (
     <div>
       <LogoColumn />
-      <Navbar/>
-      <section className="main-content">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 col-sm-12 col-xs-12">
-              <div className="section">
-                <TravelPosts dataObject={result} />
-                <BannerAd1 addObject ={value} />
-                <TravelPost1 dataObject ={result} /> 
-                <BannerAd2 addObject ={value} />
-                 <TravelPost2 dataObject ={result} />
-              </div>
+      <Navbar />
+      <br />
+      <div className='col-md-12 col-xs-12 col-sm-12'>
+        <div className='col-md-8'>
+          <div className='col' >
+            <Travel1 dataObject={result} />
+            <div className='col-md-12' style={{padding: "10px", textAlign: "center" }}>
+              <Add1 addObject={value} />
             </div>
-            <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
-              <aside>
-                <ChaiTheoryAd addObject={value} />
-                <RecentTravel dataObject={result} /> 
-                <SristarAd1 addObject={value} />
-                 <SliderWidgetTravel dataObject={result} /> 
-                <ArchivePostTravel />
-              </aside>
+            <Travel2 dataObject={result} />
+            <div className='col-md-12' style={{ padding: "10px", textAlign: "center" }}>
+              <Add2 addObject={value} />
             </div>
+            <Travel3 dataObject={result} />
+            
           </div>
+         
         </div>
-      </section>
-      <FooterCategory />
+        
+        <div className='col-md-4'>
+
+          <SideAdd1 addObject={value} />
+          <SidePopularTravel dataObject={result} />
+          <SideAdd2 addObject={value} />
+          <SidePostTravel dataObject={result} />
+        </div>
+
+      </div>
+<FooterCategory />
     </div>
   )
 }

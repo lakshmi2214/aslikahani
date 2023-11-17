@@ -14,6 +14,10 @@ import Magzine from "../NavPages/Magzine";
 import Flipbook from "../ArticleContent/Magzine/Flipbook";
 import MagzinePreview from "../E-magzine/MagzinePreview";
 import SearchBar from "../NavPages/SearchBar";
+// import SubscriptionDoor from "../Subscription/SubscriptionDoor";
+import Subscribe from "../Subscription/Subscribe";
+import EducationComponent from "../Component/EducationComponent";
+import Stories from "../NavPages/Stories";
 // import Turn from "../ArticleContent/Magzine/Turn";
 
 function Router() {
@@ -46,6 +50,9 @@ function Router() {
              <Route path="/Art-and-Culture/:id" element={<ArticleContent />} /> 
              <Route path="/emagazine/:id" element={<MagzinePreview/>}/>
              <Route path="/emagazine/:id/:id" element={<Flipbook />} /> 
+             <Route path="/subscribe" element={<Subscribe /> }/>
+             <Route path="/checking" element={<EducationComponent /> }/>
+             <Route path="/Stories" element={<Stories /> }/>
         </Routes>
     </BrowserRouter>
         </>

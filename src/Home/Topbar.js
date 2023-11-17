@@ -57,6 +57,7 @@ function Topbar() {
                      </div>
                      <div className="col-md-4 col-sm-9 col-xs-12">
                         <ul >
+                        <li className="subscribeBtn"><a href={process.env.REACT_APP_DOMAIN_NAME+'/subscribe'}>Subscribe</a></li>
                            <li className="magzinebook"><a href={process.env.REACT_APP_DOMAIN_NAME+'/emagazine'}>E-Magazine</a></li>
                            <li><a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><span>Aslikahani Podcast</span><span> </span><i className="fa fa-spotify"></i></a></li>
                         </ul>

@@ -11,9 +11,10 @@ import SristarAd1 from '../Advertisements/SristarAd1';
 // import BannerAd2 from '../Advertisements/BannerAd2';
 // import BusinessPost2 from '../Business/BusinessPost2';
 import Navbar from '../Utility/Navbar';
-import MagzinePost1 from "../E-magzine/MagzinePost1";
+// import MagzinePost1 from "../E-magzine/MagzinePost1";
 // import MagzinePreview from "../E-magzine/MagzinePreview";
 import LogoColumn from "../Home/LogoColumn";
+import MagazinePosts from "../E-magzine/MagazinePosts";
 
 function Magzine(){
 
@@ -42,8 +43,10 @@ function Magzine(){
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-sm-12 col-xs-12">
-              <div className="section">
-                <MagzinePost1 dataObject={result} />
+              <div className="section" >
+                {/* style={{margin:"auto",width:"fit-content"}} */}
+                {/* <MagzinePost1 dataObject={result} /> */}
+                <MagazinePosts dataObject={result}/>
                 {/* <BannerAd1 addObject={value} /> */}
              
                 {/* <BusinessPost1 dataObject={result} /> */}

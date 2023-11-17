@@ -1,18 +1,18 @@
 import React from 'react';
-import FooterCategory from '../FooterCategory/FooterCategory';
 import { useState, useEffect } from 'react';
-import EducationPosts from '../Education/EducationPosts';
-import ChaiTheoryAd from '../Advertisements/ChaiTheoryAd';
-import RecentEducation from '../Education/RecentEducation';
-import SristarAd1 from '../Advertisements/SristarAd1';
-import SliderWidgetEducation from '../Education/SliderWidgetEducation';
-import ArchivePostEducation from '../Education/ArchivePostEducation';
-import Navbar from '../Utility/Navbar';
-import BannerAd1 from '../Advertisements/BannerAd1';
-import EducationPost1 from '../Education/EducationPost1';
-import BannerAd2 from '../Advertisements/BannerAd2';
-import EducationPost2 from '../Education/EducationPost2';
 import LogoColumn from '../Home/LogoColumn';
+import Navbar from '../Utility/Navbar';
+import Education1 from '../Education/Education1';
+import Education2 from '../Education/Education2';
+import Education3 from '../Education/Education3';
+import Add1 from '../Advertisements/Add1';
+import Add2 from '../Advertisements/Add2';
+import SideAdd1 from '../Advertisements/SideAdd1';
+import SideAdd2 from '../Advertisements/SideAdd2';
+import SidePost from '../Education/SidePost';
+import SidePopular from '../Education/SidePopular';
+import FooterCategory from '../FooterCategory/FooterCategory';
+// import EducationComponent from '../Education/EducationComponent';
 
 
 function Education() {
@@ -35,33 +35,38 @@ function Education() {
   }, []);
   return (
     <div>
-      <LogoColumn />
-      <Navbar/>
-      <section className="main-content">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 col-sm-12 col-xs-12">
-              <div className="section">
-                <EducationPosts dataObject={result} />
-                <BannerAd1 addObject={value} />
-                <EducationPost1 dataObject={result} />
-                <BannerAd2 addObject={value} />
-                <EducationPost2 dataObject={result} />
-              </div>
+    {/* <EducationComponent /> */}
+    <LogoColumn />
+      <Navbar />
+      <br />
+      <div className='col-md-12 col-xs-12 col-sm-12'>
+        <div className='col-md-8'>
+          <div className='col' >
+            <Education1 dataObject={result} />
+            <div className='col-md-12' style={{padding: "10px", textAlign: "center" }}>
+              <Add1 addObject={value} />
             </div>
-            <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
-              <aside>
-                <ChaiTheoryAd addObject= {value}/>
-                <RecentEducation dataObject={result} />
-                <SristarAd1 addObject= {value}/>
-                <SliderWidgetEducation dataObject={result} />
-                <ArchivePostEducation addObject= {value}/>
-              </aside>
+            <Education2 dataObject={result} />
+            <div className='col-md-12' style={{ padding: "10px", textAlign: "center" }}>
+              <Add2 addObject={value} />
             </div>
+            <Education3 dataObject={result} />
+            
           </div>
+         
         </div>
-      </section>
-      <FooterCategory/>
+        
+        <div className='col-md-4'>
+
+          <SideAdd1 addObject={value} />
+          <SidePopular dataObject={result} />
+          <SideAdd2 addObject={value} />
+          <SidePost dataObject={result} />
+        </div>
+
+      </div>
+<FooterCategory />
+
     </div>
   )
 }

@@ -45,6 +45,7 @@ import LogoColumn from "../Home/LogoColumn";
 // import sideBanner from "../images/banner2.jpg"
 import WeatherApp from "../WeatherForecast/WeatherApp";
 import Tags from "../Home/Tags";
+import GridSection from "../Home/GridSection";
 // import Navbars from "../Utility/Navbars";
 // import rightBanner from "../images/banner1.jpg"
 function Home() {
@@ -89,6 +90,7 @@ function Home() {
       {/* <div className=" sideBanner col-md-1 col-xs-12 col-sm-12 position-fixed">              
               <img src={sideBanner} alt="side banner" />              
             </div> */}
+            {/* <GridSection dataObject={result}/> */}
      <Grid dataObject={result}/>
      <br/>
                  <section className="main-content">

@@ -1,84 +1,3 @@
-/*
-Template Name: NewsForest -  Magazine / Blog HTML Template
-Author: ScriptsBundle
-Version: 1.0
-Designed and Development by: ScriptsBundle
-
-====================================
-[ CSS TABLE CONTENT ]
-------------------------------------
-     1.0 - GENERAL CSS
-    2.0 - HEADING STYLE
-    3.0 - BREADCRUMB
-    4.0 - CATEGORY COLOR CODE
-    5.0 - TOP BAR
-    6.0 - MENU CUSTOMIZATIONS
-		6.1 - MENU CONTAINER SIZE
-		6.2 - MENU DARK
-		6.3 - MENU CSS FOR BLOCKS AND LISTING
-		6.4 - MENU CATEGORY COLOR CODE
-	7.0 - VIDEO SECTION MAIN
-	8.0 - PARALLEL POST STYLE
-	9.0 - ARCHIVE POSTS
-	10.0 - CATEGORY SIDEBAR
-	11.0 - VIDEO SECTION
-	12.0 - SOCIAL SHARE 2
-	13.0 - HEADER
-	14.0 - FEATURED SLIDER CSS
-	15.0 - FULL WIDTH SLIDER MAIN
-	16.0 - FULL WIDTH STYLE 2
-	17.0 - OWL SLIDER CUSTOM CSS
-	18.0 - CSS PREE LOADR
-	19.0 - COMMENT SECTION
-	20.0 - FULL WIDTH IMAGE SINGLE POST
-	21.0 - FULL WIDTH SLIDER
-	22.0 - PAGINATION
-	23.0 - AUTHOR LIST
-	24.0 - ARTICLE CAPTION AND RELATED CSS
-	25.0 - GRID CSS
-	26.0 - SMALL GRID CSS
-	27.0 - SIDEBAR WIDGET
-	28.0 - WIDGET CATEGORY
-	29.0 - POL WIDGET
-	30.0 - AUTHOR POST WIDGET
-	31.0 - PHOTO GALLERY SECTION
-	32.0 - TABS
-	33.0 - ADVERTISEMENT CSS
-	34.0 - CONTACT US CSS
-	35.0 - FOOTER CSS
-	36.0 - INSTAGRAM GALLERY
-	37.0 - LOAD MORE POSTS
-	38.0 - FOOTER TAGS
-	39.0 - SOCIAL COUNTERS
-	40.0 - MAIN TABS CSS
-	41.0 - TOP SMALL POSTS SLIDER
-	42.0 - RESPONSIVENESS QURIES
-
--------------------------------------
-[ END CSS TABLE CONTENT ]
-=====================================
-
-
-
-COLOR CODES FOR CATEGORY
-
-1- purple = photography
-2- orange = nature
-3- yellow = entertainment
-4- gray = food and health
-5- green = travel
-6- pink = life style
-7- red = fashion
-8- blue = videos
-9- maroon = sports
-10-Dark Red = technology
-10- lightblue =Technology
-
-*/
-
-
-/* GENERAL CSS */
-
 body {
 	/* background-color: #242424; */
 	font-weight: 400;
@@ -946,7 +865,7 @@ p .readmore {
 	padding: 0;
 	/* margin-left: 5%;
 	margin-right: 5%; */
-	margin-left: 15%;
+	margin-left: 13%;
     margin-right: -3%;
 }
 
@@ -1143,8 +1062,15 @@ p .readmore {
 	width: 100%;
 	max-width: 400px;
 }
+.groups{
+	width: 100%;
+}
 
 @media screen and  (max-width: 768px) {
+	.form-group{
+		border: 1px solid red;
+		max-width: 100%;
+	}
 	.videoGallery .rsTmb {
 		padding: 6px 8px;
 	}
@@ -4879,6 +4805,12 @@ footer .social-media-icons ul {
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+	form{
+		border: 1px solid red;
+		width: 80%;
+		margin: 10%;
+		margin-right: 10%;
+	}
 	.heading .main-heading {
 		padding: 8px 12px;
 		font-size: 16px;
@@ -5056,8 +4988,9 @@ footer .social-media-icons ul {
 	/* .grid-thumb{
 	} */
 	.section {
-		margin-left: 0;
-		margin-right: .5px;
+		margin-left:10%;
+		margin-right: 10%;
+		/* border: 1px solid red; */
 	}
 	.post-contents h3 {
 		margin-left: 20%;

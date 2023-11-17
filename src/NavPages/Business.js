@@ -1,17 +1,17 @@
 import React from 'react';
 import FooterCategory from '../FooterCategory/FooterCategory';
 import { useState, useEffect } from 'react';
-import BusinessPosts from '../Business/BusinessPosts';
-import ChaiTheoryAd from '../Advertisements/ChaiTheoryAd';
-import RecentBusiness from '../Business/RecentBusiness';
-import SliderWidgetBusiness from '../Business/SliderWidgetBusiness';
-import SristarAd1 from '../Advertisements/SristarAd1';
-import BannerAd1 from '../Advertisements/BannerAd1';
-import BusinessPost1 from '../Business/BusinessPost1';
-import BannerAd2 from '../Advertisements/BannerAd2';
-import BusinessPost2 from '../Business/BusinessPost2';
 import Navbar from '../Utility/Navbar';
 import LogoColumn from '../Home/LogoColumn';
+import Business1 from '../Business/Business1';
+import Add1 from '../Advertisements/Add1';
+import Business2 from '../Business/Business2';
+import Add2 from '../Advertisements/Add2';
+import Business3 from '../Business/Business3';
+import SideAdd1 from '../Advertisements/SideAdd1';
+import SidePopularBusiness from '../Business/SidePopularBusiness';
+import SideAdd2 from '../Advertisements/SideAdd2';
+import SidePostBusiness from '../Business/SidePostBusiness';
 
 
 
@@ -36,29 +36,33 @@ function Business() {
     <div>
       <LogoColumn />
       <Navbar/>
-      <section className="main-content">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 col-sm-12 col-xs-12">
-              <div className="section">
-                <BusinessPosts dataObject={result} />
-                <BannerAd1 addObject={value} />
-                <BusinessPost1 dataObject={result} />
-                <BannerAd2 addObject={value} />
-                <BusinessPost2 dataObject ={result} />
-              </div> 
+      <br/>
+      <div className='col-md-12 col-xs-12 col-sm-12'>
+        <div className='col-md-8'>
+          <div className='col'>
+            <Business1 dataObject={result} />
+            <div className='col-md-12' style={{padding: "10px", textAlign: "center" }}>
+              <Add1 addObject={value} />
             </div>
-            <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
-              <aside>
-                <ChaiTheoryAd addObject={value} />
-                <RecentBusiness dataObject={result} />
-                <SristarAd1 addObject={value} />
-                <SliderWidgetBusiness dataObject={result} />
-              </aside>
+            <Business2 dataObject={result} />
+            <div className='col-md-12' style={{ padding: "10px", textAlign: "center" }}>
+              <Add2 addObject={value} />
             </div>
+            <Business3 dataObject={result} />
+            
           </div>
+         
         </div>
-      </section>
+        
+        <div className='col-md-4'>
+
+          <SideAdd1 addObject={value} />
+          <SidePopularBusiness dataObject={result} />
+          <SideAdd2 addObject={value} />
+          <SidePostBusiness dataObject={result} />
+        </div>
+
+      </div>
         <FooterCategory  /> 
     </div>
   )

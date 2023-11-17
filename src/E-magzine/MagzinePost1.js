@@ -22,6 +22,7 @@ import '../css/zerogrid.css';
 import '../css/royal-slider/rs-default.css';
 import '../css/owl.carousel.css';
 import { useNavigate } from "react-router-dom";
+import MagazinePosts from "./MagazinePosts";
 
 function MagzinePost1(props) {
 
@@ -33,18 +34,19 @@ function MagzinePost1(props) {
    }
    return (
       <>
+      {/* <div className="container"> */}
          <div className="row">
             
-            <article className="col-sm-4 " >
-               <div className="grid-1 post1">
+            <article className="col-sm-2" >
+               <div className="post1 ">
                   {props.dataObject?.map((item, index) => {
                      console.log(item);
                      return (
                         <div key={index}>
-                           <div className="picture">
+                           <div className="picture" style={{width:"fit-content"}}>
                               <div className="category-image"onClick={() => handleNavigation(item, index)} >
                                  <a href={process.env.REACT_APP_DOMAIN_NAME+'/emagazine/'+item.url}>
-                                    <img alt="" className="img-responsive" src={item.cover_image} style={{ height: "240px", width: "57%" }} />
+                                    <img alt="" className="img-responsive" src={item.cover_image} style={{ height: "240px", width: "100%" }} />
                                  </a>
                               </div>
                            </div>
@@ -64,35 +66,11 @@ function MagzinePost1(props) {
                </div>
             </article>
           
-            {/* <article className="col-md-6 col-sm-6 col-xs-12">
-               <div className="grid-1">
-                  {props.dataObject?.locations?.BussGeneral.slice(5, 6).map((item, index) => {
-                     console.log(item);
-                     return (
-                        <div key={index}>
-                           <div className="picture">
-                              <div className="category-image" >
-                                 <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
-                                    <img alt="" className="img-responsive" src={item.image} style={{ height: "240px", widtth: "300px" }} />
-                                 </a>
-                              </div>
-                           </div>
-                           <div className="detail">
-                              <div className="caption" >
-                                 <h5>
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a>
-                                 </h5>
-                              </div>
-                              <ul className="post-tools" >
-                                 <li> by <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}> <strong> {item.authored_by}</strong> </a></li>
-                              </ul>
-                           </div>
-                        </div>
-                     )
-                  })}
-               </div>
-            </article> */}
+           
                      </div>
+                     {/* </div> */}
+                     {/* <MagazinePosts /> */}
+                    
       </>
    )
 }

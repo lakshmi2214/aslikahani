@@ -1,18 +1,17 @@
 import React from 'react'
 import FooterCategory from '../FooterCategory/FooterCategory';
-import LifestylePosts from '../LifeStyle/LifestylePosts';
-import ChaiTheoryAd from '../Advertisements/ChaiTheoryAd';
-import RecentLifestyle from '../LifeStyle/RecentLifestyle';
-import SliderWidgetLifestyle from '../LifeStyle/SliderWidgetLifestyle';
-import ArchiveLifestyle from '../LifeStyle/ArchiveLifestyle';
 import { useState, useEffect } from 'react';
-import SristarAd1 from '../Advertisements/SristarAd1';
 import Navbar from '../Utility/Navbar';
-import LifestylePost1 from '../LifeStyle/LifestylePost1';
-import BannerAd1 from '../Advertisements/BannerAd1';
-import BannerAd2 from '../Advertisements/BannerAd2';
-import LifestylePost2 from '../LifeStyle/LifestylePost2';
 import LogoColumn from '../Home/LogoColumn';
+import Lifestyle1 from '../LifeStyle/Lifestyle1';
+import Add1 from '../Advertisements/Add1';
+import Lifestyle2 from '../LifeStyle/Lifestyle2';
+import Add2 from '../Advertisements/Add2';
+import Lifestyle3 from '../LifeStyle/Lifestyle3';
+import SideAdd1 from '../Advertisements/SideAdd1';
+import SideAdd2 from '../Advertisements/SideAdd2';
+import SidePopularLifestyle from '../LifeStyle/SidePopularLifestyle';
+import SidePostLifestyle from '../LifeStyle/SidePostLifestyle';
 
 function LifeStyle() {
   const [result, setResult] = useState([]);
@@ -32,34 +31,37 @@ function LifeStyle() {
   }, []);
   return (
     <div>
-      <LogoColumn />
-      <Navbar/>
-      <section className="main-content">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 col-sm-12 col-xs-12">
-              <div className="section">
-                <LifestylePosts dataObject={result} />
-                <BannerAd1 addObject={value} />
-                <LifestylePost1 dataObject={result} />
-                <BannerAd2 addObject={value} />
-                <LifestylePost2 dataObject={result} />
-              </div>
-            </div>
-            <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
-              <aside>
-                <ChaiTheoryAd addObject={value}/>
-                <RecentLifestyle dataObject={result} />
-                <SristarAd1 addObject={value} />
-                <SliderWidgetLifestyle dataObject={result} />
-                <ArchiveLifestyle addObject={value} />
-              </aside>
-            </div>
+    <LogoColumn />
+    <Navbar />
+    <br />
+    <div className='col-md-12 col-xs-12 col-sm-12'>
+      <div className='col-md-8'>
+        <div className='col' >
+          <Lifestyle1 dataObject={result} />
+          <div className='col-md-12' style={{padding: "10px", textAlign: "center" }}>
+            <Add1 addObject={value} />
           </div>
+          <Lifestyle2 dataObject={result} />
+          <div className='col-md-12' style={{ padding: "10px", textAlign: "center" }}>
+            <Add2 addObject={value} />
+          </div>
+          <Lifestyle3 dataObject={result} />
+          
         </div>
-      </section>
-      <FooterCategory />
+       
+      </div>
+      
+      <div className='col-md-4'>
+
+        <SideAdd1 addObject={value} />
+        <SidePopularLifestyle dataObject={result} />
+        <SideAdd2 addObject={value} />
+        <SidePostLifestyle dataObject={result} />
+      </div>
+
     </div>
+<FooterCategory />
+  </div>
   )
 }
 

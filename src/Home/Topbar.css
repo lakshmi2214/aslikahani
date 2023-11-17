@@ -182,3 +182,24 @@
     justify-content: center;
 
   }
+  /* .subscribe-button{
+    border: 1px solid black;
+    left: 60%;
+
+  }
+  .subscribe-img{
+    width: -webkit-fill-available;
+  } */
+  .parent {
+    /* border: 1px solid black; */
+    margin: 1rem;
+    padding: 2rem 2rem;
+    /* text-align: center; */
+  }
+  .child {
+    height: 515px;
+    display: flex;
+    /* border: 1px solid red; */
+    padding: 1rem 1rem;
+    vertical-align: middle;
+  }

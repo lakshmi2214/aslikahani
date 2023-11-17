@@ -1,18 +1,17 @@
 import React from 'react';
 import FooterCategory from '../FooterCategory/FooterCategory';
-import TechnologyPosts from '../Technology/TechnologyPosts';
-import ChaiTheoryAd from '../Advertisements/ChaiTheoryAd';
-import RecentTechnology from '../Technology/RecentTechnology';
-import SristarAd1 from '../Advertisements/SristarAd1';
-import SliderWidgetTechnology from '../Technology/SliderWidgetTechnology';
-import ArchivePostTechnology from '../Technology/ArchivePostTechnology';
 import { useState, useEffect } from 'react';
 import Navbar from '../Utility/Navbar';
-import BannerAd1 from '../Advertisements/BannerAd1';
-import TechnologyPost1 from '../Technology/TechnologyPost1';
-import BannerAd2 from '../Advertisements/BannerAd2';
-import TechnologyPost2 from '../Technology/TechnologyPost2';
 import LogoColumn from '../Home/LogoColumn';
+import Technology1 from '../Technology/Technology1';
+import Add1 from '../Advertisements/Add1';
+import Technology2 from '../Technology/Technology2';
+import Add2 from '../Advertisements/Add2';
+import Technology3 from '../Technology/Technology3';
+import SideAdd1 from '../Advertisements/SideAdd1';
+import SidePopularTechnology from '../Technology/SidePopularTechnology';
+import SideAdd2 from '../Advertisements/SideAdd2';
+import SidePostTechnology from '../Technology/SidePostTechnology';
 function Technology() {
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
@@ -34,30 +33,33 @@ function Technology() {
     <div>
       <LogoColumn />
       <Navbar/>
-      <section className="main-content">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 col-sm-12 col-xs-12">
-              <div className="section">
-                <TechnologyPosts dataObject={result} />
-                <BannerAd1 addObject={value} />
-                <TechnologyPost1 dataObject={result} />
-                <BannerAd2 addObject={value} />
-                <TechnologyPost2 dataObject={result} />
-              </div>
+      <br/>
+      <div className='col-md-12 col-xs-12 col-sm-12'>
+        <div className='col-md-8'>
+          <div className='col' >
+            <Technology1 dataObject={result} />
+            <div className='col-md-12' style={{padding: "10px", textAlign: "center" }}>
+              <Add1 addObject={value} />
             </div>
-            <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
-              <aside>
-                <ChaiTheoryAd addObject={value}/>
-                <RecentTechnology dataObject={result} />
-                <SristarAd1 addObject={value}/>
-                <SliderWidgetTechnology dataObject={result} />
-                <ArchivePostTechnology />
-              </aside>
+            <Technology2 dataObject={result} />
+            <div className='col-md-12' style={{ padding: "10px", textAlign: "center" }}>
+              <Add2 addObject={value} />
             </div>
+            <Technology3 dataObject={result} />
+            
           </div>
+         
         </div>
-      </section>
+        
+        <div className='col-md-4'>
+
+          <SideAdd1 addObject={value} />
+          <SidePopularTechnology dataObject={result} />
+          <SideAdd2 addObject={value} />
+          <SidePostTechnology dataObject={result} />
+        </div>
+
+      </div>
       <FooterCategory />
     </div>
   )

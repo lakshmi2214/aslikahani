@@ -96,7 +96,7 @@ nav {
   }
 @media screen and (min-width: 320px) and (max-width: 767px){
 	header{
-		height:50px;
+		height:60px;
 	}
 	.span{
 		text-align: center;
