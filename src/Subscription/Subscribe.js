@@ -9,11 +9,9 @@ import "./Subscription.css"
 // import SubscribeForm from './SubscribeForm';
 
 function Subscribe() {
-  // const script = document.createElement("script");
-  // script.src = "https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js";
-  // script.async = true;
-  // document.body.appendChild(script);
-  
+	function myFunction() {
+		alert("successfully!");
+	  }
   return (
     <>
       <LogoColumn />
@@ -32,11 +30,11 @@ function Subscribe() {
 	<form action="">
 		<div class="zeile">
 			<div class="input-container">
-				<input type="text" id="name" placeholder=""/>
+				<input type="text" id="name" placeholder="" required/>
 				<label for="name">First Name: <span style={{ color: "red" }}>*</span></label>
 			</div>
 			<div class="input-container">
-				<input type="text" id="lname" placeholder=""/>
+				<input type="text" id="lname" placeholder="" required/>
 				<label for="lname">Last Name: <span style={{ color: "red" }}>*</span></label>
 			</div>
 		</div>
@@ -45,7 +43,7 @@ function Subscribe() {
 			<label for="email">Email:</label>
 		</div>
 		<div class="input-container">
-			<input type="Number" id="Number" placeholder=""/>
+			<input type="Number" id="Number" placeholder="" required/>
 			<label for="Number">Phone Number: <span style={{ color: "red" }}>*</span></label>
 		</div>
 		<div class="input-container">
@@ -53,7 +51,12 @@ function Subscribe() {
 			<label for="Message">Comment / Message</label>
 		</div>
 		<div class="input-container">
-    <button type="button" class="btn btn-danger col-md-4  " style={{width:"35%", left:"32%", marginBottom:"5%"}}>Submit</button>
+		<button
+                      type="button"
+                      className="btn btn-danger col-md-4"
+                      onClick={myFunction}
+                      style={{ width: "35%", left: "32%", marginBottom: "5%" }}
+                    >Submit</button>
 	</div>{/* <input type="submit" value="Submit"/> */}
 	</form>
 </section>

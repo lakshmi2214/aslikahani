@@ -7,7 +7,6 @@ import './nav.css';
 
 function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
-
 	const toggleMenu = () => {
 		// console.log("Toggle menu clicked");
 		setIsOpen(!isOpen);
