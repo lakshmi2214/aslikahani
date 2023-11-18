@@ -188,7 +188,7 @@ textarea {
 
 .input-container input,
 .input-container textarea {
-	font-size: 21px;
+	font-size: 17px;
 	color: #333;
 	outline: none;
 	width: 100%;
@@ -198,6 +198,7 @@ textarea {
     border: 1px solid #535252;
     border-radius: 10px;
     font-family: sans-serif;
+    padding: 4px;
 }
 
 .input-container label {
