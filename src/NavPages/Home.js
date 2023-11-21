@@ -42,10 +42,12 @@ import LogoColumn from "../Home/LogoColumn";
 // import Nav from "../Utility/Nav";
 // import Navbars from "../Utility/Navbars";
 // import Subscriptiontag from "../Subscription/Subscriptiontag";
-// import sideBanner from "../images/banner2.jpg"
+import sidebanner from "../images/banner2.jpg"
 import WeatherApp from "../WeatherForecast/WeatherApp";
 import Tags from "../Home/Tags";
 import GridSection from "../Home/GridSection";
+import LatestArticle from "../Home/LatestArticle";
+import Grids from "../Home/Grids";
 // import Navbars from "../Utility/Navbars";
 // import rightBanner from "../images/banner1.jpg"
 function Home() {
@@ -83,58 +85,40 @@ function Home() {
       <div className="col-md-12 col-xm-12 col-xs-12" style={{borderBottom:"1px solid rgb(180, 179, 179)"}}> 
          <Tags dataObject={result}/>
      </div>
-      
+   
       <span className="col-md-12 bannerAd1">
       <BannerAd1 addObject={value}/>
       </span>
+      
+      <div className="col-md-12" style={{border:"1px solid blue"}}>
+     
       {/* <div className=" sideBanner col-md-1 col-xs-12 col-sm-12 position-fixed">              
               <img src={sideBanner} alt="side banner" />              
             </div> */}
             {/* <GridSection dataObject={result}/> */}
-     <Grid dataObject={result}/>
+     {/* <Grid dataObject={result}/> */}
      <br/>
-                 <section className="main-content">
-         <div className="container">
-            <div className="row">
-               <div className="col-md-6 col-sm-12 col-xs-12">
-                  <br/>
-                  <LatestArticles dataObject={result}/>
-                  <NationalNews dataObject={result}/>             
-                  <TrendingNews dataObject={result}/>
-              
-               </div>
-               <div className="col-md-2 col-sm-2 hidden-xs hidden-sm nopadding">
-                  <div className="category-sidebar sidebar-middle">
-                     <br/>
-                    <TopNews dataObject={result}/>
-                  </div>
-               </div>
-               <div className="col-md-4 col-sm-12 col-xs-12" id="sidebar">
-                  <aside>
-                     <br/>
-                  <WeatherApp />
-                  <br/>
-                       <ChaiTheoryAd addObject={value}/>
-                       
-                      <PopularRecent dataObject={result}/> 
-                      <SristarAd1 addObject={value}/>
-                     <div className="widget widget-bg">                       
-                   <span className="SliderPostWidget">   <SliderPostWidget dataObject={result}/></span>
-                     </div>
-                     
-                  </aside>
-                  {/* <div className="asideBanner col-sm-1">              
-              <img src={sideBanner} alt="side banner"/>              
-            </div> */}
-               </div>
-         </div>
-         </div>
-         <BannerAd1 addObject={value}/>
-         </section>
-     <AdminChoice dataObject={result}/>
+                 
+     {/* <AdminChoice dataObject={result}/>
       <AllTimeBestArticles dataObject={result}/>
       <BannerAd2 addObject={value}/>
-      <Footer/>
+      <Footer/> */}
+      
+      <div className="container">
+      <div className="" style={{border:"1px solid red"}}>
+      {/* <div className='col-md-1'><div className="banner-fixed"> <img src={sidebanner} alt='banner1' style={{width:"-webkit-fill-available"}}/>
+</div></div> */}
+
+<Grids dataObject={result} />
+
+        <GridSection dataObject={result}/>
+        <div className="col-md-12">
+        {/* <LatestArticle dataObject={result}/> */}
+      </div>
+      </div>
+      
+      </div>
+      </div>
         </>
     );
 }
