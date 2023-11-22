@@ -18,7 +18,7 @@ function GridSection(props) {
                 <div className='banner-fixed'>
                 <img src={sidebanner} alt='banner1' style={{ width: "-webkit-fill-available" }} />
             </div></div> */}
-            <div className="col-md-12 full-width">
+            <div className="col-md-10 full-width">
             {/* <div className="col-md-1"></div> */}
                 <div className='posts'>
 
@@ -90,11 +90,11 @@ function GridSection(props) {
                 </div>
             </div>
 
-            {/* <div className='col-md-1'>
-            <div className='banner-fixed'>
-                <img src={sidebanner} alt='banner1' style={{ width: "-webkit-fill-available" }} />
-            </div>
-            </div> */}
+            <div className="col-md-1">
+          <div className="banner-fixed" style={{ width: "90px" }}>
+            <img src={sidebanner} alt='banner1' style={{ width: "-webkit-fill-available" }} />
+          </div>
+        </div>
         </div>
     )
 }

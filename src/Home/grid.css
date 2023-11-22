@@ -75,19 +75,35 @@
   }
   .banner-fixed {
     position: fixed;
-    /* display: block; */
+    display: block;
+    top: 220px;
   }
-  .banner-fixed img{
-    padding: 10px;
-    width: fit-content;
-  }
-  @media screen and (min-width: 320px) and (max-width: 767px){
+  @media only screen and (min-width: 767px) and (max-width: 991px){
     .banner-fixed{
         display: none;
       }
       .grid-container{
         display: none;
       }
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1023px){
+    .banner-fixed{
+        display: none;
+      }
+      .grid-container{
+        display: none;
+      }
+  }
+  @media only screen and (min-width: 1024px) and (max-width: 1033px){
+    .banner-fixed{
+      display: none;
+      /* left: 16px; */
+    }
+  }
+  @media (max-width: 768px){
+    .banner-fixed{
+      display: none;
+    }
   }
   @media (min-width: 992px){
 .col-md-6 {
@@ -101,7 +117,8 @@
       "footer footer footer footer footer";
   grid-template-rows: 0fr 1fr 0fr;
   grid-template-columns: 0fr 100px 87% 100px 0fr;
-  min-height: 100vh; */
+  min-h
+  eight: 100vh; */
 }
   }
   .grid-container {
@@ -109,18 +126,37 @@
     display: block;
   }
   
-  .banner-fixed {
-    position: fixed;
-    top: 200px;
-  }
-  .banner-fixed img{
-    padding: 10px;
-  }
-  
   .content-container {
     margin-left: 10px; /* Adjust the margin to the width of your fixed side banner */
   }
-  
-  /* .banner-fixed{
-    display: flex;
+  .overflow-auto {
+    overflow: auto;
+  }
+  /* section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  article{
+    height: 200px;
   } */
+  .size{
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  .article_desc{
+    border-bottom: 1px solid #a4a0a0;
+  }
+  .article_desc h5 a{
+    color: black;
+    text-decoration: none;
+    font-size: smaller;   
+  }
+  .article_desc h5 a:hover{
+    color: #d32415;
+  }
+  .article_desc p a:hover{
+    color: #d32415;
+  }
+  .article_desc p span:hover{
+    color: #d32415;
+  }

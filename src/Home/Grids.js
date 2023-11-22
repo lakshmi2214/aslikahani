@@ -1,53 +1,102 @@
 import React from 'react'
 import './article.css'
 import sidebanner from "../images/banner2.jpg"
+import { useNavigate } from "react-router-dom";
+import "./grid.css"
+import { Container, Row, Col } from 'react-bootstrap';
 
-function Grids() {
+function Grids(props) {
+  const navigate = useNavigate();
+  const handleNavigation = (item) => {
+      console.log(item);
+
+      navigate(`/${item.category}/${item.url}`, { state: { item } });
+  }
+
+  const grid = props.dataObject;
+
+
   return (
     <>
     
-    <div class="wrappers">
-{/* <div class="header">Header (Absolute)</div> */}
-<div class="sidebar-1">
-  <div class="sticky-spacer"></div>
-  <div class="sticky-content">                <img src={sidebanner} alt='banner1' style={{ width: "-webkit-fill-available" }} />
-</div>
-</div>
-<div class="content">
-  <div class="sticky-spacer"></div>
-  <div class="sticky-content">
-    Scrollable content<br/><br/>
-    line 1<br/><br/>
-    line 2<br/><br/>
-    line 3<br/><br/>
-    line 4<br/><br/>
-    line 5<br/><br/>
-    line 6<br/><br/>
-    line 7<br/><br/>
-    line 8<br/><br/>
-    line 9<br/><br/>
-    line 10<br/><br/>
-    line 11<br/><br/>
-    line 12<br/><br/>
-    line 13<br/><br/>
-    line 14<br/><br/>
-    line 15<br/><br/>
-    line 16<br/><br/>
-    line 17<br/><br/>
-    line 18<br/><br/>
-    line 19<br/><br/>
-    line 20
-  </div>
-</div>
-<div class="sidebar-2">
-  <div class="sticky-spacer"></div>
-  <div class="sticky-content">
-  <img src={sidebanner} alt='banner1' style={{ width: "-webkit-fill-available" }} />
+    <div className='container-fluid'>
+      <div className='row'>
+        <div className="col-md-10">
+        <div className='posts' style={{height:"370px"}}>
 
-  </div>
+<div className='col-md-6' style={{ padding: "2px"}}>
+    {grid?.locations?.Slider.slice(0, 1).map((item, index) => {
+
+
+        console.log(item);
+        return (
+            <div key={index}>
+
+                <div className='article-img'>
+                    <img src={item.image} alt='img1' style={{ width: "-webkit-fill-available", height: "363px" }} />
+                </div><div className='col-md-12 bottom-left' >
+                    <h4> <a href=''>{item.title}</a></h4>
+                    <p><a href="">{item.created_at} </a></p>
+
+                </div>
+            </div>
+        )
+    })}
 </div>
-{/* <div class="footer">Footer (Absolute)</div> */}
+    <div className='col-md-6' >
+        <div className='row' >
+            {grid?.locations?.Slider.slice(1, 3).map((item, index) => {
+                console.log(item);
+                return (
+
+                    <div key={index}>
+                        <div className='col-md-6' style={{ padding: "2px" }}>
+                            <div className='article-img' style={{}}>
+                                <img src={item.image} alt='img1' style={{ width: "-webkit-fill-available", height: "180px" }} />
+                            </div>
+                            <div className='col-md-12 bottom-left' >
+                                <h4> <a href=''>{item.title}</a></h4>
+                                <p><a href="">{item.created_at} </a></p>
+                            </div>
+                        </div>
+                    </div>
+                )
+            })}
+        </div>
+        <div className='row' >
+            {grid?.locations?.Slider.slice(3, 5).map((item, index) => {
+                console.log(item);
+                return (
+
+                    <div key={index}>
+                        <div className='col-md-6' style={{ padding: "2px" }}>
+                            <div className='article-img'>
+                                <img src={item.image} alt='img1' style={{ width: "-webkit-fill-available", height: "180px" }} />
+                            </div>
+                            <div className='col-md-12 bottom-left' >
+                                <h4> <a href=''>{item.title}</a></h4>
+                                <p><a href="">{item.created_at} </a></p>
+                            </div>
+                        </div>
+                    </div>
+                )
+            })}
+            {/* <div className='col-md-6' style={{ border: "1px solid black" }}>4
+       </div> */}
+        </div>
+    </div>
 </div>
+        </div>
+          <div className='col-md-1' >
+      
+          <div className="banner-fixed"  style={{ width: "90px" }}>
+            <span>
+                <img src={sidebanner} alt='banner1' style={{width:"-webkit-fill-available"}} />
+           </span>
+           </div>
+           </div>
+      </div>
+    </div>
     
     </>
   )

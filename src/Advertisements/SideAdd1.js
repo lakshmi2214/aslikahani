@@ -29,7 +29,7 @@ function SideAdd1(props) {
          return (
              <div key={index}>
         
-                    <div className="col-md-11">							
+                    <div className="col-md-11" style={{width:"-webkit-fill-available"}}>							
 							<div className="slider-adds">
 								<a href={item.url} target='blank'>
                                 <img style={{width:"100%", height:"100%"}} src={item.image}/>

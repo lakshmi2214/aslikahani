@@ -12,13 +12,16 @@ function Tags(props) {
     // console.log(item);
     return(
         <a href={process.env.REACT_APP_DOMAIN_NAME+'/search/'+item.tag_value}>
-            <div className="badge text-bg-danger tagname">{item.tag_name}</div></a>             
+            <div className="badge text-bg-danger tagname">{item.tag_name}</div></a>                         
         )
         })}
-     <span className='col-md-2'style={{float:"unset"}}>
+        <a href={process.env.REACT_APP_DOMAIN_NAME+'/subscribe'}>
+      <img src={button} style={{width:"300px"}}/></a>
+      
+     {/* <span className='col-md-2'style={{float:"unset"}}>
       <a href={process.env.REACT_APP_DOMAIN_NAME+'/subscribe'}>
       <img src={button} style={{width:"320px"}}/></a>
-      </span>
+      </span> */}
 
         {/* <div className='col-md-3 subscribe-button'>
   <img className='subscribe-img' src={button} ></img>
