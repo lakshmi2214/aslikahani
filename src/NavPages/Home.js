@@ -54,6 +54,13 @@ import SidePopularLifestyle from "../LifeStyle/SidePopularLifestyle";
 import SideAdd2 from "../Advertisements/SideAdd2";
 import SidePostLifestyle from "../LifeStyle/SidePostLifestyle";
 import TopArticles from "../Home/Content/TopArticles";
+import Articles from "../Home/Content/Articles";
+import TrendingArticles from "../Home/Content/TrendingArticles";
+import PopularArticles from "../Home/Content/PopularArticles";
+import PostArticles from "../Home/Content/PostArticles";
+import Add2 from "../Advertisements/Add2";
+import Add1 from "../Advertisements/Add1";
+import EditorsChoise from "../Home/Content/EditorsChoise";
 // import Navbars from "../Utility/Navbars";
 // import rightBanner from "../images/banner1.jpg"
 function Home() {
@@ -100,16 +107,44 @@ function Home() {
 <div className="">
 <div className="col-md-12">
   <div className="col-md-1"></div>
-<div className="col-md-5 col-sm-12"  style={{border:"1px solid red"}}>
+<div className="col-md-5 col-sm-12">
        <LatestArticle dataObject={result}/>
+       <br/>
+       {/* <div className="col-md-12 col-sm-12"> */}
+       <Articles dataObject={result} />
+       {/* </div> */}
+      <TrendingArticles dataObject={result} />
        </div>
        
-       <div className="col-md-2 col-sm-12"  style={{border:"1px solid red"}}>
+       
+       <div className="col-md-2 col-sm-12"  >
         <TopArticles dataObject={result} />
        </div>
        
-       <div className="col-md-3 col-sm-12"  style={{border:"1px solid red"}}>swasw</div>
+       <div className="col-md-3 col-sm-12"  >
+<br/>
+<WeatherApp />
+<br/>
+<SideAdd1 addObject={value} />
+<PopularArticles dataObject={result } />
+<PostArticles dataObject={result} />
        </div>
+       {/* <div className="col-md-12"><br/>
+        <div className="col-md-1 none"></div>
+        <div className="col-md-10"><Add1 addObject={value} /></div> 
+        <div className="col-md-1"></div>
+      </div> */}
+      <span className="col-md-12 bannerAd1">
+        <BannerAd2 addObject={value} />
+      </span>
+      
+      <div className="col-md-12" style={{border:"1px solid black"}}>
+        {/* <EditorsChoise dataObject={result} /> */}
+
+      </div>
+
+       </div>
+      
        </div>
 </div>
     </>

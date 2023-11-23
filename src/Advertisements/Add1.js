@@ -5,23 +5,23 @@ function Add1(props) {
         <div>
 
             {/* <div className='col-md-12' style={{ border: "1px solid blue", textAlign: "center" }}> */}
-                {props.addObject?.categories?.slice(0, 1).map((item) => {
-                    return (
-                        item.advertisements.BottomBannerAd1.map((item, index) => {
-                            // console.log(item)
-                            return (
-                                <div key={index}>
-                                    <div className='pt-3'>
-                                        <a href={item.url}>
-                                            <img src={item.image} alt='banner1' style={{width:"-webkit-fill-available"}}/>
-                                        </a>
-                                        </div>
+            {props.addObject?.categories?.slice(0, 1).map((item) => {
+                return (
+                    item.advertisements.BottomBannerAd1.map((item, index) => {
+                        return (
+                            < div key={index} >
+                                <div className='pt-3'>
+                                    <a href={item.url}>
+                                        <img src={item.image} alt='banner1' style={{ width: "-webkit-fill-available" }} />
+                                    </a>
                                 </div>
-                            )
-                        })
-                    )
-                }
-                )}
+                            </div >
+
+                        )
+                    })
+                )
+            }
+            )}
 
 
             {/* </div> */}
@@ -31,3 +31,9 @@ function Add1(props) {
 }
 
 export default Add1
+
+{/* <div key={index}>
+<a href={item.url} target="_blank" rel="noreferrer">
+    <img src={item.image} className="img-responsive" alt="itm-img" />
+</a>
+</div> */}

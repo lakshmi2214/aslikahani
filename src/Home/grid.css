@@ -85,6 +85,9 @@
       .grid-container{
         display: none;
       }
+      .none{
+        display: none;
+      }
   }
   @media only screen and (min-width: 992px) and (max-width: 1023px){
     .banner-fixed{
@@ -93,21 +96,33 @@
       .grid-container{
         display: none;
       }
+      .none{
+        display: none;
+      }
   }
   @media only screen and (min-width: 1024px) and (max-width: 1033px){
     .banner-fixed{
       display: none;
       /* left: 16px; */
     }
+    .none{
+      display: none;
+    }
   }
   @media (max-width: 768px){
     .banner-fixed{
+      display: none;
+    }
+    .none{
       display: none;
     }
   }
   @media (min-width: 992px){
 .col-md-6 {
     width: 50%;
+}
+.none{
+  display: none;
 }
 .wrappers{
   display: block;
@@ -159,4 +174,57 @@
   }
   .article_desc p span:hover{
     color: #d32415;
+  }
+  .title-article{
+    padding: 6px;
+  }
+  .title-article h3 span{
+    border: 1px solid black;
+    padding: 6px;
+  }
+  .none{
+    display: block;
+  }
+  /* body{
+    font-family: verdana;
+  } */
+  .containers{
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+  
+  }
+  .fa-globe{
+    font-size: 5rem;
+    padding-right: 5px;
+  }
+  .box {
+    padding: 5px;
+    margin: 5px;
+    color: #ddd;
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .hero-container{
+    height: 50vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(256,256,256,.1),rgba(0,0,0,.3)),url('https://cdn.dribbble.com/users/343382/screenshots/1497688/3r2def.png');
+    background-size: cover;
+    
+    
+  }
+  @media only screen and (max-width: 700px) {
+   
+    .box {
+    flex:0;
+      }
+    .container {
+      flex-direction: column;
+    }
   }

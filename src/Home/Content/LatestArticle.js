@@ -16,7 +16,9 @@ function LatestArticle(props) {
 			<div className='row'>
 
 				<div className="col-md-12">
-					<h2 className="main-heading">Latest Articles</h2>
+				<div className='title-article'>
+					<h3><span>Latest Articles</span></h3>
+					</div>
 					<div className="col-md-7 col-sm-12 overflow-auto">
 						{props.dataObject?.locations?.LatestPost.slice(0, 1).map((item, index) => {
 							return (
