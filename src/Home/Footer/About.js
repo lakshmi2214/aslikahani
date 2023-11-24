@@ -27,7 +27,7 @@ function About() {
    return (
       <>
          <div className="col-md-3 col-sm-6 col-xs-12 no-padding">
-            <h2>About Us</h2>
+            <h3>About Us</h3>
             <div className="footer-block">
                <p>A captivating platform that takes you on a journey through the realms of imagination,
                   inspiration and cultural richness. Asli Kahani, meaning "Real Story" in Hindi, is a celebration
@@ -46,11 +46,7 @@ function About() {
                      <li><a href="https://www.youtube.com/@AsliKahani"><i className="ti-youtube"></i></a></li>
                      <li><a href=" https://www.instagram.com/aslikahani/"><i className="ti-instagram"></i></a></li>
                      <li><a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><i className="fa fa-spotify"></i></a></li>
-                     {/* <li> <a href=""><i className="ti-linkedin"></i></a></li>
-                              <li> <a href=""><i className="ti-google"></i></a></li>
-                              <li> <a href=""><i className="ti-vimeo"></i></a></li>
-                              <li> <a href=""><i className="ti-pinterest"></i></a></li> */}
-                  </ul>
+                     </ul>
                </div>
             </div>
          </div>

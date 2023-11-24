@@ -1,36 +1,13 @@
 import React from "react";
-import '../../css/style.css';
-import '../../css/animate.min.css';
-import '../../css/megaMenu.css';
-import '../../css/colors/amethyst.css';
-import '../../css/colors/carrat.css';
-import '../../css/colors/defualt.css';
-import '../../css/colors/golden.css';
-import '../../css/colors/java-color.css';
-import '../../css/colors/sea-green.css';
-import '../../css/themify-icons.css';
-import '../../css/royal-slider/royalslider.css';
-import '../../css/tranparentmenu.css';
-import '../../css/magnific-popup.css';
-import '../../css/bootstrap-normal-container.min.css';
-import '../../css/bootstrap.min.css';
-import '../../css/owl.theme.default.css';
-import '../../css/royal-slider/rs-default.png';
-import '../../css/breakingNews.css';
-import '../../css/font-awesome.min.css';
-import '../../css/owl.carousel.css';
-import '../../css/zerogrid.css';
-import '../../fonts/glyphicons-halflings-regular.svg';
-import '../../css/royal-slider/rs-default.css';
-
 function Twitter() {
     return(
         <>
         <div className="col-xs-12 col-md-3 col-sm-6 ">
-                     <h2>Twitter Widget</h2>
+                     <h3>Twitter Widget</h3>
                      <ul className="tabs-posts twitter-widget">
                         <li>
-                           <div className="caption1"><a href="https://twitter.com/kahaniasli" className="url"> PENNY SAVED IS A PENNY EARNED: TIPS ON SAVING MONEY 
+                           <div className="caption1" style={{fontSize:"14px"}}><a href="https://twitter.com/kahaniasli" className="url" style={{textDecoration:"none"}}> 
+                           Penny Saved Is A Penny Earned: Tips on Savings Money 
                               </a>
                            </div>
                            <ul className="post-tools">
@@ -38,7 +15,9 @@ function Twitter() {
                            </ul>
                         </li>
                         <li>
-                           <div className="caption1"><a href="https://twitter.com/kahaniasli" className="url">BATTERY ELECTRIC VEHICLES - ROAD TO AN ELECTRIFYING FUTURE
+                           {/* <div className="caption1"><a href="https://twitter.com/kahaniasli" className="url"> */}
+                           <div className="caption1" style={{fontSize:"14px"}}><a href="https://twitter.com/kahaniasli" className="url" style={{textDecoration:"none"}}> 
+                              Battery Electric Vehicles - Road To An Electrifying Future
                            </a>
                            </div>
                            <ul className="post-tools">

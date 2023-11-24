@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
-import { Container, Row, Col } from 'react-bootstrap';
+// import { Container, Row, Col } from 'react-bootstrap';
 
 function LatestArticle(props) {
 	const navigate = useNavigate();
@@ -14,7 +14,9 @@ function LatestArticle(props) {
 
 			{/* <Container fluid> */}
 			<div className='row'>
-
+			<div className='title-article'>
+                    <h3><span>Editor's Choice</span></h3>
+                </div>
 				<div className="col-md-12">
 				<div className='title-article'>
 					<h3><span>Latest Articles</span></h3>

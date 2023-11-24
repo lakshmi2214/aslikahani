@@ -1,3 +1,4 @@
+
 import React from "react";
 import { useState, useEffect } from "react";
 import '../css/style.css';
@@ -48,7 +49,7 @@ import Tags from "../Home/Tags";
 import GridSection from "../Home/GridSection";
 import LatestArticle from "../Home/Content/LatestArticle";
 import Grids from "../Home/Grids";
-import { Container, Row, Col } from 'react-bootstrap';
+// import { Container, Row, Col } from 'react-bootstrap';
 import SideAdd1 from "../Advertisements/SideAdd1";
 import SidePopularLifestyle from "../LifeStyle/SidePopularLifestyle";
 import SideAdd2 from "../Advertisements/SideAdd2";
@@ -61,6 +62,7 @@ import PostArticles from "../Home/Content/PostArticles";
 import Add2 from "../Advertisements/Add2";
 import Add1 from "../Advertisements/Add1";
 import EditorsChoise from "../Home/Content/EditorsChoise";
+import AllTimeBest from "../Home/Content/AllTimeBest";
 // import Navbars from "../Utility/Navbars";
 // import rightBanner from "../images/banner1.jpg"
 function Home() {
@@ -104,7 +106,6 @@ function Home() {
         </div>
 
         <GridSection dataObject={result} />
-<div className="">
 <div className="col-md-12">
   <div className="col-md-1"></div>
 <div className="col-md-5 col-sm-12">
@@ -138,15 +139,19 @@ function Home() {
         <BannerAd2 addObject={value} />
       </span>
       
-      <div className="col-md-12" style={{border:"1px solid black"}}>
-        {/* <EditorsChoise dataObject={result} /> */}
-
+      <div className="col-md-12" style={{padding:"5%"}}>
+     <EditorsChoise dataObject={result} />
+      </div>
+      <div className="col-md-12">
+      <AllTimeBest dataObject={result} />
+      </div>     
+       </div>       
+</div><div className="col-md-12">
+      <Footer/>
       </div>
 
-       </div>
-      
-       </div>
-</div>
+<span style={{color:"white"}}>B</span>
+
     </>
   );
 }

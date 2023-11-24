@@ -10,28 +10,33 @@ function EditorsChoise(props) {
     }
   return (
     <>
-  <div class="containers">
-  <div class="box red"> 
-  {props.dataObject?.locations?.AdminChoice.slice(0, 3).map((item, index) => {
-return(
-    <div key={index}>
-        <div className='col-md-12' style={{borderBottom:"1px solid #a4a0a0"}}>
-									<a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
-										<img alt="" className="img-responsive" src={item.image} style={{height:"190px"}}/>
-									</a>
-									<div className='article-desc' >
-										<h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.title}</a></h5>
-										<p className='size'><span>BY</span> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}><strong>{item.authored_by}</strong></a>
-											<span> / </span><span>{item.created_at}</span> </p>
-									</div>
-									</div>
-    </div>
-)})}
-  
+    <span style={{color:"white"}}>B</span>
+      <div class="container" >  
+      <div className='title-article'>
+                    <h3><span>Editor's Choice</span></h3>
+                </div><br/>
+                                 {props.dataObject?.locations?.AdminChoice.slice(0,3).map((item, index) => {
+                                   return (
+                                    <div key={index}>
+                                 <div className='col-md-4'>
+   <div class="card" style={{width: "20rem;", border:"1px solid #cfcbcb"}}>
+   <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
+<div className='img-hover-zoom'>
+  <img class="card-img-top" src={item.image} alt="Card image cap" style={{width:"-webkit-fill-available"}}/>
+  </div> </a>
+  <div class="card-body">
+  <div className='article-desc' style={{ padding: "5px", background:"white",height:"100px" }}>
+                                <h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.title}</a></h5>
+                                <p className='size'><span>BY</span> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}><strong>{item.authored_by}</strong></a>
+                                    <span> / </span><span>{item.created_at}</span> </p>
+                            </div>{/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
   </div>
-  {/* <div class="box blue"> <i class="fa fa-globe"></i> here is box number 2</div>
-  <div class="box green"> <i class="fa fa-globe"></i> here is box number 3</div> */}
+</div><br/>
 </div>
+</div>
+                                   )})}
+  </div>
+{/* </div> */}
     </>
   )
 }

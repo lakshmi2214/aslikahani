@@ -2023,11 +2023,11 @@ pre code {
     }
 }
 
-@media (min-width:1200px) {
+/* @media (min-width:1200px) {
     .container {
         width: 1240px
     }
-}
+} */
 
 .container-fluid {
     margin-right: auto;

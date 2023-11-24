@@ -13,7 +13,7 @@ function Footer() {
                   <div className="row">
                      <About />
                      <div className="col-xs-12 col-md-3 col-sm-6 ">
-                        <h2>Most Read Articles</h2>
+                        <h3>Most Read Articles</h3>
                         <ul className="tabs-posts">
                            <li>
                               <div className="caption1" style={{ paddingTop: "15px" }}>

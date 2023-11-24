@@ -11,40 +11,18 @@ import I4 from '../../images/posts/Suitable_Guide_for_career_planning.jpg';
 import I3 from '../../images/posts/PENNY_1.jpg';
 import I2 from '../../images/posts/Kids_vs_Technology.jpeg';
 import I1 from '../../images/posts/KATHAL.jpg';
-import '../../css/style.css';
-import '../../css/animate.min.css';
-import '../../css/megaMenu.css';
-import '../../css/colors/amethyst.css';
-import '../../css/colors/carrat.css';
-import '../../css/colors/defualt.css';
-import '../../css/colors/golden.css';
-import '../../css/colors/java-color.css';
-import '../../css/colors/sea-green.css';
-import '../../css/themify-icons.css';
-import '../../css/royal-slider/royalslider.css';
-import '../../css/tranparentmenu.css';
-import '../../css/magnific-popup.css';
-import '../../css/bootstrap-normal-container.min.css';
-import '../../css/bootstrap.min.css';
-import '../../css/owl.theme.default.css';
-import '../../css/royal-slider/rs-default.png';
-import '../../css/breakingNews.css';
-import '../../css/font-awesome.min.css';
-import '../../css/owl.carousel.css';
-import '../../css/zerogrid.css';
-import '../../fonts/glyphicons-halflings-regular.svg';
-import '../../css/royal-slider/rs-default.css';
+
 
 function Instagram() {
     return (
         <>
             <div className="col-xs-12 col-md-3 col-sm-6 ">
-                <h2>Instagram Widget</h2>
+                <h3>Instagram Widget</h3>
                 <div className="insta-gallery">
-                    <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I1} /> </a>
+                    {/* <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I1} /> </a>
                     <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I2} /> </a>
                     <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I3} /> </a>
-                    <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I4} /> </a>
+                    <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I4} /> </a> */}
                     <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I5} /> </a>
                     <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I7} /> </a>
                     

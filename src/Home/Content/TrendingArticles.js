@@ -65,7 +65,7 @@ function TrendingArticles(props) {
                                         <th scope="col-md-4">
                                             <img src={item.image} style={{ width: "100px", height: "85px", padding: "5px" }} alt='popular-img' />
                                         </th>
-                                        <th scope="col-md-8">
+                                        <th scope="col-md-12">
                                             <div className='article-desc' style={{ position: "relative", top: "-25px" }}>
                                                 <h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.title}</a></h5>
                                             </div>

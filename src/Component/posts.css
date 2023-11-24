@@ -7,7 +7,7 @@
 .article-desc h5 a{
     text-decoration: none;
     color: black;
-    font-size: larger;
+    font-size: medium;
 }
 .article-desc h5 a:hover{
     color: red;
