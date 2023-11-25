@@ -7,7 +7,7 @@ function Footer() {
    return (
 
       <div>
-         <section className="footer-white">
+         <div className="footer-white">
             <div className="footer-top">
                <div className="container">
                   <div className="row">
@@ -16,7 +16,7 @@ function Footer() {
                         <h3>Most Read Articles</h3>
                         <ul className="tabs-posts">
                            <li>
-                              <div className="caption1" style={{ paddingTop: "15px" }}>
+                              <div className="caption1" style={{  }}>
                                  <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/the-starry-night-van-goghs-enigmatic-masterpiece'} className="url"> The Starry Night: Van Gogh's Enigmatic Masterpiece
                                  </a>
                                  <ul className="post-tools">
@@ -62,7 +62,7 @@ function Footer() {
                   </div>
                </div>
             </div>
-         </section>
+         </div>
 
       </div>
    )

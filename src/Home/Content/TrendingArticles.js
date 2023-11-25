@@ -18,10 +18,11 @@ function TrendingArticles(props) {
                 {props.dataObject?.locations?.TrendingNews.slice(0, 1).map((item, index) => {
                     return (
                         <div key={index}>
-                            <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
+                            <div className='zoom-in'>
+                                <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
 
-                                <img src={item.image} alt='bigimage' style={{  width: "-webkit-fill-available" }} />
-                            </a>
+                                    <img src={item.image} alt='bigimage' style={{ width: "-webkit-fill-available" }} />
+                                </a></div>
                             <div className='article-desc' style={{ padding: "initial" }}>
                                 <h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.title}</a></h5>
                                 <p className='size'><span>BY</span> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}><strong>{item.authored_by}</strong></a>
@@ -36,9 +37,11 @@ function TrendingArticles(props) {
                             {props.dataObject?.locations?.TrendingNews.slice(1, 4).map((item, index) => {
 
                                 return (
-                                    <div key={index} className='table-box' onClick={() => handleNavigation(item, index)} style={{height:"100px",borderBottom:"1px dotted #e5dfdf"}}>
-                                        <th scope="col-md-4">
-                                            <img src={item.image} style={{ width: "100px", height: "85px", padding: "5px" }} alt='popular-img' />
+                                    <div key={index} className='table-box' onClick={() => handleNavigation(item, index)} style={{ height: "100px", borderBottom: "1px dotted #e5dfdf" }}>
+                                        <th scope="col-md-4 " className='zoom-in'>
+                                            <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
+                                                <img src={item.image} style={{ width: "100px", height: "85px", padding: "5px" }} alt='popular-img' />
+                                            </a>
                                         </th>
                                         <th scope="col-md-8">
                                             {/* <div style={{ position: "relative", top: "-25px", padding:"5px"}}> */}
@@ -61,9 +64,11 @@ function TrendingArticles(props) {
                             {props.dataObject?.locations?.TrendingNews.slice(4, 7).map((item, index) => {
 
                                 return (
-                                    <div key={index} className='table-box' onClick={() => handleNavigation(item, index)}  style={{height:"100px",borderBottom:"1px dotted #e5dfdf"}}>
-                                        <th scope="col-md-4">
-                                            <img src={item.image} style={{ width: "100px", height: "85px", padding: "5px" }} alt='popular-img' />
+                                    <div key={index} className='table-box' onClick={() => handleNavigation(item, index)} style={{ height: "100px", borderBottom: "1px dotted #e5dfdf" }}>
+                                        <th scope="col-md-4" className='zoom-in'>
+                                            <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
+                                                <img src={item.image} style={{ width: "100px", height: "85px", padding: "5px" }} alt='popular-img' />
+                                            </a>
                                         </th>
                                         <th scope="col-md-12">
                                             <div className='article-desc' style={{ position: "relative", top: "-25px" }}>

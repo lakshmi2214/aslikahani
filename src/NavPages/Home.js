@@ -97,60 +97,61 @@ function Home() {
       </span>
 
       <div className="col-md-12">
-
         <br />
         <div className="col-md-1">
-          <div className="banner-fixed" style={{ width: "90px" }}>
-            <img src={sidebanner} alt='banner1' style={{ width: "-webkit-fill-available" }} />
+          <div className="image_container" >
+            {/* <img src={sidebanner} alt='banner1' style={{ width: "-webkit-fill-available" }} /> */}
+            <img class="sticky" src={sidebanner} alt="Avatar"/>
           </div>
+
         </div>
 
         <GridSection dataObject={result} />
-<div className="col-md-12">
-  <div className="col-md-1"></div>
-<div className="col-md-5 col-sm-12">
-       <LatestArticle dataObject={result}/>
-       <br/>
-       {/* <div className="col-md-12 col-sm-12"> */}
-       <Articles dataObject={result} />
-       {/* </div> */}
-      <TrendingArticles dataObject={result} />
-       </div>
-       
-       
-       <div className="col-md-2 col-sm-12"  >
-        <TopArticles dataObject={result} />
-       </div>
-       
-       <div className="col-md-3 col-sm-12"  >
-<br/>
-<WeatherApp />
-<br/>
-<SideAdd1 addObject={value} />
-<PopularArticles dataObject={result } />
-<PostArticles dataObject={result} />
-       </div>
-       {/* <div className="col-md-12"><br/>
+        <div className="col-md-12">
+          <div className="col-md-1"></div>
+          <div className="col-md-5 col-sm-12">
+            <LatestArticle dataObject={result} />
+            <br />
+            {/* <div className="col-md-12 col-sm-12"> */}
+            <Articles dataObject={result} />
+            {/* </div> */}
+            <TrendingArticles dataObject={result} />
+          </div>
+
+
+          <div className="col-md-2 col-sm-12"  >
+            <TopArticles dataObject={result} />
+          </div>
+
+          <div className="col-md-3 col-sm-12"  >
+            <br />
+            <WeatherApp />
+            <br />
+            <SideAdd1 addObject={value} />
+            <PopularArticles dataObject={result} />
+            <PostArticles dataObject={result} />
+          </div>
+          {/* <div className="col-md-12"><br/>
         <div className="col-md-1 none"></div>
         <div className="col-md-10"><Add1 addObject={value} /></div> 
         <div className="col-md-1"></div>
       </div> */}
-      <span className="col-md-12 bannerAd1">
-        <BannerAd2 addObject={value} />
-      </span>
-      
-      <div className="col-md-12" style={{padding:"5%"}}>
-     <EditorsChoise dataObject={result} />
+          <span className="col-md-12 bannerAd1">
+            <BannerAd2 addObject={value} />
+          </span>
+
+          <div className="col-md-12" style={{ padding: "5%" }}>
+            <EditorsChoise dataObject={result} />
+          </div>
+          <div className="col-md-12">
+            <AllTimeBest dataObject={result} />
+          </div>
+        </div>
       </div>
       <div className="col-md-12">
-      <AllTimeBest dataObject={result} />
-      </div>     
-       </div>       
-</div><div className="col-md-12">
-      <Footer/>
+        <Footer />
       </div>
-
-<span style={{color:"white"}}>B</span>
+      <span style={{ color: "white" }}>.</span>
 
     </>
   );

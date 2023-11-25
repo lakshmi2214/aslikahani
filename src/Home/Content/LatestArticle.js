@@ -14,9 +14,7 @@ function LatestArticle(props) {
 
 			{/* <Container fluid> */}
 			<div className='row'>
-			<div className='title-article'>
-                    <h3><span>Editor's Choice</span></h3>
-                </div>
+
 				<div className="col-md-12">
 				<div className='title-article'>
 					<h3><span>Latest Articles</span></h3>
@@ -25,7 +23,7 @@ function LatestArticle(props) {
 						{props.dataObject?.locations?.LatestPost.slice(0, 1).map((item, index) => {
 							return (
 								<div key={index}>
-									<div className='' style={{borderBottom:"1px solid #a4a0a0"}}>
+									<div className='zoom-in' style={{borderBottom:"1px solid #a4a0a0"}}>
 									<a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
 										<img alt="" className="img-responsive" src={item.image} style={{height:"190px"}}/>
 									</a>

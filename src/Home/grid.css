@@ -53,10 +53,21 @@
     bottom: 0px;
     left: 0px;
     cursor: pointer;
+    /* position: absolute;
+    bottom: 0px;
+    left: 0px;
+    cursor: pointer;
+    border: 1px solid black;
+    text-align: justify;
+    padding: 5px;
+    line-height: 3px; */
+    line-height: 10px;
+    
   }
   .bottom-left h4 a{
     color: white;
     text-decoration: none;
+    font-size: 16px;
 
   }
   .bottom-left h4 a:hover{
@@ -100,6 +111,9 @@
   .img-hover-zoom:hover img {
     transform: scale(1.2);
   }
+  
+
+  
   @media only screen and (min-width: 767px) and (max-width: 991px){
     .banner-fixed{
         display: none;
@@ -131,6 +145,16 @@
       display: none;
     }
   }
+  @media (min-width: 992px)
+{
+    .containering {
+    width: 1125px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+}
   @media (max-width: 768px){
     .banner-fixed{
       display: none;
@@ -251,3 +275,34 @@
       flex-direction: column;
     }
   }
+  .zoom-in{
+    overflow: hidden;
+  }
+  .zoom-in a image{
+    transition: all .5s ease-in-out;
+  }
+  .zoom-in:hover img{
+    transform: scale(1.1);
+
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 200px;
+  }
+  /* .image_container{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 200px;
+  } */
+  
+  /* .image_contianer img{
+   height: 100%;
+   position: fixed;
+  } */

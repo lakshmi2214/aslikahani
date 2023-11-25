@@ -6,35 +6,29 @@ import sidebanner from "../images/banner2.jpg"
 function GridSection(props) {
     const navigate = useNavigate();
     const handleNavigation = (item) => {
-        console.log(item);
-
-        navigate(`/${item.category}/${item.url}`, { state: { item } });
+     // console.log(item);
+  
+      navigate(`/${item.category}/${item.url}`, { state: {item} });
     }
-
-    const grid = props.dataObject;
+  
+     const grid =  props.dataObject;
     return (
         <div>
-            {/* <div className='col-md-1'>
-                <div className='banner-fixed'>
-                <img src={sidebanner} alt='banner1' style={{ width: "-webkit-fill-available" }} />
-            </div></div> */}
             <div className="col-md-10 full-width">
-            {/* <div className="col-md-1"></div> */}
                 <div className='posts'>
 
                     <div className='col-md-6' style={{ padding: "2px", border: "1px solid white" }}>
                         {grid?.locations?.Slider.slice(0, 1).map((item, index) => {
-
-
-                            console.log(item);
                             return (
                                 <div key={index}>
 
-                                    <div className='article-img'>
-                                        <img src={item.image} alt='img1' style={{ width: "-webkit-fill-available", height: "363px" }} />
-                                    </div><div className='col-md-12 bottom-left' >
-                                        <h4> <a href=''>{item.title}</a></h4>
-                                        <p><a href="">{item.created_at} </a></p>
+                                    <div className='zoom-in' onClick={() => handleNavigation(item, index)} style={{cursor:"pointer"}}>
+                                      <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url} className='article-img'>
+                                        <img src={item.image} alt='img1'  style={{ width: "-webkit-fill-available", height: "363px" }} />
+                                        </a>
+                                    </div><div className='col-md-12 bottom-left' onClick={() => handleNavigation(item, index)}>
+                                        <h4> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url} >{item.title}</a></h4>
+                                        <p><a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.created_at} </a></p>
 
                                     </div>
                                 </div>
@@ -49,13 +43,15 @@ function GridSection(props) {
                                     return (
 
                                         <div key={index}>
-                                            <div className='col-md-6' style={{ padding: "2px" }}>
-                                                <div className='article-img' style={{}}>
+                                            <div className='col-md-6' onClick={() => handleNavigation(item, index)} style={{ padding: "2px" }}>
+                                                <div className='zoom-in' style={{cursor:"pointer"}}>
+                                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url} className='article-img'>
                                                     <img src={item.image} alt='img1' style={{ width: "-webkit-fill-available", height: "180px" }} />
+                                                </a>
                                                 </div>
                                                 <div className='col-md-12 bottom-left' >
-                                                    <h4> <a href=''>{item.title}</a></h4>
-                                                    <p><a href="">{item.created_at} </a></p>
+                                                    <h4> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a></h4>
+                                                    <p><a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.created_at} </a></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -70,13 +66,15 @@ function GridSection(props) {
                                     return (
 
                                         <div key={index}>
-                                            <div className='col-md-6' style={{ padding: "2px" }}>
-                                                <div className='article-img'>
+                                            <div className='col-md-6' onClick={() => handleNavigation(item, index)} style={{ padding: "2px" }}>
+                                                <div className='zoom-in' style={{cursor:"pointer"}}>
+                                                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url} className='article-img'>
                                                     <img src={item.image} alt='img1' style={{ width: "-webkit-fill-available", height: "180px" }} />
+                                                </a>
                                                 </div>
                                                 <div className='col-md-12 bottom-left' >
-                                                    <h4> <a href=''>{item.title}</a></h4>
-                                                    <p><a href="">{item.created_at} </a></p>
+                                                    <h4> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a></h4>
+                                                    <p><a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.created_at} </a></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -91,7 +89,7 @@ function GridSection(props) {
             </div>
 
             <div className="col-md-1">
-          <div className="banner-fixed" style={{ width: "90px" }}>
+          <div className="banner-fixed" style={{ width: "83px" }}>
             <img src={sidebanner} alt='banner1' style={{ width: "-webkit-fill-available" }} />
           </div>
         </div>

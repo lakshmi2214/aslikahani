@@ -25,7 +25,7 @@ function Twitter() {
                            </ul>
                         </li>
                         <li>
-                           <div className="caption1"><a href="https://twitter.com/kahaniasli" className="url">AN OVERVIEW OF COSMETIC SURGERY AND BEAUTY TREATMENTS 
+                           <div className="caption1" style={{fontSize:"14px"}}><a href="https://twitter.com/kahaniasli" className="url" style={{textDecoration:"none"}}>An Overview Of Cosmetic Surgery And Beauty Treatments 
                            </a>
                            </div>
                            <ul className="post-tools">

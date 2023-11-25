@@ -17,17 +17,14 @@ function TopArticles(props) {
                   // console.log(item);
                   return (
                      <div key={index}>
-                        {/* <div className='col-md-12'> */}
+                      <div className='zoom-in'>
                <a href={process.env.REACT_APP_DOMAIN_NAME + '/'+item.category+'/' + item.url}>
-                                 <img alt="" className="img-responsive" src={item.image} />
-                              </a>
+                                 <img alt="img11" className="img-responsive" src={item.image} />
+                              </a></div>
                               <div className='article-desc' >
 										<h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.title}</a></h5>
-										{/* <p className='size'><span>BY</span> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}><strong>{item.authored_by}</strong></a>
-											<span> / </span><span>{item.created_at}</span> </p> */}
-									</div>
-                                    {/* </div> */}
-                                    </div>
+										</div>
+                                     </div>
                   )})}
             </div>
         </div>

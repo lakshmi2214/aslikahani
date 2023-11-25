@@ -18,13 +18,12 @@ function Articles(props) {
     <h3><span>
         Articles</span></h3></div>
                 <div className='col-md-6 ' style={{padding:"5px"}}>
-                {/* {props.dataObject?.locations?.BussGeneral.slice(0,2).map((item, index) => { */}
-                      {/* console.log(item); */}
+              
                      {national?.locations?.NationalNews.slice(0, 2).map((item, index) => {
 
                         return (
                              <div key={index}> 
-                                <div className='article-image' onClick={() => handleNavigation(item, index)}>
+                                <div className='article-image zoom-in' onClick={() => handleNavigation(item, index)}>
                                     <div  onClick={() => handleNavigation(item, index)}> 
                                     <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
                                         <img src={item.image} alt='img1' style={{ width: "-webkit-fill-available", height: "180px" }} />
@@ -42,13 +41,15 @@ function Articles(props) {
                 </div>
                 <div className='col'>
                     <div className='col-md-6' style={{padding:"5px"}}>
-                     {national?.locations?.NationalNews.slice(2, 4).map((item, index) => {
+                     {national?.locations?.NationalNews.slice(2,4).map((item, index) => {
                             return (
                                 <div key={index}>
-                                    <div className='article-image'>
+                                    <div className='article-image zoom-in'>
+                                        {/* <div className='zoom-in'> */}
                                         <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
                                             <img src={item.image} alt='img1' style={{ width: "-webkit-fill-available" , height:"180px"}} />
                                         </a>
+                                        {/* </div> */}
                                         <div className='col-md-12 article-desc' style={{padding: "initial"}}>
                                             <h5 className="w-100 text-justify">
                                                  <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.title}</a></h5>
@@ -60,6 +61,7 @@ function Articles(props) {
                         })}
                     </div>
                 </div>
+                
             </div> 
 
     </div>

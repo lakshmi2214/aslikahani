@@ -30,7 +30,7 @@ function ArticleContent() {
       <LogoColumn />
       <Navbar />
       <section className="main-content">
-        <div className="container">
+        <div className="container" >
           <div className="row">
             <RelatedArticleContent />
             <div className="col-md-5 col-sm-12 col-xs-12" id="side-bar-right-2">
