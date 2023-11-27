@@ -10,6 +10,7 @@ import "./Subscription.css"
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
+import Topbar from '../Home/Topbar';
 // import { getAccessToken } from './Authentication';
 
 
@@ -87,6 +88,7 @@ function Subscribe() {
 
 	return (
 		<>
+		<Topbar />
 			<LogoColumn />
 			<Navbar />
 			{/* <SubscribeForm /> */}

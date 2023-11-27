@@ -12,6 +12,7 @@ import SideAdd1 from '../Advertisements/SideAdd1';
 import SideAdd2 from '../Advertisements/SideAdd2';
 import SidePopularLifestyle from '../LifeStyle/SidePopularLifestyle';
 import SidePostLifestyle from '../LifeStyle/SidePostLifestyle';
+import Topbar from '../Home/Topbar';
 
 function LifeStyle() {
   const [result, setResult] = useState([]);
@@ -31,6 +32,7 @@ function LifeStyle() {
   }, []);
   return (
     <div>
+      <Topbar />
     <LogoColumn />
     <Navbar />
     <br />

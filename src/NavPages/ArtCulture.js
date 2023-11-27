@@ -12,6 +12,7 @@ import SideAdd1 from '../Advertisements/SideAdd1';
 import SideAdd2 from '../Advertisements/SideAdd2';
 import SidePopularArt from '../ArtAndCulture/SidePopularArt';
 import SidePostArt from '../ArtAndCulture/SidePostArt';
+import Topbar from '../Home/Topbar';
 
 function ArtCulture() {
 
@@ -32,6 +33,7 @@ function ArtCulture() {
   }, []);
   return (
     <div>
+      <Topbar />
     <LogoColumn />
     <Navbar />
     <br />

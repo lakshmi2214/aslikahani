@@ -2,10 +2,12 @@ import React from "react";
 import blackSub from "./SUBSCRIBE1.jpeg";
 // import "./Subscription.css";
 import box from "./Subscribebox.jpeg";
+import Topbar from "../Home/Topbar";
 
 function SubscriptionDoor(){
     return(
         <>
+        <Topbar />
         <div className="flex">
         <div className="left">
 

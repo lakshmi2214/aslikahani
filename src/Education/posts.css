@@ -8,6 +8,7 @@
     text-decoration: none;
     color: black;
     font-size: larger;
+    cursor: pointer;
 }
 .article-desc h5 a:hover{
     color: red;

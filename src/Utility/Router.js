@@ -18,6 +18,7 @@ import SearchBar from "../NavPages/SearchBar";
 import Subscribe from "../Subscription/Subscribe";
 import EducationComponent from "../Component/EducationComponent";
 import Stories from "../NavPages/Stories";
+import SiteMap from "../NavPages/SiteMap";
 // import Turn from "../ArticleContent/Magzine/Turn";
 
 function Router() {
@@ -53,6 +54,7 @@ function Router() {
              <Route path="/subscribe" element={<Subscribe /> }/>
              <Route path="/checking" element={<EducationComponent /> }/>
              <Route path="/Stories" element={<Stories /> }/>
+             <Route path="/sitemap.xml" element={ <SiteMap />  } />
         </Routes>
     </BrowserRouter>
         </>

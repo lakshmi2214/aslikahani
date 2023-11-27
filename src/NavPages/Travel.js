@@ -12,6 +12,7 @@ import SideAdd1 from '../Advertisements/SideAdd1';
 import SidePopularTravel from '../Travel/SidePopularTravel';
 import SideAdd2 from '../Advertisements/SideAdd2';
 import SidePostTravel from '../Travel/SidePostTravel';
+import Topbar from '../Home/Topbar';
 
 
 function Travel() {
@@ -34,6 +35,7 @@ function Travel() {
   }, []);
   return (
     <div>
+      <Topbar />
       <LogoColumn />
       <Navbar />
       <br />

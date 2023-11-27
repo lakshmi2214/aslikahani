@@ -23,11 +23,13 @@ function PopularArticles(props) {
              return (
                   <div key={index} className='table-box'  onClick={() => handleNavigation(item, index)} >
                    <th scope="col-md-4">
+                   <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
                       <img src={item.image} style={{ width: "100px", height: "85px", padding: "5px" }} alt='popular-img' />
+                    </a>
                     </th>
                     <th scope="col-md-8">
-                      <div style={{ position: "relative", top: "-25px", padding:"5px"}}>
-                        <h5 className='text-left' style={{ letterSpacing: "1px", lineHeight: "17px" }}>  {item.title}</h5>
+                      <div className='article-desc' style={{ position: "relative", top: "-25px", padding:"5px"}}>
+                        <h5 className='text-left' style={{ letterSpacing: "1px", lineHeight: "17px" }}> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>  {item.title}</a></h5>
                         <h5> {item.created_at}</h5>
                       </div>
 

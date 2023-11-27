@@ -14,6 +14,7 @@ import Navbar from '../Utility/Navbar';
 // import ArtPost2 from '../ArtAndCulture/ArtPost2';
 import LogoColumn from '../Home/LogoColumn';
 import Searching from '../Search/Searching';
+import Topbar from '../Home/Topbar';
 
 function SearchBar() {
 
@@ -42,6 +43,7 @@ function SearchBar() {
   }, []);
   return (
     <>
+    <Topbar />
     <LogoColumn />
     <Navbar/>    
       <section className="main-content">        

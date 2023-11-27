@@ -12,6 +12,7 @@ import SideAdd1 from '../Advertisements/SideAdd1';
 import SidePopularTechnology from '../Technology/SidePopularTechnology';
 import SideAdd2 from '../Advertisements/SideAdd2';
 import SidePostTechnology from '../Technology/SidePostTechnology';
+import Topbar from '../Home/Topbar';
 function Technology() {
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
@@ -31,6 +32,7 @@ function Technology() {
   }, []);
   return (
     <div>
+      <Topbar />
       <LogoColumn />
       <Navbar/>
       <br/>

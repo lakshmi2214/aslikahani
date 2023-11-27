@@ -12,6 +12,7 @@ import SideAdd1 from '../Advertisements/SideAdd1';
 import SidePopularBusiness from '../Business/SidePopularBusiness';
 import SideAdd2 from '../Advertisements/SideAdd2';
 import SidePostBusiness from '../Business/SidePostBusiness';
+import Topbar from '../Home/Topbar';
 
 
 
@@ -34,6 +35,7 @@ function Business() {
 
   return (
     <div>
+      <Topbar />
       <LogoColumn />
       <Navbar/>
       <br/>

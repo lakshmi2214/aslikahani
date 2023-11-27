@@ -6,7 +6,8 @@ function SidePostArt(props) {
     const handleNavigation = (item) => {
         // console.log(item);
 
-        navigate(`/${item.category}/${item.url}`, { state: { item } });
+        navigate(`/Art-and-Culture/${item.url}`, { state: { item } });
+
     }
     return (
         <div>
@@ -19,13 +20,13 @@ function SidePostArt(props) {
                         return (
                             <div key={index}>
                                 <div className='col-md-12' onClick={() => handleNavigation(item, index)}>
-                                <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
+                                <a href={process.env.REACT_APP_DOMAIN_NAME+'/Art-and-Culture/' + item.url}>
                                 <img src={item.image} alt='post-img' style={{ width: "-webkit-fill-available"}} />
                                 </a>
                                 </div>
                                 <div className='col-md-12 post-title' onClick={() => handleNavigation(item, index)}>
-                                    <h4> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.title}</a></h4>
-                                    <p><span >BY</span> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.authored_by}</a></p>
+                                    <h4> <a href={process.env.REACT_APP_DOMAIN_NAME+'/Art-and-Culture/' + item.url}>{item.title}</a></h4>
+                                    <p><span >BY</span> <a href={process.env.REACT_APP_DOMAIN_NAME+'/Art-and-Culture/' + item.url}>{item.authored_by}</a></p>
 
                                 </div>
 

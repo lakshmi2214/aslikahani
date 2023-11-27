@@ -12,6 +12,7 @@ import SideAdd2 from '../Advertisements/SideAdd2';
 import SidePost from '../Education/SidePost';
 import SidePopular from '../Education/SidePopular';
 import FooterCategory from '../FooterCategory/FooterCategory';
+import Topbar from '../Home/Topbar';
 // import EducationComponent from '../Education/EducationComponent';
 
 
@@ -35,7 +36,7 @@ function Education() {
   }, []);
   return (
     <div>
-    {/* <EducationComponent /> */}
+    <Topbar />
     <LogoColumn />
       <Navbar />
       <br />

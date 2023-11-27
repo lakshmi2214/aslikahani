@@ -3,8 +3,7 @@ import SubscriptionDoor from "../Subscription/SubscriptionDoor";
 
 function SubscriptionPage(){
     return(
-        <>
-       
+        <>       
        <SubscriptionDoor/>
         </>
     )

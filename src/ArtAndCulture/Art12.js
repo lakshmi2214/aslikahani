@@ -19,13 +19,13 @@ function Art2(props) {
                         <div key={index}>
             <div className='article-image'  onClick={() => handleNavigation(item, index)}>
                 {/* <div  onClick={() => handleNavigation(item, index)}>  */}
-            <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
+            <a href={process.env.REACT_APP_DOMAIN_NAME+'/Art-and-Culture/'+item.url}>
                 <img src={item.image} alt='img1' style={{width:"-webkit-fill-available",height:"260px"}}/>
                </a>
                {/* </div> */}
                <div className='col-md-12 article-desc' style={{ height:"80px"}}>
-                <h5 > <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a></h5>
-                <p>BY <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.authored_by}</a></p>
+                <h5 > <a href={process.env.REACT_APP_DOMAIN_NAME+'/Art-and-Culture/'+item.url}>{item.title}</a></h5>
+                <p>BY <a href={process.env.REACT_APP_DOMAIN_NAME+'/Art-and-Culture/'+item.url}>{item.authored_by}</a></p>
                 </div>
             </div>
             </div>
@@ -40,12 +40,12 @@ function Art2(props) {
                      return (
                         <div key={index}>
             <div className='article-image'>
-            <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
+            <a href={process.env.REACT_APP_DOMAIN_NAME+'/Art-and-Culture/'+item.url}>
                 <img src={item.image} alt='img1' style={{width:"-webkit-fill-available", height:"260px"}}/>
               </a>
                <div className='col-md-12 article-desc' style={{height:"80px"}}>
-               <h5> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a></h5>
-                <p>BY <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.authored_by}</a></p>
+               <h5> <a href={process.env.REACT_APP_DOMAIN_NAME+'/Art-and-Culture/'+item.url}>{item.title}</a></h5>
+                <p>BY <a href={process.env.REACT_APP_DOMAIN_NAME+'/Art-and-Culture/'+item.url}>{item.authored_by}</a></p>
                 </div>
             </div>
             </div>

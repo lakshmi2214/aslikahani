@@ -23,7 +23,7 @@ function TrendingArticles(props) {
 
                                     <img src={item.image} alt='bigimage' style={{ width: "-webkit-fill-available" }} />
                                 </a></div>
-                            <div className='article-desc' style={{ padding: "initial" }}>
+                            <div className='article-desc' style={{ padding: "initial",borderBottom:"1px solid #e2e2e2" }}>
                                 <h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.title}</a></h5>
                                 <p className='size'><span>BY</span> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}><strong>{item.authored_by}</strong></a>
                                     <span> / </span><span>{item.created_at}</span> </p>

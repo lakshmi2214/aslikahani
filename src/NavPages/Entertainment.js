@@ -12,6 +12,7 @@ import SideAdd1 from '../Advertisements/SideAdd1'
 import SidePopularEntertainment1 from '../Entertainment/SidePopularEntertainment1'
 import SideAdd2 from '../Advertisements/SideAdd2'
 import SidePostEntertainment from '../Entertainment/SidePostEntertainment'
+import Topbar from '../Home/Topbar'
 function Entertainment() {
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
@@ -33,7 +34,7 @@ function Entertainment() {
   }, []);
   return (
     <div>
-       
+       <Topbar />
       <LogoColumn />
       <Navbar/>
       <br />

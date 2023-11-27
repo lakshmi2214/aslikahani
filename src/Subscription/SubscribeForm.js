@@ -10,8 +10,8 @@ import box from "./subscriptionplan.jpeg";
 function SubscribeForm() {
   return (
     <div>
- {/* <LogoColumn />
-      <Navbar /> */}
+ <LogoColumn />
+      <Navbar />
       <div className='container'>
       <div className='col-md-12 col-sm-12 col-xm-12'>
       <div className='col-md-6' style={{height:"515px"}}>

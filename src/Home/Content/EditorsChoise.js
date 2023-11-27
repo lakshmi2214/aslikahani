@@ -25,7 +25,7 @@ function EditorsChoise(props) {
   <img class="card-img-top" src={item.image} alt="Card image cap" style={{width:"-webkit-fill-available"}}/>
   </div> </a>
   <div class="card-body">
-  <div className='article-desc' style={{ padding: "5px", background:"white",height:"100px" }}>
+  <div className='article-desc' style={{ padding: "5px", background:"white" }}>
                                 <h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.title}</a></h5>
                                 <p className='size'><span>BY</span> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}><strong>{item.authored_by}</strong></a>
                                     <span> / </span><span>{item.created_at}</span> </p>

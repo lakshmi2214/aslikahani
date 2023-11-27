@@ -1,29 +1,6 @@
 
 import React from "react";
 import { useState, useEffect } from "react";
-import '../css/style.css';
-import '../css/animate.min.css';
-import '../css/megaMenu.css';
-import '../css/colors/amethyst.css';
-import '../css/colors/carrat.css';
-import '../css/colors/defualt.css';
-import '../css/colors/golden.css';
-import '../css/colors/java-color.css';
-import '../css/colors/sea-green.css';
-import '../css/themify-icons.css';
-import '../css/royal-slider/royalslider.css';
-import '../css/tranparentmenu.css';
-import '../css/magnific-popup.css';
-import '../css/bootstrap-normal-container.min.css';
-import '../css/bootstrap.min.css';
-import '../css/owl.theme.default.css';
-import '../css/royal-slider/rs-default.png';
-import '../css/breakingNews.css';
-import '../css/font-awesome.min.css';
-import '../css/owl.carousel.css';
-import '../css/zerogrid.css';
-import '../fonts/glyphicons-halflings-regular.svg';
-import '../css/royal-slider/rs-default.css';
 import Grid from "../Home/Grid";
 import LatestArticles from "../Home/Content/LatestArticles";
 import NationalNews from "../Home/Content/NationalNews";
@@ -65,6 +42,8 @@ import EditorsChoise from "../Home/Content/EditorsChoise";
 import AllTimeBest from "../Home/Content/AllTimeBest";
 // import Navbars from "../Utility/Navbars";
 // import rightBanner from "../images/banner1.jpg"
+import Topbar from "../Home/Topbar";
+
 function Home() {
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
@@ -86,6 +65,7 @@ function Home() {
   }, []);
   return (
     <>
+    <Topbar />
       <LogoColumn />
       <Navbar />
       <div className="col-md-12 col-xm-12 col-xs-12" style={{ borderBottom: "1px solid rgb(180, 179, 179)" }}>
@@ -98,12 +78,16 @@ function Home() {
 
       <div className="col-md-12">
         <br />
-        <div className="col-md-1">
+        {/* <div className="col-md-1">
           <div className="image_container" >
-            {/* <img src={sidebanner} alt='banner1' style={{ width: "-webkit-fill-available" }} /> */}
             <img class="sticky" src={sidebanner} alt="Avatar"/>
           </div>
 
+        </div> */}
+         <div className="col-md-1">
+          <div className="banner-fixed" style={{position:"sticky",top:"0px"}}>
+            {/* <img src={sidebanner} alt='banner1' style={{ width: "-webkit-fill-available" }} /> */}
+          </div>
         </div>
 
         <GridSection dataObject={result} />
@@ -131,11 +115,6 @@ function Home() {
             <PopularArticles dataObject={result} />
             <PostArticles dataObject={result} />
           </div>
-          {/* <div className="col-md-12"><br/>
-        <div className="col-md-1 none"></div>
-        <div className="col-md-10"><Add1 addObject={value} /></div> 
-        <div className="col-md-1"></div>
-      </div> */}
           <span className="col-md-12 bannerAd1">
             <BannerAd2 addObject={value} />
           </span>

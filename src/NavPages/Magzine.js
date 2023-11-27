@@ -15,6 +15,7 @@ import Navbar from '../Utility/Navbar';
 // import MagzinePreview from "../E-magzine/MagzinePreview";
 import LogoColumn from "../Home/LogoColumn";
 import MagazinePosts from "../E-magzine/MagazinePosts";
+import Topbar from "../Home/Topbar";
 
 function Magzine(){
 
@@ -37,6 +38,7 @@ function Magzine(){
 
     return(
         <>
+        <Topbar />
         <LogoColumn />
         <Navbar/>
         <section className="main-content">

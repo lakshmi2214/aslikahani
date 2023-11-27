@@ -3996,11 +3996,20 @@ footer {
 
 /*INSTAGRAM GALLERY*/
 
-.insta-gallery a {
+.insta-gallery a{
 	width: 80px;
-	display: inline-block;
+	/* border: 1px solid red; */
+	/* display: inline-block; */
 	margin-right: 5px;
 	margin-bottom: 5px;
+}
+
+.insta-gallery{
+	/* border: 1px solid red; */
+	place-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 footer .footer-top ul.twitter-widget .caption a.url {

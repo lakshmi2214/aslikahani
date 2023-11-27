@@ -32,7 +32,6 @@ function Navbar() {
 				<li><Link to={"/Travel"} className="bar">Travel</Link></li>
 				<li><Link to={"/Lifestyle"} className="bar">LifeStyle</Link></li>
 				<li><Link to={"/Art-and-Culture"} className="bar">Art and Culture</Link></li>
-				{/* <li><Link to={"/Stories"} className="bar">Stories</Link></li> */}
 				{/* <li><Link to={"/Stories"} className="bar">Share Your Kahani</Link></li> */}
 
 			</nav>
