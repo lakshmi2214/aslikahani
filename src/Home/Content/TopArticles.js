@@ -17,9 +17,9 @@ function TopArticles(props) {
                   // console.log(item);
                   return (
                      <div key={index}>
-                      <div className='zoom-in'>
+                      <div className='zoom-in' style={{height:"110px"}}>
                <a href={process.env.REACT_APP_DOMAIN_NAME + '/'+item.category+'/' + item.url}>
-                                 <img alt="img11" className="img-responsive" src={item.image} />
+                                 <img alt="img11" className="img-responsive" src={item.image} style={{width:"100%", height:"100%"}}/>
                               </a></div>
                               <div className='article-desc' >
 										<h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.title}</a></h5>

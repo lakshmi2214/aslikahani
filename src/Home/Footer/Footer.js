@@ -9,10 +9,11 @@ function Footer() {
       <div>
          <div className="footer-white">
             <div className="footer-top">
-               <div className="container">
+            <div className='col-md-12' style={{paddingLeft:"8%", paddingRight:"8%"}}>
+               {/* <div className="container"> */}
                   <div className="row">
                      <About />
-                     <div className="col-xs-12 col-md-3 col-sm-6 ">
+                     <div className="col-xs-12 col-md-3 col-sm-6">
                         <h3>Most Read Articles</h3>
                         <ul className="tabs-posts">
                            <li>

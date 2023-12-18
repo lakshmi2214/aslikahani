@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import logosmall from "../images/logo-small.jpg";
+import logosmall from "../images/logo-round.png";
 // import Translator from './Translator';
 import Search from '../Utility/Search';
-// import LangTrans from './LangTrans';
-// import Translation from './Translation';
 import { useNavigate } from 'react-router-dom';
 
 function LogoColumn() {
@@ -42,15 +40,15 @@ function LogoColumn() {
 
   return (
     <div>
-        <div className='col-md-5 dateTime'>
+        <div className='col-md-4 dateTime'>
       <p className='date'>{formattedDate}</p>
       <p className='time'>{formattedTime} |<span className='pointer'>  Explore Trending Articles </span></p>
       </div>
-      <div className='col-sm-4 logo'>
+      <div className='col-sm-4 logo' style={{textAlign:"center"}}>
         <a href='/'>
      <img src={logosmall} className="navlogo" alt="logo" ></img></a>
       </div>
-      <div className='col-md-2 span'>
+      <div className='col-md-4 span'>
         {/* <span className=''> */}
         <Search onSearch={handleNavigation} />
       {/* </span> */}

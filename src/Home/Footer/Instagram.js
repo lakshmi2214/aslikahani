@@ -21,8 +21,8 @@ function Instagram() {
                 <div className="insta-gallery">
                     {/* <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I1} /> </a>
                     <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I2} /> </a>
-                    <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I3} /> </a>
-                    <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I4} /> </a> */}
+                    <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I3} /> </a>*/}
+                    <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I4} /> </a> 
                     <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I5} /> </a>
                     <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I7} /> </a>
                     

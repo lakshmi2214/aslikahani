@@ -51,7 +51,7 @@ function Topbar() {
                         </ul>
                         {/* <Translator /> */}
                      </div>
-                     <div className="col-md-2" style={{marginLeft:"10%"}}>
+                     <div className="col-md-4">
                      {/* <img src={logosmall} alt="logo" style={{ height: "20px", width: "180px" }} /> */}
                      {/* <Translation /> */}
                      </div>

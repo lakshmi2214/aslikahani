@@ -51,7 +51,7 @@ function Articles(props) {
                                         </a>
                                         {/* </div> */}
                                         <div className='col-md-12 article-desc' style={{padding: "initial"}}>
-                                            <h5 className="w-100 text-justify">
+                                            <h5 className="w-100 ">
                                                  <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.title}</a></h5>
                                             <p className="w-100">BY <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.authored_by} </a></p>
                                         </div>

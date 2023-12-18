@@ -52,12 +52,6 @@ function Subscribe() {
 			const response = await fetch(`${process.env.REACT_APP_BACKEND_HOST}/api/v1/enquiry/submit`, requestOptions);
 			setSpinner(false);
 			if (response.ok) {
-				// Handle successful response from the backend
-				// Swal.fire({
-				// 	title: "Good job!",
-				// 	text: "You clicked the button!",
-				// 	icon: "success"
-				//   });
 				swal({
 					title: "Subscription Confirmed!",
 					text: "You've been added to the list",

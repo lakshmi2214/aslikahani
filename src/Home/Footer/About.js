@@ -36,7 +36,7 @@ function About() {
                <div className="footer-detail">
                   <ul className="personal-info">
                      <li><i className="fa fa-map-marker"></i> #280/1 2nd Floor, 18th Cross, Malleshwaram.</li>
-                     <li><i className="fa fa-envelope"></i> aslikahani.media@gmail.com </li>
+                     <li><i className="fa fa-envelope"></i> connect@aslikahani.com </li>
                   </ul>
                </div>
                <div className="social-media-icons">

@@ -23,72 +23,73 @@ function TrendingArticles(props) {
 
                                     <img src={item.image} alt='bigimage' style={{ width: "-webkit-fill-available" }} />
                                 </a></div>
-                            <div className='article-desc' style={{ padding: "initial",borderBottom:"1px solid #e2e2e2" }}>
+                            <div className='article-desc' style={{ padding: "initial", borderBottom: "1px solid #e2e2e2" }}>
                                 <h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.title}</a></h5>
                                 <p className='size'><span>BY</span> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}><strong>{item.authored_by}</strong></a>
                                     <span> / </span><span>{item.created_at}</span> </p>
                             </div>
                         </div>
                     )
-                })}
-                <table className="col-md-6 table">
-                    <thead>
-                        <tr className="col">
+                })}<br />
+
+                <div className='col-md-12'>
+                    <div className='row'>
+                        <div className='col-md-6' >
+                           
                             {props.dataObject?.locations?.TrendingNews.slice(1, 4).map((item, index) => {
 
                                 return (
-                                    <div key={index} className='table-box' onClick={() => handleNavigation(item, index)} style={{ height: "100px", borderBottom: "1px dotted #e5dfdf" }}>
-                                        <th scope="col-md-4 " className='zoom-in'>
+                                    <div key={index} onClick={() => handleNavigation(item, index)} >
+                                        
+                                        <div className='col-md-4' style={{ marginTop: "15px", padding: "initial"}}>
+
                                             <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
-                                                <img src={item.image} style={{ width: "100px", height: "85px", padding: "5px" }} alt='popular-img' />
+                                                <img src={item.image} style={{ width: "100%" }} alt='popular-img' />
                                             </a>
-                                        </th>
-                                        <th scope="col-md-8">
-                                            {/* <div style={{ position: "relative", top: "-25px", padding:"5px"}}> */}
-                                            <div className='article-desc' style={{ position: "relative", top: "-25px" }}>
-                                                <h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.title}</a></h5>
+                                        </div>
+                                        <div className='border' style={{borderBottom:"1px dotted #e5dfdf", height:"130px"}}>
+                                        <div className='col-md-8' style={{padding:"initial", position:"relative", right:"-5px"}} >
+                                            <div className='article-desc'>
+                                                <h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url} style={{ fontSize: "14px" }}>{item.title}</a></h5>
                                             </div>
-
-                                        </th>
-
+                                        </div>
+                                        </div>
                                     </div>
-
                                 )
                             })}
-                        </tr>
-                    </thead>
-                </table>
-                <table className="col-md-6 table">
-                    <thead>
-                        <tr className="col">
+                            
+                        </div>
+                        <div className='col-md-6' >
                             {props.dataObject?.locations?.TrendingNews.slice(4, 7).map((item, index) => {
 
                                 return (
-                                    <div key={index} className='table-box' onClick={() => handleNavigation(item, index)} style={{ height: "100px", borderBottom: "1px dotted #e5dfdf" }}>
-                                        <th scope="col-md-4" className='zoom-in'>
+                                    <div key={index} onClick={() => handleNavigation(item, index)} >
+                                        <div className='col-md-4' style={{ marginTop: "15px", padding: "initial" }}>
+
                                             <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
-                                                <img src={item.image} style={{ width: "100px", height: "85px", padding: "5px" }} alt='popular-img' />
+                                                <img src={item.image} style={{ width: "100%" }} alt='popular-img' />
                                             </a>
-                                        </th>
-                                        <th scope="col-md-12">
-                                            <div className='article-desc' style={{ position: "relative", top: "-25px" }}>
-                                                <h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.title}</a></h5>
+                                        </div>
+                                        <div className='border' style={{borderBottom:"1px dotted #e5dfdf", height:"130px"}}>
+                                        <div className='col-md-8' style={{position:"relative", right:"-5px", marginTop:"10px"}} >
+                                            <div className='article-desc'>
+                                                <h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url} style={{ fontSize: "13px" }}>{item.title}</a></h5>
                                             </div>
-
-                                        </th>
-
+                                        </div>
+                                        </div>
                                     </div>
-
                                 )
                             })}
-                        </tr>
-                    </thead>
-                </table>
-            </div>
+                        </div>
+                    </div>
+                    </div>
 
 
-        </>
-    )
+                </div>
+
+
+            </>
+            )
 }
 
-export default TrendingArticles
+            export default TrendingArticles

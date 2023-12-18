@@ -1,5 +1,7 @@
 import React from "react";
-import logosmall from '../images/logo-small.jpg';
+// import logosmall from '../images/logo-small.jpg';
+import logosmall from "../images/logo-round.png";
+
 import I8 from '../images/posts/Fashion_Transformed.jpg';
 import I1 from '../images/posts/KATHAL.jpg';
 import '../css/style.css'
@@ -9,13 +11,14 @@ function FooterCategory() {
     return(
         <div>            
  <footer>
- <div className="footer-top bg-dark" style={{paddingTop:"30px"}}>
- <div className="container">
+ <div className="footer-top bg-dark" style={{paddingTop:"45px"}}>
+ {/* <div className="container"> */}
+ <div className='' style={{paddingLeft:"7%", paddingRight:"7%"}}>
  <div className="row">
  <div className="col-md-3 col-sm-6 col-xs-12">
- <div className="footer-block">
- <img src={ logosmall } style={{height:"50px",width:"300px",paddingRight:"50px",paddingTop:"5px"}} alt="footerImg"/>
- <p>A captivating platform that takes you on a journey through the realms of imagination, inspiration and cultural richness. Asli Kahani, meaning "Real Story" in Hindi, is a celebration of narratives that connect us, embracing diverse voices and bringing forth compelling tales from around the country.</p>
+ <div className="footer-block" style={{bottom:"10px"}}>
+ <img src={ logosmall } style={{height:"100px",paddingRight:"50px",paddingTop:"5px"}} alt="footerImg"/>
+ <p style={{margin:"auto"}}>A captivating platform that takes you on a journey through the realms of imagination, inspiration and cultural richness. Asli Kahani, meaning "Real Story" in Hindi, is a celebration of narratives that connect us, embracing diverse voices and bringing forth compelling tales from around the country.</p>
  </div>
  </div>
 
@@ -71,7 +74,7 @@ function FooterCategory() {
                 <div className="footer-detail">
                 <ul className="personal-info">
                            <li><i className="fa fa-map-marker"></i>#280/1, Sampige Road, 18th cross, Malleshwaram.</li>
-                           <li><i className="fa fa-envelope"></i> aslikahani.media@gmail.com </li>
+                           <li><i className="fa fa-envelope"></i> connect@aslikahani.com </li>
                            {/* <li><i className="fa fa-phone"></i> +99 333 1234567 </li> */}
                         </ul>
                 </div>

@@ -2,10 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: -11px; */
-    /* width: 66%; */
     position: absolute;
-      /* right: 10px; */
+      right: 90px;
       /* top: 23px; */
   }
   

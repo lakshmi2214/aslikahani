@@ -25,7 +25,7 @@ function LatestArticle(props) {
 								<div key={index}>
 									<div className='zoom-in' style={{borderBottom:"1px solid #a4a0a0"}}>
 									<a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
-										<img alt="" className="img-responsive" src={item.image} style={{height:"190px"}}/>
+										<img alt="" className="img-fluid" src={item.image} style={{height:"190px", width:"100%"}}/>
 									</a>
 									<div className='article-desc' >
 										<h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.title}</a></h5>
