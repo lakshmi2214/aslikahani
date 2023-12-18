@@ -17,7 +17,7 @@ function FooterCategory() {
  <div className="row">
  <div className="col-md-3 col-sm-6 col-xs-12">
  <div className="footer-block" style={{bottom:"10px"}}>
- <img src={ logosmall } style={{height:"100px",paddingRight:"50px",paddingTop:"5px"}} alt="footerImg"/>
+ <img src={ logosmall } style={{height:"125px",paddingRight:"50px",paddingTop:"5px"}} alt="footerImg"/>
  <p style={{margin:"auto"}}>A captivating platform that takes you on a journey through the realms of imagination, inspiration and cultural richness. Asli Kahani, meaning "Real Story" in Hindi, is a celebration of narratives that connect us, embracing diverse voices and bringing forth compelling tales from around the country.</p>
  </div>
  </div>

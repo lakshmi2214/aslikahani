@@ -12,35 +12,27 @@ function SidePopularTravel(props) {
     <div>
       <br />
       <div className='col-md-12'>
-        <div className='text-center col-md-11' style={{ height: "35px", padding: "8px", backgroundColor: "#d32415", color: "white", cursor: "default" }}>POPULAR</div>
+        <div className='text-center' style={{ height: "35px", padding: "8px", backgroundColor: "#d32415", color: "white", cursor: "default" }}>POPULAR</div>
         {/* <div className='col-md-12'></div> */}
-        <table className="table">
-          <thead>
-            {/* <br/> */}
-            <tr className="col-md-11">
-              {props.dataObject?.locations?.TravelGeneral.slice(1, 5).map((item, index) => {
-                // console.log(item);
-                return (
-                  <div key={index} className='table-box'  onClick={() => handleNavigation(item, index)}>
-                   <th scope="col-md-4">
-                      <img src={item.image} style={{ width: "100px", height: "85px", padding: "5px" }} alt='popular-img' />
-                    </th>
-                    <th scope="col-md-8">
-                      <div style={{ position: "relative", top: "-25px", padding:"5px"}}>
-                        <h5 className='text-left' style={{ letterSpacing: "1px", lineHeight: "17px" }}>  {item.title}</h5>
+        {props.dataObject?.locations?.TravelGeneral.slice(1, 5).map((item, index) => {             
+             return (
+                  <div key={index}>
+       <div className='col-md-4' style={{padding:"initial"}}>
+        <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
+                      <img src={item.image} style={{ width: "100%", height: "90px", padding: "5px" }} alt='popular-img' />
+                    </a>
+       </div>
+       <div className='col-md-8' style={{position:"relative", bottom:"5px", left:"5px"}}>
+         <div className='article-desc' style={{  padding:"5px"}}>
+                        <h5 className='text-left' > <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>  {item.title}</a></h5>
                         <h5> {item.created_at}</h5>
                       </div>
-
-                    </th>
-
-                  </div>
-
-                )
-              })}
-            </tr>
-          </thead>
-        </table>
+       </div>
+       </div>
+             )})}
       </div>
+
+
     </div>
 
   )

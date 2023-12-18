@@ -4,6 +4,7 @@ function SideAdd2(props) {
   return (
     <div>
 <div className="col-md-11"  style={{width:"-webkit-fill-available"}}>	
+<br/>
 {props.addObject?.categories?.slice(0, 1).map((item) => {
    return (
       item.advertisements.TopPosterAd2?.slice(0,1).map((item, index) => {

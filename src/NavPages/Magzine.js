@@ -42,7 +42,7 @@ function Magzine(){
         <LogoColumn />
         <Navbar/>
         <section className="main-content">
-        <div className="container">
+        <div className="col-md-12" style={{paddingLeft:"5%", paddingRight:"5%"}}>
           <div className="row">
             <div className="col-md-8 col-sm-12 col-xs-12">
               <div className="sections" >
