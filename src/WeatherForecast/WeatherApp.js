@@ -10,6 +10,7 @@ const WeatherApp = () => {
     unit: 'metric', // values are (metric, standard, imperial)
   });
   return (
+    // <div className='col-md-12' style={{padding:"initial"}}>
     <ReactWeather
       isLoading={isLoading}
       errorMessage={errorMessage}
@@ -19,6 +20,7 @@ const WeatherApp = () => {
       unitsLabels={{ temperature: 'C', windSpeed: 'Km/h' }}
       showForecast
     />
+    // </div>
   );
 };
 export default WeatherApp;

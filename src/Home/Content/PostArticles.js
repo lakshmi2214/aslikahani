@@ -13,7 +13,7 @@ function PostArticles(props) {
    } 
   return (
     <>
-    
+    <div className='col-md-12' style={{padding:"initial"}}>
                 <div className='title-article'>
 					<h3><span>Post Widget</span></h3>
 					</div>
@@ -48,7 +48,7 @@ function PostArticles(props) {
 return (
              <div key={index}>
         
-                    <div className="col-md-12">							
+                    <div className="col-md-12"  style={{padding:"initial"}}>							
 							<div className="slider-adds">
 								<a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url} target='blank'>
                                 <img style={{width:"100%", height:"100%"}} src={item.image}/>
@@ -69,7 +69,7 @@ return (
                   return (
              <div key={index}>
         
-        <div className="col-md-12">							
+        <div className="col-md-12"  style={{padding:"initial"}}>							
 							<div className="slider-adds">
 								<a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url} target='blank'>
                                 <img style={{width:"100%", height:"100%"}} src={item.image}/>
@@ -91,7 +91,7 @@ return (
                   return (
              <div key={index}>
         
-        <div className="col-md-12">							
+        <div className="col-md-12"  style={{padding:"initial"}}>							
 							<div className="slider-adds">
 								<a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url} target='blank'>
                                 <img style={{width:"100%", height:"100%"}} src={item.image}/>
@@ -113,7 +113,7 @@ return (
                   return (
              <div key={index}>
         
-        <div className="col-md-12">							
+        <div className="col-md-12"  style={{padding:"initial"}}>							
 							<div className="slider-adds">
 								<a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url} target='blank'>
                                 <img style={{width:"100%", height:"100%"}} src={item.image}/>
@@ -131,7 +131,7 @@ return (
       
                   </SwiperSlide>
                   </Swiper>
-    
+                  </div>
     </>
   )
 }

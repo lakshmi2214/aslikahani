@@ -197,7 +197,16 @@ nav {
 .style{
 	display: none;
   }
+ 
 }
+@media (max-width: 767px) {
+	.mobile-view {
+	  display: none;
+	}
+  }
+/* .mobile-view{
+	display: block;
+  } */
   .style{
 	display: block;
   }

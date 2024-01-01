@@ -9,7 +9,7 @@ function Footer() {
       <div>
          <div className="footer-white">
             <div className="footer-top">
-            <div className='col-md-12' style={{paddingLeft:"8%", paddingRight:"8%"}}>
+            <div className='col-md-12' style={{paddingLeft:"5%", paddingRight:"5%"}}>
                {/* <div className="container"> */}
                   <div className="row">
                      <About />

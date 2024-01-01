@@ -1,18 +1,33 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from 'react';
 
 function TrendingArticles(props) {
+    const [isMobile, setIsMobile] = useState(false);
     const navigate = useNavigate();
     const handleNavigation = (item) => {
 
         navigate(`/${item.category}/${item.url}`, { state: { item } });
     }
-
+    useEffect(() => {
+        const checkMobile = () => {
+          const isMobile = window.innerWidth >= 767;
+          setIsMobile(isMobile);
+        };
+    
+        checkMobile();
+    
+        window.addEventListener('resize', checkMobile);
+    
+        return () => {
+          window.removeEventListener('resize', checkMobile);
+        };
+      }, []);
     return (
         <>
 
-            <div className='col-md-12'>
-                <div className='title-article'>
+            <div className='col-md-12' style={{padding:"initial"}}>
+                <div className='title-article' style={{paddingLeft:"0px"}}>
                     <h3><span>Trending Articles</span></h3>
                 </div>
                 {props.dataObject?.locations?.TrendingNews.slice(0, 1).map((item, index) => {
@@ -32,49 +47,53 @@ function TrendingArticles(props) {
                     )
                 })}<br />
 
-                <div className='col-md-12'>
+                <div className='col-md-12 mobile-view' style={{padding:"initial"}}>
                     <div className='row'>
-                        <div className='col-md-6' >
+                        <div className='col-md-6' style={{padding:"initial"}}>
                            
                             {props.dataObject?.locations?.TrendingNews.slice(1, 4).map((item, index) => {
 
                                 return (
                                     <div key={index} onClick={() => handleNavigation(item, index)} >
+                                        <div className='col-md-12' style={{borderBottom:"1px dotted #e5dfdf"}}>
                                         
-                                        <div className='col-md-4' style={{ marginTop: "15px", padding: "initial"}}>
+                                        <div className='col-md-4' style={{ padding: "initial"}}>
 
                                             <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
-                                                <img src={item.image} style={{ width: "100%" }} alt='popular-img' />
+                                                <img src={item.image} style={{ width: "100%", height:"100px", padding:"5px" }} alt='popular-img' />
                                             </a>
                                         </div>
-                                        <div className='border' style={{borderBottom:"1px dotted #e5dfdf", height:"130px"}}>
+                                        {/* <div className='border'> */}
                                         <div className='col-md-8' style={{padding:"initial", position:"relative", right:"-5px"}} >
                                             <div className='article-desc'>
                                                 <h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url} style={{ fontSize: "14px" }}>{item.title}</a></h5>
                                             </div>
                                         </div>
                                         </div>
+                                        {/* </div> */}
                                     </div>
                                 )
                             })}
                             
                         </div>
-                        <div className='col-md-6' >
+                        <div className='col-md-6' style={{padding:"initial"}}>
                             {props.dataObject?.locations?.TrendingNews.slice(4, 7).map((item, index) => {
 
                                 return (
                                     <div key={index} onClick={() => handleNavigation(item, index)} >
-                                        <div className='col-md-4' style={{ marginTop: "15px", padding: "initial" }}>
+                                         <div className='col-md-12' style={{borderBottom:"1px dotted #e5dfdf"}}>
+                                        <div className='col-md-4' style={{ padding: "initial" }}>
 
                                             <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
-                                                <img src={item.image} style={{ width: "100%" }} alt='popular-img' />
+                                                <img src={item.image} style={{ width: "100%" , height:"100px", padding:"5px"}} alt='popular-img' />
                                             </a>
                                         </div>
-                                        <div className='border' style={{borderBottom:"1px dotted #e5dfdf", height:"130px"}}>
+                                        {/* <div className='border'> */}
                                         <div className='col-md-8' style={{position:"relative", right:"-5px", marginTop:"10px"}} >
                                             <div className='article-desc'>
                                                 <h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url} style={{ fontSize: "13px" }}>{item.title}</a></h5>
                                             </div>
+                                        {/* </div> */}
                                         </div>
                                         </div>
                                     </div>
@@ -83,8 +102,63 @@ function TrendingArticles(props) {
                         </div>
                     </div>
                     </div>
+                    {isMobile ? null : (
+                    <div className='col-md-12' style={{padding:"initial"}}>
+                    <div className='row'>
+                        <div className='col-md-6' style={{padding:"initial"}}>
+                           
+                            {props.dataObject?.locations?.TrendingNews.slice(1, 4).map((item, index) => {
 
+                                return (
+                                    <div key={index} onClick={() => handleNavigation(item, index)} >
+                                        <div className='col-md-12' style={{borderBottom:"1px dotted #e5dfdf"}}>
+                                        
+                                        <div className='col-md-4' style={{ padding: "initial"}}>
 
+                                            <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
+                                                <img src={item.image} style={{ width: "100%" }} alt='popular-img' />
+                                            </a>
+                                        </div>
+                                        {/* <div className='border'> */}
+                                        <div className='col-md-8' style={{padding:"initial", position:"relative", right:"-5px"}} >
+                                            <div className='article-desc'>
+                                                <h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url} style={{ fontSize: "14px" }}>{item.title}</a></h5>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        {/* </div> */}
+                                    </div>
+                                )
+                            })}
+                            
+                        </div>
+                        <div className='col-md-6' style={{padding:"initial"}}>
+                            {props.dataObject?.locations?.TrendingNews.slice(4, 7).map((item, index) => {
+
+                                return (
+                                    <div key={index} onClick={() => handleNavigation(item, index)} >
+                                         <div className='col-md-12' style={{borderBottom:"1px dotted #e5dfdf"}}>
+                                        <div className='col-md-4' style={{ padding: "initial" }}>
+
+                                            <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
+                                                <img src={item.image} style={{ width: "100%" }} alt='popular-img' />
+                                            </a>
+                                        </div>
+                                        {/* <div className='border'> */}
+                                        <div className='col-md-8' style={{position:"relative", right:"-5px", marginTop:"10px"}} >
+                                            <div className='article-desc'>
+                                                <h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url} style={{ fontSize: "13px" }}>{item.title}</a></h5>
+                                            </div>
+                                        {/* </div> */}
+                                        </div>
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
+                    </div>
+                    )}
                 </div>
 
 

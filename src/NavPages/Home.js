@@ -1,43 +1,27 @@
 
 import React from "react";
 import { useState, useEffect } from "react";
-import Grid from "../Home/Grid";
-import LatestArticles from "../Home/Content/LatestArticles";
-import NationalNews from "../Home/Content/NationalNews";
-import TrendingNews from "../Home/Content/TrendingNews";
 import BannerAd1 from "../Advertisements/BannerAd1";
 import BannerAd2 from "../Advertisements/BannerAd2";
-import TopNews from "../Home/Content/TopNews";
-import ChaiTheoryAd from "../Advertisements/ChaiTheoryAd";
-import PopularRecent from "../Home/Content/PopularRecent";
-import SristarAd1 from "../Advertisements/SristarAd1";
-import SliderPostWidget from "../Home/Content/SliderPostWidget";
-import AdminChoice from "../Home/AdminChoice/AdminChoice";
-import AllTimeBestArticles from "../Home/AllTimeBestArticles";
 import Footer from "../Home/Footer/Footer";
 import Navbar from "../Utility/Navbar";
 import LogoColumn from "../Home/LogoColumn";
 // import Nav from "../Utility/Nav";
 // import Navbars from "../Utility/Navbars";
 // import Subscriptiontag from "../Subscription/Subscriptiontag";
-import sidebanner from "../images/banner2.jpg"
+// import sidebanner from "../images/banner2.jpg"
 import WeatherApp from "../WeatherForecast/WeatherApp";
 import Tags from "../Home/Tags";
 import GridSection from "../Home/GridSection";
 import LatestArticle from "../Home/Content/LatestArticle";
-import Grids from "../Home/Grids";
+// import Grids from "../Home/Grids";
 // import { Container, Row, Col } from 'react-bootstrap';
 import SideAdd1 from "../Advertisements/SideAdd1";
-import SidePopularLifestyle from "../LifeStyle/SidePopularLifestyle";
-import SideAdd2 from "../Advertisements/SideAdd2";
-import SidePostLifestyle from "../LifeStyle/SidePostLifestyle";
 import TopArticles from "../Home/Content/TopArticles";
 import Articles from "../Home/Content/Articles";
 import TrendingArticles from "../Home/Content/TrendingArticles";
 import PopularArticles from "../Home/Content/PopularArticles";
 import PostArticles from "../Home/Content/PostArticles";
-import Add2 from "../Advertisements/Add2";
-import Add1 from "../Advertisements/Add1";
 import EditorsChoise from "../Home/Content/EditorsChoise";
 import AllTimeBest from "../Home/Content/AllTimeBest";
 // import Navbars from "../Utility/Navbars";
@@ -45,6 +29,7 @@ import AllTimeBest from "../Home/Content/AllTimeBest";
 import Topbar from "../Home/Topbar";
 
 function Home() {
+  const [isMobile, setIsMobile] = useState(false);
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
   useEffect(() => {
@@ -62,6 +47,18 @@ function Home() {
       .then(response => {
         setvalue(response)
       })
+      const checkMobile = () => {
+        const isMobile = window.innerWidth >= 767;
+        setIsMobile(isMobile);
+      };
+  
+      checkMobile();
+  
+      window.addEventListener('resize', checkMobile);
+  
+      return () => {
+        window.removeEventListener('resize', checkMobile);
+      };
   }, []);
   return (
     <>
@@ -107,24 +104,44 @@ function Home() {
             <TopArticles dataObject={result} />
           </div>
 
-          <div className="col-md-3 col-sm-12"  >
-            <br />
+          <div className="col-md-3 col-sm-12 mobile-view" style={{padding:"initial"}} >
+            <br />        
             <WeatherApp />
             <br />
             <SideAdd1 addObject={value} />
             <PopularArticles dataObject={result} />
             <PostArticles dataObject={result} />
           </div>
+          {isMobile ? null : (  
+             <div className="col-md-3 col-sm-12" >
+             <br />        
+             <WeatherApp />
+             <br />
+             <SideAdd1 addObject={value} />
+             <PopularArticles dataObject={result} />
+             <PostArticles dataObject={result} />
+           </div>
+          )}  
           <span className="col-md-12 bannerAd1">
             <BannerAd2 addObject={value} />
           </span>
 
-          <div className="col-md-12" style={{ padding: "5%" }}>
+          <div className="col-md-12 mobile-view" style={{padding:"initial"}}>
             <EditorsChoise dataObject={result} />
           </div>
+          {isMobile ? null : (
           <div className="col-md-12">
+            <EditorsChoise dataObject={result} />
+          </div>
+          )}
+          <div className="col-md-12 mobile-view">
             <AllTimeBest dataObject={result} />
           </div>
+          {isMobile ? null : ( 
+             <div className="col-md-12" style={{padding:"0px"}}>
+             <AllTimeBest dataObject={result} />
+           </div>
+          )}
         </div>
       </div>
       <div className="col-md-12">

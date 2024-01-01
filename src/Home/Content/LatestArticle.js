@@ -15,8 +15,8 @@ function LatestArticle(props) {
 			{/* <Container fluid> */}
 			<div className='row'>
 
-				<div className="col-md-12">
-				<div className='title-article'>
+				<div className="col-md-12" style={{padding:"initial"}}>
+				<div className='title-article' style={{paddingLeft:"16px"}}>
 					<h3><span>Latest Articles</span></h3>
 					</div>
 					<div className="col-md-7 col-sm-12 overflow-auto">

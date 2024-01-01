@@ -29,7 +29,7 @@ function SideAdd1(props) {
                 return (
                   <div key={index}>
 
-                    <div className="col-md-11" style={{ width: "-webkit-fill-available" }}>
+                    <div className="col-md-12" style={{ width: "-webkit-fill-available", padding:"initial" }}>
                       <div className="slider-adds">
                         <a href={item.url} target='blank'>
                           <img style={{ width: "100%", height: "100%" }} src={item.image} />
@@ -39,7 +39,8 @@ function SideAdd1(props) {
                             <a href={item.url} target='blank'>{item.description}</a>
 
                           </h4>
-                        </div><br/>
+                        </div>
+                        <br/>
                       </div>
                     </div>
 
@@ -57,7 +58,7 @@ function SideAdd1(props) {
                 return (
                   <div key={index}>
 
-                    <div className="col-md-10">
+<div className="col-md-12" style={{ width: "-webkit-fill-available", padding:"initial" }}>
                       <div className="slider-adds">
                         <a href={item.url} target='blank'>
                           <img style={{ width: "100%", height: "100%" }} src={item.image} />
@@ -66,8 +67,8 @@ function SideAdd1(props) {
                           <h4>
                             <a href={item.url} target='blank'>{item.description}</a>
 
-                          </h4> <br />
-                        </div>
+                          </h4>
+                        </div><br/>
                       </div>
                     </div>
                   </div>
