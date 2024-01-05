@@ -13,7 +13,9 @@ import SidePopularTechnology from '../Technology/SidePopularTechnology';
 import SideAdd2 from '../Advertisements/SideAdd2';
 import SidePostTechnology from '../Technology/SidePostTechnology';
 import Topbar from '../Home/Topbar';
+
 function Technology() {
+  const [isMobile, setIsMobile] = useState(false);
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
   // similar to componentDidMount
@@ -29,6 +31,18 @@ function Technology() {
         .then(response => {
           setvalue(response)
         })
+        const checkMobile = () => {
+          const isMobile = window.innerWidth >= 767;
+          setIsMobile(isMobile);
+        };
+    
+        checkMobile();
+    
+        window.addEventListener('resize', checkMobile);
+    
+        return () => {
+          window.removeEventListener('resize', checkMobile);
+        };
   }, []);
   return (
     <div>
@@ -54,8 +68,12 @@ function Technology() {
         </div>
         
         <div className='col-md-4'>
-
-          <SideAdd1 addObject={value} />
+<div className='mobile-view'>
+          <SideAdd1 addObject={value} /></div>
+          {isMobile ? null:(
+            <div className='col-md-11'>
+            <SideAdd1 addObject={value} /></div>
+          )}
           <SidePopularTechnology dataObject={result} />
           <SideAdd2 addObject={value} />
           <SidePostTechnology dataObject={result} />

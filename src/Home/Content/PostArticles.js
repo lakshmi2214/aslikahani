@@ -14,7 +14,7 @@ function PostArticles(props) {
   return (
     <>
     <div className='col-md-12' style={{padding:"initial"}}>
-                <div className='title-article'>
+                <div className='title-article' style={{paddingLeft:"0px"}}>
 					<h3><span>Post Widget</span></h3>
 					</div>
       <Swiper
@@ -31,18 +31,6 @@ function PostArticles(props) {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-      {/* 
-      without automatic
-      <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}  
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-      ></Swiper> */}
       <SwiperSlide>
          {props.dataObject?.locations?.SliderWidget.slice(2,3).map((item, index) => {
 return (

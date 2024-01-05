@@ -31,7 +31,7 @@ function PopularArticles(props) {
 
 {isMobile ? null : (
         <div className='col-md-12' style={{padding:"initial"}}>
-          <div className='text-center' style={{ height: "35px", padding: "8px", backgroundColor: "#d32415", color: "white", cursor: "default" }}>POPULAR</div>
+          <div className='text-center' style={{ height: "auto", padding: "8px", backgroundColor: "#d32415", color: "white", cursor: "default" }}>POPULAR</div>
           {props.dataObject?.locations?.Popular.slice(0, 4).map((item, index) => {
             return (
               <div key={index}>

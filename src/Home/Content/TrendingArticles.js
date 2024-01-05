@@ -60,7 +60,7 @@ function TrendingArticles(props) {
                                         <div className='col-md-4' style={{ padding: "initial"}}>
 
                                             <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
-                                                <img src={item.image} style={{ width: "100%", height:"100px", padding:"5px" }} alt='popular-img' />
+                                                <img src={item.image} style={{ width: "100%", height:"85px", padding:"5px" }} alt='popular-img' />
                                             </a>
                                         </div>
                                         {/* <div className='border'> */}
@@ -85,7 +85,7 @@ function TrendingArticles(props) {
                                         <div className='col-md-4' style={{ padding: "initial" }}>
 
                                             <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
-                                                <img src={item.image} style={{ width: "100%" , height:"100px", padding:"5px"}} alt='popular-img' />
+                                                <img src={item.image} style={{ width: "100%" , height:"85px", padding:"5px"}} alt='popular-img' />
                                             </a>
                                         </div>
                                         {/* <div className='border'> */}

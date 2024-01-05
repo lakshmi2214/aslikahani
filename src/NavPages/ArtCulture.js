@@ -15,7 +15,7 @@ import SidePostArt from '../ArtAndCulture/SidePostArt';
 import Topbar from '../Home/Topbar';
 
 function ArtCulture() {
-
+  const [isMobile, setIsMobile] = useState(false);
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
   useEffect(() => {
@@ -30,6 +30,18 @@ function ArtCulture() {
         .then(response => {
           setvalue(response)
         })
+        const checkMobile = () => {
+          const isMobile = window.innerWidth >= 767;
+          setIsMobile(isMobile);
+        };
+    
+        checkMobile();
+    
+        window.addEventListener('resize', checkMobile);
+    
+        return () => {
+          window.removeEventListener('resize', checkMobile);
+        };
   }, []);
   return (
     <div>
@@ -55,8 +67,14 @@ function ArtCulture() {
       </div>
       
       <div className='col-md-4'>
-
+<div className='mobile-view'>
+        <SideAdd1 addObject={value} /></div>
+        {isMobile ? null:(
+           <div className='col-md-11'>
         <SideAdd1 addObject={value} />
+        </div>
+        )}
+       
         <SidePopularArt dataObject={result} />
         <SideAdd2 addObject={value} />
         <SidePostArt dataObject={result} />

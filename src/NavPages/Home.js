@@ -9,7 +9,7 @@ import LogoColumn from "../Home/LogoColumn";
 // import Nav from "../Utility/Nav";
 // import Navbars from "../Utility/Navbars";
 // import Subscriptiontag from "../Subscription/Subscriptiontag";
-// import sidebanner from "../images/banner2.jpg"
+import sidebanner from "../images/banner2.jpg"
 import WeatherApp from "../WeatherForecast/WeatherApp";
 import Tags from "../Home/Tags";
 import GridSection from "../Home/GridSection";
@@ -75,22 +75,20 @@ function Home() {
 
       <div className="col-md-12">
         <br />
-        {/* <div className="col-md-1">
-          <div className="image_container" >
-            <img class="sticky" src={sidebanner} alt="Avatar"/>
-          </div>
-
-        </div> */}
-         <div className="col-md-1">
-          <div className="banner-fixed" style={{position:"sticky",top:"0px"}}>
-            {/* <img src={sidebanner} alt='banner1' style={{ width: "-webkit-fill-available" }} /> */}
-          </div>
+       <div className="col-md-1 mobile-view" style={{position:"sticky", top:"45px",padding:"0px", height:"200px"}}>
+        <img src={sidebanner} alt='banner1' style={{ width: "-webkit-fill-available", height:"auto" ,padding:"0px"}} />
+        </div>
+        {/* <div className="col-md-1"></div> */}
+        <GridSection dataObject={result} />
+        <div className="col-md-1 mobile-view" style={{position:"sticky", top:"45px",padding:"0px", height:"200px"}}>
+        <img src={sidebanner} alt='banner1' style={{ width: "-webkit-fill-available", height:"auto" ,padding:"0px"}} />
         </div>
 
-        <GridSection dataObject={result} />
+
         <div className="col-md-12">
           <div className="col-md-1"></div>
-          <div className="col-md-5 col-sm-12">
+          {/* <div className="col-md-12" style={{border:"1px solid red"}}> */}
+          <div className="col-md-5 col-sm-12" >
             <LatestArticle dataObject={result} />
             <br />
             {/* <div className="col-md-12 col-sm-12"> */}
@@ -98,12 +96,9 @@ function Home() {
             {/* </div> */}
             <TrendingArticles dataObject={result} />
           </div>
-
-
           <div className="col-md-2 col-sm-12"  >
             <TopArticles dataObject={result} />
           </div>
-
           <div className="col-md-3 col-sm-12 mobile-view" style={{padding:"initial"}} >
             <br />        
             <WeatherApp />
@@ -122,6 +117,7 @@ function Home() {
              <PostArticles dataObject={result} />
            </div>
           )}  
+          {/* </div> */}
           <span className="col-md-12 bannerAd1">
             <BannerAd2 addObject={value} />
           </span>
@@ -138,7 +134,7 @@ function Home() {
             <AllTimeBest dataObject={result} />
           </div>
           {isMobile ? null : ( 
-             <div className="col-md-12" style={{padding:"0px"}}>
+             <div className="col-md-12" style={{padding:"14px"}}>
              <AllTimeBest dataObject={result} />
            </div>
           )}

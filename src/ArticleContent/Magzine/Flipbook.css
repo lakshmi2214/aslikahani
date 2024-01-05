@@ -2,7 +2,7 @@
   background-image: url("./Jpeg/magzine-background-grey.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: auto;
   /* pointer-events: none; */
 }
 
@@ -40,7 +40,7 @@ align-items: center;
 
 }
 
-.box {
+.boxing {
   box-shadow: 0 0 5px 2px #3b3b3b;
 }
 

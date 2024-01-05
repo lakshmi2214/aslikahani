@@ -14,6 +14,7 @@ import SideAdd2 from '../Advertisements/SideAdd2'
 import SidePostEntertainment from '../Entertainment/SidePostEntertainment'
 import Topbar from '../Home/Topbar'
 function Entertainment() {
+  const [isMobile, setIsMobile] = useState(false);
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
 
@@ -31,6 +32,18 @@ function Entertainment() {
         .then(response => {
           setvalue(response)
         })
+        const checkMobile = () => {
+          const isMobile = window.innerWidth >= 767;
+          setIsMobile(isMobile);
+        };
+    
+        checkMobile();
+    
+        window.addEventListener('resize', checkMobile);
+    
+        return () => {
+          window.removeEventListener('resize', checkMobile);
+        };
   }, []);
   return (
     <div>
@@ -39,13 +52,6 @@ function Entertainment() {
       <Navbar/>
       <br />
       <div className='col-md-12 col-xs-12 col-sm-12'>
-      {/* <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-        integrity="..."
-        crossOrigin="anonymous"
-      /> */}
-      {/* <div className='col-md-1 style'></div> */}
         <div className='col-md-8'style={{paddingLeft:"4%"}}>
         <div className='mx-auto'>
           <div className='col' >
@@ -62,9 +68,13 @@ function Entertainment() {
          
         </div>
         </div>
-        <div className='col-md-4'>
-
-          <SideAdd1 addObject={value} />
+        <div className='col-md-4 '>
+<div className='mobile-view'>
+          <SideAdd1 addObject={value} /></div>
+          {isMobile ? null : (  
+            <div className='col-md-11'>
+            <SideAdd1 addObject={value} /></div>
+          )}
           <SidePopularEntertainment1 dataObject={result} />
           <SideAdd2 addObject={value} />
           <SidePostEntertainment dataObject={result} />

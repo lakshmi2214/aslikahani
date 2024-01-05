@@ -158,7 +158,7 @@ function Flipbook() {
                                 // console.log(item)
                                 return (
 
-                                    <div key={index} className='box' style={{ maxWidth: "100%" , pointerEvents:"none"}} onClick={null}>
+                                    <div key={index} className='boxing' style={{ maxWidth: "100%" , pointerEvents:"none"}} onClick={null}>
                                         <Page number="1" 
                                         style={{PointerEvent:"none"}}> 
                                             <img src={item.images} alt="Zoomable" className='api-images' style={{pointerEvents:"none"}} onClick={null}/>

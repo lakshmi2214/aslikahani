@@ -10,20 +10,18 @@ function SidePostTechnology(props) {
     }
     return (
         <div>
-
-            <div className='col-md-11'>
-                <h3 style={{ marginBottom: "17px" }}><b className='post-Widget'>Post Widget</b></h3>
-                {/* <div className='col-md-12'> */}
+<div className='col-md-11'>
+            <div className='title-article' style={{paddingLeft:"3px"}}>
+					<h3><span>Post Widget</span></h3></div>
                     {props.dataObject?.locations?.TecGeneral.slice(4, 5).map((item, index) => {
-                        // console.log(item);
                         return (
                             <div key={index}>
-                                <div className='col-md-12' onClick={() => handleNavigation(item, index)}>
+                                <div className='col-md-12' onClick={() => handleNavigation(item, index)} style={{padding:"5px"}}>
                                 <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
                                 <img src={item.image} alt='post-img' style={{ width: "-webkit-fill-available"}} />
                                 </a>
                                 </div>
-                                <div className='col-md-12 post-title' onClick={() => handleNavigation(item, index)}>
+                                <div className='col-md-12 post-title' onClick={() => handleNavigation(item, index)} style={{padding:"5px"}}>
                                     <h4> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.title}</a></h4>
                                     <p><span >BY</span> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.authored_by}</a></p>
 
@@ -33,8 +31,6 @@ function SidePostTechnology(props) {
                         )
                     })}
                 </div>
-
-            {/* </div> */}
 
         </div>
     )

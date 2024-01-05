@@ -12,13 +12,12 @@ function SidePostEntertainment(props) {
         <div>
 
             <div className='col-md-11'>
-                <h3 style={{ marginBottom: "17px" }}><b className='post-Widget'>Post Widget</b></h3>
-                {/* <div className='col-md-12'> */}
+            <div className='title-article'>
+					<h3><span>Post Widget</span></h3></div>
                     {props.dataObject?.locations?.General.slice(4, 5).map((item, index) => {
-                        // console.log(item);
                         return (
                             <div key={index}>
-                                <div className='col-md-12' onClick={() => handleNavigation(item, index)}>
+                                <div className='col-md-12' onClick={() => handleNavigation(item, index)} style={{padding:"5px"}}>
                                 <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
                                 <img src={item.image} alt='post-img' style={{ width: "-webkit-fill-available"}} />
                                 </a>

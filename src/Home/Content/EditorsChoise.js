@@ -25,7 +25,7 @@ function EditorsChoise(props) {
   return (
     <>
       {/* <span style={{ color: "white" }}>B</span> */}
-      <div class="col-md-12 mobile-view" style={{ paddingLeft: "5%", paddingRight: "5%" }}  >
+      <div class="col-md-12 mobile-view" style={{ paddingLeft: "8%", paddingRight: "8%" }}  >
         <div className='title-article' style={{paddingLeft:"16px"}}>
           <h3><span>Editor's Choice</span></h3>
         </div><br />
