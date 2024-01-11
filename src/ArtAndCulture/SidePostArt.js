@@ -9,7 +9,7 @@ function SidePostArt(props) {
     }
     return (
         <div>
-            <div className='col-md-11'>
+            <div className='col-md-12' style={{padding:"5px"}}>
                 <div className='title-article' style={{ paddingLeft: "3px" }}>
                     <h3><span>Post Widget</span></h3></div>
                 {props.dataObject?.locations?.ArtCultureGeneral.slice(4, 5).map((item, index) => {

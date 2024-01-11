@@ -3,7 +3,7 @@ import React from 'react'
 function SideAdd2(props) {
   return (
     <div>
-<div className="col-md-11"  style={{width:"-webkit-fill-available"}}>	
+<div className="col-md-12"  style={{padding:"5px"}}>	
 <br/>
 {props.addObject?.categories?.slice(0, 1).map((item) => {
    return (
