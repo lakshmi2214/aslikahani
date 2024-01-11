@@ -27,6 +27,7 @@ function MagzinePreview(){
   }, );
     return(
         <>
+      <div className="mobile-view" style={{color:"transparent"}}>a</div>
 		<LogoColumn />
 		<Navbar/>
         <div className="single-product mt-150 mb-150">

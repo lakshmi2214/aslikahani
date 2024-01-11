@@ -35,7 +35,7 @@ function AllTimeBest(props) {
           return (
             <div key={index}>
               <div className='col-md-4'>
-                <div className="card mb-3" style={{ maxWidth: "540px;" ,overflow:"hidden"}}>
+                <div className="card mb-3" style={{ maxWidth: "540px" ,overflow:"hidden"}}>
                   <div className="row ">
 
                     <div className="col-md-4" style={{ padding: "initial" }}>
@@ -68,7 +68,7 @@ function AllTimeBest(props) {
           return (
             <div key={index}>
               <div className='col-md-4'>
-                <div className="card mb-3" style={{ maxWidth: "540px;" , overflow:"hidden"}}>
+                <div className="card mb-3" style={{ maxWidth: "540px" , overflow:"hidden"}}>
                   <div className="row no-gutters">
 
                     <div className="col-md-4" style={{ padding: "initial" }}>
@@ -94,7 +94,7 @@ function AllTimeBest(props) {
         })}
       </div>
       {isMobile ? null : (
-      <div className='col-md-12' style={{padding:"initial"}}>
+      <div className='col-md-12'>
         <div className='title-article' style={{paddingLeft:"1px"}}>
           <h3><span>All Time Best Articles</span></h3>
         </div><br />
@@ -103,7 +103,7 @@ function AllTimeBest(props) {
           return (
             <div key={index}>
               <div className='col-md-4' style={{padding:"initial"}}>
-                <div className="card mb-3" style={{ maxWidth: "540px;" ,overflow:"hidden"}}>
+                <div className="card mb-3" style={{ maxWidth: "540px" ,overflow:"hidden"}}>
                   <div className="row ">
 
                     <div className="col-md-4" style={{ padding: "initial" }}>
@@ -136,7 +136,7 @@ function AllTimeBest(props) {
           return (
             <div key={index}>
               <div className='col-md-4' style={{padding:"initial"}}>
-                <div className="card mb-3" style={{ maxWidth: "540px;" , overflow:"hidden"}}>
+                <div className="card mb-3" style={{ maxWidth: "540px" , overflow:"hidden"}}>
                   <div className="row no-gutters">
 
                     <div className="col-md-4" style={{ padding: "initial" }}>

@@ -8,7 +8,7 @@ import box from "./1plans.jpeg";
 import "./Subscription.css"
 // import SubscribeForm from './SubscribeForm';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 import Topbar from '../Home/Topbar';
 // import { getAccessToken } from './Authentication';
@@ -17,7 +17,7 @@ import Topbar from '../Home/Topbar';
 function Subscribe() {
 	// const Swal = require('sweetalert');npm install sweetalert --save
 	const [spinner, setSpinner] = useState(false);
-	const navigate = useNavigate();
+	// const navigate = useNavigate();
 	const [formData, setFormData] = useState({
 		fname: '',
 		lname: '',
@@ -57,8 +57,8 @@ function Subscribe() {
 					text: "You've been added to the list",
 					icon: "success"
 					// button: "Aww yess!"
-				  })
-				  
+				})
+
 				console.log('Form data submitted successfully!', response);
 			}
 			else {
@@ -66,12 +66,12 @@ function Subscribe() {
 					title: "Failed!!!",
 					text: "Please check your details and try again",
 					icon: "error"
-				  })
+				})
 				// Handle the error response from the backend
 				// console.error('Error submitting form data:', response);
 			}
 		} catch (error) {
-			
+
 			// Handle network errors or other exceptions
 			console.error('Error submitting form data:', error);
 		}
@@ -82,7 +82,7 @@ function Subscribe() {
 
 	return (
 		<>
-		<Topbar />
+			<Topbar />
 			<LogoColumn />
 			<Navbar />
 			{/* <SubscribeForm /> */}
@@ -95,10 +95,10 @@ function Subscribe() {
 						// style={{height:"515px"}}
 						>
 							<br />
-							<section class="form-container">
+							<section className="form-container">
 								<form action="" onSubmit={handleSubmit} >
-									<div class="zeile">
-										<div class="input-container">
+									<div className="zeile">
+										<div className="input-container">
 											<input type="text" id="fname" name='fname' placeholder=""
 												value={formData.fname}
 												onChange={handleChange}
@@ -106,28 +106,28 @@ function Subscribe() {
 											/>
 											<label for="name">First Name: <span style={{ color: "red" }}>*</span></label>
 										</div>
-										<div class="input-container">
+										<div className="input-container">
 											<input type="text" id="lname" name='lname' placeholder="" value={formData.lname}
-												onChange={handleChange}/>
+												onChange={handleChange} />
 											<label for="lname">Last Name: <span style={{ color: "red" }}>*</span></label>
 										</div>
 									</div>
-									<div class="input-container">
+									<div className="input-container">
 										<input type="email" id="email" name='email' placeholder="" value={formData.email}
-												onChange={handleChange}/>
+											onChange={handleChange} />
 										<label for="email">Email:</label>
 									</div>
-									<div class="input-container">
-										<input type="Number" id="number" name='phone_number' placeholder=""  value={formData.phone_number}
-												onChange={handleChange}/>
+									<div className="input-container">
+										<input type="Number" id="number" name='phone_number' placeholder="" value={formData.phone_number}
+											onChange={handleChange} />
 										<label for="Number">Phone Number: <span style={{ color: "red" }}>*</span></label>
 									</div>
-									<div class="input-container">
-										<textarea id="message" rows="3" placeholder="" name='message'  value={formData.message}
-												onChange={handleChange}></textarea>
+									<div className="input-container">
+										<textarea id="message" rows="3" placeholder="" name='message' value={formData.message}
+											onChange={handleChange}></textarea>
 										<label for="Message">Comment / Message</label>
 									</div>
-									<div class="input-container">
+									<div className="input-container">
 										<button
 											type="button"
 											className="btn btn-danger col-md-4"
@@ -139,17 +139,17 @@ function Subscribe() {
 							</section>
 
 
-						
+
+							<div style={{ display: "none" }}>{spinner} </div>
 
 
 
 
-							
 						</div>
 						{/* <br></br> */}
 						<div className='col-md-6' style={{ textAlign: "center", marginTop: "2%", marginBottom: "5%" }}>
 							{/* <br/><br/> */}
-							<img src={box} style={{ width: "-webkit-fill-available", borderRadius: "10px" }} />
+							<img src={box} alt='box' style={{ width: "-webkit-fill-available", borderRadius: "10px" }} />
 
 						</div>
 					</div>

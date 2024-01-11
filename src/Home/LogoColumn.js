@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 function LogoColumn() {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleNavigation = (item) => {
     console.log(item);
@@ -18,11 +18,11 @@ function LogoColumn() {
     const intervalId = setInterval(() => {
       setCurrentDateTime(new Date());
     }, 1000);
-    
+
     // Clean up the interval when the component unmounts
     return () => clearInterval(intervalId);
   }, []);
-  
+
   const optionsDate = {
     year: 'numeric',
     month: 'long',
@@ -40,19 +40,19 @@ function LogoColumn() {
 
   return (
     <div>
-        <div className='col-md-4 dateTime'>
-      <p className='date'>{formattedDate}</p>
-      <p className='time'>{formattedTime} |<span className='pointer'>  Explore Trending Articles </span></p>
+      <div className='col-md-4 dateTime'>
+        <p className='date'>{formattedDate}</p>
+        <p className='time'>{formattedTime} |<span className='pointer'>  Explore Trending Articles </span></p>
       </div>
-      <div className='col-sm-4 logo' style={{textAlign:"center"}}>
+      <div className='col-sm-4 logo' style={{ textAlign: "center" }}>
         <a href='/'>
-     <img src={logosmall} className="navlogo" alt="logo" ></img></a>
+          <img src={logosmall} className="navlogo" alt="logo" ></img></a>
       </div>
       <div className='col-md-4 span'>
         {/* <span className=''> */}
         <Search onSearch={handleNavigation} />
-      {/* </span> */}
-       
+        {/* </span> */}
+
       </div>
     </div>
   );

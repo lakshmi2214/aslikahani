@@ -6,9 +6,12 @@
 body{
 	margin-left: auto;
 	margin-right: auto;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 	/* overflow: hidden; */
 }
-
+/* .nav-linking .bar.active {
+	color: #d32415;
+  } */
 
 header {
 	display: flex;
@@ -97,6 +100,9 @@ nav {
 @media screen and (min-width: 320px) and (max-width: 767px){
 	header{
 		height:60px;
+	}
+	.image-viewer {
+		height: 100vh;
 	}
 	.span{
 		text-align: center;
@@ -203,10 +209,10 @@ nav {
 	.mobile-view {
 	  display: none;
 	}
+	.banner-view {
+		display: none;
+	  }
   }
-/* .mobile-view{
-	display: block;
-  } */
   .style{
 	display: block;
   }

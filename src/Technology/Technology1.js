@@ -24,7 +24,7 @@ function Technology1(props) {
                                         <img src={item.image} alt='img1' style={{ width: "-webkit-fill-available", height: "260px" }} />
                                     </a>
                                     {/* </div> */}
-                                    <div className='col-md-12 article-desc' style={{  height: "90px" }}>
+                                    <div className='col-md-12 article-desc' style={{  height: "120px",padding:"0px" }}>
                                         <h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.title}</a></h5>
                                         <p>BY <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.authored_by}</a></p>
                                     </div>
@@ -44,7 +44,7 @@ function Technology1(props) {
                                         <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
                                             <img src={item.image} alt='img1' style={{ width: "-webkit-fill-available", height: "260px" }} />
                                         </a>
-                                        <div className='col-md-12 article-desc' style={{height: "90px" }}>
+                                        <div className='col-md-12 article-desc' style={{height: "120px",padding:"0px" }}>
                                             <h5 className="w-100 text-justify">
                                                  <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.title}</a></h5>
                                             <p className="w-100">BY <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.authored_by} </a></p>

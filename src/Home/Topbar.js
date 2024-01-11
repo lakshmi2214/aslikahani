@@ -1,7 +1,7 @@
 import React from "react";
 import '../css/style.css';
 import '../css/animate.min.css';
-import '../css/megaMenu.css';
+import '../css/megaMenu.css'; 
 import '../css/colors/amethyst.css';
 // import '../css/colors/blue.css';
 import '../css/colors/carrat.css';

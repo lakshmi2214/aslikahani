@@ -1,15 +1,14 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 function SidePopularLifestyle(props) {
   const [isMobile, setIsMobile] = useState(false);
-  const navigate = useNavigate();
-  const handleNavigation = (item) => {
-    // console.log(item);
-
-    navigate(`/${item.category}/${item.url}`, { state: { item } });
-  }
+  // const navigate = useNavigate();
+  // const handleNavigation = (item) => {
+  
+  //   navigate(`/${item.category}/${item.url}`, { state: { item } });
+  // }
   useEffect(() =>{
     const checkMobile = () => {
       const isMobile = window.innerWidth >= 767;

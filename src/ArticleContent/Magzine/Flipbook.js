@@ -122,7 +122,11 @@ function Flipbook() {
     //audio clip for page flip
 
     const [play] = useSound(page);
-    
+    const handlePageFlip = (page) => {
+        console.log(`Page flipped: ${page}`);
+        // Play the sound when a page is flipped
+        play();
+    };
     return (
         <div>
             <FullScreen
@@ -152,7 +156,7 @@ function Flipbook() {
                             height={500}
                             style={imageStyles}
                             ref={book}
-                           
+                            onFlip={handlePageFlip}
                             >
                             {datavalue.map((item, index) => {
                                 // console.log(item)

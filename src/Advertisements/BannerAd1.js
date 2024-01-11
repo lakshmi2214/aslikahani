@@ -14,9 +14,9 @@ function BannerAd1(props) {
 
                                 <div key={index}>
                                     <a href={item.url} target="_blank" rel="noreferrer">
-                                        <img src={item.image} className="img-responsive" alt="itm-img" />
+                                        <img src={item.image} className="img-responsive" alt="itm-img" style={{width:"85%"}}/>
                                     </a>
-                                </div>
+                               </div>
                             )
 
                         })

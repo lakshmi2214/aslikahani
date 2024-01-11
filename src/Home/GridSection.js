@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 import "./grid.css"
-import sidebanner from "../images/banner2.jpg"
+// import sidebanner from "../images/banner2.jpg"
 
 function GridSection(props) {
     const navigate = useNavigate();

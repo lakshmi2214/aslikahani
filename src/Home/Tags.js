@@ -16,22 +16,15 @@ function Tags(props) {
         )
         })}
         <a href={process.env.REACT_APP_DOMAIN_NAME+'/subscribe'}>
-      <img src={button} style={{width:"300px"}}/></a>
-      
-     {/* <span className='col-md-2'style={{float:"unset"}}>
-      <a href={process.env.REACT_APP_DOMAIN_NAME+'/subscribe'}>
-      <img src={button} style={{width:"320px"}}/></a>
-      </span> */}
-
-        {/* <div className='col-md-3 subscribe-button'>
-  <img className='subscribe-img' src={button} ></img>
-</div> */}
+      <img src={button} style={{width:"300px"}} alt='button-img'/></a>
 </div>
 
 
 </div>
 
 
+
+          
     </>
   )
 }

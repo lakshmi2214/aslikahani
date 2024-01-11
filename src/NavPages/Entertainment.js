@@ -57,11 +57,11 @@ function Entertainment() {
           <div className='col' >
             <Entertainment1 dataObject={result} />
             <div className='col-md-12' style={{padding: "10px", textAlign: "center" }}>
-              <Add1 addObject={value} />
+              <Add1 addObject={value} /><br/>
             </div>
             <Entertainment2 dataObject={result} />
             <div className='col-md-12' style={{ padding: "10px", textAlign: "center" }}>
-              <Add2 addObject={value} />
+              <Add2 addObject={value} /><br/>
             </div>
             <Entertainment3 dataObject={result} />            
           </div>
