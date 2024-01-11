@@ -1,42 +1,34 @@
 import React from "react";
-import '../css/style.css';
-import '../css/animate.min.css';
-import '../css/megaMenu.css';
-import '../css/colors/amethyst.css';
-import '../css/colors/carrat.css';
-import '../css/colors/defualt.css';
-import '../css/colors/golden.css';
-import '../css/colors/java-color.css';
-import '../css/colors/sea-green.css';
-import '../css/themify-icons.css';
-import '../css/royal-slider/royalslider.css';
-import '../css/tranparentmenu.css';
-import '../css/magnific-popup.css';
-import '../css/bootstrap-normal-container.min.css';
-import '../css/bootstrap.min.css';
-import '../css/owl.theme.default.css';
-import '../css/royal-slider/rs-default.png';
-import '../css/breakingNews.css';
-import '../css/font-awesome.min.css';
-import '../css/owl.carousel.css';
-import '../css/zerogrid.css';
-import '../fonts/glyphicons-halflings-regular.svg';
-import '../css/royal-slider/rs-default.css';
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 function RecentArt(props) {
+   const [isMobile, setIsMobile] = useState(false);
    const navigate = useNavigate();
    const handleNavigation = (item) => {
       // console.log(item);
 
       navigate(`/Art-and-Culture/${item.url}`, { state: { item } });
    }
-
+   useEffect(() =>{
+      const checkMobile = () => {
+        const isMobile = window.innerWidth >= 767;
+        setIsMobile(isMobile);
+      };
+  
+      checkMobile();
+  
+      window.addEventListener('resize', checkMobile);
+  
+      return () => {
+        window.removeEventListener('resize', checkMobile);
+      };
+    })
 
 
    return (
       <>
-         <div className="widget widget-bg">
+         {/* <div className="widget widget-bg">
             <div className="tabs">
                <div role="tabpanel">
                   <ul className="nav nav-tabs nav-justified" role="tablist">
@@ -75,7 +67,55 @@ function RecentArt(props) {
 
                </div>
             </div>
-         </div>
+         </div> */}
+          <div className='col-md-12 mobile-view' style={{padding:"0px"}}>
+        <div className='text-center' style={{ height: "35px", padding: "8px", backgroundColor: "#d32415", color: "white", cursor: "default" }}>POPULAR</div>
+       {props.dataObject?.locations?.ArtCultureGeneral.slice(0, 5).map((item, index) => {
+
+          return (
+            <div key={index}>
+              <div className='col-md-12' style={{padding:"0px"}}>
+              <div className='col-md-4' style={{ padding: "initial" }}>
+                <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
+                  <img src={item.image} style={{ width: "100%", height: "90px", padding: "5px" }} alt='popular-img' />
+                </a>
+              </div>
+              <div className='col-md-8' style={{ padding:"0px" }}>
+                <div className='article-desc' style={{ padding: "5px" }}>
+                  <h5 className='text-left' > <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>  {item.title}</a></h5>
+                  <h5> {item.created_at}</h5>
+                </div>
+              </div>
+            </div>
+            </div>
+          )
+        })}
+      </div>
+      {isMobile ? null:(
+         <div className='col-md-12'>
+         <div className='text-center' style={{ height: "35px", padding: "8px", backgroundColor: "#d32415", color: "white", cursor: "default" }}>POPULAR</div>
+        {props.dataObject?.locations?.ArtCultureGeneral.slice(0, 5).map((item, index) => {
+ 
+           return (
+             <div key={index}>
+               <div className='col-md-12'style={{padding:"0px"}}>
+               <div className='col-md-4' style={{ padding: "initial" }}>
+                 <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
+                   <img src={item.image} style={{ width: "100%", padding: "5px" }} alt='popular-img' />
+                 </a>
+               </div>
+               <div className='col-md-8' style={{ padding:"0px" }}>
+                 <div className='article-desc' style={{ padding: "5px" }}>
+                   <h5 className='text-left' > <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>  {item.title}</a></h5>
+                   <h5> {item.created_at}</h5>
+                 </div>
+               </div>
+             </div>
+             </div>
+           )
+         })}
+       </div>
+      )}
       </>
    );
 }
