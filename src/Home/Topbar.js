@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import '../css/style.css';
 import '../css/animate.min.css';
-import '../css/megaMenu.css'; 
+import '../css/megaMenu.css';
 import '../css/colors/amethyst.css';
 // import '../css/colors/blue.css';
 import '../css/colors/carrat.css';
@@ -35,43 +35,77 @@ import "./Topbar.css";
 // import logosmall from "../images/logo-small.jpg";
 
 function Topbar() {
+
+   const [currentDateTime, setCurrentDateTime] = useState(new Date());
+
+
+   // const [article, setAricle] = useState([]);
+   useEffect(() => {
+      const intervalId = setInterval(() => {
+         setCurrentDateTime(new Date());
+      }, 1000);
+
+      // Clean up the interval when the component unmounts
+      return () => clearInterval(intervalId);
+   }, []);
+
+   const optionsDate = {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+   };
+
+   const optionsTime = {
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+   };
+   const formattedDate = currentDateTime.toLocaleString(undefined, optionsDate);
+   const formattedTime = currentDateTime.toLocaleString(undefined, optionsTime);
    return (
-      <div>
+      <>
          <section className="topbar w-100">
             <div className="container-fluid">
                <div className="row">
                   <div className="col-md-12 col-sm-12 col-xs-12 nopadding">
-                     <div className="col-md-4 col-sm-3 col-xs-5">
-                        <ul className="social-media-icons-top">
-                           <li><a href=" https://www.facebook.com/aslikahani.in"><i className="ti-facebook"></i> </a></li>
-                           <li><a href="https://twitter.com/kahaniasli"><i className="ti-twitter"></i></a></li>
-                           <li><a href="https://www.youtube.com/@AsliKahani"><i className="ti-youtube"></i></a></li>
-                           <li><a href=" https://www.instagram.com/aslikahani/"><i className="ti-instagram"></i></a></li>
-
-                        </ul>
-                        {/* <Translator /> */}
-                     </div>
-                     <div className="col-md-4">
+                     {/* <div className="col-md-4"> */}
                      {/* <img src={logosmall} alt="logo" style={{ height: "20px", width: "180px" }} /> */}
                      {/* <Translation /> */}
-                     </div>
-                     <div className="col-md-4 col-sm-9 col-xs-12">
-                        <ul >
-                        <li className="subscribeBtn"><a href={process.env.REACT_APP_DOMAIN_NAME+'/subscribe'}>Subscribe</a></li>
-                           <li className="magzinebook"><a href={process.env.REACT_APP_DOMAIN_NAME+'/emagazine'}>E-Magazine</a></li>
+                     {/* </div> */}
+                     <div className="col-md-6 col-sm-9 col-xs-12">
+                        <ul className="subs-topbar" >
+                           <li className="subscribeBtn"><a href={process.env.REACT_APP_DOMAIN_NAME + '/subscribe'}>Subscribe</a></li>
+                           <li className="magzinebook"><a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine'}>E-Magazine</a></li>
                            <li><a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><span>Aslikahani Podcast</span><span> </span><i className="fa fa-spotify"></i></a></li>
                         </ul>
+                     </div>
+                     <div className="col-md-6 col-sm-6 col-xs-5">
+                        <div className='tranding'>
+                           <ul className="social-media-icons-top">
+                              <li><a href=" https://www.facebook.com/aslikahani.in"><i className="ti-facebook"></i> </a></li>
+                              <li><a href="https://twitter.com/kahaniasli"><i className="ti-twitter"></i></a></li>
+                              <li><a href="https://www.youtube.com/@AsliKahani"><i className="ti-youtube"></i></a></li>
+                              <li><a href=" https://www.instagram.com/aslikahani/"><i className="ti-instagram"></i></a></li>
+
+                           </ul>
+                           <div className='time-stamp'>
+                              <h3>{formattedDate}</h3>
+                              <p>{formattedTime} |<span>  Explore Trending Articles </span></p>
+                           </div>
+                           {/* <Translator /> */}
+
+                        </div>
                      </div>
                   </div>
                </div>
             </div>
          </section>
-        {/* <Translator /> */}
+         {/* <Translator /> */}
          {/* <LanguageSwitcher /> */}
-         
+
          {/* <LogoColumn /> */}
          {/* <LanguageTranslator /> */}
-      </div>
+      </>
    );
 }
 export default Topbar;

@@ -17,7 +17,7 @@
     /* margin-right: 10px; */
   }
   
-  button {
+  /* button {
     background-color: #d32415;
     color: #fff;
     border: none;
@@ -26,7 +26,7 @@
     cursor: pointer;
     position: absolute;
     right: 5px;
-  }
+  } */
   
   @media (max-width: 768px) {
     .search-bar {
@@ -118,7 +118,7 @@
       text-align: center;
       cursor: pointer;
     }
-    .hash-tagName a div{
+    /* .hash-tagName a div{
       margin-left: 10px;
       margin-right: 10px;
       padding: 7px;
@@ -128,7 +128,7 @@
         cursor: pointer;
         margin-bottom: 5px;
     
-    }
+    } */
   }
   
 
@@ -248,11 +248,11 @@
 .hash-tagName{
   /* border-bottom: 1px solid rgb(180, 179, 179); */
   /* display: flex; */
-  width: 100%;
+  /* width: 100%;
   padding: 10px;
-  text-align: center;
+  text-align: center; */
 }
-.hash-tagName a div{
+/* .hash-tagName a div{
   margin-left: 10px;
   margin-right: 10px;
   padding: 7px;
@@ -262,7 +262,7 @@
     cursor: pointer;
     margin-bottom: 5px;
 
-}
+} */
 /* .hash-tagName{
   display: flex;
   width: 70%;
@@ -290,7 +290,10 @@
   border-bottom: 1px solid rgb(180, 179, 179);
   width: 100%;
 } */
-
+.banner-view {
+  position: sticky;
+  top: 55px;
+}
 
 @media (max-width: 768px) {
   .tags{

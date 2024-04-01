@@ -5,11 +5,11 @@ import Router from "./Utility/Router";
 
 function App() {
   return (
-    <div>
+    <>
       {/* <Topbar/> */}
       {/* <Subscriptiontag/> */}
       <Router />
-    </div>
+    </>
   )
 }
 

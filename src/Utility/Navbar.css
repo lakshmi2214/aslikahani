@@ -15,20 +15,19 @@ body{
 
 header {
 	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	height: 40px;
-	padding: 0 2rem;
-	background-color: white;
-	color: var(--textColor);
-	border-top: 1px solid rgb(180, 179, 179);
-	border-bottom: 1px solid rgb(180, 179, 179);
-    /* border: 1px solid rgb(180, 179, 179); */
-    position: -webkit-sticky;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 40px;
+    padding: 26px 0px;
+    background-color: white;
+    color: var(--textColor);
+    border-top: 1px solid rgb(237 237 237);
+    border-bottom: 1px solid rgb(237 237 237);
     position: sticky;
     top: 0;
     z-index: 15;
-	width: 100%;
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 nav Link {

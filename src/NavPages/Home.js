@@ -63,85 +63,89 @@ function Home() {
       <Topbar />
       <LogoColumn />
       <Navbar />
-      <div className="col-md-12 col-xm-12 col-xs-12" style={{ borderBottom: "1px solid rgb(180, 179, 179)" }}>
-        <Tags dataObject={result} />
-      </div>
+      <Tags dataObject={result} />
 
-      <span className="col-md-12 bannerAd1" style={{ height: "100%" }}>
+      {/* <span className="col-md-12 bannerAd1" style={{ height: "100%" }}>
         <BannerAd1 addObject={value} />
-      </span>
+      </span> */}
 
-      <div className="col-md-12">
-        <div className="col-md-1 banner-view" style={{ position: "sticky", top: "45px", height: "380px" }}>
-          <img src={sidebanner} alt='banner1' style={{ width: "-webkit-fill-available", height: "410px", padding: "0px" }} />
-        </div>
-        <GridSection dataObject={result} />
-        <div className="col-md-1 banner-view" style={{ position: "sticky", top: "45px", height: "380px" }}>
-          <img src={sidebanner} alt='banner1' style={{ width: "-webkit-fill-available", height: "410px", padding: "0px" }} />
-        </div>
-
-
-        <div className="col-md-12">
-          {/* <div className="col-md-12"> */}
-          <div className="col-md-1"></div>
-          {/* <div className="col-md-12" style={{border:"1px solid red"}}> */}
-          <div className="col-md-5 col-sm-12" >
-            <LatestArticle dataObject={result} />
-            <br />
-            {/* <div className="col-md-12 col-sm-12"> */}
-            <Articles dataObject={result} />
-            {/* </div> */}
-            <TrendingArticles dataObject={result} />
-          </div>
-          <div className="col-md-2 col-sm-12"  >
-            <TopArticles dataObject={result} />
-          </div>
-          <div className="col-md-3 col-sm-12 mobile-view" style={{ padding: "initial" }} >
-            <br />
-            <WeatherApp />
-            <br />
-            <SideAdd1 addObject={value} />
-            <PopularArticles dataObject={result} />
-            <PostArticles dataObject={result} />
-          </div>
-          {/* </div> */}
-          {isMobile ? null : (
-            <div className="col-md-3 col-sm-12" >
-              <br />
-              <WeatherApp />
-              <br />
-              <SideAdd1 addObject={value} />
-              <PopularArticles dataObject={result} />
-              <PostArticles dataObject={result} />
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-1 " >
+            <div className="banner-view">
+              <img src={sidebanner} alt='banner1' className="img-fluid" />
             </div>
-          )}
-          {/* </div> */}
-          <span className="col-md-12 bannerAd1">
-            <BannerAd2 addObject={value} />
-          </span>
+          </div>
+          <div className="col-md-10">
+            <GridSection dataObject={result} />
+            <div className="subData-grid-container">
 
-          <div className="col-md-12 mobile-view" style={{ padding: "initial" }}>
-            <EditorsChoise dataObject={result} />
-          </div>
-          {isMobile ? null : (
-            <div className="col-md-12">
-              <EditorsChoise dataObject={result} />
+              <div className="row">
+                <div className="col-md-8 col-sm-12" >
+                  <LatestArticle dataObject={result} />
+                  <div className="topArticals">
+                    <TopArticles dataObject={result} />
+                  </div>
+                  <Articles dataObject={result} />
+
+                  <TrendingArticles dataObject={result} />
+                </div>
+                {/* <div className="col-md-3 col-sm-12"  >
+                  <TopArticles dataObject={result} />
+                </div> */}
+                <div className="col-md-4 col-sm-12 mobile-view" >
+
+                  <WeatherApp />
+
+                  <SideAdd1 addObject={value} />
+                  <PopularArticles dataObject={result} />
+                  <PostArticles dataObject={result} />
+                </div>
+              </div>
+
+              {isMobile ? null : (
+                <div className="col-md-3 col-sm-12" >
+
+                  <WeatherApp />
+
+                  <SideAdd1 addObject={value} />
+                  <PopularArticles dataObject={result} />
+                  <PostArticles dataObject={result} />
+                </div>
+              )}
+              {/* </div> */}
+              <span className="col-md-12 bannerAd1">
+                <BannerAd2 addObject={value} />
+              </span>
+
+              <div className="col-md-12 mobile-view" style={{ padding: "initial" }}>
+                <EditorsChoise dataObject={result} />
+              </div>
+              {isMobile ? null : (
+                <div className="col-md-12">
+                  <EditorsChoise dataObject={result} />
+                </div>
+              )}
+              <div className="col-md-12 mobile-view">
+                <AllTimeBest dataObject={result} />
+              </div>
+              {isMobile ? null : (
+                <div className="col-md-12" style={{ padding: "14px" }}>
+                  <AllTimeBest dataObject={result} />
+                </div>
+              )}
             </div>
-          )}
-          <div className="col-md-12 mobile-view">
-            <AllTimeBest dataObject={result} />
           </div>
-          {isMobile ? null : (
-            <div className="col-md-12" style={{ padding: "14px" }}>
-              <AllTimeBest dataObject={result} />
+          <div className="col-md-1" >
+            <div className="banner-view">
+              <img src={sidebanner} alt='banner1' className="img-fluid" />
             </div>
-          )}
+          </div>
         </div>
       </div>
-      <div className="col-md-12">
+
         <Footer />
-      </div>
-      <span style={{ color: "white" }}>.</span>
+
 
     </>
   );

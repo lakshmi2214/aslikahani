@@ -6,7 +6,7 @@ import Twitter from './Twitter';
 function Footer() {
    return (
 
-      <div>
+      <>
          <div className="footer-white">
             <div className="footer-top">
             <div className='col-md-12' style={{paddingLeft:"5%", paddingRight:"5%"}}>
@@ -48,7 +48,7 @@ function Footer() {
                   </div>
                </div>
             </div>
-            <div className="footer-link bg-white">
+            <div className="footer-link">
                <div className="container">
                   <div className="row">
                      <div className="col-md-12 col-sm-12 col-xs-12">
@@ -65,7 +65,7 @@ function Footer() {
             </div>
          </div>
 
-      </div>
+      </>
    )
 
 

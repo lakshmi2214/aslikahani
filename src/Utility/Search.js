@@ -11,7 +11,8 @@ const Search = () => {
   };
 
   return (
-    <div className="search-bar">
+    // <div className="search-bar">
+    <div className="search-bar-custom">
       <input value={value} onChange={(e) => {setValue(e.target.value)}} type="text" placeholder="Search.."  name="gsearch" ></input>
       <button onClick={handleNavigation}>
         <i className="fa fa-search"></i>

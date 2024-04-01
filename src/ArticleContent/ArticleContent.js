@@ -32,7 +32,7 @@ function ArticleContent() {
       <LogoColumn />
       <Navbar />
       <section className="main-content">
-        <div className="col-md-12" style={{paddingLeft:"5%", paddingRight:"5%"}} >
+        <div className="col-md-12" style={{ paddingLeft: "5%", paddingRight: "5%" }} >
           <div className="row">
             <RelatedArticleContent />
             <div className="col-md-5 col-sm-12 col-xs-12" id="side-bar-right-2">
@@ -47,7 +47,7 @@ function ArticleContent() {
           </div>
         </div>
       </section>
-      <FooterCategory/>
+      <FooterCategory />
     </div>
   )
 }

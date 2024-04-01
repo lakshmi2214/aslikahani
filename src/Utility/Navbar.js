@@ -1,9 +1,10 @@
 // import { useRef } from "react";
 import { FaBars } from "react-icons/fa";
 import "./Navbar.css";
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react";
 import './nav.css';
+import Search from '../Utility/Search';
 
 function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -11,11 +12,18 @@ function Navbar() {
 		// console.log("Toggle menu clicked");
 		setIsOpen(!isOpen);
 	};
+	const navigate = useNavigate();
+	const handleNavigation = (item) => {
+		console.log(item);
+		// item value should be equal to the keyword being serarched.
+		navigate(`/search/${item}`);
+	  };
 	return (
 		<header>
 			<div className="pod" > <a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj" target="blank" style={{ color: "black" }}>Podcast
-				<span > </span><i class="fa fa-spotify"></i></a> | <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine'} style={{ color: "black" }}> EMagazine</a> 
-				<div className="subscribe"><a href={process.env.REACT_APP_DOMAIN_NAME + '/subscribe'} style={{ color: "black" ,marginLeft:"auto", marginRight:"auto",marginBottom:"10px"}}> Subscribe</a> </div></div>
+				<span > </span><i class="fa fa-spotify"></i></a> | <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine'} style={{ color: "black" }}> EMagazine</a>
+				<div className="subscribe"><a href={process.env.REACT_APP_DOMAIN_NAME + '/subscribe'} style={{ color: "black", marginLeft: "auto", marginRight: "auto", marginBottom: "10px" }}> Subscribe</a> </div>
+			</div>
 			<div className="socialmedia-mobile">
 				<a href=" https://www.facebook.com/aslikahani.in" target="blank"><i className="ti-facebook"></i> </a>
 				<a href="https://twitter.com/kahaniasli" target="blank"><i className="ti-twitter"></i></a>
@@ -23,7 +31,7 @@ function Navbar() {
 				<a href=" https://www.instagram.com/aslikahani/" target="blank"><i className="ti-instagram"></i></a>
 			</div>
 			<nav className={`nav-linking ${isOpen ? 'open' : ''}`}>
-			{/* <nav className={`nav-linking ${isOpen ? 'open transition' : ''}`}> */}
+				{/* <nav className={`nav-linking ${isOpen ? 'open transition' : ''}`}> */}
 				<li><Link to={"/Home"} className="bar">Home</Link></li>
 				<li><Link to={"/Entertainment"} className="bar">Entertainment</Link></li>
 				<li><Link to={"/Education"} className="bar">Education</Link></li>
@@ -35,7 +43,7 @@ function Navbar() {
 				{/* <li><Link to={"/Stories"} className="bar">Share Your Kahani</Link></li> */}
 
 			</nav>
-
+			<Search onSearch={handleNavigation} />
 			<button
 				// className="nav-btn"
 				className={`nav-btn ${isOpen ? 'open' : ''}`}
