@@ -57,7 +57,7 @@ function LogoColumn() {
     //   </div>
     // </div>
     <nav>
-      <div className='container-fluid'>
+      <div className='container'>
         <div className='header-main'>
           <div className='grid-view-card'>
             <div className='logo-img'>

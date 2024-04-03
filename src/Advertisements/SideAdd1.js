@@ -27,23 +27,19 @@ function SideAdd1(props) {
                 //  console.log(item)
 
                 return (
-                  <div key={index}>
-
-                    <div className="col-md-12" style={{ width: "-webkit-fill-available", padding:"initial" }}>
+                  <div className='row' key={index}>
+                    <div className="col-md-12">
                       <div className="slider-adds">
                         <a href={item.url} target='blank'>
-                          <img style={{ width: "100%", height: "100%" }} src={item.image} />
+                          <img className='img-fluid' src={item.image} />
                         </a>
-                        <div className="article-desc">
+                        <div className="article-desc-small">
                           <h4>
                             <a href={item.url} target='blank'>{item.description}</a>
-
                           </h4>
                         </div>
-                        <br/>
                       </div>
                     </div>
-
                   </div>
 
                 )

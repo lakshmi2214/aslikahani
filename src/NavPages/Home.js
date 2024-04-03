@@ -69,82 +69,86 @@ function Home() {
         <BannerAd1 addObject={value} />
       </span> */}
 
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-md-1 " >
-            <div className="banner-view">
-              <img src={sidebanner} alt='banner1' className="img-fluid" />
+      <section className="page-mid-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-1 " >
+              <div className="banner-view">
+                <img src={sidebanner} alt='banner1' className="img-fluid" />
+              </div>
             </div>
-          </div>
-          <div className="col-md-10">
-            <GridSection dataObject={result} />
-            <div className="subData-grid-container">
+            <div className="col-md-10">
+              <GridSection dataObject={result} />
+              <div className="subData-grid-container">
 
-              <div className="row">
-                <div className="col-md-8 col-sm-12" >
-                  <LatestArticle dataObject={result} />
-                  <div className="topArticals">
-                    <TopArticles dataObject={result} />
+                <div className="row">
+                  <div className="col-md-8 col-sm-12" >
+                    <LatestArticle dataObject={result} />
+                    <div className="topArticals">
+                      <TopArticles dataObject={result} />
+                    </div>
+                    <Articles dataObject={result} />
+
+                    {/* <TrendingArticles dataObject={result} /> */}
                   </div>
-                  <Articles dataObject={result} />
-
-                  <TrendingArticles dataObject={result} />
+                  <div className="col-md-4 col-sm-12 mobile-view" >
+                    <div className="right-gird-home-widget">
+                      <WeatherApp />
+                      <div className="swiper-widget">
+                        <SideAdd1 addObject={value} />
+                      </div>
+                      <PopularArticles dataObject={result} />
+                      <PostArticles dataObject={result} />
+                    </div>
+                  </div>
+                  <div className="col-md-12 col-12">
+                    <TrendingArticles dataObject={result} />
+                  </div>
                 </div>
-                {/* <div className="col-md-3 col-sm-12"  >
-                  <TopArticles dataObject={result} />
-                </div> */}
-                <div className="col-md-4 col-sm-12 mobile-view" >
 
-                  <WeatherApp />
+                {isMobile ? null : (
+                  <div className="col-md-3 col-sm-12" >
 
-                  <SideAdd1 addObject={value} />
-                  <PopularArticles dataObject={result} />
-                  <PostArticles dataObject={result} />
-                </div>
-              </div>
+                    <WeatherApp />
 
-              {isMobile ? null : (
-                <div className="col-md-3 col-sm-12" >
+                    <SideAdd1 addObject={value} />
+                    <PopularArticles dataObject={result} />
+                    <PostArticles dataObject={result} />
+                  </div>
+                )}
+                {/* </div> */}
+                <span className="col-md-12 bannerAd1">
+                  <BannerAd2 addObject={value} />
+                </span>
 
-                  <WeatherApp />
-
-                  <SideAdd1 addObject={value} />
-                  <PopularArticles dataObject={result} />
-                  <PostArticles dataObject={result} />
-                </div>
-              )}
-              {/* </div> */}
-              <span className="col-md-12 bannerAd1">
-                <BannerAd2 addObject={value} />
-              </span>
-
-              <div className="col-md-12 mobile-view" style={{ padding: "initial" }}>
-                <EditorsChoise dataObject={result} />
-              </div>
-              {isMobile ? null : (
-                <div className="col-md-12">
+                <div className="col-md-12 mobile-view" style={{ padding: "initial" }}>
                   <EditorsChoise dataObject={result} />
                 </div>
-              )}
-              <div className="col-md-12 mobile-view">
-                <AllTimeBest dataObject={result} />
-              </div>
-              {isMobile ? null : (
-                <div className="col-md-12" style={{ padding: "14px" }}>
+                {isMobile ? null : (
+                  <div className="col-md-12">
+                    <EditorsChoise dataObject={result} />
+                  </div>
+                )}
+                <div className="col-md-12 mobile-view">
                   <AllTimeBest dataObject={result} />
                 </div>
-              )}
+                {isMobile ? null : (
+                  <div className="col-md-12" style={{ padding: "14px" }}>
+                    <AllTimeBest dataObject={result} />
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-          <div className="col-md-1" >
-            <div className="banner-view">
-              <img src={sidebanner} alt='banner1' className="img-fluid" />
+            <div className="col-md-1" >
+              <div className="banner-view">
+                <img src={sidebanner} alt='banner1' className="img-fluid" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-        <Footer />
+      <Footer />
 
 
     </>

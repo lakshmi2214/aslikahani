@@ -51,7 +51,7 @@ function TopArticles(props) {
       <div className=' mobile-view'>
         <div className='multi-artic'>
           <h4><strong>Top Aricles</strong></h4>
-          <div className='row'>
+          <div className='row row-gap-4'>
             {props.dataObject?.locations?.TopNews.slice(0, 6).map((item, index) => {
               // console.log(item);
               return (

@@ -14,7 +14,7 @@ function BannerAd2(props) {
 
                                 <div key={index}>
                                     <a href={item.url} target='blank' >
-                                        <img src={item.image} className="img-responsive" alt="" />
+                                        <img src={item.image} className="img-fluid" alt="" />
                                     </a>
                                 </div>
                             )
