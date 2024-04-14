@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import logosmall from "../images/logo-round.png";
+// import logosmall from "../images/logo-round.png";
+import logosmall from "../images/logo-small.jpg";
 // import Translator from './Translator';
 // import Search from '../Utility/Search';
 // import { useNavigate } from 'react-router-dom';

@@ -43,24 +43,24 @@
     }
     
     input {
-      padding: 5px;
+      /* padding: 5px;
       font-size: 16px;
       border: 1px solid #ccc;
-      border-radius: 18px;
+      border-radius: 18px; */
       /* width: 300px; */
-      width: 100%;
+      /* width: 100%; */
       /* margin-right: 10px; */
     }
     
     button {
-      background-color: d32415;
+      /* background-color: d32415;
       color: #fff;
       border: none;
       border-radius: 100%;
       padding: 4px 7px;
       cursor: pointer;
       position: absolute;
-      right: 2.2%;
+      right: 2.2%; */
     }
     .about-box{
       width: 100%;

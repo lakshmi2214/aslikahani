@@ -23,38 +23,51 @@ import '../css/royal-slider/rs-default.css';
 import '../css/owl.carousel.css';
 
 function SristarAd2(props) {
-  
-    return(
-        <>
-        <div className="widget widget-bg">
-        
-                  
-                         <div className="heading">
-                        </div> 
-                        {props.addObject?.categories?.slice(0,1).map((item,index)=>{
-    return(
-        item.advertisements.TopPosterad1.slice(1,2).map((item,index)=>{
-            // console.log(item)
-            return(
-               
-                <div key={index}>
-                        <div className="ad-div style-box">
-                           <a href={item.url} target='blank'>
-                           <img src={item.image} className="img-responsive " alt="" style={{height:"400px",width:"330px"}}/>
-                           </a>
-                        </div>
-                        <div className="detail">
-                              <div className="caption" >
-                                 <h5>
+
+   return (
+      <>
+
+
+
+         {props.addObject?.categories?.slice(0, 1).map((item, index) => {
+            return (
+               item.advertisements.TopPosterad1.slice(1, 2).map((item, index) => {
+
+                  return (
+                     <div className='row' key={index}>
+                        <div className="col-md-12">
+                           <div className="slider-adds">
+                              <a href={item.url} target='blank'>
+                                 <img className='img-fluid' src={item.image} />
+                              </a>
+                              <div className="article-desc-small">
+                                 <h4>
                                     <a href={item.url} target='blank'>{item.description}</a>
-                                 </h5>
+                                 </h4>
                               </div>
                            </div>
                         </div>
-            )}))})}
-                
                      </div>
-        </>
-    )
+                     // <div key={index}>
+                     //    <div className="ad-div style-box">
+                     //       <a href={item.url} target='blank'>
+                     //          <img src={item.image} className="img-responsive " alt="" style={{ height: "400px", width: "330px" }} />
+                     //       </a>
+                     //    </div>
+                     //    <div className="detail">
+                     //       <div className="caption" >
+                     //          <h5>
+                     //             <a href={item.url} target='blank'>{item.description}</a>
+                     //          </h5>
+                     //       </div>
+                     //    </div>
+                     // </div>
+                  )
+               }))
+         })}
+
+
+      </>
+   )
 }
 export default SristarAd2;

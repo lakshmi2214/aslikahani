@@ -72,13 +72,6 @@ function Topbar() {
                      {/* <img src={logosmall} alt="logo" style={{ height: "20px", width: "180px" }} /> */}
                      {/* <Translation /> */}
                      {/* </div> */}
-                     <div className="col-md-6 col-sm-9 col-xs-12">
-                        <ul className="subs-topbar" >
-                           <li className="subscribeBtn"><a href={process.env.REACT_APP_DOMAIN_NAME + '/subscribe'}>Subscribe</a></li>
-                           <li className="magzinebook"><a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine'}>E-Magazine</a></li>
-                           <li><a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><span>Aslikahani Podcast</span><span> </span><i className="fa fa-spotify"></i></a></li>
-                        </ul>
-                     </div>
                      <div className="col-md-6 col-sm-6 col-xs-5">
                         <div className='tranding'>
                            <ul className="social-media-icons-top">
@@ -95,6 +88,13 @@ function Topbar() {
                            {/* <Translator /> */}
 
                         </div>
+                     </div>
+                     <div className="col-md-6 col-sm-9 col-xs-12">
+                        <ul className="subs-topbar" >
+                           <li className="subscribeBtn"><a href={process.env.REACT_APP_DOMAIN_NAME + '/subscribe'}>Subscribe</a></li>
+                           <li className="magzinebook"><a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine'}>E-Magazine</a></li>
+                           <li><a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><span>Aslikahani Podcast</span><span> </span><i className="fa fa-spotify"></i></a></li>
+                        </ul>
                      </div>
                   </div>
                </div>

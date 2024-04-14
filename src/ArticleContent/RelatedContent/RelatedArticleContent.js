@@ -47,34 +47,32 @@ function RelatedArticleContent() {
 
   return (
     <>
-      <div className="col-md-7 col-sm-7 col-xs-12 ">
-        <div className="picture">
-          <h2>{data.title}</h2>
-          <ul className="post-tools nolineheight">
-            <li> by <a href=""> <strong> {data.authored_by}</strong> </a></li>
-            <li> {data.created_at} </li>
-          </ul>
-          <img alt="" className="img-responsive" src={data.image} style={{ height: "auto", width: "100%" }} />
-          <span className="text-muted h6">{data.credit_line} </span>
-        </div>
-        <div className="catname">
-          <br></br>
-          <br></br>
-          <p> {data.description}</p>
-          <div dangerouslySetInnerHTML={{ __html: data.body }}></div>
-        </div>
-        {/* <div className="col-md-12" style={{border:"1px solid red"}}>
+      <div className="col-md-8 col-sm-7 col-xs-12 ">
+        <div className="blog-dtsl">
+          <div className="picture">
+            <h2>{data.title}</h2>
+            <ul className="post-tools nolineheight">
+              <li> by <a href=""> <strong> {data.authored_by}</strong> </a></li>
+              <li> {data.created_at} </li>
+            </ul>
+            <img alt="" className="img-responsive" src={data.image} />
+            <span className="text-muted h6">{data.credit_line} </span>
+          </div>
+          <div className="catname">
+            <p> {data.description}</p>
+            <div className="sub-render-pera" dangerouslySetInnerHTML={{ __html: data.body }}></div>
+          </div>
+          {/* <div className="col-md-12" style={{border:"1px solid red"}}>
         <ReactPlayer url="https://www.youtube.com/watch?v=eoOaKN4qCKw" controls={true}/>
         </div> */}
 
-        {data.video_url != null ?
-          <div className="embed-responsive embed-responsive-16by9">
-            <iframe className="embed-responsive-item" src={data.video_url} allowfullscreen></iframe>
-          </div>
-          : ""
-        }
-
-
+          {data.video_url != null ?
+            <div className="embed-responsive embed-responsive-16by9">
+              <iframe className="embed-responsive-item" src={data.video_url} allowfullscreen></iframe>
+            </div>
+            : ""
+          }
+        </div>
       </div>
     </>
   );

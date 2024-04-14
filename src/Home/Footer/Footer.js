@@ -8,16 +8,15 @@ function Footer() {
 
       <>
          <div className="footer-white">
-            <div className="footer-top">
-            <div className='col-md-12' style={{paddingLeft:"5%", paddingRight:"5%"}}>
-               {/* <div className="container"> */}
+            <div className="container">
+               <div className="footer-top">
                   <div className="row">
                      <About />
                      <div className="col-xs-12 col-md-3 col-sm-6">
                         <h3>Most Read Articles</h3>
                         <ul className="tabs-posts">
                            <li>
-                              <div className="caption1" style={{  }}>
+                              <div className="caption1" style={{}}>
                                  <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/the-starry-night-van-goghs-enigmatic-masterpiece'} className="url"> The Starry Night: Van Gogh's Enigmatic Masterpiece
                                  </a>
                                  <ul className="post-tools">
@@ -47,18 +46,18 @@ function Footer() {
                      <Instagram />
                   </div>
                </div>
-            </div>
-            <div className="footer-link">
-               <div className="container">
-                  <div className="row">
-                     <div className="col-md-12 col-sm-12 col-xs-12">
-                        <ul>
-                           <li><a href="/">Privacy Policy </a></li>
-                           <li><a href="/">About Us</a></li>
-                           <li><a href="/">FAQ</a></li>
-                           <li><a href="/">Blog</a></li>
-                        </ul>
-                        <div className="copyright"> <span>&copy; 2023 All rights reserved. Aslikahani</span> </div>
+               <div className="footer-link">
+                  <div className="container">
+                     <div className="row">
+                        <div className="col-md-12 col-sm-12 col-xs-12">
+                           <ul>
+                              <li><a href="/">Privacy Policy </a></li>
+                              <li><a href="/">About Us</a></li>
+                              <li><a href="/">FAQ</a></li>
+                              <li><a href="/">Blog</a></li>
+                           </ul>
+                           <div className="copyright"> <span>&copy; 2023 All rights reserved. Aslikahani</span> </div>
+                        </div>
                      </div>
                   </div>
                </div>

@@ -31,21 +31,23 @@ function ArticleContent() {
       <Topbar />
       <LogoColumn />
       <Navbar />
-      <section className="main-content">
-        <div className="col-md-12" style={{ paddingLeft: "5%", paddingRight: "5%" }} >
+      <section className='inner-pages-section'>
+
+        <div className='container'>
           <div className="row">
             <RelatedArticleContent />
-            <div className="col-md-5 col-sm-12 col-xs-12" id="side-bar-right-2">
+            <div className="col-md-4 col-sm-12 col-xs-12" id="side-bar-right-2">
               <div className="theiaStickySidebar">
                 <aside>
                   <SristarAd2 addObject={value} />
-                  <ChaiTheoryAd addObject={value} />
+                  {/* <ChaiTheoryAd addObject={value} /> */}
                   <SristarAd1 addObject={value} />
                 </aside>
               </div>
             </div>
           </div>
         </div>
+
       </section>
       <FooterCategory />
     </div>

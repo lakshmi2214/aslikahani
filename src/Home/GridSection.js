@@ -15,7 +15,7 @@ function GridSection(props) {
     return (
         <>
             <div className='posts'>
-                <div className='row no-gutters row-gap-1'>
+                <div className='row no-gutters row-gap-1 align-items-center'>
                     <div className='col-md-7'>
                         {/* {grid?.locations?.Slider.slice(0, 1).map((item, index) => {
                             return (

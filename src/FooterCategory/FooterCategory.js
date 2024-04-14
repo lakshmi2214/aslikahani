@@ -1,6 +1,6 @@
 import React from "react";
-// import logosmall from '../images/logo-small.jpg';
-import logosmall from "../images/logo-round.png";
+import logosmall from '../images/logo-small.jpg';
+// import logosmall from "../images/logo-round.png";
 
 import I8 from '../images/posts/Fashion_Transformed.jpg';
 import I1 from '../images/posts/KATHAL.jpg';
@@ -9,16 +9,15 @@ function FooterCategory() {
 
 
    return (
-      <div>
+      <>
          <footer>
-            <div className="footer-top bg-dark" style={{ paddingTop: "45px" }}>
-               {/* <div className="container"> */}
-               <div className='' style={{ paddingLeft: "7%", paddingRight: "7%" }}>
+            <div className="footer-top bg-dark" >
+               <div className="container">
                   <div className="row">
                      <div className="col-md-3 col-sm-6 col-xs-12">
-                        <div className="footer-block" style={{ bottom: "10px" }}>
-                           <img src={logosmall} style={{ height: "125px", paddingRight: "50px", paddingTop: "5px" }} alt="footerImg" />
-                           <p style={{ margin: "auto" }}>A captivating platform that takes you on a journey through the realms of imagination, inspiration and cultural richness. Asli Kahani, meaning "Real Story" in Hindi, is a celebration of narratives that connect us, embracing diverse voices and bringing forth compelling tales from around the country.</p>
+                        <div className="footer-block" >
+                           <img src={logosmall} className="img-fluid" alt="footerImg" />
+                           <p >A captivating platform that takes you on a journey through the realms of imagination, inspiration and cultural richness. Asli Kahani, meaning "Real Story" in Hindi, is a celebration of narratives that connect us, embracing diverse voices and bringing forth compelling tales from around the country.</p>
                         </div>
                      </div>
 
@@ -28,7 +27,7 @@ function FooterCategory() {
                            <li>
                               <div className="pic">
                                  <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/kathal-a-jackfruit-mystery-an-enlightening-satire'}>
-                                    <img alt="aslikahaniimage" className="img-responsive" src={I1} /></a> </div>
+                                    <img alt="aslikahaniimage" className="img-fluid" src={I1} /></a> </div>
                               <div className="caption1"> <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/kathal-a-jackfruit-mystery-an-enlightening-satire'}>Kathal: A Jackfruit Mystery: An Enlightening Satire</a>
                               </div>
                               <ul className="post-tools">
@@ -38,7 +37,7 @@ function FooterCategory() {
                            <li>
                               <div className="pic">
                                  <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/navigating-job-mobility-in-the-economy'}>
-                                    <img alt="aslikahaniimage" className="img-responsive" src={I8} /></a> </div>
+                                    <img alt="aslikahaniimage" className="img-fluid" src={I8} /></a> </div>
                               <div className="caption1"> <a href={process.env.REACT_APP_DOMAIN_NAME + '/home/navigating-job-mobility-in-the-economy'}>Navigating Job Mobility In The Economy</a>
                               </div>
                               <ul className="post-tools">
@@ -75,7 +74,6 @@ function FooterCategory() {
                            <ul className="personal-info">
                               <li><i className="fa fa-map-marker"></i>#280/1, Sampige Road, 18th cross, Malleshwaram.</li>
                               <li><i className="fa fa-envelope"></i> connect@aslikahani.com </li>
-                              {/* <li><i className="fa fa-phone"></i> +99 333 1234567 </li> */}
                            </ul>
                         </div>
                         <div className="social-media-icons">
@@ -108,7 +106,7 @@ function FooterCategory() {
                </div>
             </div>
          </footer>
-      </div>
+      </>
    );
 }
 export default FooterCategory;

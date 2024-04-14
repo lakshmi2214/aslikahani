@@ -10,9 +10,9 @@ function Add1(props) {
                     item.advertisements.BottomBannerAd1.map((item, index) => {
                         return (
                             < div key={index} >
-                                <div className='pt-3'>
-                                    <a href={item.url}>
-                                        <img src={item.image} alt='banner1' style={{ width: "-webkit-fill-available" }} />
+                                <div className='midAddImg my-xxl-4'>
+                                    <a href={item.url} className='my-xxl-4'>
+                                        <img src={item.image} alt='banner1' className='img-fluid'/>
                                     </a>
                                 </div>
                             </div >

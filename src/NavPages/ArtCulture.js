@@ -44,45 +44,77 @@ function ArtCulture() {
         };
   }, []);
   return (
-    <div>
-      <Topbar />
-    <LogoColumn />
-    <Navbar />
-    <br />
-    <div className='col-md-12 col-xs-12 col-sm-12'>
-      <div className='col-md-8 col-xs-12 col-sm-12' style={{paddingLeft:"4%"}}>
-        <div className='col' >
-          <Art1 dataObject={result} />
-          <div className='col-md-12' style={{padding: "10px", textAlign: "center" }}>
-            <Add1 addObject={value} /><br/>
-          </div>
-          <Art2 dataObject={result} />
-          <div className='col-md-12' style={{ padding: "10px", textAlign: "center" }}>
-            <Add2 addObject={value} /><br/>
-          </div>
-          <Art3 dataObject={result} />
+//     <div>
+//       <Topbar />
+//     <LogoColumn />
+//     <Navbar />
+//     <br />
+//     <div className='col-md-12 col-xs-12 col-sm-12'>
+//       <div className='col-md-8 col-xs-12 col-sm-12' style={{paddingLeft:"4%"}}>
+//         <div className='col' >
+//           <Art1 dataObject={result} />
+//           <div className='col-md-12' style={{padding: "10px", textAlign: "center" }}>
+//             <Add1 addObject={value} /><br/>
+//           </div>
+//           <Art2 dataObject={result} />
+//           <div className='col-md-12' style={{ padding: "10px", textAlign: "center" }}>
+//             <Add2 addObject={value} /><br/>
+//           </div>
+//           <Art3 dataObject={result} />
           
-        </div>
+//         </div>
        
-      </div>
+//       </div>
       
-      <div className='col-md-4'>
-<div className='mobile-view'>
-        <SideAdd1 addObject={value} /></div>
-        {isMobile ? null:(
-           <div className='col-md-11'>
-        <SideAdd1 addObject={value} />
-        </div>
-        )}
+//       <div className='col-md-4'>
+// <div className='mobile-view'>
+//         <SideAdd1 addObject={value} /></div>
+//         {isMobile ? null:(
+//            <div className='col-md-11'>
+//         <SideAdd1 addObject={value} />
+//         </div>
+//         )}
        
-        <SidePopularArt dataObject={result} />
-        <SideAdd2 addObject={value} />
-        <SidePostArt dataObject={result} />
-      </div>
+//         <SidePopularArt dataObject={result} />
+//         <SideAdd2 addObject={value} />
+//         <SidePostArt dataObject={result} />
+//       </div>
 
-    </div>
-<FooterCategory />
-  </div>
+//     </div>
+// <FooterCategory />
+//   </div>
+<>
+      <Topbar />
+      <LogoColumn />
+      <Navbar />
+
+      <section className='inner-pages-section'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-md-8' >
+              <Art1 dataObject={result} />
+              <Add1 addObject={value} />
+              <Art2 dataObject={result} />
+              <Add2 addObject={value} />
+              <Art3 dataObject={result} />
+            </div>
+            <div className='col-md-4 '>
+              <div className='innerPage-side-bar'>
+                <div className='mobile-view'>
+                  <SideAdd1 addObject={value} />
+                </div>
+                <SidePopularArt dataObject={result} />
+                <SideAdd2 addObject={value} />
+                <SidePostArt dataObject={result} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <FooterCategory />
+
+    </>
   );
 }
 

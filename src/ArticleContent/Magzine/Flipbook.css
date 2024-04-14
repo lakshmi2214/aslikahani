@@ -372,8 +372,8 @@ align-items: center;
 }
 
 header span {
-  font-size: 21px;
-  font-weight: 600;
+  /* font-size: 21px;
+  font-weight: 600; */
 }
 
 header .close,

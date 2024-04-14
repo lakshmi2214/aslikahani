@@ -16,11 +16,14 @@
 
 .nav-linking {
   list-style: none;
-  display: flex;
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    width: calc(100% - 380px);
 }
 
 .nav-linking li {
-  margin: 0 15px;
+  /* margin: 0 15px; */
   /* padding-top: 6px; */
 }
 
@@ -32,14 +35,14 @@
 /* Media Query for Mobile View */
 @media (max-width: 768px) {
   .nav-linking {
-    display: none;
+    /* display: none;
     flex-direction: column;
     position: absolute;
     top: 60px;
     left: 0;
     right: 0;
     background-color: #333;
-    padding: 10px 20px;
+    padding: 10px 20px; */
     
   }
   .nav-btn {
@@ -51,7 +54,18 @@
   }
   .nav-linking {
     transition: all 0.3s ease-in-out;
-    transform: translateX(-100%);
+    /* transform: translateX(-100%); */
+    position: absolute;
+    flex-flow: column;
+    width: 100%;
+    left: -100%;
+    right: 0;
+    top: 60px;
+    z-index: 1010;
+    text-align: center;
+    gap: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 15px 0;
    }
    
    .nav-linking.open {
@@ -64,20 +78,12 @@
   } */
   .nav-linking.open{
     display: flex;
-    /* border: 1px solid red; */
-    visibility: visible;
-    background-color: white;
-    /* margin: -5px;
-    height: 500px; */
-    margin-left: -5%;
-    height: 500px;
-    width: 115%;
-    top: 50px;
+    left: 0;
   }
 
   .nav-linking li {
-    margin: 6px 10px;
-    text-align: center;
+    /* margin: 6px 10px;
+    text-align: center; */
   }
 
   .toggle-buttons {
@@ -91,10 +97,10 @@
   }
 
   .bar {
-    width: 25px;
+    /* width: 25px;
     height: 3px;
     background-color: #fff;
-    margin: 5px 0;
+    margin: 5px 0; */
   }
   .asli-navbar {
     background-color: transparent;
