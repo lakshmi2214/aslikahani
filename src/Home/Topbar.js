@@ -67,12 +67,12 @@ function Topbar() {
          <section className="topbar w-100">
             <div className="container-fluid">
                <div className="row">
-                  <div className="col-md-12 col-sm-12 col-xs-12 nopadding">
+                  {/* <div className="col-md-12 col-sm-12 col-xs-12 nopadding"> */}
                      {/* <div className="col-md-4"> */}
                      {/* <img src={logosmall} alt="logo" style={{ height: "20px", width: "180px" }} /> */}
                      {/* <Translation /> */}
                      {/* </div> */}
-                     <div className="col-md-6 col-sm-6 col-xs-5">
+                     <div className="col-md-6 col-sm-6 col-4">
                         <div className='tranding'>
                            <ul className="social-media-icons-top">
                               <li><a href=" https://www.facebook.com/aslikahani.in"><i className="ti-facebook"></i> </a></li>
@@ -89,7 +89,7 @@ function Topbar() {
 
                         </div>
                      </div>
-                     <div className="col-md-6 col-sm-9 col-xs-12">
+                     <div className="col-md-6 col-sm-9 col-8">
                         <ul className="subs-topbar" >
                            <li className="subscribeBtn"><a href={process.env.REACT_APP_DOMAIN_NAME + '/subscribe'}>Subscribe</a></li>
                            <li className="magzinebook"><a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine'}>E-Magazine</a></li>
@@ -98,7 +98,7 @@ function Topbar() {
                      </div>
                   </div>
                </div>
-            </div>
+            {/* </div> */}
          </section>
          {/* <Translator /> */}
          {/* <LanguageSwitcher /> */}
