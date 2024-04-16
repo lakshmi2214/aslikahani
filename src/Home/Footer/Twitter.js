@@ -3,7 +3,7 @@ function Twitter() {
     return(
         <>
         <div className="col-xs-12 col-md-3 col-sm-6 ">
-                     <h3>Twitter Widget</h3>
+                     <h3>Twitter </h3>
                      <ul className="tabs-posts twitter-widget">
                         <li>
                            <div className="caption1" style={{fontSize:"14px"}}><a href="https://twitter.com/kahaniasli" className="url" style={{textDecoration:"none"}}> 

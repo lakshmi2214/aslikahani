@@ -15,7 +15,7 @@ function GridSection(props) {
     return (
         <>
             <div className='posts'>
-                <div className='row no-gutters row-gap-1 align-items-center'>
+                <div className='row no-gutters row-gap-1 align-items-center row-gap-4'>
                     <div className='col-md-7'>
                         {/* {grid?.locations?.Slider.slice(0, 1).map((item, index) => {
                             return (
@@ -52,7 +52,7 @@ function GridSection(props) {
 
                     <div className='col-md-5'>
                         <div className='four-card-grid'>
-                            <div className='row' >
+                            <div className='row row-gap-4' >
                                 {grid?.locations?.Slider.slice(1, 3).map((item, index) => {
                                     console.log(item);
                                     return (
@@ -74,7 +74,7 @@ function GridSection(props) {
                                 {/* <div className='col-md-6' style={{ border: "1px solid black" }}>2
                            </div> */}
                             </div>
-                            <div className='row' >
+                            <div className='row row-gap-4' >
                                 {grid?.locations?.Slider.slice(3, 5).map((item, index) => {
                                     console.log(item);
                                     return (

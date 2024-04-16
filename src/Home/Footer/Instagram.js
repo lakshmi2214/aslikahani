@@ -17,7 +17,7 @@ function Instagram() {
     return (
         <>
             <div className="col-xs-12 col-md-3 col-sm-6 ">
-                <h3>Instagram Widget</h3>
+                <h3>Instagram</h3>
                 <div className="insta-gallery">
                     {/* <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I1} /> </a>
                     <a href="https://www.instagram.com/aslikahani/" className="tt-lightbox"> <img className="img-responsive center-block" alt="aslikahaniimage" src={I2} /> </a>

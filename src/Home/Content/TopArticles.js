@@ -28,13 +28,13 @@ function TopArticles(props) {
   return (
     <>
       {isMobile ? null : (
-        <div className='row'>
+        <div className='row row-gap-4'>
           <div className='col-md-12'>
             <h4 style={{ backgroundColor: "#d32415", color: "white", padding: "10px" }}><strong>Top Aricles</strong></h4>
             {props.dataObject?.locations?.TopNews.slice(0, 6).map((item, index) => {
               // console.log(item);
               return (
-                <div key={index}>
+                <div className='mb-4' key={index}>
                   <div className='zoom-in' style={{ height: "auto" }}>
                     <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
                       <img alt="img11" className="img-responsive" src={item.image} style={{ width: "100%", height: "auto" }} />
