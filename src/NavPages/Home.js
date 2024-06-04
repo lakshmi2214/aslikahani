@@ -25,6 +25,7 @@ import AllTimeBest from "../Home/Content/AllTimeBest";
 // import Navbars from "../Utility/Navbars";
 // import rightBanner from "../images/banner1.jpg"
 import Topbar from "../Home/Topbar";
+import Marquee from "../Component/Marquee";
 
 function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -186,7 +187,12 @@ function Home() {
           </div>
         </div>
       </section>
-      <div class="marquee"><p> Today's Rate | Gold 24k/1 g Rs 7700, To get 100% value of your gold call 63 66 333 444 </p><p> Today's Rate | Gold 24k/1 g Rs 7700, To get 100% value of your gold call 63 66 333 444 </p><p> Today's Rate | Gold 24k/1 g Rs 7700, To get 100% value of your gold call 63 66 333 444 </p></div>
+      {/* <div class="marquee">
+        <p> Today's Rate | Gold 24k/1 g Rs 7700, To get 100% value of your gold call 63 66 333 444 </p>
+        <p> Today's Rate | Gold 24k/1 g Rs 7700, To get 100% value of your gold call 63 66 333 444 </p>
+        <p> Today's Rate | Gold 24k/1 g Rs 7700, To get 100% value of your gold call 63 66 333 444 </p>
+      </div> */}
+      <Marquee/>
       <Footer />
 
 
