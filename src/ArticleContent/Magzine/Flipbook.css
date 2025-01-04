@@ -12,7 +12,7 @@
   flex-direction: column;
   align-items: center; /* pointer-events: none; */
   height: 100vh;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -558,3 +558,21 @@ span.nvIco:hover i {
   overflow: hidden !important;
 }
 
+
+.downwards-bar {
+  position: absolute;
+  right: 0;
+  flex-flow: column;
+  bottom: 0;
+  top: unset;
+  right: 23px;
+}
+@media (max-width:768px) {
+  .downwards-bar {
+    position: relative;
+    flex-flow: row;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+}

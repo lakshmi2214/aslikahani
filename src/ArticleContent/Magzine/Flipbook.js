@@ -13,6 +13,7 @@ import useSound from 'use-sound';
 import page from "./Jpeg/page.mp3"
 
 function Flipbook() {
+    
     const location = useLocation();
 
     //Api fetching
@@ -61,8 +62,28 @@ function Flipbook() {
 
     //page-zooming
 
-    const [zoomLevel, setZoomLevel] = useState(100); // Initial zoom level is 100%
+    const [zoomLevel, setZoomLevel] = useState(150); // Initial zoom level is 100%
+    useEffect(() => {
+        // Function to detect device type and set zoom level
+        const adjustZoomForDevice = () => {
+            if (window.innerWidth <= 768) {
+                setZoomLevel(100); // Set zoom level for mobile
+            } else {
+                setZoomLevel(150); // Default zoom level for desktop
+            }
+        };
 
+        // Adjust zoom level on component mount
+        adjustZoomForDevice();
+
+        // Add resize event listener to handle dynamic resizing
+        window.addEventListener('resize', adjustZoomForDevice);
+
+        // Cleanup event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', adjustZoomForDevice);
+        };
+    }, []);
     const handleZoomIn = () => {
         setZoomLevel(prevZoom => Math.min(prevZoom + 10, 200)); // Increase zoom level by 10%, capped at 200%
     };
@@ -142,7 +163,7 @@ function Flipbook() {
                 </div>
                 <div id='total-magzine' >
                     <div className="image-viewer">
-                        <div style={{ marginTop: "1%", marginBottom: "1%" }}><a href="/"><img src={logosmall} className="rounded mx-auto d-block" alt="logo" style={{ height: "50px", width: "250px" }} /></a></div>
+                        {/* <div style={{ marginTop: "1%", marginBottom: "1%" }}><a href="/"><img src={logosmall} className="rounded mx-auto d-block" alt="logo" style={{ height: "50px", width: "250px" }} /></a></div> */}
                         <HTMLFlipBook
                             width={380}
                             height={500}
@@ -168,16 +189,16 @@ function Flipbook() {
                         </HTMLFlipBook>
 
                         <div className='downwards-bar' style={{ marginBottom: "2%", marginTop: "2%" }}>
-                            <div className='btn2 ebookBtns'>
+                            {/* <div className='btn2 ebookBtns'>
                                 <div onClick={() => {
                                     book.current.pageFlip().flipPrev();
                                 }} className='prev-btn'><i className="fa fa-chevron-left" aria-hidden="true"></i></div>
-                            </div>
-                            <div className='btn3 ebookBtns'>
+                            </div> */}
+                            {/* <div className='btn3 ebookBtns'>
                                 <div onClick={() => {
                                     book.current.pageFlip().flipNext();
                                 }} className='next-btn'><i className="fa fa-chevron-right" aria-hidden="true"></i></div>
-                            </div>
+                            </div> */}
                             <div className='btn4 ebookBtns'>
                                 <div onClick={handleZoomIn}><i className="fa fa-search-plus" aria-hidden="true"></i></div>
                             </div>
@@ -192,7 +213,6 @@ function Flipbook() {
                                 <i className="fa fa-share-alt" aria-hidden="true"></i>
                             </div>
                         </div>
-
                         {isFullScreen &&
                             <div onClick={() => setFullScreen(false)}><i className="fa fa-times exit" aria-hidden="true"></i></div>
                         }
