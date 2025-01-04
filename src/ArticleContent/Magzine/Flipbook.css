@@ -4,18 +4,20 @@
   background-size: cover;
   height: auto;
   /* pointer-events: none; */
+  height: 100vh;
 }
 
 .image-viewer {
-display: flex;
-flex-direction: column;
-align-items: center;
-/* pointer-events: none; */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* pointer-events: none; */
+  height: 100vh;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .zoom-buttons {
   margin-bottom: 10px;
-
 }
 
 .demoPage {
@@ -36,15 +38,11 @@ align-items: center;
   background-image: url("./Jpeg/magzine-background-grey.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
-
 }
 
 .boxing {
   box-shadow: 0 0 5px 2px #3b3b3b;
 }
-
-
 
 .demo-book {
   max-width: 100%;
@@ -68,15 +66,11 @@ align-items: center;
   /* margin-bottom: 10%; */
 }
 
-
-
 .sft__wrapper {
   position: relative;
   width: 100%;
   box-sizing: border-box;
 }
-
-
 
 .stf__parent canvas {
   position: absolute;
@@ -86,8 +80,6 @@ align-items: center;
   top: 0;
 }
 
-
-
 .stf__block {
   position: absolute;
   width: 100%;
@@ -96,15 +88,11 @@ align-items: center;
   perspective: 2000px;
 }
 
-
-
 .stf__item {
   display: none;
   position: absolute;
   transform-style: preserve-3d;
 }
-
-
 
 .stf__outerShadow {
   position: absolute;
@@ -112,23 +100,17 @@ align-items: center;
   top: 0;
 }
 
-
-
 .stf__innerShadow {
   position: absolute;
   left: 0;
   top: 0;
 }
 
-
-
 .stf__hardShadow {
   position: absolute;
   left: 0;
   top: 0;
 }
-
-
 
 .stf__hardInnerShadow {
   position: absolute;
@@ -139,15 +121,15 @@ align-items: center;
 /* sideflip-btns */
 
 .sideflip-btn {
-  display: flex;
-  flex-direction: row;
-  height: 40px;
-  width: 100%;
-  justify-content:space-between; 
   position: absolute;
-  top: 48%;
-  
-  /* border: 1px solid black; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+  align-items: center;
+  top: 0px;
+  bottom: 0;
+  margin: auto;
 }
 /* .sideflip-btn1{
   height:40px;
@@ -174,17 +156,13 @@ align-items: center;
 /* downward-buttons */
 
 .downwards-bar {
-  height: 42px;
-  width: 230px;
-  /* border: 1px solid black; */
-  margin-top: 10px;
   margin-right: auto;
   margin-left: auto;
   z-index: 2;
   display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  border: 1px solid black
+  background: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
 }
 
 .btn1 {
@@ -195,110 +173,100 @@ align-items: center;
   margin-right: auto;
   margin-top: -25%;
   background-color: white;
-
 }
 
 .btn2 {
-  height: 38px;
-  width: 38px;
+  height: 42px;
+  width: 42px;
   cursor: pointer;
   border: 1px solid white;
 }
 
 .fa-chevron-left {
-  height: 38px;
-  width: 38px;
+  height: 42px;
+  width: 42px;
   padding-top: 13px;
   padding-left: 13px;
-  color: white;
+  color: #777;
   border: 1px solid white;
-  background-color: rgb(75, 73, 73);
+  /* background-color: white; */
+  cursor: pointer;
 }
 
-
 .btn3 {
-  height: 38px;
-  width: 38px;
+  height: 42px;
+  width: 42px;
   cursor: pointer;
   border: 1px solid white;
 }
 
 .fa-chevron-right {
-
-  height: 38px;
-  width: 38px;
+  height: 42px;
+  width: 42px;
   padding-top: 13px;
   padding-left: 14px;
-  color: white;
-  border: 1px solid white;
-  background-color: rgb(75, 73, 73);
+  color: #777;
+  border: 1px solid white; /* background-color: white; */
 }
 
 .btn4 {
-  height: 38px;
-  width: 38px;
+  height: 42px;
+  width: 42px;
   cursor: pointer;
   border: 1px solid white;
 }
 
 .fa-search-plus {
-  height: 38px;
-  width: 38px;
+  height: 42px;
+  width: 42px;
   padding-top: 13px;
   padding-left: 13px;
-  color: white;
+  color: #777;
   border: 1px solid white;
-  background-color: rgb(75, 73, 73);
+  /* background-color: white; */
 }
 
 .btn5 {
-  height: 38px;
-  width: 38px;
+  height: 42px;
+  width: 42px;
   cursor: pointer;
   border: 1px solid white;
-
 }
 
 .fa-search-minus {
-  height: 38px;
-  width: 38px;
+  height: 42px;
+  width: 42px;
   padding-top: 13px;
   padding-left: 12px;
+  color: #777;
   border: 1px solid white;
-  color: white;
-
-  background-color: rgb(75, 73, 73);
+  /* background-color: white; */
 }
 
 .btn6 {
-  height: 38px;
-  width: 38px;
+  height: 42px;
+  width: 42px;
   cursor: pointer;
   border: 1px solid white;
-
 }
 
 .fa-arrows-alt {
-  height: 38px;
-  width: 38px;
+  height: 42px;
+  width: 42px;
   padding-top: 13px;
   padding-left: 12px;
+  color: #777;
   border: 1px solid white;
-  color: white;
-
-  background-color: rgb(75, 73, 73);
+  /* background-color: white; */
 }
 
 .fa-share-alt {
-  height: 38px;
-  width: 38px;
-  padding-left: 12px;
-  padding-top: 13px;
+  height: 42px;
+  width: 42px;
   color: white;
-  margin-top: 1px;
-  background-color: rgb(75, 73, 73);
+  color: #777;
   border: 1px solid white;
-  cursor: pointer;
+  /* background-color: white; */
 }
 
 .exit {
@@ -309,14 +277,11 @@ align-items: center;
   right: 2%;
 }
 
-
 .total-magzine {
   height: 100vh;
 }
 
-
 /* social-media-pop-up-share-icons */
-
 
 .link-copied-to-clipboard {
   height: 20px;
@@ -341,11 +306,10 @@ align-items: center;
 
   box-shadow: 0px 0px 25px black;
   transform: translate(-50%, -50%) scale(1.2);
-  transition: top 0s 0.2s ease-in-out,
+  transition:
+    top 0s 0.2s ease-in-out,
     opacity 0.2s 0s ease-in-out,
     transform 0.2s 0s ease-in-out;
-
-
 }
 
 .pop-up-share-icons-close {
@@ -356,9 +320,6 @@ align-items: center;
   height: 0px;
   display: inline;
 }
-
-
-
 
 .pop-up-share-icons :is(header, .icons, .field) {
   display: flex;
@@ -425,21 +386,21 @@ header .close:hover {
 }
 
 .icons .fb {
-  color: #1877F2;
+  color: #1877f2;
   border-color: 1pc solid #b7d4fb;
 }
 
 .icons .fb:hover {
-  color: #1877F2;
+  color: #1877f2;
 }
 
 .icons .tw {
-  color: #46C1F6;
+  color: #46c1f6;
   border-color: #b6e7fc;
 }
 
 .icons .tw:hover {
-  color: #46C1F6;
+  color: #46c1f6;
 }
 
 .icons .li {
@@ -452,12 +413,12 @@ header .close:hover {
 }
 
 .icons .wt {
-  color: #25D366;
+  color: #25d366;
   border-color: #bef4d2;
 }
 
 .icons .wt:hover {
-  color: #25D366;
+  color: #25d366;
 }
 
 .icons .tl {
@@ -491,10 +452,9 @@ header .close:hover {
 }
 
 .field i {
-  width: 38px;
+  width: 42px;
   font-size: 18px;
   text-align: center;
-
 }
 
 .field.active i {
@@ -522,3 +482,79 @@ header .close:hover {
 .field button:hover {
   color: #0088cc;
 }
+
+.downwards-bar i {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none !important;
+  font-size: 13px;
+  transition: 0.3s;
+  transition-property: opacity, color, background-color;
+}
+
+.downwards-bar i:hover {
+  background: #eee;
+  color: #00acce;
+}
+
+div.ebookBtns {
+  width: 42px;
+  height: 42px;
+  border: 0px !important;
+  cursor: pointer;
+  transition: 0.3s;
+  transition-property: opacity, color, background-color;
+}
+
+div.ebookBtns:first-child {
+  border-radius: 5px 0px 0px 0;
+}
+.sideflip-btn span.nvIco {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  background: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 42px;
+  cursor: pointer;
+}
+
+span.nvIco .fa-solid.fa-chevron-left,
+span.nvIco .fa-solid.fa-chevron-right {
+  height: unset;
+  width: unset;
+  border: none;
+  padding: 0;
+}
+
+span.nvIco:hover {
+  transform: scale(1.1);
+  color: #00acce;
+}
+
+span.nvIco:hover i {
+  color: #00acce;
+}
+.emagzine-container .stf__block {
+  background: #ffffff69;
+  backdrop-filter: blur(8px);
+  box-shadow:
+    rgba(0, 0, 0, 0.19) 0px 10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 12px;
+}
+
+.bookUi.--simple.stf__item.--soft.--left {
+  border-radius: 10px 0px 0px 10px !important;
+  overflow: hidden !important;
+}
+.bookUi.--simple.stf__item.--soft.--right {
+  border-radius: 0px 10px 10px 0px !important;
+  overflow: hidden !important;
+}
+

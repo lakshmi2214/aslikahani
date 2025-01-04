@@ -1,4 +1,4 @@
-import React, { useState,  useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import HTMLFlipBook from "react-pageflip";
 import { useLocation } from "react-router-dom";
 import { useRef } from 'react';
@@ -17,10 +17,10 @@ function Flipbook() {
 
     //Api fetching
     const [datavalue, setDatavalue] = useState([]);
-    const [tmp, setTmp] = useState([]); 
+    const [tmp, setTmp] = useState([]);
 
-//   const [data, setData] = useState([]);
- 
+    //   const [data, setData] = useState([]);
+
     useEffect(() => {
         if (location) {
             var urlcomponent = location.pathname.split('/');
@@ -30,32 +30,32 @@ function Flipbook() {
         const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/emagzines/get?url=${tmp}`
         fetch(url).then(res => res.json())
             .then(res => {
-               
+
                 setDatavalue(res)
-                
+
             })
-            // const url1 = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/emagzines/get?url=${tmp}&meta=true`
-            // fetch(url1).then(res => res.json())
-            //   .then(res => {
-            //     setData(res)
-            //     console.log(res)
-        
-            //   })
+        // const url1 = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/emagzines/get?url=${tmp}&meta=true`
+        // fetch(url1).then(res => res.json())
+        //   .then(res => {
+        //     setData(res)
+        //     console.log(res)
+
+        //   })
     }, [])
 
     //Flipbook
 
     const Page = React.forwardRef((props, ref) => {
-      
+
         const book = useRef();
         return (
             <TransformWrapper >
                 <TransformComponent >
-                    <div className="demoPage" ref={ref} style={{pointerEvents:"none"}}>
-                        <p style={{pointerEvents:"none"}}>{props.children}</p>
+                    <div className="demoPage" ref={ref} style={{ pointerEvents: "none" }}>
+                        <p style={{ pointerEvents: "none" }}>{props.children}</p>
                     </div>
-                 </TransformComponent>
-             </TransformWrapper>
+                </TransformComponent>
+            </TransformWrapper>
         );
     });
 
@@ -79,7 +79,7 @@ function Flipbook() {
 
     const [isOpen, setIsOpen] = useState(false);
 
-    const shareUrl = process.env.REACT_APP_DOMAIN_NAME+`/emagazine/${tmp}/preview`;
+    const shareUrl = process.env.REACT_APP_DOMAIN_NAME + `/emagazine/${tmp}/preview`;
     const title = 'ASLIKAHANI';
 
     const openPopup = () => {
@@ -95,7 +95,7 @@ function Flipbook() {
 
     //copy to clipboard
 
-    const textToCopy = process.env.REACT_APP_DOMAIN_NAME+`/emagazine/${tmp}/preview`;
+    const textToCopy = process.env.REACT_APP_DOMAIN_NAME + `/emagazine/${tmp}/preview`;
 
     const [copied, setCopied] = useState(false);
 
@@ -119,35 +119,27 @@ function Flipbook() {
     let [isFullScreen, setFullScreen] = useState(false);
     const book = useRef();
 
-    //audio clip for page flip
 
     const [play] = useSound(page);
-    const handlePageFlip = (page) => {
-        console.log(`Page flipped: ${page}`);
-        // Play the sound when a page is flipped
-        play();
-    };
     return (
-        <div>
+        <div className='emagzine-container'>
             <FullScreen
                 isFullScreen={isFullScreen}
                 onChange={(isFull = true) => {
                     setFullScreen(isFull)
                 }}>
-                      <div className='sideflip-btn'>
-                        <div className='sideflip-btn1'>
-                                <div onClick={() => {
-                                                      book.current.pageFlip().flipPrev();
-                                                      play();
-                                                      }} className='prev-btn'>  <span className="glyphicon glyphicon-chevron-left"></span></div>
-                            </div>
-                            <div className='sideflip-btn2'>
-                                <div onClick={() => {
-                                                      book.current.pageFlip().flipNext();
-                                                      play();
-                                                      }} className='next-btn'><span className="glyphicon glyphicon-chevron-right"></span></div>
-                            </div>
+                <div className='sideflip-btn'>
+                    <div className='sideflip-btn1'>
+                        <div onClick={() => {
+                            book.current.pageFlip().flipPrev();
+                        }} className='prev-btn'>  <span className="nvIco"><i class="fa-solid fa-chevron-left"></i></span></div>
                     </div>
+                    <div className='sideflip-btn2'>
+                        <div onClick={() => {
+                            book.current.pageFlip().flipNext();
+                        }} className='next-btn'><span className="nvIco"><i class="fa-solid fa-chevron-right"></i></span></div>
+                    </div>
+                </div>
                 <div id='total-magzine' >
                     <div className="image-viewer">
                         <div style={{ marginTop: "1%", marginBottom: "1%" }}><a href="/"><img src={logosmall} className="rounded mx-auto d-block" alt="logo" style={{ height: "50px", width: "250px" }} /></a></div>
@@ -156,46 +148,47 @@ function Flipbook() {
                             height={500}
                             style={imageStyles}
                             ref={book}
-                            onFlip={handlePageFlip}
-                            >
+                            onFlip={(e) => {
+                                console.log(`Page flipped: ${e.data}`);
+                                play(); // Trigger sound on actual page flip
+                            }}
+                        >
                             {datavalue.map((item, index) => {
                                 // console.log(item)
                                 return (
 
-                                    <div key={index} className='boxing' style={{ maxWidth: "100%" , pointerEvents:"none"}} onClick={null}>
-                                        <Page number="1" 
-                                        style={{PointerEvent:"none"}}> 
-                                            <img src={item.images} alt="Zoomable" className='api-images' style={{pointerEvents:"none"}} onClick={null}/>
+                                    <div key={index} className='bookUi' style={{ maxWidth: "100%", pointerEvents: "none" }} onClick={null}>
+                                        <Page number="1"
+                                            style={{ PointerEvent: "none" }}>
+                                            <img src={item.images} alt="Zoomable" className='api-images' style={{ pointerEvents: "none" }} onClick={null} />
                                         </Page>
                                     </div>
                                 )
                             })}
                         </HTMLFlipBook>
-                  
+
                         <div className='downwards-bar' style={{ marginBottom: "2%", marginTop: "2%" }}>
-                            <div className='btn2'>
+                            <div className='btn2 ebookBtns'>
                                 <div onClick={() => {
-                                                      book.current.pageFlip().flipPrev();
-                                                      play();
-                                                      }} className='prev-btn'><i className="fa fa-chevron-left" aria-hidden="true"></i></div>
+                                    book.current.pageFlip().flipPrev();
+                                }} className='prev-btn'><i className="fa fa-chevron-left" aria-hidden="true"></i></div>
                             </div>
-                            <div className='btn3'>
+                            <div className='btn3 ebookBtns'>
                                 <div onClick={() => {
-                                                      book.current.pageFlip().flipNext();
-                                                      play();
-                                                      }} className='next-btn'><i className="fa fa-chevron-right" aria-hidden="true"></i></div>
+                                    book.current.pageFlip().flipNext();
+                                }} className='next-btn'><i className="fa fa-chevron-right" aria-hidden="true"></i></div>
                             </div>
-                            <div className='btn4'>
+                            <div className='btn4 ebookBtns'>
                                 <div onClick={handleZoomIn}><i className="fa fa-search-plus" aria-hidden="true"></i></div>
                             </div>
-                            <div className='btn5'>
+                            <div className='btn5 ebookBtns'>
                                 <div onClick={handleZoomOut}><i className="fa fa-search-minus" aria-hidden="true"></i></div>
                             </div>
 
-                            <div className='btn6'>
+                            <div className='btn6 ebookBtns'>
                                 <div onClick={() => setFullScreen(true)}><i className="fa fa-arrows-alt" aria-hidden="true"></i></div>
                             </div>
-                            <div onClick={() => { openPopup() }}>
+                            <div className='ebookBtns' onClick={() => { openPopup() }}>
                                 <i className="fa fa-share-alt" aria-hidden="true"></i>
                             </div>
                         </div>
@@ -234,8 +227,8 @@ function Flipbook() {
                                 <div className="field">
                                     <i className="url-icon uil uil-link"></i>
                                     {/* <input type="text" readonly value="https://aslikahani.com/emagzine/asli-kahani-edition-20/preview" clipboardCopy /> */}
-                                    <input type="text" readonly value={process.env.REACT_APP_DOMAIN_NAME+`/emagazine/${tmp}/preview`} clipboardCopy />
-                                                                        
+                                    <input type="text" readonly value={process.env.REACT_APP_DOMAIN_NAME + `/emagazine/${tmp}/preview`} clipboardCopy />
+
                                     {/* {process.env.REACT_APP_DOMAIN_NAME+'/emagazine/'+data.url+'/preview' */}
                                     <button onClick={handleCopyClick}><i className="fa-solid fa-copy"></i></button>
                                     {copied && <div className='link-copied-to-clipboard'>link copied to clipboard!</div>}
