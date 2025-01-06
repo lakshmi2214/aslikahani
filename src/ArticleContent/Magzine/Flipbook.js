@@ -20,7 +20,6 @@ function Flipbook() {
     const [datavalue, setDatavalue] = useState([]);
     const [tmp, setTmp] = useState([]);
 
-    //   const [data, setData] = useState([]);
 
     useEffect(() => {
         if (location) {
@@ -35,13 +34,6 @@ function Flipbook() {
                 setDatavalue(res)
 
             })
-        // const url1 = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/emagzines/get?url=${tmp}&meta=true`
-        // fetch(url1).then(res => res.json())
-        //   .then(res => {
-        //     setData(res)
-        //     console.log(res)
-
-        //   })
     }, [])
 
     //Flipbook
@@ -67,7 +59,7 @@ function Flipbook() {
         // Function to detect device type and set zoom level
         const adjustZoomForDevice = () => {
             if (window.innerWidth <= 768) {
-                setZoomLevel(100); // Set zoom level for mobile
+                setZoomLevel(90); // Set zoom level for mobile
             } else {
                 setZoomLevel(150); // Default zoom level for desktop
             }
@@ -163,11 +155,11 @@ function Flipbook() {
                 </div>
                 <div id='total-magzine' >
                     <div className="image-viewer">
-                        {/* <div style={{ marginTop: "1%", marginBottom: "1%" }}><a href="/"><img src={logosmall} className="rounded mx-auto d-block" alt="logo" style={{ height: "50px", width: "250px" }} /></a></div> */}
                         <HTMLFlipBook
                             width={380}
                             height={500}
                             style={imageStyles}
+                            showCover = {true}
                             ref={book}
                             onFlip={(e) => {
                                 console.log(`Page flipped: ${e.data}`);
@@ -175,7 +167,6 @@ function Flipbook() {
                             }}
                         >
                             {datavalue.map((item, index) => {
-                                // console.log(item)
                                 return (
 
                                     <div key={index} className='bookUi' style={{ maxWidth: "100%", pointerEvents: "none" }} onClick={null}>
@@ -189,16 +180,6 @@ function Flipbook() {
                         </HTMLFlipBook>
 
                         <div className='downwards-bar' style={{ marginBottom: "2%", marginTop: "2%" }}>
-                            {/* <div className='btn2 ebookBtns'>
-                                <div onClick={() => {
-                                    book.current.pageFlip().flipPrev();
-                                }} className='prev-btn'><i className="fa fa-chevron-left" aria-hidden="true"></i></div>
-                            </div> */}
-                            {/* <div className='btn3 ebookBtns'>
-                                <div onClick={() => {
-                                    book.current.pageFlip().flipNext();
-                                }} className='next-btn'><i className="fa fa-chevron-right" aria-hidden="true"></i></div>
-                            </div> */}
                             <div className='btn4 ebookBtns'>
                                 <div onClick={handleZoomIn}><i className="fa fa-search-plus" aria-hidden="true"></i></div>
                             </div>
@@ -246,10 +227,7 @@ function Flipbook() {
                                 <p>Or copy link</p>
                                 <div className="field">
                                     <i className="url-icon uil uil-link"></i>
-                                    {/* <input type="text" readonly value="https://aslikahani.com/emagzine/asli-kahani-edition-20/preview" clipboardCopy /> */}
                                     <input type="text" readonly value={process.env.REACT_APP_DOMAIN_NAME + `/emagazine/${tmp}/preview`} clipboardCopy />
-
-                                    {/* {process.env.REACT_APP_DOMAIN_NAME+'/emagazine/'+data.url+'/preview' */}
                                     <button onClick={handleCopyClick}><i className="fa-solid fa-copy"></i></button>
                                     {copied && <div className='link-copied-to-clipboard'>link copied to clipboard!</div>}
                                 </div>
