@@ -13,7 +13,7 @@ import useSound from 'use-sound';
 import page from "./Jpeg/page.mp3"
 
 function Flipbook() {
-    
+
     const location = useLocation();
 
     //Api fetching
@@ -167,6 +167,48 @@ function Flipbook() {
                             }}
                         >
                             {datavalue.map((item, index) => {
+                                // Determine if it's the cover or last page
+                                const isCoverPage = index === 0;
+                                const isLastPage = index === datavalue.length - 1;
+
+                                // Dynamically set class names
+                                const pageClass = isCoverPage
+                                    ? "cover-page"
+                                    : isLastPage
+                                        ? "last-page"
+                                        : "inner-page";
+
+                                return (
+                                    <div
+                                        key={index}
+                                        className={`bookUi ${pageClass}`}
+                                        onClick={null}
+                                    >
+                                        <Page number={index + 1}>
+                                            <img
+                                                src={item.images}
+                                                alt="Zoomable"
+                                                className="api-images"
+                                                style={{ pointerEvents: "none" }}
+                                                onClick={null}
+                                            />
+                                        </Page>
+                                    </div>
+                                );
+                            })}
+                        </HTMLFlipBook>
+                        {/* <HTMLFlipBook
+                            width={380}
+                            height={500}
+                            style={imageStyles}
+                            showCover = {true}
+                            ref={book}
+                            onFlip={(e) => {
+                                console.log(`Page flipped: ${e.data}`);
+                                play(); // Trigger sound on actual page flip
+                            }}
+                        >
+                            {datavalue.map((item, index) => {
                                 return (
 
                                     <div key={index} className='bookUi' style={{ maxWidth: "100%", pointerEvents: "none" }} onClick={null}>
@@ -177,7 +219,7 @@ function Flipbook() {
                                     </div>
                                 )
                             })}
-                        </HTMLFlipBook>
+                        </HTMLFlipBook> */}
 
                         <div className='downwards-bar' style={{ marginBottom: "2%", marginTop: "2%" }}>
                             <div className='btn4 ebookBtns'>

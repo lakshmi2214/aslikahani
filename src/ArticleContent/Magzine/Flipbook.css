@@ -540,7 +540,7 @@ span.nvIco:hover {
 span.nvIco:hover i {
   color: #00acce;
 }
-.emagzine-container .stf__block {
+.emagzine-container .stf__block .bookUi{
   background: #ffffff69;
   backdrop-filter: blur(8px);
   box-shadow:
@@ -558,7 +558,14 @@ span.nvIco:hover i {
   overflow: hidden !important;
 }
 
-
+.bookUi.--simple.stf__item.--soft.cover-page {
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+.bookUi.last-page.stf__item {
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
 .downwards-bar {
   position: absolute;
   right: 0;
@@ -567,6 +574,21 @@ span.nvIco:hover i {
   top: unset;
   right: 23px;
 }
+
+
+/* .bookUi.cover-page.stf__item {
+  left: 0 !important;
+  right: 0 !important;
+  margin: auto !important;
+  transform: unset !important;
+  transform-origin: unset !important;
+  display: unset!important;
+  z-index: unset !important;
+}
+.bookUi.cover-page.stf__item:hover{
+  transform: unset !important;
+} */
+
 @media (max-width:768px) {
   .downwards-bar {
     position: relative;
