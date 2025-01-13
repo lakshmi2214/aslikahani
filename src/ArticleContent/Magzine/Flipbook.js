@@ -19,8 +19,35 @@ function Flipbook() {
     //Api fetching
     const [datavalue, setDatavalue] = useState([]);
     const [tmp, setTmp] = useState([]);
+    const [isMobile, setIsMobile] = useState(false); // Detect mobile or web
+    const [isCoverOpening, setIsCoverOpening] = useState(false); // Track if the cover is opening
+    const [currentPage, setCurrentPage] = useState(0); // Track current page
+    // Detect mobile or web
+    useEffect(() => {
+        const checkIsMobile = () => setIsMobile(window.innerWidth <= 768);
+        checkIsMobile();
 
+        // Add event listener for resize
+        window.addEventListener("resize", checkIsMobile);
 
+        // Cleanup event listener on unmount
+        return () => window.removeEventListener("resize", checkIsMobile);
+    }, []);
+    // Handle cover click
+    const handleCoverClick = () => {
+        setIsCoverOpening(true); // Apply blur effect when opening
+    };
+
+    // Handle page flip
+    const handlePageFlip = (e) => {
+        const flippedPage = e.data;
+        setCurrentPage(flippedPage);
+
+        // Remove blur effect when the cover page is fully opened or flipped back to the first page
+        if (flippedPage !== 0) {
+            setIsCoverOpening(false);
+        }
+    };
     useEffect(() => {
         if (location) {
             var urlcomponent = location.pathname.split('/');
@@ -155,48 +182,78 @@ function Flipbook() {
                 </div>
                 <div id='total-magzine' >
                     <div className="image-viewer">
-                        <HTMLFlipBook
-                            width={380}
-                            height={500}
-                            style={imageStyles}
-                            showCover = {true}
-                            ref={book}
-                            onFlip={(e) => {
-                                console.log(`Page flipped: ${e.data}`);
-                                play(); // Trigger sound on actual page flip
-                            }}
-                        >
-                            {datavalue.map((item, index) => {
-                                // Determine if it's the cover or last page
-                                const isCoverPage = index === 0;
-                                const isLastPage = index === datavalue.length - 1;
+                    <HTMLFlipBook
+  width={380}
+  height={500}
+  style={imageStyles}
+  showCover={true}
+  ref={book}
+  onFlip={handlePageFlip} // Handle page flip
+>
+  {!isMobile
+    ? datavalue.map((item, index) => {
+        // Web version: Interactive Flipbook
+        const isCoverPage = index === 0;
+        const isLastPage = index === datavalue.length - 1;
 
-                                // Dynamically set class names
-                                const pageClass = isCoverPage
-                                    ? "cover-page"
-                                    : isLastPage
-                                        ? "last-page"
-                                        : "inner-page";
+        const pageClass = isCoverPage
+          ? "cover-page"
+          : isLastPage
+          ? "last-page"
+          : "inner-page";
 
-                                return (
-                                    <div
-                                        key={index}
-                                        className={`bookUi ${pageClass}`}
-                                        onClick={null}
-                                    >
-                                        <Page number={index + 1}>
-                                            <img
-                                                src={item.images}
-                                                alt="Zoomable"
-                                                className="api-images"
-                                                style={{ pointerEvents: "none" }}
-                                                onClick={null}
-                                            />
-                                        </Page>
-                                    </div>
-                                );
-                            })}
-                        </HTMLFlipBook>
+        return (
+          <div
+            key={index}
+            className={`bookUi ${
+              isCoverPage && isCoverOpening
+                ? "cover-page cover-opening"
+                : isCoverPage
+                ? "cover-page"
+                : isLastPage
+                ? "last-page"
+                : "inner-page"
+            }`}
+            onClick={isCoverPage && currentPage === 0 ? handleCoverClick : null} // Trigger blur only on first page
+          >
+            <Page number={index + 1}>
+              <img
+                src={item.images}
+                alt="Zoomable"
+                className="api-images"
+                style={{ pointerEvents: "none" }}
+                onClick={null}
+              />
+            </Page>
+          </div>
+        );
+      })
+    : datavalue.map((item, index) => {
+        // Mobile version: Simple layout
+        const isCoverPage = index === 0;
+        const isLastPage = index === datavalue.length - 1;
+
+        const pageClass = isCoverPage
+          ? "cover-page"
+          : isLastPage
+          ? "last-page"
+          : "inner-page";
+
+        return (
+          <div key={index} className={`bookUi ${pageClass}`}>
+            <Page number={index + 1}>
+              <img
+                src={item.images}
+                alt="Zoomable"
+                className="api-images"
+                style={{ pointerEvents: "none" }}
+                onClick={null}
+              />
+            </Page>
+          </div>
+        );
+      })}
+</HTMLFlipBook>
                         {/* <HTMLFlipBook
                             width={380}
                             height={500}

@@ -540,15 +540,22 @@ span.nvIco:hover {
 span.nvIco:hover i {
   color: #00acce;
 }
-.emagzine-container .stf__block .bookUi{
+.emagzine-container .stf__block .bookUi {
+  background: #ffffff69;
+  /* backdrop-filter: blur(8px); */
+  box-shadow:
+    rgba(0, 0, 0, 0.19) 0px 10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 12px;
+}
+/* .emagzine-container .stf__block{
   background: #ffffff69;
   backdrop-filter: blur(8px);
   box-shadow:
     rgba(0, 0, 0, 0.19) 0px 10px 20px,
     rgba(0, 0, 0, 0.23) 0px 6px 6px;
   border-radius: 12px;
-}
-
+} */
 .bookUi.--simple.stf__item.--soft.--left {
   border-radius: 10px 0px 0px 10px !important;
   overflow: hidden !important;
@@ -575,7 +582,6 @@ span.nvIco:hover i {
   right: 23px;
 }
 
-
 /* .bookUi.cover-page.stf__item {
   left: 0 !important;
   right: 0 !important;
@@ -588,13 +594,72 @@ span.nvIco:hover i {
 .bookUi.cover-page.stf__item:hover{
   transform: unset !important;
 } */
+@media only screen and (min-width: 768px) {
+  .bookUi.cover-page.stf__item,
+  .bookUi.last-page.stf__item {
+    /* pointer-events: none; Disable interactions */
+    transform: none !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto;
+    z-index: 0 !important;
+  }
+  .bookUi.cover-page.stf__item:hover ~ .bookUi.inner-page.stf__item {
+    visibility: hidden !important; /* Hide the second page when hovering over the cover */
+  }
 
-@media (max-width:768px) {
+  /* Cover page styles */
+  .cover-page {
+    cursor: pointer;
+    background-color: #f5f5f5; /* Optional: Add background for visual distinction */
+  }
+
+  /* Blur effect when the cover page is opening */
+  .cover-page.cover-opening {
+    filter: blur(5px); /* Apply blur */
+  }
+
+  /* Last page styles */
+  .last-page {
+    background-color: #e0e0e0; /* Optional: Add background for visual distinction */
+  }
+
+  /* Inner pages */
+  .inner-page {
+    pointer-events: auto;
+  }
+}
+
+/* .emagzine-container .stf__block::before{
+  content: 'Start Reading';
+  position: absolute;
+  left: 0;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.emagzine-container .stf__block::after{
+  content: 'End';
+  position: absolute;
+  right: 0;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+} */
+@media (max-width: 768px) {
   .downwards-bar {
     position: relative;
     flex-flow: row;
     right: 0;
     left: 0;
     margin: auto;
-}
+  }
 }
