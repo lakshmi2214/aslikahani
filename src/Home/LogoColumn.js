@@ -67,7 +67,7 @@ function LogoColumn() {
             </div>
           </div>
           <div className='banner-header'>
-            <img className='img-fluid' src='https://media.aslikahani.in/advertisements/Goldbuyers-goldcompany.jpg' />
+            <img className='img-fluid' src='https://media.aslikahani.com/advertisements/Goldbuyers-goldcompany.jpg' />
           </div>
         </div>
       </div>

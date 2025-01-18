@@ -6,7 +6,7 @@ function MagazinePosts(props) {
   const handleNavigation = (item) => {
     // console.log(item);
 
-    navigate(`/emagazine/${item.url}`, { state: { item } });
+    navigate(`/emagazine/${item.url}/preview`, { state: { item } });
   }
   return (
     <div>
@@ -18,14 +18,14 @@ function MagazinePosts(props) {
             <div key={index}>
               <div className="item-container">
                 <div className='img-posts' onClick={() => handleNavigation(item, index)}>
-                  <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine/' + item.url}>
+                  <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine/' + item.url + '/preview'}>
                     <img src={item.cover_image} alt="test image" /></a>
                 </div>
                 <div className='content-posts'>
                 <h5>
-                  <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine/' + item.url} className='text-dark'>{item.title}</a>
+                  <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine/' + item.url + '/preview'} className='text-dark'>{item.title}</a>
                 </h5>
-                <li> by <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine/' + item.url}> <strong> {item.authored_by}</strong> </a></li>
+                <li> by  <strong> {item.authored_by}</strong> </li>
                 </div>
               </div>
             </div>
