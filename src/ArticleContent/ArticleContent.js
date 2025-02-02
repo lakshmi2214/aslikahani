@@ -35,8 +35,11 @@ function ArticleContent() {
 
         <div className='container'>
           <div className="row">
+          <div className="col-md-2 col-sm-12 col-xs-12" id="side-bar-right-2">
+          <ChaiTheoryAd addObject={value} />
+          </div>
             <RelatedArticleContent />
-            <div className="col-md-4 col-sm-12 col-xs-12" id="side-bar-right-2">
+            <div className="col-md-2 col-sm-12 col-xs-12" id="side-bar-right-2">
               <div className="theiaStickySidebar">
                 <aside>
                   <SristarAd2 addObject={value} />

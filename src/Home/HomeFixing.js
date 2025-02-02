@@ -4,12 +4,12 @@ function HomeFixing() {
   return (
     <div>
 
-<span class="banner_h">
+<span className="banner_h">
             <img src="Images\Top_Banner_4.png" alt="Banner" height="150" width ="1240" />
         </span>
 
         <nav>
-            <ul class="nav">
+            <ul className="nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
@@ -20,22 +20,22 @@ function HomeFixing() {
             </ul>
         </nav>
 
-        <span class="banner_l">
+        <span className="banner_l">
             <img src="Images\Side_Banner.jpg" alt="Banner" />
         </span>
 
-        <span class="banner_r">
+        <span className="banner_r">
             <img src="Images\Side_Banner.jpg" alt="Banner" />
         </span>
 
-        <h2 class="headers">Welcome to the Home Page!</h2>
+        <h2 className="headers">Welcome to the Home Page!</h2>
 
-        <div class="container">
+        <div className="container">
 
             Our aim is to provide the children of the community with an ever-changing variety of educational and fun toys to enhance
             their cognitive, social, emotional and physical development in the important first six years of their lives.
 
-            <br/><br/><span class="Links">Be sure to check out our Wikispace site with more information <a href="http://mysocialmediatools-pn.wikispaces.com/">here</a>!</span>
+            <br/><br/><span className="Links">Be sure to check out our Wikispace site with more information <a href="http://mysocialmediatools-pn.wikispaces.com/">here</a>!</span>
 
         </div>
 

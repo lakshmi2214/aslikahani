@@ -1,0 +1,100 @@
+/* ==== badges style  */
+.badgesContainer {
+    margin-bottom: 30px;
+    background: #d02b2b;
+    position: relative;
+    max-height: 0;
+    overflow: hidden;
+    transition:
+        max-height 0.5s ease-in-out,
+        padding 0.3s ease-in-out;
+}
+
+.hash-tagName {
+    display: flex;
+}
+
+.hash-tagName a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 4px;
+    margin: 0;
+    padding: 10px;
+}
+
+a.img-bages {
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+a.img-bages img {
+    max-width: 260px;
+}
+
+.hash-tagName a:hover {
+    text-decoration: none;
+    margin: 0;
+}
+
+a.img-bages:hover {
+    box-shadow: none;
+}
+/* ==== badges style  */
+
+.moreOpen {
+    position: absolute;
+    right: 0;
+    top: 0;
+    right: 0px;
+    z-index: 1;
+}
+
+.moreOpen button {
+    border: none;
+    color: white;
+    background: #FF5722;
+    border-radius: 0px 0px 0px 4px;
+    padding: 2px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.tagslisting {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.tagsImageCont {
+    width: 40%;
+}
+
+.openBadge {
+    max-height: 100px; /* Adjust as per content size */
+    padding: 10px 10px;
+    padding: 10px 12px;
+}
+
+.closedBadge {
+    max-height: 0;
+    padding: 0 10px;
+}
+
+button.CsLss i {
+    rotate: -180deg;
+}
+
+.moreOpen i {
+    transition: all .4s ease;
+}
+
+.moreOpen button {
+    min-width: 80px;
+    justify-content: center;
+}

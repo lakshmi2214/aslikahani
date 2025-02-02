@@ -1,29 +1,33 @@
-import React from 'react'
-// import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import button from "../images/button.jpg"
-
+import './tags.css'
 function Tags(props) {
-  // console.log(props);
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <>
-      <div className='badgesContainer'>
-          <div className='hash-tagName'>
-            {props.dataObject?.locations?.trendingTags?.map((item) => {
-              // console.log(item);
-              return (
-                <a href={process.env.REACT_APP_DOMAIN_NAME + '/search/' + item.tag_value}>
-                  <div className="badges-list">{item.tag_name}</div></a>
-              )
-            })}
-            <a className='img-bages' href={process.env.REACT_APP_DOMAIN_NAME + '/subscribe'}>
-              <img src={button} className='img-fluid' alt='button-img' /></a>
-          </div>
+    <div className='position-relative'>
+      <div className='moreOpen'>
+        <button className={`${isOpen ? 'CsLss': 'MsLss'}`} onClick={() => setIsOpen(!isOpen)}>{` ${isOpen ? 'Less': 'More' }`} 
+        <i className="fa-solid fa-circle-chevron-down"></i></button>
       </div>
-
-
-
-
-    </>
+      <div className={`badgesContainer ${isOpen ? "openBadge" : "closedBadeg"}`}>
+        <div className='container'>
+          <div className='hash-tagName'>
+            <div className='tagslisting'>
+              {props.dataObject?.locations?.trendingTags?.map((item) => {
+                return (
+                  <a href={process.env.REACT_APP_DOMAIN_NAME + '/search/' + item.tag_value}>
+                    <div className="badges-list">{item.tag_name}</div></a>
+                )
+              })}
+            </div>
+            <div className='tagsImageCont'>
+              <a className='img-bages' href={process.env.REACT_APP_DOMAIN_NAME + '/subscribe'}>
+                <img src={button} className='img-fluid' alt='button-img' /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 

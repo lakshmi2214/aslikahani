@@ -36,7 +36,7 @@ const Marquee = () => {
     return (
         <div>
             {data.length > 0 && (
-                <div class="marquee">
+                <div className="marquee">
                     <p> <span>Today's Rate - Gold 24k/1 g Rs {data[0].value}</span> | <span>Silver 24k/1 g Rs {data[1].value}</span> </p>
                     <p> <span>Today's Rate - Gold 24k/1 g Rs {data[0].value}</span> | <span>Silver 24k/1 g Rs {data[1].value}</span> </p>
                     <p> <span>Today's Rate - Gold 24k/1 g Rs {data[0].value}</span> | <span>Silver 24k/1 g Rs {data[1].value}</span> </p>

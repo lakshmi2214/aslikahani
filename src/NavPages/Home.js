@@ -187,7 +187,7 @@ function Home() {
           </div>
         </div>
       </section>
-      {/* <div class="marquee">
+      {/* <div className="marquee">
         <p> Today's Rate | Gold 24k/1 g Rs 7700, To get 100% value of your gold call 63 66 333 444 </p>
         <p> Today's Rate | Gold 24k/1 g Rs 7700, To get 100% value of your gold call 63 66 333 444 </p>
         <p> Today's Rate | Gold 24k/1 g Rs 7700, To get 100% value of your gold call 63 66 333 444 </p>

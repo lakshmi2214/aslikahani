@@ -172,12 +172,12 @@ function Flipbook() {
                     <div className='sideflip-btn1'>
                         <div onClick={() => {
                             book.current.pageFlip().flipPrev();
-                        }} className='prev-btn'>  <span className="nvIco"><i class="fa-solid fa-chevron-left"></i></span></div>
+                        }} className='prev-btn'>  <span className="nvIco"><i className="fa-solid fa-chevron-left"></i></span></div>
                     </div>
                     <div className='sideflip-btn2'>
                         <div onClick={() => {
                             book.current.pageFlip().flipNext();
-                        }} className='next-btn'><span className="nvIco"><i class="fa-solid fa-chevron-right"></i></span></div>
+                        }} className='next-btn'><span className="nvIco"><i className="fa-solid fa-chevron-right"></i></span></div>
                     </div>
                 </div>
                 <div id='total-magzine' >

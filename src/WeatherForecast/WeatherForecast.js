@@ -507,14 +507,14 @@ function WeatherForecast() {
     return (
         <div>
 
-            <div class="containers">
+            <div className="containers">
                 <h1>Weather Forecast</h1>
-                <div class="locationDiv">
-                    <div class="innerLocationDiv"><b>Country:</b> <span class="country"></span></div>
-                    <div class="innerLocationDiv"><b>City/Region:</b> <span class="region"></span></div>
+                <div className="locationDiv">
+                    <div className="innerLocationDiv"><b>Country:</b> <span className="country"></span></div>
+                    <div className="innerLocationDiv"><b>City/Region:</b> <span className="region"></span></div>
                 </div>
 
-                <div class="description">
+                <div className="description">
                     <div id="toggleBtn"><span>Toggle to &#8457;</span></div>
                 </div>
 

@@ -8,7 +8,7 @@
   min-width: 200px;
   position: relative;
   font-size: 14px;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
   width: 100%;
   font-weight: 400;
   clear: both;
@@ -39,7 +39,7 @@
   border: none;
   box-shadow: none;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
   font-weight: 400;
 }
 
@@ -200,7 +200,7 @@
   /* color: #FFF; */
   background-color: #f44a56;
   color:black;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
   font-weight: 400;
   outline: none;
 }
@@ -214,7 +214,7 @@
   width:100px;
   color:black;
   background-color: #f44a56;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif; 
   font-weight: 400;
   outline: none;
 }  */
@@ -799,7 +799,7 @@
   padding: 0.75em 1.25em;
   display: block;
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
   font-size: 0.875em;
   font-weight: 500;
   position: relative;
@@ -834,7 +834,7 @@
 .megaMenu .drop-down a span.description {
   /* description */
   display: block;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
   font-size: 0.6875em;
   font-weight: 600;
   text-transform: uppercase;

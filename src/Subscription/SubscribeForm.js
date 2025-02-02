@@ -25,7 +25,7 @@ function SubscribeForm() {
                   <label for="comment" style={{ marginLeft: "20px" }}><h4>Comment / Message</h4></label>
                   <textarea className="form-control" rows="5" id="comment"></textarea>
                   {/* <div className=' form-subscribe'> */}
-                  <button type="button" class="btn btn-danger" style={{width:"35%", left:"35%", marginTop:"5%"}}>Submit</button>
+                  <button type="button" className="btn btn-danger" style={{width:"35%", left:"35%", marginTop:"5%"}}>Submit</button>
 </form>
 </div>
 <br></br>

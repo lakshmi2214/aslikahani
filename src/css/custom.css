@@ -1,10 +1,10 @@
 @charset "utf-8";
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,400italic,500italic,500,700,900);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url(animate.css);
 @import url(iconmoon.css);
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Montserrat", serif !important;
     color: #444444;
     font-size: 14px;
 }
@@ -12,7 +12,7 @@ body {
 p {
     color: #444444;
     font-size: 14px;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
 }
 
 .wrapper {
@@ -171,7 +171,7 @@ a:hover {
 
 .cp-featured-news-slider .cp-post-content h1 {
     font-size: 30px;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     font-weight: 700;
     color: #fff;
     margin: 0px;
@@ -201,7 +201,7 @@ a:hover {
 
 .cp-featured-news-slider .btn {
     padding: 5px 14px;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     font-weight: 900;
     font-size: 14px;
     border-radius: 2px;
@@ -258,7 +258,7 @@ a:hover {
 .cp-post-content h3 {
     margin: 0px;
     padding: 0px;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     font-weight: 500;
 }
 
@@ -2040,7 +2040,7 @@ nav ul li.active {
     font-weight: 500;
     line-height: 26px;
     text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
 }
 
 .cp-product-grid ul.grid h3 a {
@@ -2052,7 +2052,7 @@ nav ul li.active {
     font-size: 18px;
     font-weight: 700;
     color: #222222;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     line-height: 22px;
 }
 
@@ -2060,7 +2060,7 @@ nav ul li.active {
 .cp-product-details .price ins {
     font-size: 30px;
     font-weight: 700;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     text-decoration: none;
     line-height: 30px;
 }
@@ -3309,7 +3309,7 @@ nav ul li.active {
 .cp-login-form .material-group-item>label {
     font-size: 14px;
     color: #888;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
 }
 
 .cp-login-form .btn-submit {

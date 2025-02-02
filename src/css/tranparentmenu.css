@@ -61,7 +61,7 @@
 .navbar-default .navbar-nav > li > a {
      color: #FFF;
     display: block;
-    font-family: Raleway,sans-serif;
+    /* font-family: Raleway,sans-serif; */
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 2px;
@@ -81,7 +81,7 @@
    color: #FFF;
    background-color: #6ACAC3;
     display: block;
-    font-family: Raleway,sans-serif;
+    /* font-family: Raleway,sans-serif; */
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 2px;
@@ -124,7 +124,7 @@
 	}
 .dropdown-menu > li > a {
    color: #707070;
-    font-family: Raleway,sans-serif;
+    /* font-family: Raleway,sans-serif; */
     font-size: 14px;
     font-weight: 500;
     padding: 12px 15px !important;
@@ -143,7 +143,7 @@
 .current-time {
 	color: #595959;
     display: block;
-    font-family: Raleway,sans-serif;
+    /* font-family: Raleway,sans-serif; */
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 2px;
@@ -169,7 +169,7 @@
 }
 .current-time span {
     float: left;
-    font-family: Raleway,sans-serif;
+    /* font-family: Raleway,sans-serif; */
     letter-spacing: 1px;
     margin-left: 15px;
     text-transform: uppercase;
