@@ -5228,39 +5228,7 @@ footer .social-media-icons ul {
 .logo-img h2 span {
 	color: #d72516;
 }
-.search-bar-custom {
-	background: white;
-	box-shadow:
-		rgba(17, 17, 26, 0.05) 0px 1px 0px,
-		rgba(17, 17, 26, 0.1) 0px 0px 8px;
-	display: flex;
-	align-items: center;
-	padding-left: 20px;
-	width: 100%;
-	max-width: 320px;
-	gap: 10px;
-	border-radius: 100px;
-	position: relative;
-}
-.search-bar-custom button {
-	padding: 10px;
-	background: #439595;
-	border-radius: 100px;
-	color: white;
-	flex-shrink: 0;
-	width: 40px;
-	height: 40px;
-	font-size: 16px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
 
-.search-bar-custom input {
-	width: 100%;
-	padding: 10px 0px;
-	font-size: 13px;
-}
 
 .header-search {
 	display: flex;
@@ -6190,9 +6158,6 @@ section.inner-pages-section {
 	}
 	.badgesContainer {
 		background: linear-gradient(90deg, #ff98004d 1.59%, #ffc10769 84.61%);
-	}
-	.search-bar-custom {
-		max-width: unset;
 	}
 	
 	.midAddImg.my-xxl-4 {

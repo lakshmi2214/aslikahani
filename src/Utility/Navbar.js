@@ -82,7 +82,7 @@ function Navbar() {
 	return (
 		<div className="header-cont">
 			<div className="container">
-				<header>
+				<header className="headCts">
 					<nav className={`nav-linking ${isOpen ? "open" : ""}`}>
 						<li><Link to="/Home" className={`bar ${isActive("/Home")}`}>Home</Link></li>
 						<li><Link to="/Entertainment" className={`bar ${isActive("/Entertainment")}`}>Entertainment</Link></li>
