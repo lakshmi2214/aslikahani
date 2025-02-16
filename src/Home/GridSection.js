@@ -35,7 +35,7 @@ function GridSection(props) {
                         {grid?.locations?.Slider.slice(0, 1).map((item, index) => {
                             return (
                                 <div className='big-left-Img girdImagesHome'>
-                                    <div key={index} className='home-image-main' onClick={() => handleNavigation(item, index)}>
+                                    <div key={index} className='home-image-main mainHightlight' onClick={() => handleNavigation(item, index)}>
                                         <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url} className='img-redirection'>
                                             <img src={item.image} className='img-fluid' alt='img1' />
                                         </a>

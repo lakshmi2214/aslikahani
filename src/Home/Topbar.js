@@ -108,6 +108,9 @@ function Topbar() {
             <div className='container'>
                <div className='topNav'>
                   <div className='timerLeft'>
+                     <div className='magzNav'>
+                        <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine'}><i class="fa-solid fa-book-open-reader"></i>E-Magazine</a>
+                     </div>
                      <div className='timeSlot'>
                         <p>{formattedDate}</p>
                         <span>{formattedTime}</span>
@@ -132,6 +135,7 @@ function Topbar() {
                   </div>
                   <div className='socialRight'>
                      <ul className="socialIcons">
+                        <li><a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><i className="fa-brands fa-spotify"></i></a></li>
                         <li><a href=" https://www.facebook.com/aslikahani.in"><i className="fa-brands fa-facebook"></i> </a></li>
                         <li><a href="https://twitter.com/kahaniasli"><i className="fa-brands fa-x-twitter"></i></a></li>
                         <li><a href="https://www.youtube.com/@AsliKahani"><i className="fa-brands fa-youtube"></i></a></li>

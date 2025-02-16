@@ -85,6 +85,30 @@ ul.socialIcons a:hover i.fa-brands.fa-instagram {
   color: #e1306c;
 }
 
+
+.magzNav a {
+  align-items: center;
+  color: black;
+  border: 1px solid #D02B2B;
+  padding: 3px 7px;
+  border-radius: 8px;
+  display: inline-flex;
+  gap: 7px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #D02B3A;
+}
+.magzNav a:hover {
+  background: #D02B2B;
+  color: white;
+  text-decoration: none;
+}
+
+.magzNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @media (max-width: 768px) {
   .timeSlot {
     gap: 10px;

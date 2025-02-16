@@ -9,7 +9,7 @@ header.headCts {
 	justify-content: space-between;
 	padding: 10px 0px;
 }
-.header.headCts-cont {
+header.headCts-cont,.header-cont {
 	position: sticky;
 	top: 0px;
 	z-index: 1010;
@@ -204,13 +204,15 @@ nav {
 	margin-right: auto;
 	margin-top: -10%;
 }
-
+.nav-linking a.emagActive{
+	background: #D02B2B;
+    color: white;
+    padding: 8px 10px;
+}
 
 
 .nav-linking a:hover,.nav-linking a.barActive {
-    background: #D02B2B;
-    color: white;
-    padding: 8px 10px;
+    
 }
 
 .nav-linking a {
@@ -218,4 +220,30 @@ nav {
     color: black;
     padding: 8px 10px;
     transition: all .2s ease;
+}
+
+.nav-linking a {
+    position: relative;
+    display: inline-flex;
+    text-decoration: none;
+    color: #333;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.nav-linking a:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px; /* Adjust thickness */
+    background: #d02a2b; /* Adjust color */
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-linking a:hover:after{
+    width: 100%;
 }
