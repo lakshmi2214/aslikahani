@@ -353,15 +353,20 @@
 }
 } */
 
+.home-image-main.mainHightlight a img {
+  max-height: 490px;
+  width: 100%;
+  object-fit: cover;
+}
 .home-image-main.mainHightlight {
-  padding: 5px;
+  /* padding: 5px; */
   text-align: center;
   font-size: 18px;
   font-weight: bold;
   color: white;
-  background: linear-gradient(45deg, #ff6600, #ffcc00, #33ccff);
+  /* background: linear-gradient(45deg, #ff6600, #ffcc00, #33ccff); */
   border-radius: 10px;
-  animation: pulse-effect 5s infinite ease-in-out;
+  /* animation: pulse-effect 5s infinite ease-in-out; */
   overflow: hidden;
 }
 

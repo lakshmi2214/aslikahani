@@ -26,6 +26,8 @@ import AllTimeBest from "../Home/Content/AllTimeBest";
 // import rightBanner from "../images/banner1.jpg"
 import Topbar from "../Home/Topbar";
 import Marquee from "../Component/Marquee";
+import SwiperCustom from "../Home/Swiper/Swiper";
+import VideoSection from "../Home/VideoSection/VideoSection";
 
 function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -79,8 +81,10 @@ function Home() {
               </div>
             </div>
             <div className="col-md-10">
-              <GridSection dataObject={result} />
-              <div className="youtubeshort-container">
+              <SwiperCustom dataObject={result} />
+              {/* <GridSection dataObject={result} /> */}
+              <VideoSection/>
+              {/* <div className="youtubeshort-container">
                 <div className="sortsHeading">
                   <h4><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" focusable="false" >
                     <g>
@@ -117,7 +121,7 @@ function Home() {
                   </div>
 
                 </div>
-              </div>
+              </div> */}
               <div className="subData-grid-container">
 
                 <div className="row">
@@ -192,10 +196,8 @@ function Home() {
         <p> Today's Rate | Gold 24k/1 g Rs 7700, To get 100% value of your gold call 63 66 333 444 </p>
         <p> Today's Rate | Gold 24k/1 g Rs 7700, To get 100% value of your gold call 63 66 333 444 </p>
       </div> */}
-      <Marquee/>
+      <Marquee />
       <Footer />
-
-
     </>
   );
 }

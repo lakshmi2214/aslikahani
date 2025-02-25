@@ -1,0 +1,58 @@
+.sliderOuter {
+    margin-bottom: 30px;
+}
+
+.sliderOuter .swiper-wrapper {
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    padding-bottom: 30px;
+}
+
+.sliderOuter .swiper-button-prev {
+    top: 0;
+    width: 50px;
+    left: 0;
+    bottom: 0;
+    background: transparent;
+    border-radius: 10px 10px 10px 10px;
+    margin: auto;
+    height: auto;
+}
+
+.sliderOuter .swiper-button-next {
+    top: 0;
+    width: 50px;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    border-radius: 10px 10px 10px 10px;
+    height: auto;
+    margin: auto;
+}
+
+.sliderOuter .swiper-button-prev:after,
+.sliderOuter .swiper-button-next:after {
+    color: #66380b;
+}
+
+.sliderOuter .swiper-button-prev:hover,
+.sliderOuter .swiper-button-next:hover {
+    background: #0c0c0c24;
+}
+
+.sliderOuter .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .sliderOuter .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+        display: none;
+    }
+
+    .sliderOuter .swiper-wrapper {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
