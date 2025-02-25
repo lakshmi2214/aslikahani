@@ -116,9 +116,6 @@ function Home() {
                   <div className="short-slide-card">
                     <iframe width="195" height="350" src="https://www.youtube.com/embed/jcx54Bl36YU" title="Mirabai Chanu’s journey from Manipur to the global stage is quite remarkable" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                   </div>
-                  <div className="short-slide-card">
-                    <iframe width="195" height="350" src="https://www.youtube.com/embed/pO7k-vYWv0A" title="On Tuesday, an Indian Air Force plane encountered a mishap in Rajasthan’s Jaisalmer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                  </div>
 
                 </div>
               </div> */}
