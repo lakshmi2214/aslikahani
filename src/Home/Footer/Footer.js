@@ -81,23 +81,23 @@ function Footer() {
 
       <>
          <section className="footer-section">
-               <footer class="footerInner">
+               <footer className="footerInner">
             <div className="container">
-                  <div class="footer-container">
-                     <div class="footer-logo">
+                  <div className="footer-container">
+                     <div className="footer-logo">
                         <img src={AslhiKahani} alt="Asli Kahani Logo"/>
                      </div>
-                     <div class="footer-description">
+                     <div className="footer-description">
                         <p>A captivating platform that takes you on a journey through the realms of imagination, inspiration, and cultural richness. Asli Kahani, meaning "Real Story" in Hindi, is a celebration of narratives that connect us, embracing diverse voices and bringing forth compelling tales from around the country.</p>
                      </div>
-                     <div class="footer-links">
-                        <a href="#"><i class="fas fa-book"></i> E-Magazine</a>
-                        <a href="#"><i class="fab fa-youtube"></i> Videos</a>
-                        <a href="#"><i class="fab fa-spotify"></i> Asli Kahani Podcasts</a>
+                     <div className="footer-links">
+                        <a href="#"><i className="fas fa-book"></i> E-Magazine</a>
+                        <a href="#"><i className="fab fa-youtube"></i> Videos</a>
+                        <a href="#"><i className="fab fa-spotify"></i> Asli Kahani Podcasts</a>
                      </div>
                   </div>
 
-                  <div class="footer-categories">
+                  <div className="footer-categories">
                      <a href="#">Entertainment</a>
                      <a href="#">Technology</a>
                      <a href="#">Business</a>
@@ -108,21 +108,21 @@ function Footer() {
                      <a href="#">Art & Culture</a>
                   </div>
 
-                  <hr class="footer-divider"/>
+                  <hr className="footer-divider"/>
 
-                     <div class="footer-bottom">
-                        <div class="footer-contact">
+                     <div className="footer-bottom">
+                        <div className="footer-contact">
                            <p>Email: <span>connect@aslikahani.com</span></p>
                            <p>Located at: <span>#280/1, Sampige Road, 18th cross, Malleshwaram.</span></p>
                         </div>
-                        <div class="footer-social">
-                           <a href="#"><i class="fab fa-x-twitter"></i></a>
-                           <a href="#"><i class="fab fa-instagram"></i></a>
-                           <a href="#"><i class="fab fa-facebook"></i></a>
+                        <div className="footer-social">
+                           <a href="#"><i className="fab fa-x-twitter"></i></a>
+                           <a href="#"><i className="fab fa-instagram"></i></a>
+                           <a href="#"><i className="fab fa-facebook"></i></a>
                         </div>
                      </div>
 
-                     <p class="footer-copyright">Copyright 2025 Asli Kahani. All rights reserved.</p>
+                     <p className="footer-copyright">Copyright 2025 Asli Kahani. All rights reserved.</p>
             </div>
                </footer>
          </section>

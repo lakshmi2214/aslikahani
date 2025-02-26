@@ -71,8 +71,8 @@ function Topbar() {
       lang: "en",
       unit: "metric",
    });
-
-   console.log("Weather API Data:", data); // Debugging: Check API response
+// 
+   // console.log("Weather API Data:", data); // Debugging: Check API response
    // ========= weather ============
    return (
       <>
@@ -109,7 +109,7 @@ function Topbar() {
                <div className='topNav'>
                   <div className='timerLeft'>
                      <div className='magzNav'>
-                        <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine'}><i class="fa-solid fa-book-open-reader"></i>E-Magazine</a>
+                        <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine'}><i className="fa-solid fa-book-open-reader"></i>E-Magazine</a>
                      </div>
                      <div className='timeSlot'>
                         <p>{formattedDate}</p>
