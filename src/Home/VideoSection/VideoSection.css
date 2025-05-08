@@ -19,7 +19,9 @@
     padding: 15px 15px;
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    background: linear-gradient(120deg, #ff0000, #832d2d);
+    background: white;
+    position: relative;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
 .videoHeader {
@@ -31,7 +33,7 @@
 
 .videoHeader h3 {
     font-size: 20px;
-    color: white;
+    color: black;
     font-weight: 600;
 }
 
@@ -68,5 +70,12 @@ button.bt-rvrs {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 section.videoSctin {
-    padding: 0;
+    padding: 10px;
+    position: relative;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 15px;
 }
+
+.videoSctin:before {content: '';position: absolute;background: linear-gradient(120deg, #ff0000, #832d2d);top: 0;left: 0;height: 100%;width: 100%;border-radius: 15px;}
+
+.videoContainer {}

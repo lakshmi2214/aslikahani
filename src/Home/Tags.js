@@ -4,10 +4,12 @@ import './tags.css'
 function Tags(props) {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className='position-relative'>
+    <div className='position-relative tagsCont'>
       <div className='moreOpen'>
-        <button className={`${isOpen ? 'CsLss': 'MsLss'}`} onClick={() => setIsOpen(!isOpen)}>{` ${isOpen ? 'Less': 'More' }`} 
-        <i className="fa-solid fa-circle-chevron-down"></i></button>
+        <button className={`${isOpen ? 'CsLss': 'MsLss'}`} onClick={() => setIsOpen(!isOpen)}>
+          {/* {` ${isOpen ? 'Less': 'More' }`}  */}
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
       <div className={`badgesContainer ${isOpen ? "openBadge" : "closedBadeg"}`}>
         <div className='container'>

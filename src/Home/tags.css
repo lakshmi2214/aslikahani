@@ -8,6 +8,7 @@
     transition:
         max-height 0.5s ease-in-out,
         padding 0.3s ease-in-out;
+    width: 100%;
 }
 
 .hash-tagName {
@@ -50,12 +51,15 @@ a.img-bages:hover {
     top: 0;
     right: 0px;
     z-index: 1;
+    top: -50px;
+    z-index: 1010;
+    right: 20px;
 }
 
 .moreOpen button {
     border: none;
-    color: white;
-    background: #FF5722;
+    color: black;
+    background: rebeccapurple;
     border-radius: 0px 0px 0px 4px;
     padding: 2px 10px;
     font-size: 13px;
@@ -95,6 +99,23 @@ button.CsLss i {
 }
 
 .moreOpen button {
-    min-width: 80px;
+    width: 40px;
     justify-content: center;
+    height: 40px;
+    border-radius: 100px;
+    background: white;
+    border: 1px solid;
+    font-size: 21px;
+}
+
+.position-relative.tagsCont {
+    /* top: -50px; */
+    /* z-index: 1010; */
+    /* right: 20px; */
+    /* pointer-events: none; */
+}
+@media (max-width :767px){
+    .position-relative.tagsCont {
+        display: none;
+    }
 }

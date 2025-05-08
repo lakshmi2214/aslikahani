@@ -1,50 +1,79 @@
 .sliderOuter {
     margin-bottom: 30px;
 }
-
+.sliderOuter .bigSwiper{
+    width:100%;
+}
 .sliderOuter .swiper-wrapper {
-    width: 90%;
+    /* width: 80%; */
     margin: auto;
     border-radius: 10px;
     padding-bottom: 30px;
 }
-
+.smallGridswiper .swiper-wrapper {
+    width:100%;
+}
 .sliderOuter .swiper-button-prev {
     top: 0;
     width: 50px;
-    left: 0;
+    left: -120px;
     bottom: 0;
-    background: transparent;
     border-radius: 10px 10px 10px 10px;
     margin: auto;
     height: auto;
+    background: #9e9e9e36;
+    height: 80px;
+    width: 80px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border: 1px solid #f8d6d4;
 }
 
 .sliderOuter .swiper-button-next {
     top: 0;
     width: 50px;
-    right: 0;
+    right: -120px;
     bottom: 0;
-    background: transparent;
+    background: #9e9e9e36;
     border-radius: 10px 10px 10px 10px;
     height: auto;
     margin: auto;
+    height: 80px;
+    width: 80px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border: 1px solid #f8d6d4;
 }
 
 .sliderOuter .swiper-button-prev:after,
 .sliderOuter .swiper-button-next:after {
-    color: #66380b;
+    color: #E91E63;
 }
 
 .sliderOuter .swiper-button-prev:hover,
 .sliderOuter .swiper-button-next:hover {
-    background: #0c0c0c24;
+    background: #ff572259;
 }
 
 .sliderOuter .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: 0;
 }
 
+.big-left-Img.girdImagesHome.miniGridSwwiper .overlayImg-text h4 {
+    font-size: 11px;
+}
+
+.big-left-Img.girdImagesHome.miniGridSwwiper .overlayImg-text p {
+    font-size: 10px;
+}
+.swiper-wrapper-custom {
+    position: relative;
+    width: 840px;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: visible; /* This is KEY to allow nav buttons to show outside */
+  }
+  .mySwiper.bigSwiper {
+    overflow: inherit;
+  }
 @media (max-width: 768px) {
     .sliderOuter .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
         display: none;
@@ -56,3 +85,4 @@
         padding: 0;
     }
 }
+

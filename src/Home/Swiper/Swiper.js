@@ -6,11 +6,12 @@ import { useNavigate } from "react-router-dom";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
 import './Swiper.css';
 
 // import required modules
-import { Autoplay, Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+import { Autoplay, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 
 // export default function SwiperCustom(props) {
 function SwiperCustom(props) {
@@ -20,11 +21,11 @@ function SwiperCustom(props) {
 
         navigate(`/${item.category}/${item.url}`, { state: { item } });
     }
-
+    const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const grid = props.dataObject;
     return (
         <div className='sliderOuter'>
-            <Swiper
+            {/* <Swiper
                 cssMode={true}
                 navigation={true}
                 pagination={{
@@ -56,7 +57,85 @@ function SwiperCustom(props) {
                         </SwiperSlide>
                     )
                 })}
-            </Swiper>
+            </Swiper> */}
+            <>
+                <div className='swiper-wrapper-custom '>
+                    <Swiper
+                        cssMode={true}
+
+                        pagination={{
+                            clickable: true,
+                        }}
+                        style={{
+                            '--swiper-navigation-color': '#fff',
+                            '--swiper-pagination-color': '#fff',
+                        }}
+                        mousewheel={true}
+                        keyboard={true}
+                        spaceBetween={10}
+                        navigation={true}
+                        thumbs={{ swiper: thumbsSwiper }}
+                        modules={[FreeMode, Navigation, Thumbs]}
+                        className="mySwiper bigSwiper"
+                        loop={true}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                    >
+                        {grid?.locations?.Slider.map((item, index) => {
+                            return (
+                                <SwiperSlide>
+                                    <div className='big-left-Img girdImagesHome'>
+                                        <div key={index} className='home-image-main mainHightlight' onClick={() => handleNavigation(item, index)}>
+                                            <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url} className='img-redirection'>
+                                                <img src={item.image} className='img-fluid' alt='img1' />
+                                            </a>
+                                        </div>
+                                        <div className='overlayImg-text' onClick={() => handleNavigation(item, index)}>
+                                            <h4> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url} >{item.title}</a></h4>
+                                            <p><a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.created_at} </a></p>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            )
+                        })}
+                    </Swiper>
+                </div>
+
+                <Swiper
+                    onSwiper={setThumbsSwiper}
+                    spaceBetween={10}
+                    slidesPerView={4}
+                    freeMode={true}
+                    loop={true}
+                    watchSlidesProgress={true}
+                    modules={[FreeMode, Navigation, Thumbs]}
+                    className="mySwiper smallGridswiper"
+                >
+                    {grid?.locations?.Slider.map((item, index) => {
+                        return (
+                            <SwiperSlide>
+                                <div className='big-left-Img girdImagesHome miniGridSwwiper'>
+                                    <div key={index} className='home-image-main mainHightlight'
+                                    // onClick={() => handleNavigation(item, index)}
+                                    >
+                                        <a className='img-redirection'>
+                                            <img src={item.image} className='img-fluid' alt='img1' />
+                                        </a>
+                                    </div>
+                                    <div className='overlayImg-text'
+                                    // onClick={() => handleNavigation(item, index)}
+                                    >
+                                        <h4> <a href="javascript:void(0)"  >{item.title}</a></h4>
+                                        <p><a href="javascript:void(0)">{item.created_at} </a></p>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        )
+                    })}
+                </Swiper>
+            </>
         </div>
     );
 }

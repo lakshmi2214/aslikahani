@@ -724,11 +724,11 @@ progress {
         max-width: 1320px;
     }
 }
-@media (min-width: 1920px) {
+/* @media (min-width: 1920px) {
     .container {
-        max-width: 1800px; /* Adjust this based on your design preference */
+        max-width: 1300px;
     }
-}
+} */
 
 :root {
     --bs-breakpoint-xs: 0;
