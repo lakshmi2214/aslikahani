@@ -9,13 +9,13 @@ function MagazinePosts(props) {
     navigate(`/emagazine/${item.url}/preview`, { state: { item } });
   }
   return (
-    <div>
+    <div className='mgz-outer'>
       <div className="main-items-container">
         {props.dataObject?.map((item, index) => {
           // console.log(item);
           return (
 
-            <div key={index}>
+            <div className='mzg-index' key={index}>
               <div className="item-container">
                 <div className='img-posts' onClick={() => handleNavigation(item, index)}>
                   <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine/' + item.url + '/preview'}>

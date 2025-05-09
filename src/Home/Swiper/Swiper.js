@@ -75,11 +75,11 @@ function SwiperCustom(props) {
                         spaceBetween={10}
                         navigation={true}
                         thumbs={{ swiper: thumbsSwiper }}
-                        modules={[FreeMode, Navigation, Thumbs]}
+                        modules={[Autoplay,FreeMode, Navigation, Thumbs]}
                         className="mySwiper bigSwiper"
                         loop={true}
                         autoplay={{
-                            delay: 2500,
+                            delay: 5500,
                             disableOnInteraction: false,
                         }}
                     >

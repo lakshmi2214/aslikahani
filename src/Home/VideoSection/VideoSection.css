@@ -44,8 +44,8 @@
 
 .vdBtns button {
     width: 90px;
-    color: white;
-    border: 1px solid white;
+    color: #d62a26;
+    border: 1px solid #d62a26;
     height: 30px;
     font-size: 14px;
     font-weight: 500;
@@ -56,8 +56,8 @@
 }
 
 button.bt-rvrs {
-    background: white;
-    color: #d62a26;
+    color: white;
+    background: #d62a26;
 }
 
 .videoSlider {
@@ -74,6 +74,7 @@ section.videoSctin {
     position: relative;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     border-radius: 15px;
+    margin-top:10px;
 }
 
 .videoSctin:before {content: '';position: absolute;background: linear-gradient(120deg, #ff0000, #832d2d);top: 0;left: 0;height: 100%;width: 100%;border-radius: 15px;}

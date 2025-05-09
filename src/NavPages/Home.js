@@ -28,12 +28,27 @@ import Topbar from "../Home/Topbar";
 import Marquee from "../Component/Marquee";
 import SwiperCustom from "../Home/Swiper/Swiper";
 import VideoSection from "../Home/VideoSection/VideoSection";
+import MagazinePosts from "../E-magzine/MagazinePosts";
 
 function Home() {
   const [isMobile, setIsMobile] = useState(false);
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
+  const [magazines, setMagazines] = useState([]);
   useEffect(() => {
+    const fetchMagazines = async () => {
+      const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/emagzines/list`;
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        // Slice the first 5 items and set the state
+        setMagazines(data.slice(0, 4));
+      } catch (error) {
+        console.error("Error fetching magazines:", error);
+      }
+    };
+
+    fetchMagazines();
     const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/articles/list?category=10&format=json`;
     fetch(url).then(response => response.json()
     )
@@ -60,6 +75,7 @@ function Home() {
     return () => {
       window.removeEventListener('resize', checkMobile);
     };
+
   }, []);
   return (
     <>
@@ -75,15 +91,26 @@ function Home() {
       <section className="page-mid-section">
         <div className="container">
           <div className="row">
-            <div className="col-md-1 " >
-              <div className="banner-view">
-                <img src={sidebanner} alt='banner1' className="img-fluid" />
+
+            <div className="col-md-12">
+              <div className="row">
+                <div className="col-md-1 " >
+                  <div className="banner-view">
+                    <img src={sidebanner} alt='banner1' className="img-fluid" />
+                  </div>
+                </div>
+                <div className="col-md-10">
+                  <SwiperCustom dataObject={result} />
+                </div>
+                <div className="col-md-1" >
+                  <div className="banner-view">
+                    <img src={sidebanner} alt='banner1' className="img-fluid" />
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="col-md-10">
-              <SwiperCustom dataObject={result} />
               {/* <GridSection dataObject={result} /> */}
-              <VideoSection/>
+              <VideoSection />
+              {/* <MagazinePosts dataObject={result}/> */}
               {/* === video add === */}
               {/* <div className="youtubeshort-container">
                 <div className="sortsHeading">
@@ -121,8 +148,42 @@ function Home() {
                 </div>
               </div> */}
               <div className="subData-grid-container">
-
+                <div className="editor-chs">
+                  <EditorsChoise dataObject={result} />
+                </div>
+                <div className="magzineShowHome">
+                  <div className='rvmpHeading'>
+                    <h2>Magazine</h2>
+                    <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine'}>View All<i class="fa-solid fa-arrow-up-right-dots"></i></a>
+                  </div>
+                  <div className="homeMgz">
+                    <MagazinePosts dataObject={magazines} />
+                  </div>
+                </div>
                 <div className="row">
+                  <div className="col-md-6 col-12">
+                    <LatestArticle dataObject={result} />
+                  </div>
+                  <div className="col-md-6 col-12">
+                    <TopArticles dataObject={result} />
+                  </div>
+                  <div className="col-md-6 col-12">
+                    <Articles dataObject={result} />
+                  </div>
+                  <div className="col-md-6 col-12">
+                    <PopularArticles dataObject={result} />
+                  </div>
+                  <div className="col-md-6 col-12">
+                    <PostArticles dataObject={result} />
+                  </div>
+                  <div className="col-md-6 col-12">
+                  <TrendingArticles dataObject={result} />
+                  </div>
+                  <div className="col-md-12 col-12">
+                  <AllTimeBest dataObject={result} />
+                  </div>
+                </div>
+                {/* <div className="row">
                   <div className="col-md-8 col-sm-12" >
                     <LatestArticle dataObject={result} />
                     <div className="topArticals">
@@ -130,7 +191,6 @@ function Home() {
                     </div>
                     <Articles dataObject={result} />
 
-                    {/* <TrendingArticles dataObject={result} /> */}
                   </div>
                   <div className="col-md-4 col-sm-12 mobile-view" >
                     <div className="right-gird-home-widget">
@@ -145,9 +205,9 @@ function Home() {
                   <div className="col-md-12 col-12">
                     <TrendingArticles dataObject={result} />
                   </div>
-                </div>
+                </div> */}
 
-                {isMobile ? null : (
+                {/* {isMobile ? null : (
                   <div className="col-md-3 col-sm-12" >
 
                     <div className="mb-4">
@@ -158,22 +218,20 @@ function Home() {
                     <PopularArticles dataObject={result} />
                     <PostArticles dataObject={result} />
                   </div>
-                )}
+                )} */}
                 {/* </div> */}
-                <div className="mid-add-section-img">
+                {/* <div className="mid-add-section-img">
                   <BannerAd2 addObject={value} />
-                </div>
-                <div className="editor-chs">
-                  <EditorsChoise dataObject={result} />
-                </div>
+                </div> */}
+
                 {/* {isMobile ? null : (
                   <div className="col-md-12">
                     <EditorsChoise dataObject={result} />
                   </div>
                 )} */}
-                <div className="allTimeBest">
+                {/* <div className="allTimeBest">
                   <AllTimeBest dataObject={result} />
-                </div>
+                </div> */}
                 {/* {isMobile ? null : (
                   <div className="col-md-12" style={{ padding: "14px" }}>
                     <AllTimeBest dataObject={result} />
@@ -181,11 +239,7 @@ function Home() {
                 )} */}
               </div>
             </div>
-            <div className="col-md-1" >
-              <div className="banner-view">
-                <img src={sidebanner} alt='banner1' className="img-fluid" />
-              </div>
-            </div>
+
           </div>
         </div>
       </section>

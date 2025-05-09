@@ -27,7 +27,7 @@ function TopArticles(props) {
   }, []);
   return (
     <>
-      {isMobile ? null : (
+      {/* {isMobile ? null : (
         <div className='row row-gap-4'>
           <div className='col-md-12'>
             <h4 style={{ backgroundColor: "#d32415", color: "white", padding: "10px" }}><strong>Top Aricles</strong></h4>
@@ -65,6 +65,31 @@ function TopArticles(props) {
                     <div className='article-desc-small' >
                       <h5> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.title}</a></h5>
                     </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </div> */}
+      <div className="updt-content-wrapper">
+        <div className="updt-section">
+          <div className='arctl-headings'>
+            <h2 className="updt-section-title">Top Aricles</h2>
+            <button>View All</button>
+          </div>
+          <div className="updt-articles">
+            {props.dataObject?.locations?.TopNews.slice(0, 3).map((item, index) => {
+              return (
+                <div key={index} className="updt-article">
+                  <div className='updt-artcl'>
+                    <img alt="" className="img-fluid" src={item.image} />
+                  </div>
+                  <div className="updt-article-text">
+                    <h3>{item.title}</h3>
+                    <p>{item.authored_by}</p>
+                    <p>{item.created_at}</p>
+                    <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>READ MORE</a>
                   </div>
                 </div>
               )

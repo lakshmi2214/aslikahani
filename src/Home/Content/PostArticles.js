@@ -13,7 +13,7 @@ function PostArticles(props) {
   }
   return (
     <>
-      <div className='col-md-12' style={{ padding: "initial" }}>
+      {/* <div className='col-md-12' style={{ padding: "initial" }}>
         <div className='popular-heading' >
           <h5>Post Widget</h5>
         </div>
@@ -123,7 +123,32 @@ function PostArticles(props) {
 
           </SwiperSlide>
         </Swiper>
-      </div>
+      </div> */}
+      <div className="updt-content-wrapper">
+				<div className="updt-section">
+					<div className='arctl-headings'>
+						<h2 className="updt-section-title">Post Articles</h2>
+						<button>View All</button>
+					</div>
+					<div className="updt-articles">
+						{props.dataObject?.locations?.SliderWidget.slice(0, 3).map((item, index) => {
+							return (
+								<div key={index} className="updt-article">
+									<div className='updt-artcl'>
+										<img alt="" className="img-fluid" src={item.image} />
+									</div>
+									<div className="updt-article-text">
+										<h3>{item.title}</h3>
+										<p>{item.authored_by}</p>
+										<p>{item.created_at}</p>
+										<a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>READ MORE</a>
+									</div>
+								</div>
+							)
+						})}
+					</div>
+				</div>
+			</div>
     </>
   )
 }
