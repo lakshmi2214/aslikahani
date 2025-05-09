@@ -6424,3 +6424,17 @@ section.inner-pages-section {
   margin-bottom: 20px;
 }
 }
+
+
+div#side-bar-right-2 {
+}
+
+.widget.widget-bg {
+    position: sticky;
+    top: 70px;
+}
+
+.theiaStickySidebar {
+    top: 80px;
+    position: sticky;
+}
