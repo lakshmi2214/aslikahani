@@ -65,17 +65,19 @@ function LatestArticle(props) {
 					<div className="updt-articles">
 						{props.dataObject?.locations?.LatestPost.slice(0, 3).map((item, index) => {
 							return (
-								<div key={index} className="updt-article">
-									<div className='updt-artcl'>
-										<img alt="" className="img-fluid" src={item.image} />
+								<a className='mst-anchor' href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>
+									<div key={index} className="updt-article">
+										<div className='updt-artcl'>
+											<img alt="" className="img-fluid" src={item.image} />
+										</div>
+										<div className="updt-article-text">
+											<h3>{item.title}</h3>
+											<p>{item.authored_by}</p>
+											<p>{item.created_at}</p>
+											<a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>READ MORE</a>
+										</div>
 									</div>
-									<div className="updt-article-text">
-										<h3>{item.title}</h3>
-										<p>{item.authored_by}</p>
-										<p>{item.created_at}</p>
-										<a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>READ MORE</a>
-									</div>
-								</div>
+								</a>
 							)
 						})}
 					</div>

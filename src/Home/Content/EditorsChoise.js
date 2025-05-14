@@ -28,7 +28,7 @@ function EditorsChoise(props) {
 
       <div className='mostViewd'>
         <div className='hdng'>
-          <h2>Editors Choise</h2>
+          <h2>Editors Choice</h2>
         </div>
         <div className='gridLis'>
           <div className='row'>

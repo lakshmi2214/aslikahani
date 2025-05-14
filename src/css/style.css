@@ -6290,10 +6290,12 @@ section.inner-pages-section {
   
   .updt-section-title {
 	font-size: 2rem;
-	font-weight: bold;
+	font-weight: 500;
 	color: #333;
 	}
-  
+  .arctl-headings button {
+    display: none;
+}
   /* Articles Container */
   .updt-articles {
 	display: flex;
@@ -6303,7 +6305,14 @@ section.inner-pages-section {
 	border-bottom: 1px solid #333;
 	padding: 20px 0;
 	}
-  
+  a.mst-anchor {
+    text-decoration: none;
+    color: inherit;
+}
+a.mst-anchor:hover {
+    color: inherit;
+    text-decoration: none;
+}
   /* Article Styles */
   .updt-article {
 	background-color: white;
