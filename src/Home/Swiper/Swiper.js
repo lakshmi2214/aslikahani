@@ -79,7 +79,7 @@ function SwiperCustom(props) {
                         className="mySwiper bigSwiper"
                         loop={true}
                         autoplay={{
-                            delay: 5500,
+                            delay: 11000,
                             disableOnInteraction: false,
                         }}
                     >
