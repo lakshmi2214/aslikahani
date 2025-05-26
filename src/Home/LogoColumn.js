@@ -13,7 +13,7 @@ function LogoColumn() {
             </div>
           </div>
           <div className='banner-header'>
-            <img className='img-fluid' src='https://media.aslikahani.com/advertisements/sristar_horizontal.jpg' />
+            <a href='https://stargoldcompany.com'><img className='img-fluid' src='https://media.aslikahani.com/advertisements/sristar_horizontal.jpg' /></a>
           </div>
         </div>
       </div>
