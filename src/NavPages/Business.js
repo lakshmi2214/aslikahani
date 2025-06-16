@@ -1,5 +1,5 @@
 import React from 'react';
-import FooterCategory from '../FooterCategory/FooterCategory';
+import Footer from "../Home/Footer/Footer";
 import { useState, useEffect } from 'react';
 import Navbar from '../Utility/Navbar';
 import LogoColumn from '../Home/LogoColumn';
@@ -109,7 +109,7 @@ function Business() {
         </div>
       </section>
 
-      <FooterCategory />
+      <Footer />
 
     </>
   )

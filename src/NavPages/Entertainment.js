@@ -13,6 +13,8 @@ import SidePopularEntertainment1 from '../Entertainment/SidePopularEntertainment
 import SideAdd2 from '../Advertisements/SideAdd2'
 import SidePostEntertainment from '../Entertainment/SidePostEntertainment'
 import Topbar from '../Home/Topbar'
+import Footer from "../Home/Footer/Footer";
+
 function Entertainment() {
   const [isMobile, setIsMobile] = useState(false);
   const [result, setResult] = useState([]);
@@ -75,7 +77,7 @@ function Entertainment() {
         </div>
       </section>
 
-      <FooterCategory />
+      <Footer />
 
     </>
   )

@@ -6,7 +6,6 @@ function AllTimeBest(props) {
   const [isMobile, setIsMobile] = useState(false);
   const navigate = useNavigate();
   const handleNavigation = (item) => {
-    // console.log(item);
 
     navigate(`/${item.category}/${item.url}`, { state: { item } });
   }
@@ -63,7 +62,7 @@ function AllTimeBest(props) {
 
 <div className='mostViewd'>
         <div className='hdng'>
-          <h2>Editors Choice</h2>
+          <h2>All Time Best Articles</h2>
         </div>
         <div className='gridLis'>
           <div className='row'>
@@ -72,12 +71,12 @@ function AllTimeBest(props) {
                 <div className='col-md-4 col-12'>
                   <div key={index} className='gridData'>
                     <div className='imgLst'>
-                      <img className="img-fluid" src={item.image} alt="imagecap" />
+                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}><img className="img-fluid" onClick={() => handleNavigation(item, index)} src={item.image} alt="imagecap" /></a>
                     </div>
                     <div className='ls-heading'>
-                      <h4>{item.title}</h4>
-                      <p>{item.authored_by}</p>
-                      <button>{item.created_at}</button>
+                      <h4 onClick={() => handleNavigation(item, index)}>{item.title}</h4>
+                      <p onClick={() => handleNavigation(item, index)}>{item.authored_by}</p>
+                      <button onClick={() => handleNavigation(item, index)}>{item.created_at}</button>
                     </div>
                   </div>
                 </div>

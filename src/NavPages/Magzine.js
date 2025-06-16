@@ -1,5 +1,5 @@
 import React from "react";
-import FooterCategory from '../FooterCategory/FooterCategory';
+import Footer from "../Home/Footer/Footer";
 import { useState, useEffect } from 'react';
 // import BusinessPosts from '../Business/BusinessPosts';
 import ChaiTheoryAd from '../Advertisements/ChaiTheoryAd';
@@ -67,7 +67,7 @@ function Magzine(){
           </div>
         </div>
       </section>
-        <FooterCategory  /> 
+        <Footer  /> 
         </>
     )
 }

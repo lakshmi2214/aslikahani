@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import FooterCategory from '../FooterCategory/FooterCategory';
+import Footer from "../Home/Footer/Footer";
 import Navbar from '../Utility/Navbar';
 import LogoColumn from '../Home/LogoColumn';
 import Art1 from '../ArtAndCulture/Art1';
@@ -112,7 +112,7 @@ function ArtCulture() {
         </div>
       </section>
 
-      <FooterCategory />
+      <Footer />
 
     </>
   );

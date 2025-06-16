@@ -76,34 +76,6 @@ function Topbar() {
    // ========= weather ============
    return (
       <>
-         {/* <section className="topbar w-100">
-            <div className="container-fluid">
-               <div className="row">
-                  <div className="col-md-6 col-sm-6 col-4">
-                     <div className='tranding'>
-                        <ul className="social-media-icons-top">
-                           <li><a href=" https://www.facebook.com/aslikahani.in"><i className="ti-facebook"></i> </a></li>
-                           <li><a href="https://twitter.com/kahaniasli"><i className="ti-twitter"></i></a></li>
-                           <li><a href="https://www.youtube.com/@AsliKahani"><i className="ti-youtube"></i></a></li>
-                           <li><a href=" https://www.instagram.com/aslikahani/"><i className="ti-instagram"></i></a></li>
-
-                        </ul>
-                        <div className='time-stamp'>
-                           <h3>{formattedDate}</h3>
-                           <p>{formattedTime} |<span>  Explore Trending Articles </span></p>
-                        </div>
-                     </div>
-                  </div>
-                  <div className="col-md-6 col-sm-9 col-8">
-                     <ul className="subs-topbar" >
-                        <li className="subscribeBtn"><a href={process.env.REACT_APP_DOMAIN_NAME + '/subscribe'}>Subscribe</a></li>
-                        <li className="magzinebook"><a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine'}>E-Magazine</a></li>
-                        <li><a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><span>Aslikahani Podcast</span><span> </span><i className="fa fa-spotify"></i></a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </section> */}
          <section className='topNavebar'>
             <div className='container'>
                <div className='topNav'>
@@ -136,10 +108,10 @@ function Topbar() {
                   <div className='socialRight'>
                      <ul className="socialIcons">
                         <li><a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj"><i className="fa-brands fa-spotify"></i></a></li>
-                        <li><a href=" https://www.facebook.com/aslikahani.in"><i className="fa-brands fa-facebook"></i> </a></li>
-                        <li><a href="https://twitter.com/kahaniasli"><i className="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/kahaniasli"><i className="fa-brands fa-facebook"></i> </a></li>
+                        <li><a href="https://x.com/kahaniasli"><i className="fa-brands fa-x-twitter"></i></a></li>
                         <li><a href="https://www.youtube.com/@AsliKahani"><i className="fa-brands fa-youtube"></i></a></li>
-                        <li><a href=" https://www.instagram.com/aslikahani/"><i className="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="http://instagram.com/aslikahani/"><i className="fa-brands fa-instagram"></i></a></li>
 
                      </ul>
                   </div>

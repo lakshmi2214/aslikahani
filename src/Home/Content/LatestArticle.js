@@ -59,7 +59,7 @@ function LatestArticle(props) {
 			<div className="updt-content-wrapper">
 				<div className="updt-section">
 					<div className='arctl-headings'>
-						<h2 className="updt-section-title">Entertainment</h2>
+						<h2 className="updt-section-title">Latest Articles</h2>
 						<button>View All</button>
 					</div>
 					<div className="updt-articles">
