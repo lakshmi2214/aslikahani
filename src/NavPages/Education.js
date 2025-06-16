@@ -11,7 +11,7 @@ import SideAdd1 from '../Advertisements/SideAdd1';
 import SideAdd2 from '../Advertisements/SideAdd2';
 import SidePost from '../Education/SidePost';
 import SidePopular from '../Education/SidePopular';
-import FooterCategory from '../FooterCategory/FooterCategory';
+import Footer from "../Home/Footer/Footer";
 import Topbar from '../Home/Topbar';
 // import EducationComponent from '../Education/EducationComponent';
 
@@ -116,7 +116,7 @@ function Education() {
         </div>
       </section>
 
-      <FooterCategory />
+      <Footer />
     </>
   )
 }

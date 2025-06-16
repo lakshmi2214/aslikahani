@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import './EditorsChoise.css'
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function EditorsChoise(props) {
   const [isMobile, setIsMobile] = useState(false);
-  // const navigate = useNavigate();
-  // const handleNavigation = (item) => {
+  const navigate = useNavigate();
+  const handleNavigation = (item) => {
 
-  //   navigate(`/${item.category}/${item.url}`, { state: { item } });
-  // }
+    navigate(`/${item.category}/${item.url}`, { state: { item } });
+  }
   useEffect(() => {
     const checkMobile = () => {
       const isMobile = window.innerWidth >= 767;
@@ -37,9 +37,9 @@ function EditorsChoise(props) {
                 <div className='col-md-4 col-12'>
                   <div key={index} className='gridData'>
                     <div className='imgLst'>
-                      <img className="img-fluid" src={item.image} alt="imagecap" />
+                    <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}><img className="img-fluid" onClick={() => handleNavigation(item, index)} src={item.image} alt="imagecap" /></a>
                     </div>
-                    <div className='ls-heading'>
+                    <div onClick={() => handleNavigation(item, index)} className='ls-heading'>
                       <h4>{item.title}</h4>
                       <p>{item.authored_by}</p>
                       <button>{item.created_at}</button>

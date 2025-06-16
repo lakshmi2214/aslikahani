@@ -3,6 +3,8 @@ import RelatedArticleContent from './RelatedContent/RelatedArticleContent'
 import ChaiTheoryAd from '../Advertisements/ChaiTheoryAd'
 import FooterCategory from '../FooterCategory/FooterCategory'
 import { useState, useEffect } from 'react'
+import Footer from "../Home/Footer/Footer";
+
 import Navbar from '../Utility/Navbar'
 import SristarAd1 from '../Advertisements/SristarAd1'
 import SristarAd2 from '../Advertisements/SristarAd2'
@@ -52,7 +54,7 @@ function ArticleContent() {
         </div>
 
       </section>
-      <FooterCategory />
+      <Footer />
     </div>
   )
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import XMLParser from 'react-xml-parser';
 import ReactDOM from "react-dom";
 import XMLViewer from "react-xml-viewer";
 
@@ -15,7 +14,6 @@ function SiteMap(){
         const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/seo/get-sitemap`;
         fetch(url,options).then(response => response.text())
           .then(response => {
-            console.log(response);
             setMap(response)
           })
 

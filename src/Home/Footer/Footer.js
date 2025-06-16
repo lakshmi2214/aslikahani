@@ -75,6 +75,7 @@
 import React from "react";
 import AslhiKahani from '../../images/logo-small.jpg'
 import './footer.css'
+import { Link } from "react-router-dom";
 
 function Footer() {
    return (
@@ -91,21 +92,21 @@ function Footer() {
                         <p>A captivating platform that takes you on a journey through the realms of imagination, inspiration, and cultural richness. Asli Kahani, meaning "Real Story" in Hindi, is a celebration of narratives that connect us, embracing diverse voices and bringing forth compelling tales from around the country.</p>
                      </div>
                      <div className="footer-links">
-                        <a href="#"><i className="fas fa-book"></i> E-Magazine</a>
-                        <a href="#"><i className="fab fa-youtube"></i> Videos</a>
-                        <a href="#"><i className="fab fa-spotify"></i> Asli Kahani Podcasts</a>
+                        <Link to="/emagazine"><i className="fas fa-book"></i> E-Magazine</Link>
+                        <a href="https://www.youtube.com/@AsliKahani" target="blank"><i className="fab fa-youtube"></i> Videos</a>
+                        <a href="https://www.linkedin.com/company/aslikahani/posts/?feedView=all" target="blank"><i className="fab fa-linkedin"></i> Asli Kahani LinkedIn</a>
+                        <a href="https://open.spotify.com/show/3Xg7iOie2Yct06H4GyXnGj" target="blank"><i className="fab fa-spotify"></i> Asli Kahani Podcasts</a>
                      </div>
                   </div>
 
                   <div className="footer-categories">
-                     <a href="#">Entertainment</a>
-                     <a href="#">Technology</a>
-                     <a href="#">Business</a>
-                     <a href="#">Travel</a>
-                     <a href="#">Education</a>
-                     <a href="#">Finance</a>
-                     <a href="#">Lifestyle</a>
-                     <a href="#">Art & Culture</a>
+                     <Link to="/Entertainment">Entertainment</Link>
+                     <Link to="/Technology">Technology</Link>
+                     <Link to="/Business">Business</Link>
+                     <Link to="/Travel">Travel</Link>
+                     <Link to="/Education">Education</Link>
+                     <Link to="/Lifestyle">Lifestyle</Link>
+                     <Link to="/Art-and-Culture">Art & Culture</Link>
                   </div>
 
                   <hr className="footer-divider"/>
@@ -116,9 +117,9 @@ function Footer() {
                            <p>Located at: <span>#280/1, Sampige Road, 18th cross, Malleshwaram.</span></p>
                         </div>
                         <div className="footer-social">
-                           <a href="#"><i className="fab fa-x-twitter"></i></a>
-                           <a href="#"><i className="fab fa-instagram"></i></a>
-                           <a href="#"><i className="fab fa-facebook"></i></a>
+                           <a href="https://x.com/kahaniasli" target="blank"><i className="fab fa-x-twitter"></i></a>
+                           <a href="http://instagram.com/aslikahani/" target="blank"><i className="fab fa-instagram"></i></a>
+                           <a href="https://www.facebook.com/kahaniasli" target="blank"><i className="fab fa-facebook"></i></a>
                         </div>
                      </div>
 
