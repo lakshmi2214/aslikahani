@@ -83,13 +83,15 @@ function Home() {
       <LogoColumn />
       <Navbar />
       <Tags dataObject={result} />
-
+      <section className="full-swiper">
+          <SwiperCustom dataObject={result} />
+      </section>
       <section className="page-mid-section">
         <div className="container">
           <div className="row">
 
             <div className="col-md-12">
-              <div className="row">
+              {/* <div className="row">
                 <div className="col-md-1 " >
                   <div className="banner-view">
                     <img src={sidebanner} alt='banner1' className="img-fluid" />
@@ -103,7 +105,7 @@ function Home() {
                     <img src={sidebanner} alt='banner1' className="img-fluid" />
                   </div>
                 </div>
-              </div>
+              </div> */}
               <VideoSection />
               <div className="subData-grid-container">
                 <div className="editor-chs">
@@ -135,10 +137,10 @@ function Home() {
                     <PostArticles dataObject={result} />
                   </div>
                   <div className="col-md-6 col-12">
-                  <TrendingArticles dataObject={result} />
+                    <TrendingArticles dataObject={result} />
                   </div>
                   <div className="col-md-12 col-12">
-                  <AllTimeBest dataObject={result} />
+                    <AllTimeBest dataObject={result} />
                   </div>
                 </div>
               </div>

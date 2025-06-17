@@ -82,14 +82,15 @@ function Footer() {
 
       <>
          <section className="footer-section">
-               <footer className="footerInner">
-            <div className="container">
+            <footer className="footerInner">
+               <div className="container">
                   <div className="footer-container">
                      <div className="footer-logo">
-                        <img src={AslhiKahani} alt="Asli Kahani Logo"/>
+                        <img src={AslhiKahani} alt="Asli Kahani Logo" />
                      </div>
                      <div className="footer-description">
-                        <p>A captivating platform that takes you on a journey through the realms of imagination, inspiration, and cultural richness. Asli Kahani, meaning "Real Story" in Hindi, is a celebration of narratives that connect us, embracing diverse voices and bringing forth compelling tales from around the country.</p>
+                        <p>Asli Kahani is a people-powered media platform uncovering untold stories that spark empathy, truth, and change. We go beyond headlines — amplifying unheard voices, grassroots struggles, and everyday courage. No sponsors. No corporate noise. Just real, responsible storytelling by citizens who care. From podcasts and documentaries to ground reports and safe spaces like Backyard Studios, we exist to ask hard questions and share what matters. Join us in this movement — because Asli Kahani isn’t run by algorithms. It’s run by all of us.
+                           Real stories. Real impact. Welcome to Asli Kahani.</p>
                      </div>
                      <div className="footer-links">
                         <Link to="/emagazine"><i className="fas fa-book"></i> E-Magazine</Link>
@@ -109,23 +110,23 @@ function Footer() {
                      <Link to="/Art-and-Culture">Art & Culture</Link>
                   </div>
 
-                  <hr className="footer-divider"/>
+                  <hr className="footer-divider" />
 
-                     <div className="footer-bottom">
-                        <div className="footer-contact">
-                           <p>Email: <span>connect@aslikahani.com</span></p>
-                           <p>Located at: <span>#280/1, Sampige Road, 18th cross, Malleshwaram.</span></p>
-                        </div>
-                        <div className="footer-social">
-                           <a href="https://x.com/kahaniasli" target="blank"><i className="fab fa-x-twitter"></i></a>
-                           <a href="http://instagram.com/aslikahani/" target="blank"><i className="fab fa-instagram"></i></a>
-                           <a href="https://www.facebook.com/kahaniasli" target="blank"><i className="fab fa-facebook"></i></a>
-                        </div>
+                  <div className="footer-bottom">
+                     <div className="footer-contact">
+                        <p>Email: <span>connect@aslikahani.com</span></p>
+                        <p>Located at: <span>#280/1, Sampige Road, 18th cross, Malleshwaram.</span></p>
                      </div>
+                     <div className="footer-social">
+                        <a href="https://x.com/kahaniasli" target="blank"><i className="fab fa-x-twitter"></i></a>
+                        <a href="http://instagram.com/aslikahani/" target="blank"><i className="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/kahaniasli" target="blank"><i className="fab fa-facebook"></i></a>
+                     </div>
+                  </div>
 
-                     <p className="footer-copyright">Copyright 2025 Asli Kahani. All rights reserved.</p>
-            </div>
-               </footer>
+                  <p className="footer-copyright">Copyright 2025 Asli Kahani. All rights reserved.</p>
+               </div>
+            </footer>
          </section>
 
       </>

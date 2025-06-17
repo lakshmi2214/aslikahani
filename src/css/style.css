@@ -6446,3 +6446,14 @@ a.mst-anchor:hover {
     top: 80px;
     position: sticky;
 }
+
+
+section.full-swiper {
+    padding-top: 0;
+}
+
+section.full-swiper .sliderOuter {
+    padding: 0;
+}
+
+.badgesContainer.closedBadeg {margin-bottom: 5px;}

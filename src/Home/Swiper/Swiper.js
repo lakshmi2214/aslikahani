@@ -1,142 +1,75 @@
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
+
+
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useNavigate } from "react-router-dom";
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
-
+import { Navigation, Autoplay } from 'swiper/modules'; // ⬅️ Add Autoplay
 import './Swiper.css';
 
-// import required modules
-import { Autoplay, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
-
-// export default function SwiperCustom(props) {
 function SwiperCustom(props) {
     const navigate = useNavigate();
-    const handleNavigation = (item) => {
-        // console.log(item);
+    const items = props?.dataObject?.locations?.Slider || [];
 
-        navigate(`/${item.category}/${item.url}`, { state: { item } });
+    const groupedSlides = [];
+    let i = 0;
+
+    while (i + 6 <= items.length) {
+        const group = [
+            ...items.slice(i, i + 6),  // 6 small items
+            items[i + 6]              // 1 big item
+        ];
+        groupedSlides.push(group);
+        i += 7;
     }
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
-    const grid = props.dataObject;
+
     return (
-        <div className='sliderOuter'>
-            {/* <Swiper
-                cssMode={true}
-                navigation={true}
-                pagination={{
-                    clickable: true,
-                  }}
-                mousewheel={true}
-                keyboard={true}
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                  }}
-                modules={[Autoplay,Navigation, Pagination, Mousewheel, Keyboard]}
-                className="mySwiper"
-            >
-                {grid?.locations?.Slider.map((item, index) => {
-                    return (
-                        <SwiperSlide>
-                            <div className='big-left-Img girdImagesHome'>
-                                <div key={index} className='home-image-main mainHightlight' onClick={() => handleNavigation(item, index)}>
-                                    <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url} className='img-redirection'>
-                                        <img src={item.image} className='img-fluid' alt='img1' />
-                                    </a>
+        <Swiper
+            navigation
+            spaceBetween={5}
+            slidesPerView={1}
+            loop={true} // ⬅️ Enable loop
+            autoplay={{
+                delay: 3000,              // ⬅️ Adjust delay as needed
+                disableOnInteraction: false,
+            }}
+            speed={3000} // ⬅️ Smooth transition speed in ms
+            className="swiper-wrapper-custom"
+            modules={[Navigation, Autoplay]} // ⬅️ Include Autoplay module
+        >
+            {groupedSlides.map((group, index) => (
+                <SwiperSlide key={index}>
+                    <div className="custom-grid">
+                        <div className="small-grid">
+                            {group.slice(0, 6).map((item, idx) => (
+                                <div
+                                    key={idx}
+                                    className="grid-tile"
+                                    style={{ backgroundImage: `url(${item.image})` }}
+                                    onClick={() => navigate(`/${item.category}/${item.url}`, { state: { item } })}
+                                >
+                                    <div className="text-overlay">{item.title}</div>
                                 </div>
-                                <div className='overlayImg-text' onClick={() => handleNavigation(item, index)}>
-                                    <h4> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url} >{item.title}</a></h4>
-                                    <p><a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.created_at} </a></p>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                    )
-                })}
-            </Swiper> */}
-            <>
-                <div className='swiper-wrapper-custom '>
-                    <Swiper
-                        cssMode={true}
-
-                        pagination={{
-                            clickable: true,
-                        }}
-                        style={{
-                            '--swiper-navigation-color': '#fff',
-                            '--swiper-pagination-color': '#fff',
-                        }}
-                        mousewheel={true}
-                        keyboard={true}
-                        spaceBetween={10}
-                        navigation={true}
-                        thumbs={{ swiper: thumbsSwiper }}
-                        modules={[Autoplay,FreeMode, Navigation, Thumbs]}
-                        className="mySwiper bigSwiper"
-                        loop={true}
-                        autoplay={{
-                            delay: 11000,
-                            disableOnInteraction: false,
-                        }}
-                    >
-                        {grid?.locations?.Slider.map((item, index) => {
-                            return (
-                                <SwiperSlide>
-                                    <div className='big-left-Img girdImagesHome'>
-                                        <div key={index} className='home-image-main mainHightlight' onClick={() => handleNavigation(item, index)}>
-                                            <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url} className='img-redirection'>
-                                                <img src={item.image} className='img-fluid' alt='img1' />
-                                            </a>
-                                        </div>
-                                        <div className='overlayImg-text' onClick={() => handleNavigation(item, index)}>
-                                            <h4> <a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url} >{item.title}</a></h4>
-                                            <p><a href={process.env.REACT_APP_DOMAIN_NAME + '/' + item.category + '/' + item.url}>{item.created_at} </a></p>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                            )
-                        })}
-                    </Swiper>
-                </div>
-
-                <Swiper
-                    onSwiper={setThumbsSwiper}
-                    spaceBetween={10}
-                    slidesPerView={4}
-                    freeMode={true}
-                    loop={true}
-                    watchSlidesProgress={true}
-                    modules={[FreeMode, Navigation, Thumbs]}
-                    className="mySwiper smallGridswiper"
-                >
-                    {grid?.locations?.Slider.map((item, index) => {
-                        return (
-                            <SwiperSlide>
-                                <div className='big-left-Img girdImagesHome miniGridSwwiper'>
-                                    <div key={index} className='home-image-main mainHightlight'
-                                    // onClick={() => handleNavigation(item, index)}
-                                    >
-                                        <a className='img-redirection'>
-                                            <img src={item.image} className='img-fluid' alt='img1' />
-                                        </a>
-                                    </div>
-                                    <div className='overlayImg-text'
-                                    // onClick={() => handleNavigation(item, index)}
-                                    >
-                                        <h4> <a href="javascript:void(0)"  >{item.title}</a></h4>
-                                        <p><a href="javascript:void(0)">{item.created_at} </a></p>
-                                    </div>
-                                </div>
-                            </SwiperSlide>
-                        )
-                    })}
-                </Swiper>
-            </>
-        </div>
+                            ))}
+                        </div>
+                        <div
+                            className="feature-tile"
+                            style={{ backgroundImage: `url(${group[6]?.image})` }}
+                            onClick={() => navigate(`/${group[6]?.category}/${group[6]?.url}`, { state: { item: group[6] } })}
+                        >
+                            <div className="text-overlay large">{group[6]?.title}</div>
+                        </div>
+                    </div>
+                </SwiperSlide>
+            ))}
+        </Swiper>
     );
 }
-export default SwiperCustom
+
+export default SwiperCustom;
+
+
+
+
+

@@ -1,88 +1,182 @@
-.sliderOuter {
-    margin-bottom: 30px;
-}
-.sliderOuter .bigSwiper{
-    width:100%;
-}
-.sliderOuter .swiper-wrapper {
-    /* width: 80%; */
-    margin: auto;
-    border-radius: 10px;
-    padding-bottom: 30px;
-}
-.smallGridswiper .swiper-wrapper {
-    width:100%;
-}
-.sliderOuter .swiper-button-prev {
-    top: 0;
-    width: 50px;
-    left: -120px;
-    bottom: 0;
-    border-radius: 10px 10px 10px 10px;
-    margin: auto;
-    height: auto;
-    background: #dfdfdf36;
-    height: 80px;
-    width: 80px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    border: 1px solid #f8d6d4;
+
+ .swiper-wrapper-custom {
+  width: 100%;
 }
 
-.sliderOuter .swiper-button-next {
-    top: 0;
-    width: 50px;
-    right: -120px;
-    bottom: 0;
-    background: #dfdfdf36;
-    border-radius: 10px 10px 10px 10px;
-    height: auto;
-    margin: auto;
-    height: 80px;
-    width: 80px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    border: 1px solid #f8d6d4;
+.custom-grid {
+  display: flex;
+  gap: 5px;
+  align-items: stretch;
 }
 
-.sliderOuter .swiper-button-prev:after,
-.sliderOuter .swiper-button-next:after {
-    color: #E91E63;
+.small-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 5px;
+  flex: 3;
 }
 
-.sliderOuter .swiper-button-prev:hover,
-.sliderOuter .swiper-button-next:hover {
-    background: #ff572259;
+.grid-tile {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding-top: 56.25%;
+  cursor: pointer;
+  overflow: hidden;
 }
 
-.sliderOuter .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 0;
+.feature-tile {
+  flex: 2;
+  aspect-ratio: 3 / 4;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
 }
 
-.big-left-Img.girdImagesHome.miniGridSwwiper .overlayImg-text h4 {
-    font-size: 11px;
+.text-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.big-left-Img.girdImagesHome.miniGridSwwiper .overlayImg-text p {
-    font-size: 10px;
+.text-overlay.large {
+  font-size: 20px;
+  font-weight: 600;
 }
-.swiper-wrapper-custom {
-    position: relative;
-    width: 840px;
-    max-width: 100%;
-    margin: 0 auto;
-    overflow: visible; /* This is KEY to allow nav buttons to show outside */
-  }
-  .mySwiper.bigSwiper {
-    overflow: inherit;
-  }
+
+
 @media (max-width: 768px) {
-    .sliderOuter .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
-        display: none;
-    }
+  .custom-grid {
+    flex-direction: column;
+  }
 
-    .sliderOuter .swiper-wrapper {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
+  .feature-tile {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .small-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.sliderOuter {
+  width: 100%;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.magazine-swiper {
+  width: 100%;
+}
+
+.magazine-group {
+  width: auto;
+}
+
+.magazine-grid {
+  display: flex;
+  gap: 5px;
+  /* width: 800px; */
+  max-width: 100%;
+}
+
+.grid-left {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5px;
+  flex: 3;
+}
+
+.grid-tile {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.feature-tile {
+  position: relative;
+  width: 600px;
+  height: 405px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.text-overlay {
+      position: absolute;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    background: rgb(0 0 0 / 68%);
+    color: #fff;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(5px);
+    border-radius: 0;
+}
+
+.text-overlay.large {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.grid-left.grid-6 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.grid-left.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+
+
+.grid-left.grid-4 .grid-tilem.grid-left.grid-6 .grid-tile {
+  width: 300px;
+  height: 200px;
+  padding-top: 0; /* remove aspect ratio padding */
+}
+
+
+
+section.full-swiper .swiper-button-prev,section.full-swiper .swiper-button-next {
+    border-radius: 100px;
+    background: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --swiper-navigation-size: 26px;
+    color: #d02a2b;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
