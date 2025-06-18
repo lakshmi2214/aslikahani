@@ -153,10 +153,10 @@ function VideoSection() {
                                     pagination={{ clickable: true }}
                                     mousewheel={true}
                                     keyboard={true}
-                                    autoplay={{
-                                        delay: 7500,
-                                        disableOnInteraction: false,
-                                    }}
+                                    // autoplay={{
+                                    //     delay: 7500,
+                                    //     disableOnInteraction: false,
+                                    // }}
                                     modules={[Autoplay, Navigation, Pagination, Mousewheel, Keyboard]}
                                     className="verticalSlider"
                                 >
