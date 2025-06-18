@@ -154,7 +154,7 @@ function VideoSection() {
                                     mousewheel={true}
                                     keyboard={true}
                                     autoplay={{
-                                        delay: 2500,
+                                        delay: 7500,
                                         disableOnInteraction: false,
                                     }}
                                     modules={[Autoplay, Navigation, Pagination, Mousewheel, Keyboard]}

@@ -48,10 +48,10 @@ function SwiperCustom({ dataObject }) {
             slidesPerView={1}
             loop={true}
             autoplay={{
-                delay: 3000,
+                delay: 10000,
                 disableOnInteraction: false,
             }}
-            speed={1000}
+            speed={4000}
             className="swiper-wrapper-custom"
             modules={[Navigation, Autoplay]}
         >
