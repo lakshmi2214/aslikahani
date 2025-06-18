@@ -1,5 +1,4 @@
-
- .swiper-wrapper-custom {
+.swiper-wrapper-custom {
   width: 100%;
 }
 
@@ -55,7 +54,6 @@
   font-size: 20px;
   font-weight: 600;
 }
-
 
 @media (max-width: 768px) {
   .custom-grid {
@@ -123,21 +121,21 @@
   overflow: hidden;
 }
 .text-overlay {
-      position: absolute;
-    bottom: 12px;
-    left: 12px;
-    right: 12px;
-    background: rgb(0 0 0 / 68%);
-    color: #fff;
-    padding: 8px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 500;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    backdrop-filter: blur(5px);
-    border-radius: 0;
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  background: rgb(0 0 0 / 68%);
+  color: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(5px);
+  border-radius: 0;
 }
 
 .text-overlay.large {
@@ -157,26 +155,59 @@
   grid-template-rows: repeat(2, 1fr);
 }
 
-
-
 .grid-left.grid-4 .grid-tilem.grid-left.grid-6 .grid-tile {
   width: 300px;
   height: 200px;
   padding-top: 0; /* remove aspect ratio padding */
 }
 
-
-
-section.full-swiper .swiper-button-prev,section.full-swiper .swiper-button-next {
-    border-radius: 100px;
-    background: white;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    --swiper-navigation-size: 26px;
-    color: #d02a2b;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+section.full-swiper .swiper-button-prev,
+section.full-swiper .swiper-button-next {
+  border-radius: 100px;
+  background: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --swiper-navigation-size: 26px;
+  color: #d02a2b;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.mobile-scroll-wrapper {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+  margin-left: 10px;
+}
+
+.mobile-scroll-tile {
+  flex: 0 0 auto;
+  width: 360px;
+  height: 240px;
+  background-size: contain;
+  background-position: center;
+  border-radius: 10px;
+  position: relative;
+  scroll-snap-align: start;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 5px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  section.full-swiper {
+    padding-bottom: 20px;
+  }
+}

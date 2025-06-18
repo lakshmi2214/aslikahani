@@ -1,27 +1,44 @@
-
-
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useNavigate } from "react-router-dom";
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation, Autoplay } from 'swiper/modules'; // ⬅️ Add Autoplay
+import { Navigation, Autoplay } from 'swiper/modules';
 import './Swiper.css';
 
-function SwiperCustom(props) {
+function SwiperCustom({ dataObject }) {
     const navigate = useNavigate();
-    const items = props?.dataObject?.locations?.Slider || [];
+    const items = dataObject?.locations?.Slider || [];
+
+    const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        const check = () => setIsMobile(window.innerWidth <= 768);
+        check();
+        window.addEventListener("resize", check);
+        return () => window.removeEventListener("resize", check);
+    }, []);
 
     const groupedSlides = [];
-    let i = 0;
-
-    while (i + 6 <= items.length) {
-        const group = [
-            ...items.slice(i, i + 6),  // 6 small items
-            items[i + 6]              // 1 big item
-        ];
+    for (let i = 0; i + 6 < items.length; i += 7) {
+        const group = [...items.slice(i, i + 6), items[i + 6]];
         groupedSlides.push(group);
-        i += 7;
+    }
+
+    if (isMobile) {
+        return (
+            <div className="mobile-scroll-wrapper">
+                {items.map((item, idx) => (
+                    <div
+                        key={idx}
+                        className="mobile-scroll-tile"
+                        style={{ backgroundImage: `url(${item.image})` }}
+                        onClick={() => navigate(`/${item.category}/${item.url}`, { state: { item } })}
+                    >
+                        <div className="text-overlay">{item.title}</div>
+                    </div>
+                ))}
+            </div>
+        );
     }
 
     return (
@@ -29,14 +46,14 @@ function SwiperCustom(props) {
             navigation
             spaceBetween={5}
             slidesPerView={1}
-            loop={true} // ⬅️ Enable loop
+            loop={true}
             autoplay={{
-                delay: 3000,              // ⬅️ Adjust delay as needed
+                delay: 3000,
                 disableOnInteraction: false,
             }}
-            speed={3000} // ⬅️ Smooth transition speed in ms
+            speed={1000}
             className="swiper-wrapper-custom"
-            modules={[Navigation, Autoplay]} // ⬅️ Include Autoplay module
+            modules={[Navigation, Autoplay]}
         >
             {groupedSlides.map((group, index) => (
                 <SwiperSlide key={index}>
@@ -68,8 +85,3 @@ function SwiperCustom(props) {
 }
 
 export default SwiperCustom;
-
-
-
-
-
