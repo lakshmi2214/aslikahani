@@ -19,6 +19,7 @@ import Subscribe from "../Subscription/Subscribe";
 import EducationComponent from "../Component/EducationComponent";
 import Stories from "../NavPages/Stories";
 import SiteMap from "../NavPages/SiteMap";
+import Career from "../NavPages/Carrer";
 // import Turn from "../ArticleContent/Magzine/Turn";
 
 function Router() {
@@ -38,7 +39,7 @@ function Router() {
             <Route path="/Art-and-Culture" exact element={<ArtCulture />}/>
              <Route path="/subscription" element={<SubscriptionPage />} />
              <Route path="/emagazine" element={<Magzine />} />
-             {/* <Route path="/turn" element={< Turn/>}/> */}
+             <Route path="/Careers" element={< Career/>}/>
             
            <Route path="/search/:keyword" element={<SearchBar />} />
              <Route path="/Home/:id" element={<ArticleContent />} />
