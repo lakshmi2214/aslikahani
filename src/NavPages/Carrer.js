@@ -60,7 +60,7 @@ function Career() {
     submissionData.append('phone_number', formData.phone_number);
     submissionData.append('description', formData.description);
     submissionData.append('cv', formData.cv);
-    submissionData.append('source', "StarGoldCompany");
+    submissionData.append('source', "AsliKahani");
 
     try {
       const response = await fetch('https://backend.aslikahani.com/purity/v1/career/submit', {
