@@ -29,12 +29,14 @@ import Marquee from "../Component/Marquee";
 import SwiperCustom from "../Home/Swiper/Swiper";
 import VideoSection from "../Home/VideoSection/VideoSection";
 import MagazinePosts from "../E-magzine/MagazinePosts";
+import CareerModal from '../Component/CareerModal';
 
 function Home() {
   const [isMobile, setIsMobile] = useState(false);
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
   const [magazines, setMagazines] = useState([]);
+  const [showCareerModal, setShowCareerModal] = useState(false);
   useEffect(() => {
     const fetchMagazines = async () => {
       const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/emagzines/list`;
@@ -86,6 +88,12 @@ function Home() {
       <section className="full-swiper">
           <SwiperCustom dataObject={result} />
       </section>
+      <div className="d-flex justify-content-center my-3">
+        <button className="btn btn-primary" onClick={() => setShowCareerModal(true)}>
+          Join the event
+        </button>
+      </div>
+      <CareerModal show={showCareerModal} handleClose={() => setShowCareerModal(false)} />
       <section className="page-mid-section">
         <div className="container">
           <div className="row">
