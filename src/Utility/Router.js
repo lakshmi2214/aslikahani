@@ -41,7 +41,7 @@ function Router() {
              <Route path="/subscription" element={<SubscriptionPage />} />
              <Route path="/emagazine" element={<Magzine />} />
              <Route path="/Careers" element={< Career/>}/>
-             <Route path="/career-form" element={<CareerForm />} />
+             <Route path="/event-form" element={<CareerForm />} />
             
            <Route path="/search/:keyword" element={<SearchBar />} />
              <Route path="/Home/:id" element={<ArticleContent />} />
