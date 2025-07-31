@@ -20,6 +20,7 @@ import EducationComponent from "../Component/EducationComponent";
 import Stories from "../NavPages/Stories";
 import SiteMap from "../NavPages/SiteMap";
 import Career from "../NavPages/Carrer";
+import CareerForm from "../NavPages/CareerForm";
 // import Turn from "../ArticleContent/Magzine/Turn";
 
 function Router() {
@@ -40,6 +41,7 @@ function Router() {
              <Route path="/subscription" element={<SubscriptionPage />} />
              <Route path="/emagazine" element={<Magzine />} />
              <Route path="/Careers" element={< Career/>}/>
+             <Route path="/career-form" element={<CareerForm />} />
             
            <Route path="/search/:keyword" element={<SearchBar />} />
              <Route path="/Home/:id" element={<ArticleContent />} />

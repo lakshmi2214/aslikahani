@@ -88,12 +88,12 @@ function Home() {
       <section className="full-swiper">
           <SwiperCustom dataObject={result} />
       </section>
-      <div className="d-flex justify-content-center my-3">
+      {/* <div className="d-flex justify-content-center my-3">
         <button className="btn btn-primary" onClick={() => setShowCareerModal(true)}>
           Join the event
         </button>
       </div>
-      <CareerModal show={showCareerModal} handleClose={() => setShowCareerModal(false)} />
+      <CareerModal show={showCareerModal} handleClose={() => setShowCareerModal(false)} /> */}
       <section className="page-mid-section">
         <div className="container">
           <div className="row">

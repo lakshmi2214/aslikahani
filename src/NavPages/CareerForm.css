@@ -1,0 +1,39 @@
+.career-form-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff;
+  background: white;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.career-form-page .container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  padding: 2rem 2rem;
+}
+.career-form-page label span {
+  color: #d9534f;
+}
+.career-form-page .form-control {
+  border-radius: 6px;
+  box-shadow: none;
+}
+.career-form-page .btn-primary {
+  background: #007bff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 2rem;
+}
+.career-form-page .btn-primary:disabled {
+  background: #6c757d;
+}
+@media(max-width:768px){
+    .career-form-page {
+        padding: 20px 0;
+    }
+}
+
