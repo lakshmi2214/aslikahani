@@ -60,7 +60,7 @@ function Magzine(){
               <aside>
                 <ChaiTheoryAd addObject={value} />
                 {/* <RecentBusiness dataObject={result} /> */}
-                <SristarAd1 addObject={value} />
+                {/* <SristarAd1 addObject={value} /> */}
                 {/* <SliderWidgetBusiness dataObject={result} /> */}
               </aside>
             </div>
