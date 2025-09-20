@@ -21,6 +21,7 @@ import Stories from "../NavPages/Stories";
 import SiteMap from "../NavPages/SiteMap";
 import Career from "../NavPages/Carrer";
 import CareerForm from "../NavPages/CareerForm";
+import DynamicForm from "../NavPages/DynamicForm";
 // import Turn from "../ArticleContent/Magzine/Turn";
 
 function Router() {
@@ -42,6 +43,7 @@ function Router() {
           <Route path="/emagazine" element={<Magzine />} />
           <Route path="/Careers" element={< Career />} />
           <Route path="/event-form" element={<CareerForm />} />
+          <Route path="/df/:id" element={<DynamicForm />} />  
           <Route path="/search/:keyword" element={<SearchBar />} />
           <Route path="/Home/:id" element={<ArticleContent />} />
           <Route path="/Entertainment/:id" element={<ArticleContent />} />
