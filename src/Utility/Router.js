@@ -22,6 +22,7 @@ import SiteMap from "../NavPages/SiteMap";
 import Career from "../NavPages/Carrer";
 import CareerForm from "../NavPages/CareerForm";
 import DynamicForm from "../NavPages/DynamicForm";
+import Lottery from "../NavPages/Lottery";
 // import Turn from "../ArticleContent/Magzine/Turn";
 
 function Router() {
@@ -41,6 +42,8 @@ function Router() {
           <Route path="/Art-and-Culture" exact element={<ArtCulture />} />
           <Route path="/subscription" element={<SubscriptionPage />} />
           <Route path="/emagazine" element={<Magzine />} />
+          {/* <Route path="/LuckyDraw/:id" element={<Lottery />} /> */}
+          <Route path="/LuckyDraw" element={<Lottery />} />
           <Route path="/Careers" element={< Career />} />
           <Route path="/event-form" element={<CareerForm />} />
           <Route path="/df/:id" element={<DynamicForm />} />  

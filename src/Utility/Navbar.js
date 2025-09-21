@@ -85,6 +85,7 @@ function Navbar() {
 				<header className="headCts">
 					<nav className={`nav-linking ${isOpen ? "open" : ""}`}>
 						<li><Link to="/emagazine" className={`bar emagActive ${isActive("/emagazine")}`}>E-magazine</Link></li>
+						{/* <li><Link to="/lottery" className={`bar ${isActive("/lottery")}`}>Lucky Draw</Link></li> */}
 						{/* <li><Link to="/Home" className={`bar ${isActive("/Home")}`}>Home</Link></li> */}
 						<li><Link to="/Entertainment" className={`bar ${isActive("/Entertainment")}`}>Entertainment</Link></li>
 						<li><Link to="/Education" className={`bar ${isActive("/Education")}`}>Education</Link></li>
