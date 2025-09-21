@@ -43,7 +43,7 @@ function Router() {
           <Route path="/subscription" element={<SubscriptionPage />} />
           <Route path="/emagazine" element={<Magzine />} />
           {/* <Route path="/LuckyDraw/:id" element={<Lottery />} /> */}
-          <Route path="/LuckyDraw" element={<Lottery />} />
+          <Route path="/draw/:id" element={<Lottery />} />
           <Route path="/Careers" element={< Career />} />
           <Route path="/event-form" element={<CareerForm />} />
           <Route path="/df/:id" element={<DynamicForm />} />  

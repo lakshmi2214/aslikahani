@@ -5,8 +5,10 @@ import LogoColumn from '../Home/LogoColumn';
 import Navbar from '../Utility/Navbar';
 import Footer from '../Home/Footer/Footer';
 import './CareerForm.css';
+import { useLocation } from "react-router-dom";
 
 function DrawForm() {
+    const location = useLocation();
     const [schema, setSchema] = useState([]);
     const [formImage, setFormImage] = useState('');
     const [formData, setFormData] = useState({});
@@ -18,26 +20,34 @@ function DrawForm() {
     useEffect(() => {
         async function fetchSchema() {
             try {
+                if (location) {
+                    var tmp = location.pathname.slice(location.pathname.lastIndexOf("/"), location.pathname.length);
+                    // setData(tmp) 
+                    tmp = tmp.substring(1, tmp.length);
+                }
+
                 const res = await fetch(`${process.env.REACT_APP_BACKEND_HOST}/api/v1/lottery/list`);
                 const data = await res.json();
 
+                console.log(data);
+
                 if (data.valid && data.valid.length > 0) {
-                    const lottery = data.valid[0]; // take the first valid lottery
+                    const lottery = data.valid.find(item => item.unique_identifier === tmp); // take the first valid lottery
 
                     // 🚨 Remove ALL city fields
-                    const filteredFields = (lottery.lottery_form_fields || []).filter(
-                        f => !f.FieldName.toLowerCase().includes("city") &&
-                            !f.form_input_name.toLowerCase().includes("city")
-                    );
+                    // const filteredFields = (lottery.lottery_form_fields || []).filter(
+                    //     f => !f.FieldName.toLowerCase().includes("city") &&
+                    //         !f.form_input_name.toLowerCase().includes("city")
+                    // );
 
-                    setSchema(filteredFields);
+                    setSchema(lottery.lottery_form_fields || []);
                     setFormImage(lottery.image_url || '');
                     setLotteryId(lottery.unique_identifier);
                     setLotteryUrl(lottery.url);
 
                     // init form data
                     const init = {};
-                    filteredFields.forEach(f => {
+                    lottery.lottery_form_fields.forEach(f => {
                         init[f.form_input_name] = f.FieldType === 'Checkbox' ? false : '';
                     });
                     setFormData(init);
@@ -95,7 +105,7 @@ function DrawForm() {
                 formPayload.append(key, formData[key]);
             }
             // ✅ backend requires this key
-            formPayload.append('form_identifier', lotteryId);
+            formPayload.append('lottery_identifier', lotteryId);
 
             const response = await fetch(
                 `${process.env.REACT_APP_BACKEND_HOST}/api/v1/lottery/submit`,
