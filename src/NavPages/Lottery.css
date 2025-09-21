@@ -1,0 +1,127 @@
+.swal-text{
+    text-align: center;
+}
+.swal-content {
+    padding: 0 20px;
+    font-size: medium;
+    margin-top: 40px;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 20px;
+}
+
+/* Countdown Timer Styles */
+.countdown-timer {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    padding: 10px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.countdown-timer h4 {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.timer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.timer-item {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 20px 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timer-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.timer-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.timer-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        max-width: 400px;
+    }
+    
+    .timer-number {
+        font-size: 1.5rem;
+    }
+    
+    .countdown-timer {
+        padding: 15px 10px;
+        margin-bottom: 20px;
+    }
+    
+    .countdown-timer h4 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    
+    .timer-item {
+        padding: 12px 8px;
+    }
+    
+    .timer-label {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        max-width: 300px;
+    }
+    
+    .timer-item {
+        padding: 10px 6px;
+    }
+    
+    .timer-number {
+        font-size: 1.3rem;
+    }
+    
+    .timer-label {
+        font-size: 0.7rem;
+    }
+    
+    .countdown-timer {
+        padding: 12px 8px;
+        margin-bottom: 15px;
+    }
+    
+    .countdown-timer h4 {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+}

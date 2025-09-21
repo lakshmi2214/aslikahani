@@ -124,7 +124,7 @@
     width: fit-content;
     left: 45%;
     margin-top: 4px;
-    background-color: #d32415 !important;
+    /* background-color: #d32415 !important; */
     border: none;
 }
 /* .subscribe-plans{

@@ -5,6 +5,7 @@ import LogoColumn from '../Home/LogoColumn';
 import Navbar from '../Utility/Navbar';
 import Footer from '../Home/Footer/Footer';
 import './CareerForm.css';
+import './Lottery.css';
 import { useLocation } from "react-router-dom";
 
 function DrawForm() {
@@ -16,6 +17,14 @@ function DrawForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [lotteryId, setLotteryId] = useState('');
     const [lotteryUrl, setLotteryUrl] = useState('');
+    const [termsAccepted, setTermsAccepted] = useState(false);
+    const [endDateTime, setEndDateTime] = useState('');
+    const [timeLeft, setTimeLeft] = useState({
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+    });
 
     useEffect(() => {
         async function fetchSchema() {
@@ -44,6 +53,7 @@ function DrawForm() {
                     setFormImage(lottery.image_url || '');
                     setLotteryId(lottery.unique_identifier);
                     setLotteryUrl(lottery.url);
+                    setEndDateTime(lottery.end_datetime);
 
                     // init form data
                     const init = {};
@@ -57,7 +67,34 @@ function DrawForm() {
             }
         }
         fetchSchema();
-    }, []);
+    }, [location]);
+
+    // Timer effect
+    useEffect(() => {
+        if (!endDateTime) return;
+
+        const calculateTimeLeft = () => {
+            const now = new Date().getTime();
+            const endTime = new Date(endDateTime).getTime();
+            const difference = endTime - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                setTimeLeft({ days, hours, minutes, seconds });
+            } else {
+                setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+            }
+        };
+
+        calculateTimeLeft();
+        const timer = setInterval(calculateTimeLeft, 1000);
+
+        return () => clearInterval(timer);
+    }, [endDateTime]);
 
     const validate = () => {
         const newErrors = {};
@@ -77,6 +114,12 @@ function DrawForm() {
                 }
             }
         });
+        
+        // Check terms and conditions acceptance
+        if (!termsAccepted) {
+            newErrors.terms = 'You must accept the terms and conditions';
+        }
+        
         return newErrors;
     };
 
@@ -87,6 +130,35 @@ function DrawForm() {
             [field.form_input_name]: type === 'checkbox' ? checked : value,
         }));
     };
+
+    // Copy to clipboard function
+    const copyToClipboard = (elementId) => {
+        const element = document.getElementById(elementId);
+        if (element) {
+            element.select();
+            element.setSelectionRange(0, 99999); // For mobile devices
+            document.execCommand('copy');
+            
+            // Show feedback
+            const button = element.nextElementSibling;
+            const originalText = button.textContent;
+            button.textContent = 'Copied!';
+            button.style.background = '#28a745';
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = '#007bff';
+            }, 2000);
+        }
+    };
+
+    // Make copyToClipboard available globally for the onclick handler
+    useEffect(() => {
+        window.copyToClipboard = copyToClipboard;
+        return () => {
+            delete window.copyToClipboard;
+        };
+    }, []);
 
 
     const handleSubmit = async (e) => {
@@ -121,9 +193,31 @@ function DrawForm() {
                 setFormData({});
                 swal({
                     title: 'Submitted',
-                    text: 'Your lottery entry has been recorded successfully!',
+                    text: 'Your Draw entry has been recorded successfully!',
                     icon: 'success',
+                    content: {
+                        element: "div",
+                        attributes: {
+                            innerHTML: `
+                            <p>ನಿಮ್ಮ ಡ್ರಾ ದಾಖಲಾತಿ ಯಶಸ್ವಿಯಾಗಿ ಪೂರ್ಣಗೊಂಡಿದೆ!</p>
+                                ${result.submission_transaction_id ? `
+                                    <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px; border: 1px solid #dee2e6;">
+                                        <p style="margin: 0 0 10px 0; font-weight: bold; color: #495057; font-size: 10px;
+    color: #F44336;">⚠️ Important: Copy this code now – it is your ONLY unique participation code for the draw results. Without it, you cannot claim your prize.</p>
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <input type="text" value="${result.submission_transaction_id}" readonly style="flex: 1; padding: 8px 12px; border: 1px solid #ced4da; border-radius: 4px; background: white; font-family: monospace; font-size: 14px;" id="responseKeyInput">
+                                            <button onclick="copyToClipboard('responseKeyInput')" style="padding: 8px 12px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px;">Copy</button>
+                                        </div>
+                                    </div>
+                                ` : ''}
+                                <p>Subscribe to our YouTube channel <a href="https://www.youtube.com/@AsliKahani" target="_blank" rel="noopener noreferrer" style="color: #007bff; text-decoration: underline;">click here</a></p>
+                            `
+                        }
+                    }
                 }).then(() => {
+                    // Redirect to YouTube channel
+                    window.open('https://www.youtube.com/@AsliKahani', '_blank');
+                    
                     if (lotteryUrl) {
                         window.location.href = lotteryUrl;
                     }
@@ -132,7 +226,7 @@ function DrawForm() {
                 if (result?.error?.toLowerCase().includes('duplicate')) {
                     swal({
                         title: 'Already Registered',
-                        text: 'You have already registered for this lottery.',
+                        text: 'You have already registered for this Draw.',
                         icon: 'info',
                     });
                 } else {
@@ -198,6 +292,31 @@ function DrawForm() {
             <Navbar />
             <section className="inner-pages-section">
                 <div className="container py-5">
+                    {/* Countdown Timer */}
+                    {endDateTime && (
+                        <div className="countdown-timer mb-4">
+                            <h4 className="text-center mb-3">Time Remaining</h4>
+                            <div className="timer-grid">
+                                <div className="timer-item">
+                                    <div className="timer-number">{timeLeft.days}</div>
+                                    <div className="timer-label">Days</div>
+                                </div>
+                                <div className="timer-item">
+                                    <div className="timer-number">{timeLeft.hours}</div>
+                                    <div className="timer-label">Hours</div>
+                                </div>
+                                <div className="timer-item">
+                                    <div className="timer-number">{timeLeft.minutes}</div>
+                                    <div className="timer-label">Minutes</div>
+                                </div>
+                                <div className="timer-item">
+                                    <div className="timer-number">{timeLeft.seconds}</div>
+                                    <div className="timer-label">Seconds</div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                    
                     <div className="sub-hading">
                         <h5 className="letsBuild">Join the Lucky Draw</h5>
                         <h2>Apply Now<strong> Fill your details</strong></h2>
@@ -234,8 +353,32 @@ function DrawForm() {
                                             </div>
                                         ))}
                                         <div className="col-md-12">
+                                            <div className="form-group">
+                                                <div className="form-check">
+                                                    <input
+                                                        type="checkbox"
+                                                        className="form-check-input"
+                                                        id="termsCheckbox"
+                                                        checked={termsAccepted}
+                                                        onChange={(e) => setTermsAccepted(e.target.checked)}
+                                                        style={{
+                                                            width: '20px',
+                                                            height: '20px',
+                                                            marginTop: '2px'
+                                                        }}
+                                                    />
+                                                    <label className="form-check-label" htmlFor="termsCheckbox" style={{ fontSize: '14px', marginLeft: '8px',fontWeight:'500' }}>
+                                                        I agree to the <a href="javascript:void(0)" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>
+                                                    </label>
+                                                </div>
+                                                {errors.terms && (
+                                                    <small className="text-danger">{errors.terms}</small>
+                                                )}
+                                            </div>
+                                        </div>
+                                        <div className="col-md-12">
                                             <div className="form-submit">
-                                                <button type="submit" disabled={isSubmitting}>
+                                                <button type="submit" disabled={isSubmitting || !termsAccepted}>
                                                     {isSubmitting ? 'Submitting...' : 'Submit'}
                                                 </button>
                                             </div>
