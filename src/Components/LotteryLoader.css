@@ -1,0 +1,112 @@
+.lottery-loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+}
+
+.lottery-loader-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    min-width: 400px;
+    min-height: 500px;
+}
+
+.main-animation {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
+    background: transparent;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.main-animation > div {
+    background: transparent !important;
+}
+
+.main-animation svg {
+    background: transparent !important;
+}
+
+.main-animation canvas {
+    background: transparent !important;
+}
+
+.confetti-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.winner-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    pointer-events: none;
+}
+
+.loader-text {
+    color: white;
+    font-family: 'Arial', sans-serif;
+    z-index: 5;
+    position: relative;
+}
+
+.loader-text h2 {
+    font-size: 24px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .lottery-loader-container {
+        min-width: 300px;
+        min-height: 400px;
+        padding: 20px;
+    }
+    
+    .main-animation {
+        width: 200px !important;
+        height: 200px !important;
+    }
+    
+    .winner-overlay {
+        width: 150px !important;
+        height: 150px !important;
+    }
+}
