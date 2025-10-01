@@ -101,12 +101,16 @@
     }
     
     .main-animation {
-        width: 200px !important;
-        height: 200px !important;
+        width: 150px !important;
+        height: 150px !important;
     }
     
     .winner-overlay {
-        width: 150px !important;
-        height: 150px !important;
+        width: 120px !important;
+        height: 120px !important;
+    }
+    
+    .loader-text h2 {
+        font-size: 18px;
     }
 }

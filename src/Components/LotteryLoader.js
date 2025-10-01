@@ -9,6 +9,16 @@ function LotteryLoader({ onComplete }) {
     const [currentAnimation, setCurrentAnimation] = useState('spinwheel');
     const [showConfetti, setShowConfetti] = useState(false);
     const [showWinner, setShowWinner] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -53,8 +63,8 @@ function LotteryLoader({ onComplete }) {
                         loop={currentAnimation === 'spinwheel'}
                         autoplay={true}
                         style={{ 
-                            width: 300, 
-                            height: 300,
+                            width: isMobile ? 150 : 300, 
+                            height: isMobile ? 150 : 300,
                             background: 'transparent'
                         }}
                         rendererSettings={{
@@ -82,7 +92,10 @@ function LotteryLoader({ onComplete }) {
                             animationData={winnerQulAnimation}
                             loop={false}
                             autoplay={true}
-                            style={{ width: 200, height: 200 }}
+                            style={{ 
+                                width: isMobile ? 120 : 200, 
+                                height: isMobile ? 120 : 200 
+                            }}
                         />
                     </div>
                 )}
