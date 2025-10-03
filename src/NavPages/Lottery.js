@@ -41,7 +41,9 @@ function DrawForm() {
 
                 console.log(data);
 
-                const lottery = data.valid.find(item => item.unique_identifier === tmp);
+                const allLotteries = [...(data.valid || []), ...(data.expired || [])];
+
+                const lottery = allLotteries.find(item => item.unique_identifier === tmp); // take the first valid lottery
                 if (!lottery.is_valid){
                     window.open(`${process.env.REACT_APP_DOMAIN_NAME}/winners/${tmp}`, '_self');
                 }
