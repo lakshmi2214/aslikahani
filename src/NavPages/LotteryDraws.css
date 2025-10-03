@@ -39,16 +39,17 @@
 }
 /* Grid Container */
 .lottery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .lottery-card-wrapper {
-    width: 100%;
+    width: calc(33.33% - 20px);
 }
 
 /* Lottery Card */
@@ -224,6 +225,9 @@
     .lottery-section-title {
         font-size: 2rem;
         margin-bottom: 30px;
+    }
+    .lottery-card-wrapper {
+        width: calc(100%);
     }
     
     .lottery-grid {

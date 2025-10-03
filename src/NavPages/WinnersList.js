@@ -16,29 +16,43 @@ function WinnersList() {
         
         async function fetchWinners(params) {
             try {
+                let tmp = null;
                 if (location) {
-                    var tmp = location.pathname.slice(location.pathname.lastIndexOf("/"), location.pathname.length);
-                    // setData(tmp) 
-                    tmp = tmp.substring(1, tmp.length);
+                    // Extract the lottery ID from the URL path
+                    const pathParts = location.pathname.split('/');
+                    tmp = pathParts[pathParts.length - 1]; // Get the last part of the path
+                    console.log('Extracted lottery ID:', tmp);
                 }
     
                 // const res = await fetch(`${process.env.REACT_APP_BACKEND_HOST}/api/v1/lottery/list`);
                 const res = await fetch(`${process.env.REACT_APP_BACKEND_HOST}/api/v1/lottery/list`);
                 const data = await res.json();
     
-                console.log(data);
+                console.log('API Data:', data);
+                console.log('Looking for lottery ID:', tmp);
+                
                 var mockWinners = [];
 
                 const allLotteries = [...(data.valid || []), ...(data.expired || [])];
-                const lottery = allLotteries.find(item => item.unique_identifier === tmp); // take the first valid lottery
+                console.log('All lotteries:', allLotteries);
+                
+                const lottery = allLotteries.find(item => item.unique_identifier === tmp);
+                console.log('Found lottery:', lottery);
 
+                if (!lottery) {
+                    console.error('Lottery not found with ID:', tmp);
+                    setIsLoading(false);
+                    return;
+                }
     
                 if (!lottery.is_valid) {
-                    
+                    console.log('Fetching winners for expired lottery...');
                     const winner_list = await fetch(`${process.env.REACT_APP_BACKEND_HOST}/api/v1/lottery/winners-list/${tmp}`);
-                    mockWinners = await winner_list.json();
-                    
-                }else{
+                    const winnerData = await winner_list.json();
+                    console.log('Winners data:', winnerData);
+                    mockWinners = winnerData;
+                } else {
+                    console.log('Lottery is still active, redirecting to draw page...');
                     window.open(`${process.env.REACT_APP_DOMAIN_NAME}/draw/${tmp}`, '_self');
                 }
 

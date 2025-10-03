@@ -3,12 +3,15 @@ import Topbar from '../Home/Topbar';
 import LogoColumn from '../Home/LogoColumn';
 import Navbar from '../Utility/Navbar';
 import Footer from '../Home/Footer/Footer';
+import LotteryLoader from '../Components/LotteryLoader';
 // import ChaiTheoryAd from '../Advertisements/ChaiTheoryAd';
 // import SristarAd1 from '../Advertisements/SristarAd1';
 import './LotteryDraws.css';
 
 function LotteryDraws() {
     const [lotteryDraws, setLotteryDraws] = useState([]);
+    const [showLoader, setShowLoader] = useState(false);
+    const [selectedLotteryId, setSelectedLotteryId] = useState(null);
     // const [categories, setCategories] = useState([]);
     useEffect(() => {
         // Fetch lottery draws data
@@ -71,10 +74,19 @@ function LotteryDraws() {
 
 
     const handleDrawClick = (draw) => {
-        if (draw.url) {
-            // Redirect to the lottery URL
+        if (draw.isActive && draw.url) {
+            // For active lotteries, redirect to the lottery URL
             window.open(draw.url, '_blank');
+        } else if (!draw.isActive) {
+            // For expired lotteries, show the loader and then redirect to winners
+            setSelectedLotteryId(draw.id);
+            setShowLoader(true);
         }
+    };
+
+    const handleLoaderComplete = () => {
+        // Navigate to winners page after loader completes
+        window.location.href = `/winners/${selectedLotteryId}`;
     };
 
 
@@ -91,6 +103,9 @@ function LotteryDraws() {
             <Topbar />
             <LogoColumn />
             <Navbar />
+            {showLoader && (
+                <LotteryLoader onComplete={handleLoaderComplete} />
+            )}
             <section className="lottery-main-content">
                 <div className="col-md-12" style={{paddingLeft:"5%", paddingRight:"5%"}}>
                     <div className="row">
@@ -137,8 +152,8 @@ function LotteryDraws() {
                                                             <button className="details-link" onClick={(e) => e.preventDefault()}>Details</button>
                                                         </div>
                                                         <button 
-                                                            className={`card-button 'active'`}
-                                                            disabled={!draw.isActive}
+                                                            className={`card-button active`}
+                                                            // disabled={!draw.isActive}
                                                             onClick={() => handleDrawClick(draw)}
                                                         >
                                                             {draw.isActive ? 'Participate Now' : 'Winners'}

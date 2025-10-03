@@ -6455,7 +6455,17 @@ section.full-swiper {
 section.full-swiper .sliderOuter {
     padding: 0;
 }
+section.lottery-banner {
+  padding: 20px 0;
+}
 
+
+section.lottery-banner img {
+  display: block;
+  margin: auto;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
 .badgesContainer.closedBadeg {margin-bottom: 5px;}
 
 

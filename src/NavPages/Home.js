@@ -94,6 +94,16 @@ function Home() {
         </button>
       </div>
       <CareerModal show={showCareerModal} handleClose={() => setShowCareerModal(false)} /> */}
+
+      {/* <section className="lottery-banner">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <img src='https://media.aslikahani.com/advertisements/sristar_horizontal.jpg' className="img-fluid" alt="lotterybanner" />
+            </div>
+          </div>
+        </div>
+      </section> */}
       <section className="page-mid-section">
         <div className="container">
           <div className="row">
