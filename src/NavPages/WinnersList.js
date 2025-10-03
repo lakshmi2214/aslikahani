@@ -4,104 +4,57 @@ import LogoColumn from '../Home/LogoColumn';
 import Navbar from '../Utility/Navbar';
 import Footer from '../Home/Footer/Footer';
 import './WinnersList.css';
+import { useLocation } from "react-router-dom";
+
 
 function WinnersList() {
     const [winners, setWinners] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const location = useLocation();
 
     useEffect(() => {
-        // Simulate API call
-        const fetchWinners = async () => {
+        
+        async function fetchWinners(params) {
             try {
-                // Mock data for demonstration
-                const mockWinners = [
-                    {
-                        id: 1,
-                        name: 'Priya Sharma',
-                        silverCoins: 5,
-                        reward: '₹500',
-                        collected: true,
-                        winDate: '2024-12-20',
-                        drawName: 'Jewellery Draw'
-                    },
-                    {
-                        id: 2,
-                        name: 'Rajesh Kumar',
-                        silverCoins: 3,
-                        reward: '₹300',
-                        collected: false,
-                        winDate: '2024-12-19',
-                        drawName: 'Clothing Draw'
-                    },
-                    {
-                        id: 3,
-                        name: 'Anita Singh',
-                        silverCoins: 7,
-                        reward: '₹700',
-                        collected: true,
-                        winDate: '2024-12-18',
-                        drawName: 'Footwear Draw'
-                    },
-                    {
-                        id: 4,
-                        name: 'Vikram Patel',
-                        silverCoins: 2,
-                        reward: '₹200',
-                        collected: false,
-                        winDate: '2024-12-17',
-                        drawName: 'Beauty Draw'
-                    },
-                    {
-                        id: 5,
-                        name: 'Sunita Reddy',
-                        silverCoins: 4,
-                        reward: '₹400',
-                        collected: true,
-                        winDate: '2024-12-16',
-                        drawName: 'Luggage Draw'
-                    },
-                    {
-                        id: 6,
-                        name: 'Amit Gupta',
-                        silverCoins: 6,
-                        reward: '₹600',
-                        collected: false,
-                        winDate: '2024-12-15',
-                        drawName: 'Jewellery Draw'
-                    },
-                    {
-                        id: 7,
-                        name: 'Kavita Joshi',
-                        silverCoins: 3,
-                        reward: '₹300',
-                        collected: true,
-                        winDate: '2024-12-14',
-                        drawName: 'Clothing Draw'
-                    },
-                    {
-                        id: 8,
-                        name: 'Rohit Verma',
-                        silverCoins: 5,
-                        reward: '₹500',
-                        collected: false,
-                        winDate: '2024-12-13',
-                        drawName: 'Footwear Draw'
-                    }
-                ];
+                if (location) {
+                    var tmp = location.pathname.slice(location.pathname.lastIndexOf("/"), location.pathname.length);
+                    // setData(tmp) 
+                    tmp = tmp.substring(1, tmp.length);
+                }
+    
+                // const res = await fetch(`${process.env.REACT_APP_BACKEND_HOST}/api/v1/lottery/list`);
+                const res = await fetch(`${process.env.REACT_APP_BACKEND_HOST}/api/v1/lottery/list`);
+                const data = await res.json();
+    
+                console.log(data);
+                var mockWinners = [];
+
+                const allLotteries = [...(data.valid || []), ...(data.expired || [])];
+                const lottery = allLotteries.find(item => item.unique_identifier === tmp); // take the first valid lottery
+
+    
+                if (!lottery.is_valid) {
+                    
+                    const winner_list = await fetch(`${process.env.REACT_APP_BACKEND_HOST}/api/v1/lottery/winners-list/${tmp}`);
+                    mockWinners = await winner_list.json();
+                    
+                }else{
+                    window.open(`${process.env.REACT_APP_DOMAIN_NAME}/draw/${tmp}`, '_self');
+                }
 
                 // Simulate loading delay
                 setTimeout(() => {
                     setWinners(mockWinners);
                     setIsLoading(false);
                 }, 1500);
-            } catch (error) {
-                console.error('Error fetching winners:', error);
-                setIsLoading(false);
+            } catch (err) {
+                console.error('Error fetching lottery schema', err);
+                
             }
-        };
+        }
 
         fetchWinners();
-    }, []);
+    }, [location]);
 
     const handleCollectReward = (winnerId) => {
         setWinners(prevWinners => 
@@ -141,14 +94,14 @@ function WinnersList() {
                                     <span className="stat-number">{winners.length}</span>
                                     <span className="stat-label">Total Winners</span>
                                 </div>
-                                <div className="stat-item">
+                                {/* <div className="stat-item">
                                     <span className="stat-number">{winners.filter(w => w.collected).length}</span>
                                     <span className="stat-label">Rewards Collected</span>
                                 </div>
                                 <div className="stat-item">
                                     <span className="stat-number">{winners.reduce((sum, w) => sum + w.silverCoins, 0)}</span>
                                     <span className="stat-label">Silver Coins Won</span>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
@@ -169,8 +122,11 @@ function WinnersList() {
                                         <tr>
                                             <th>Rank</th>
                                             <th>Winner Name</th>
-                                            <th>Silver Coins</th>
-                                            <th>Action</th>
+                                            <th>Phone Number</th>
+                                            <th>Prize</th>
+                                            <th>Prize Details</th>
+                                            <th>Submission Id</th>
+                                            {/* <th>Action</th> */}
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -184,16 +140,34 @@ function WinnersList() {
                                                 <td className="name-cell">
                                                     <div className="winner-name">
                                                         <i className="fa fa-user-circle"></i>
-                                                        {winner.name}
+                                                        {winner.candidate_name}
+                                                    </div>
+                                                </td>
+                                                <td className="reward-cell">
+                                                    <div className="winner-name">
+                                                        <i className="fa fa-user-number"></i>
+                                                        {winner.phone_number}
                                                     </div>
                                                 </td>
                                                 <td className="reward-cell">
                                                     <div className="reward-amount">
                                                         <i className="fa fa-coins"></i>
-                                                        {winner.silverCoins} Silver Coins
+                                                        {winner.prize_obj.prize}
                                                     </div>
                                                 </td>
-                                                <td className="action-cell">
+                                                <td className="reward-cell">
+                                                    <div className="reward-amount">
+                                                        <i className="fa fa-coins"></i>
+                                                        {winner.prize_obj.prize_details}
+                                                    </div>
+                                                </td>
+                                                <td className="reward-cell">
+                                                    <div className="winner-name">
+                                                        <i className="fa fa-user-number"></i>
+                                                        {winner.unique_identifier}
+                                                    </div>
+                                                </td>
+                                                {/* <td className="action-cell">
                                                     {!winner.collected ? (
                                                         <button 
                                                             className="collect-btn"
@@ -208,7 +182,7 @@ function WinnersList() {
                                                             Collected
                                                         </span>
                                                     )}
-                                                </td>
+                                                </td> */}
                                             </tr>
                                         ))}
                                     </tbody>
@@ -222,6 +196,7 @@ function WinnersList() {
                         <div className="message-content">
                             <h3>🎊 Congratulations to All Winners! 🎊</h3>
                             <p>Thank you for participating in our lucky draws. Keep playing to win more amazing prizes!</p>
+                            <p>Reach out to support team to collect the reward at +91-6366333444</p>
                             <div className="celebration-icons">
                                 <i className="fa fa-star"></i>
                                 <i className="fa fa-gift"></i>

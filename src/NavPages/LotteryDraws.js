@@ -15,6 +15,7 @@ function LotteryDraws() {
         const fetchLotteryDraws = async () => {
             try {
                 const response = await fetch(`${process.env.REACT_APP_BACKEND_HOST}/api/v1/lottery/list`);
+                // const response = await fetch(`http://localhost:8000/api/v1/lottery/list`);
                 const data = await response.json();
                 
                 // Combine both valid and expired lotteries
@@ -70,7 +71,7 @@ function LotteryDraws() {
 
 
     const handleDrawClick = (draw) => {
-        if (draw.isActive && draw.url) {
+        if (draw.url) {
             // Redirect to the lottery URL
             window.open(draw.url, '_blank');
         }
@@ -103,7 +104,7 @@ function LotteryDraws() {
                                         {lotteryDraws.map((draw, index) => (
                                             <div key={draw.id} className="lottery-card-wrapper">
                                                 <div 
-                                                    className={`lottery-card ${draw.isActive ? 'active' : 'disabled'}`}
+                                                    className={`lottery-card 'active'`}
                                                     onClick={() => handleDrawClick(draw)}
                                                 >
                                                     <div className="card-image-section">
@@ -111,7 +112,7 @@ function LotteryDraws() {
                                                             <img src={draw.image} alt={draw.title} />
                                                         </div>
                                                         <div className="expires-banner">
-                                                            {draw.isActive ? 'Active Now' : 'Expired'}
+                                                            {draw.isActive ? 'Active Now' : 'Winners'}
                                                         </div>
                                                         <div className="crown-icon">
                                                             <i className="fa fa-crown"></i>
@@ -136,11 +137,11 @@ function LotteryDraws() {
                                                             <button className="details-link" onClick={(e) => e.preventDefault()}>Details</button>
                                                         </div>
                                                         <button 
-                                                            className={`card-button ${draw.isActive ? 'active' : 'disabled'}`}
+                                                            className={`card-button 'active'`}
                                                             disabled={!draw.isActive}
                                                             onClick={() => handleDrawClick(draw)}
                                                         >
-                                                            {draw.isActive ? 'Participate Now' : 'Expired'}
+                                                            {draw.isActive ? 'Participate Now' : 'Winners'}
                                                         </button>
                                                     </div>
                                                 </div>

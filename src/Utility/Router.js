@@ -45,7 +45,7 @@ function Router() {
           <Route path="/subscription" element={<SubscriptionPage />} />
           <Route path="/emagazine" element={<Magzine />} />
           <Route path="/lucky-draws" element={<LotteryDraws />} />
-          <Route path="/winners" element={<WinnersList />} />
+          <Route path="/winners/:id" element={<WinnersList />} />
           {/* <Route path="/LuckyDraw/:id" element={<Lottery />} /> */}
           <Route path="/draw/:id" element={<Lottery />} />
           <Route path="/Careers" element={< Career />} />

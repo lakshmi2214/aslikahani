@@ -36,6 +36,7 @@ function DrawForm() {
                 }
 
                 const res = await fetch(`${process.env.REACT_APP_BACKEND_HOST}/api/v1/lottery/list`);
+                // const res = await fetch(`http://localhost:8000/api/v1/lottery/list`);
                 const data = await res.json();
 
                 console.log(data);
@@ -61,9 +62,12 @@ function DrawForm() {
                         init[f.form_input_name] = f.FieldType === 'Checkbox' ? false : '';
                     });
                     setFormData(init);
+                }else{
+                    window.open(`${process.env.REACT_APP_DOMAIN_NAME}/winners/${tmp}`, '_self');
                 }
             } catch (err) {
                 console.error('Error fetching lottery schema', err);
+                
             }
         }
         fetchSchema();
