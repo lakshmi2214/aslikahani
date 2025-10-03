@@ -41,30 +41,32 @@ function DrawForm() {
 
                 console.log(data);
 
-                if (data.valid && data.valid.length > 0) {
-                    const lottery = data.valid.find(item => item.unique_identifier === tmp); // take the first valid lottery
-
-                    // 🚨 Remove ALL city fields
-                    // const filteredFields = (lottery.lottery_form_fields || []).filter(
-                    //     f => !f.FieldName.toLowerCase().includes("city") &&
-                    //         !f.form_input_name.toLowerCase().includes("city")
-                    // );
-
-                    setSchema(lottery.lottery_form_fields || []);
-                    setFormImage(lottery.image_url || '');
-                    setLotteryId(lottery.unique_identifier);
-                    setLotteryUrl(lottery.url);
-                    setEndDateTime(lottery.end_datetime);
-
-                    // init form data
-                    const init = {};
-                    lottery.lottery_form_fields.forEach(f => {
-                        init[f.form_input_name] = f.FieldType === 'Checkbox' ? false : '';
-                    });
-                    setFormData(init);
-                }else{
+                const lottery = data.valid.find(item => item.unique_identifier === tmp);
+                if (!lottery.is_valid){
                     window.open(`${process.env.REACT_APP_DOMAIN_NAME}/winners/${tmp}`, '_self');
                 }
+
+                // take the first valid lottery
+
+                // 🚨 Remove ALL city fields
+                // const filteredFields = (lottery.lottery_form_fields || []).filter(
+                //     f => !f.FieldName.toLowerCase().includes("city") &&
+                //         !f.form_input_name.toLowerCase().includes("city")
+                // );
+
+                setSchema(lottery.lottery_form_fields || []);
+                setFormImage(lottery.image_url || '');
+                setLotteryId(lottery.unique_identifier);
+                setLotteryUrl(lottery.url);
+                setEndDateTime(lottery.end_datetime);
+
+                // init form data
+                const init = {};
+                lottery.lottery_form_fields.forEach(f => {
+                    init[f.form_input_name] = f.FieldType === 'Checkbox' ? false : '';
+                });
+                setFormData(init);
+                
             } catch (err) {
                 console.error('Error fetching lottery schema', err);
                 
