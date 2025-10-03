@@ -83,7 +83,8 @@ function DrawForm() {
 
         const calculateTimeLeft = () => {
             const now = new Date().getTime();
-            const endTime = new Date(endDateTime).getTime();
+
+            const endTime = new Date(endDateTime.slice(0, -1)).getTime();
             const difference = endTime - now;
 
             if (difference > 0) {
