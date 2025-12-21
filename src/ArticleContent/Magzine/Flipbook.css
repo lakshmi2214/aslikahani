@@ -1,10 +1,8 @@
 #total-magzine {
-  background-image: url("./Jpeg/magzine-background-grey.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: auto;
-  /* pointer-events: none; */
+  background: #333;
   height: 100vh;
+  overflow: hidden;
+  touch-action: manipulation;
 }
 
 .image-viewer {
@@ -338,7 +336,8 @@ header span {
 }
 
 header .close,
-.icons a {
+.icons a,
+.icons span {
   display: flex;
   align-items: center;
   border-radius: 50%;
@@ -371,12 +370,14 @@ header .close:hover {
   font-size: 16px;
 }
 
-.content .icons a {
+.content .icons a,
+.content .icons span {
   height: 5px;
   width: 50px;
   font-size: 20px;
   text-decoration: none;
   margin-left: -40%;
+  cursor: pointer;
   /* border: 1px solid red; */
   /* gap: 1px; */
 }
@@ -388,6 +389,7 @@ header .close:hover {
 .icons .fb {
   color: #1877f2;
   border-color: 1pc solid #b7d4fb;
+  cursor: pointer;
 }
 
 .icons .fb:hover {
@@ -397,6 +399,7 @@ header .close:hover {
 .icons .tw {
   color: #46c1f6;
   border-color: #b6e7fc;
+  cursor: pointer;
 }
 
 .icons .tw:hover {
@@ -406,6 +409,7 @@ header .close:hover {
 .icons .li {
   color: #0072b1;
   border-color: #f5bccf;
+  cursor: pointer;
 }
 
 .icons .li:hover {
@@ -415,6 +419,7 @@ header .close:hover {
 .icons .wt {
   color: #25d366;
   border-color: #bef4d2;
+  cursor: pointer;
 }
 
 .icons .wt:hover {
@@ -424,18 +429,21 @@ header .close:hover {
 .icons .tl {
   color: #0088cc;
   border-color: #b3e6ff;
+  cursor: pointer;
 }
 
 .icons .tl:hover {
   color: #0088cc;
 }
 
-.icons a:hover {
+.icons a:hover,
+.icons span:hover {
   color: #fff;
   border-color: transparent;
 }
 
-.icons a:hover i {
+.icons a:hover i,
+.icons span:hover i {
   transform: scale(1.2);
 }
 
@@ -663,3 +671,200 @@ span.nvIco:hover i {
     margin: auto;
   }
 }
+
+/* DearFlip Container Styles */
+.dearflip-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
+  /* Prevent browser zoom, let DearFlip handle it */
+  touch-action: pan-x pan-y;
+}
+
+.dearflip-container #df_magazine {
+  width: 100%;
+  height: 100%;
+}
+
+/* Prevent page zoom when interacting with flipbook */
+.df-container,
+.df-3dcanvas,
+.df-book-stage {
+  touch-action: manipulation;
+}
+
+/* Override DearFlip's container to prevent page scroll/zoom interference */
+.emagzine-container {
+  touch-action: pan-x pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+#total-magzine {
+  touch-action: manipulation;
+}
+
+/* Loading spinner - centered */
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-size: 16px;
+  color: #fff;
+  background-color: #1a1a1a;
+  background-image: url("./Jpeg/magzine-background-grey.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999999;
+  margin: 0;
+  padding: 0;
+}
+
+.loading-spinner::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hide DearFlip loading indicator - we use our own */
+.loading-info {
+  display: none !important;
+}
+
+/* Override DearFlip default styles for better integration */
+.df-container {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Back button - visible on all devices */
+.back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 999999;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover,
+.back-btn:active {
+  background: rgba(255, 255, 255, 0.95);
+  transform: scale(1.1);
+}
+
+.back-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Style the FLOATING side navigation arrows (not control bar) */
+.df-container.df-floating > .df-ui-next,
+.df-container.df-floating > .df-ui-prev,
+.df-container.df-float > .df-ui-next,
+.df-container.df-float > .df-ui-prev,
+.df-container > .df-ui-next:not(.df-ui-btn),
+.df-container > .df-ui-prev:not(.df-ui-btn) {
+  background: rgba(255, 255, 255, 0.6) !important;
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  border-radius: 50% !important;
+  width: 44px !important;
+  height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #222 !important;
+  font-size: 20px !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.2s ease !important;
+}
+
+.df-container.df-floating > .df-ui-next:hover,
+.df-container.df-floating > .df-ui-prev:hover,
+.df-container.df-float > .df-ui-next:hover,
+.df-container.df-float > .df-ui-prev:hover {
+  background: rgba(255, 255, 255, 0.85) !important;
+  background-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Icon inside floating navigation */
+.df-container.df-floating > .df-ui-next::before,
+.df-container.df-floating > .df-ui-prev::before,
+.df-container.df-float > .df-ui-next::before,
+.df-container.df-float > .df-ui-prev::before {
+  color: #222 !important;
+}
+
+/* Full page view for magazine */
+.emagzine-container {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 9999;
+}
+
+#total-magzine {
+  height: 100vh !important;
+  width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.dearflip-container {
+  height: 100vh !important;
+  width: 100vw !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.dearflip-container .df-container {
+  height: 100vh !important;
+  width: 100vw !important;
+}
+
+/* Responsive adjustments for DearFlip */
+@media (max-width: 768px) {
+  .dearflip-container ._df_book {
+    min-height: 400px;
+  }
+}
+
