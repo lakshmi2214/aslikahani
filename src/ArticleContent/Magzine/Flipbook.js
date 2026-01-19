@@ -43,7 +43,8 @@ function Flipbook() {
         console.log('jQuery available:', !!window.jQuery, 'flipBook:', !!window.jQuery?.fn?.flipBook);
         
         if (datavalue && flipbookRef.current) {
-            // TEST: Use DearFlip's demo PDF (CORS-enabled)
+            // TEST: Using demo PDF until CORS is fixed on your server
+            // TODO: Replace with your API response when CORS is enabled
             const testPdfUrl = "https://js.dearflip.com/wp-content/uploads/2019/07/glfw.pdf";
             
             // Check if API returns PDF or images
