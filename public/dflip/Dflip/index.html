@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DearFlip PDF Viewer</title>
+    
+    <!-- DearFlip CSS -->
+    <link rel="stylesheet" href="css/dflip.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #1a1a2e;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+            padding: 20px 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .header h1 {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        
+        .header h1 span {
+            color: #4facfe;
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .section-title {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        /* Embedded flipbook container */
+        .flipbook-embed {
+            width: 100%;
+            height: 600px;
+            background: #0f0f1a;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        
+        /* Button styles for popup flipbooks */
+        .flipbook-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        ._df_button {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%) !important;
+            color: #fff !important;
+            padding: 12px 24px !important;
+            border-radius: 8px !important;
+            font-weight: 500;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            display: inline-block;
+        }
+        
+        ._df_button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 20px;
+            }
+            
+            .flipbook-embed {
+                height: 400px;
+            }
+            
+            .header {
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Dear<span>Flip</span> PDF Viewer</h1>
+    </header>
+    
+    <main class="main-content">
+        
+        <!-- Example 1: Embedded Flipbook -->
+        <section>
+            <h2 class="section-title">Embedded PDF Flipbook</h2>
+            <div class="flipbook-embed _df_book" id="df_embedded" 
+                 height="100%" 
+                 webgl="true"
+                 backgroundcolor="#0f0f1a"
+                 source="https://js.dearflip.com/wp-content/uploads/2019/07/glfw.pdf">
+                <!-- 
+                    TO USE YOUR OWN PDF:
+                    1. Change the "source" attribute above to your PDF URL
+                    2. For local PDF: source="pdf/your-file.pdf" (create a pdf folder)
+                    3. For remote PDF: source="https://example.com/file.pdf"
+                -->
+            </div>
+        </section>
+        
+        <!-- Example 2: Popup/Lightbox Flipbooks with Buttons -->
+        <section>
+            <h2 class="section-title">Popup Flipbooks (Click to Open)</h2>
+            <div class="flipbook-buttons">
+                <!-- 
+                    TO USE YOUR OWN PDF:
+                    Change the source in the data-option script below
+                -->
+                <a class="_df_button" id="df_popup_1" data-df-option="df_option_popup_1">Sample PDF 1</a>
+                <a class="_df_button" id="df_popup_2" data-df-option="df_option_popup_2">Sample PDF 2</a>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- jQuery (required by DearFlip) -->
+    <script src="js/jquery.min.js"></script>
+    
+    <!-- DearFlip Script -->
+    <script src="js/dflip.min.js"></script>
+    
+    <!-- DearFlip Configuration -->
+    <script>
+        // DearFlip global settings - Point to DearFlip CDN for required assets
+        var dFlipLocation = "https://js.dearflip.com/wp-content/plugins/dflip/assets/";
+        
+        var dFlipWPGlobal = {
+            "text": {
+                "toggleSound": "Turn on/off Sound",
+                "toggleThumbnails": "Toggle Thumbnails",
+                "toggleOutline": "Toggle Outline/Bookmark",
+                "previousPage": "Previous Page",
+                "nextPage": "Next Page",
+                "toggleFullscreen": "Toggle Fullscreen",
+                "zoomIn": "Zoom In",
+                "zoomOut": "Zoom Out",
+                "toggleHelp": "Toggle Help",
+                "singlePageMode": "Single Page Mode",
+                "doublePageMode": "Double Page Mode",
+                "downloadPDFFile": "Download PDF File",
+                "gotoFirstPage": "Goto First Page",
+                "gotoLastPage": "Goto Last Page",
+                "share": "Share",
+                "search": "Search",
+                "print": "Print",
+                "loading": "Loading"
+            },
+            "viewerType": "flipbook",
+            "mobileViewerType": "auto",
+            "backgroundColor": "rgb(34, 34, 52)",
+            "height": "100%",
+            "duration": "800",
+            "enableAnalytics": "false",
+            "webgl": "true",
+            "hard": "none",
+            "maxTextureSize": "3200",
+            "zoomRatio": "1.5"
+        };
+
+        // ============================================
+        // HOW TO ADD YOUR OWN PDF:
+        // ============================================
+        // Option 1: Local PDF - Put your PDF file in a "pdf" folder and use:
+        //           source: "pdf/your-file.pdf"
+        //
+        // Option 2: Remote PDF - Use a full URL:
+        //           source: "https://example.com/path/to/file.pdf"
+        // ============================================
+        
+        // Popup Flipbook 1 Options
+        window.df_option_popup_1 = {
+            source: "https://js.dearflip.com/wp-content/uploads/2019/07/glfw.pdf", // <-- CHANGE THIS TO YOUR PDF
+            is3D: true,
+            pageMode: 0,
+            backgroundColor: "#1a1a2e"
+        };
+        
+        // Popup Flipbook 2 Options  
+        window.df_option_popup_2 = {
+            source: "https://js.dearflip.com/wp-content/uploads/2019/07/Brand-Manual-Template.pdf", // <-- CHANGE THIS TO YOUR PDF
+            is3D: true,
+            pageMode: 0,
+            backgroundColor: "#1a1a2e"
+        };
+        
+        // Parse all flipbook elements when ready
+        jQuery(document).ready(function($) {
+            if(window.DFLIP && window.DFLIP.parseBooks) {
+                window.DFLIP.parseBooks();
+            }
+        });
+    </script>
+</body>
+</html>
