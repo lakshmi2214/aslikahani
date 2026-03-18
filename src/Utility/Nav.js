@@ -38,6 +38,8 @@ function Nav() {
 				<Link to={"/Business"} className="bar" onClick={handleClick}>Business</Link>
 				<Link to={"/Travel"} className="bar" onClick={handleClick}>Travel</Link>
 				<Link to={"/Lifestyle"} className="bar" onClick={handleClick}>LifeStyle</Link>
+				<Link to={"/Health"} className="bar" onClick={handleClick}>Health</Link>
+				<Link to={"/Sports"} className="bar" onClick={handleClick}>Sports</Link>
 				{/* <Link to={"/Art-and-Culture"} className="bar" onClick={handleClick}>Art and Culture</Link> */}
 
 			</nav>

@@ -7,6 +7,8 @@ import Technology from "../NavPages/Technology";
 import Business from "../NavPages/Business";
 import Travel from "../NavPages/Travel";
 import LifeStyle from "../NavPages/LifeStyle";
+import Health from "../NavPages/Health";
+import Sports from "../NavPages/Sports";
 import ArtCulture from "../NavPages/ArtCulture";
 import ArticleContent from "../ArticleContent/ArticleContent";
 import SubscriptionPage from "../NavPages/SubscriptionPage";
@@ -41,6 +43,8 @@ function Router() {
           <Route path="/Business" exact element={<Business />} />
           <Route path="/Travel" exact element={<Travel />} />
           <Route path="/Lifestyle" exact element={<LifeStyle />} />
+          <Route path="/Health" exact element={<Health />} />
+          <Route path="/Sports" exact element={<Sports />} />
           <Route path="/Art-and-Culture" exact element={<ArtCulture />} />
           <Route path="/subscription" element={<SubscriptionPage />} />
           <Route path="/emagazine" element={<Magzine />} />
@@ -59,6 +63,8 @@ function Router() {
           <Route path="/Business/:id" element={<ArticleContent />} />
           <Route path="/Travel/:id" element={<ArticleContent />} />
           <Route path="/Lifestyle/:id" element={<ArticleContent />} />
+          <Route path="/Health/:id" element={<ArticleContent />} />
+          <Route path="/Sports/:id" element={<ArticleContent />} />
           <Route path="/Art-and-Culture/:id" element={<ArticleContent />} />
           <Route path="/emagazine/:id" element={<MagzinePreview />} />
           <Route path="/emagazine/:id/:id" element={<Flipbook />} />

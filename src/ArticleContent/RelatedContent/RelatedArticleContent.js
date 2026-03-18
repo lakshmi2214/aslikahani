@@ -48,18 +48,18 @@ function RelatedArticleContent() {
   return (
     <>
       <div className="col-md-8 col-sm-7 col-xs-12 ">
-        <div className="blog-dtsl">
-          <div className="picture">
-            <h2>{data.title}</h2>
-            <ul className="post-tools nolineheight">
-              <li> by <a href=""> <strong> {data.authored_by}</strong> </a></li>
-              <li> {data.created_at} </li>
-            </ul>
-            <img alt="" className="img-responsive" src={data.image} />
-            <span className="text-muted h6">{data.credit_line} </span>
-          </div>
-          <div className="catname">
-            <p> {data.description}</p>
+        <div className="blog-dtsl text-center">
+            <h1 className="article-detailed-title">{data.title}</h1>
+            <div className="article-meta-info">
+               <span><strong>{data.authored_by}</strong></span>  / <span>{data.created_at}</span>
+            </div>
+            <div className="picture mt-4">
+               <img alt="" className="img-fluid featured-detailed-image" src={data.image} />
+               <p className="text-muted small mt-2">{data.credit_line}</p>
+            </div>
+          
+          <div className="catname text-start">
+            <p className="lead"> {data.description}</p>
             <div className="sub-render-pera" dangerouslySetInnerHTML={{ __html: data.body }}></div>
           </div>
           {/* <div className="col-md-12" style={{border:"1px solid red"}}>

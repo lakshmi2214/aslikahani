@@ -1,18 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Footer from "../Home/Footer/Footer";
-import { useState, useEffect } from 'react';
 import Navbar from '../Utility/Navbar';
 import LogoColumn from '../Home/LogoColumn';
-import Technology1 from '../Technology/Technology1';
 import Add1 from '../Advertisements/Add1';
-import Technology2 from '../Technology/Technology2';
 import Add2 from '../Advertisements/Add2';
-import Technology3 from '../Technology/Technology3';
 import SideAdd1 from '../Advertisements/SideAdd1';
-import SidePopularTechnology from '../Technology/SidePopularTechnology';
 import SideAdd2 from '../Advertisements/SideAdd2';
-import SidePostTechnology from '../Technology/SidePostTechnology';
 import Topbar from '../Home/Topbar';
+import { CategoryContent1, CategoryContent2, SidePopularGeneric } from './GenericCategoryContent';
 
 function Technology() {
   const [isMobile, setIsMobile] = useState(false);
@@ -93,20 +88,18 @@ function Technology() {
         <div className='container'>
           <div className='row'>
             <div className='col-md-8' >
-              <Technology1 dataObject={result} />
+              <CategoryContent1 dataObject={result} categoryKey="TecGeneral" />
               <Add1 addObject={value} />
-              <Technology2 dataObject={result} />
+              <CategoryContent2 dataObject={result} categoryKey="TecGeneral" />
               <Add2 addObject={value} />
-              <Technology3 dataObject={result} />
             </div>
             <div className='col-md-4 '>
               <div className='innerPage-side-bar'>
                 <div className='mobile-view'>
                   <SideAdd1 addObject={value} />
                 </div>
-                <SidePopularTechnology dataObject={result} />
+                <SidePopularGeneric dataObject={result} categoryKey="TecGeneral" />
                 <SideAdd2 addObject={value} />
-                <SidePostTechnology dataObject={result} />
               </div>
             </div>
           </div>

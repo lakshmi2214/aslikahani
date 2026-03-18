@@ -6410,15 +6410,17 @@ a.mst-anchor:hover {
 }
 
 .updt-article:first-child .updt-artcl img {
-  width: 160px;
+  width: 220px;
 }
 
 .updt-artcl img {
-  width: 160px;
+  width: 220px;
+  max-height: 150px;
+  object-fit: cover;
 }
 
 .updt-article-text {
-  padding: 0px 5px 0px 10px;
+  padding: 0px 5px 0px 15px;
 }
 
 .updt-section {
@@ -6593,3 +6595,61 @@ h5.letsBuild {
   }
 }
 /* ======== */
+/* ---- Article Detail Page Overrides (New Featured Look) ---- */
+.article-detailed-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.article-meta-info {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+.article-meta-info strong {
+  color: #333;
+}
+
+.featured-detailed-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.blog-dtsl.text-center {
+  padding: 40px 30px;
+  margin-bottom: 20px;
+}
+
+.sub-render-pera {
+  margin-top: 25px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.catname.text-start p.lead {
+  font-size: 20px;
+  font-weight: 500;
+  color: #444;
+  border-left: 4px solid #D02B2B;
+  padding-left: 20px;
+  margin: 30px 0;
+}
+
+@media (max-width: 768px) {
+  .article-detailed-title {
+    font-size: 28px;
+  }
+  .blog-dtsl.text-center {
+    padding: 20px 15px;
+  }
+}

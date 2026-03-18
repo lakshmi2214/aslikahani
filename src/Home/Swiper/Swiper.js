@@ -58,8 +58,15 @@ function SwiperCustom({ dataObject }) {
             {groupedSlides.map((group, index) => (
                 <SwiperSlide key={index}>
                     <div className="custom-grid">
+                        <div
+                            className="feature-tile"
+                            style={{ backgroundImage: `url(${group[0]?.image})` }}
+                            onClick={() => navigate(`/${group[0]?.category}/${group[0]?.url}`, { state: { item: group[0] } })}
+                        >
+                            <div className="text-overlay large">{group[0]?.title}</div>
+                        </div>
                         <div className="small-grid">
-                            {group.slice(0, 6).map((item, idx) => (
+                            {group.slice(1, 7).map((item, idx) => (
                                 <div
                                     key={idx}
                                     className="grid-tile"
@@ -69,13 +76,6 @@ function SwiperCustom({ dataObject }) {
                                     <div className="text-overlay">{item.title}</div>
                                 </div>
                             ))}
-                        </div>
-                        <div
-                            className="feature-tile"
-                            style={{ backgroundImage: `url(${group[6]?.image})` }}
-                            onClick={() => navigate(`/${group[6]?.category}/${group[6]?.url}`, { state: { item: group[6] } })}
-                        >
-                            <div className="text-overlay large">{group[6]?.title}</div>
                         </div>
                     </div>
                 </SwiperSlide>

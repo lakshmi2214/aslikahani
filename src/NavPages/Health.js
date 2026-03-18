@@ -1,46 +1,32 @@
 import React, { useState, useEffect } from 'react';
+import Footer from "../Home/Footer/Footer";
 import Navbar from '../Utility/Navbar';
 import LogoColumn from '../Home/LogoColumn';
+import Topbar from '../Home/Topbar';
 import Add1 from '../Advertisements/Add1';
 import Add2 from '../Advertisements/Add2';
 import SideAdd1 from '../Advertisements/SideAdd1';
 import SideAdd2 from '../Advertisements/SideAdd2';
-import Topbar from '../Home/Topbar';
-import Footer from "../Home/Footer/Footer";
 import { CategoryContent1, CategoryContent2, SidePopularGeneric } from './GenericCategoryContent';
 
-function Entertainment() {
-  const [isMobile, setIsMobile] = useState(false);
+function Health() {
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
 
-  // similar to componentDidMount
   useEffect(() => {
-    const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/articles/list?category=3&format=json`;
+    // Health category ID = ?
+    const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/articles/list?category=Health&format=json`;
     fetch(url).then(response => response.json())
       .then(response => {
-        // console.log(response)
         setResult(response)
       })
     const url1 = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/category/list`;
-    fetch(url1).then(response => response.json()
-    )
+    fetch(url1).then(response => response.json())
       .then(response => {
         setvalue(response)
       })
-    const checkMobile = () => {
-      const isMobile = window.innerWidth >= 767;
-      setIsMobile(isMobile);
-    };
-
-    checkMobile();
-
-    window.addEventListener('resize', checkMobile);
-
-    return () => {
-      window.removeEventListener('resize', checkMobile);
-    };
   }, []);
+
   return (
     <>
       <Topbar />
@@ -51,9 +37,9 @@ function Entertainment() {
         <div className='container'>
           <div className='row'>
             <div className='col-md-8' >
-              <CategoryContent1 dataObject={result} categoryKey="General" />
+              <CategoryContent1 dataObject={result} categoryKey="HealthGeneral" />
               <Add1 addObject={value} />
-              <CategoryContent2 dataObject={result} categoryKey="General" />
+              <CategoryContent2 dataObject={result} categoryKey="HealthGeneral" />
               <Add2 addObject={value} />
             </div>
             <div className='col-md-4 '>
@@ -61,7 +47,7 @@ function Entertainment() {
                 <div className='mobile-view'>
                   <SideAdd1 addObject={value} />
                 </div>
-                <SidePopularGeneric dataObject={result} categoryKey="General" />
+                <SidePopularGeneric dataObject={result} categoryKey="HealthGeneral" />
                 <SideAdd2 addObject={value} />
               </div>
             </div>
@@ -70,9 +56,8 @@ function Entertainment() {
       </section>
 
       <Footer />
-
     </>
   )
 }
 
-export default Entertainment
+export default Health;

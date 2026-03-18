@@ -1,19 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Footer from "../Home/Footer/Footer";
-import { useState, useEffect } from 'react';
 import Navbar from '../Utility/Navbar';
 import LogoColumn from '../Home/LogoColumn';
-import Travel1 from '../Travel/Travel1';
 import Add1 from '../Advertisements/Add1';
-import Travel2 from '../Travel/Travel2';
 import Add2 from '../Advertisements/Add2';
-import Travel3 from '../Travel/Travel3';
 import SideAdd1 from '../Advertisements/SideAdd1';
-import SidePopularTravel from '../Travel/SidePopularTravel';
 import SideAdd2 from '../Advertisements/SideAdd2';
-import SidePostTravel from '../Travel/SidePostTravel';
 import Topbar from '../Home/Topbar';
-
+import { CategoryContent1, CategoryContent2, SidePopularGeneric } from './GenericCategoryContent';
 
 function Travel() {
   const [isMobile, setIsMobile] = useState(false);
@@ -93,20 +87,18 @@ function Travel() {
         <div className='container'>
           <div className='row'>
             <div className='col-md-8' >
-              <Travel1 dataObject={result} />
+              <CategoryContent1 dataObject={result} categoryKey="TravelGeneral" />
               <Add1 addObject={value} />
-              <Travel2 dataObject={result} />
+              <CategoryContent2 dataObject={result} categoryKey="TravelGeneral" />
               <Add2 addObject={value} />
-              <Travel3 dataObject={result} />
             </div>
             <div className='col-md-4 '>
               <div className='innerPage-side-bar'>
                 <div className='mobile-view'>
                   <SideAdd1 addObject={value} />
                 </div>
-                <SidePopularTravel dataObject={result} />
+                <SidePopularGeneric dataObject={result} categoryKey="TravelGeneral" />
                 <SideAdd2 addObject={value} />
-                <SidePostTravel dataObject={result} />
               </div>
             </div>
           </div>

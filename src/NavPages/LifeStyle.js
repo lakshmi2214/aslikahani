@@ -1,18 +1,13 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import Footer from "../Home/Footer/Footer";
-import { useState, useEffect } from 'react';
 import Navbar from '../Utility/Navbar';
 import LogoColumn from '../Home/LogoColumn';
-import Lifestyle1 from '../LifeStyle/Lifestyle1';
 import Add1 from '../Advertisements/Add1';
-import Lifestyle2 from '../LifeStyle/Lifestyle2';
 import Add2 from '../Advertisements/Add2';
-import Lifestyle3 from '../LifeStyle/Lifestyle3';
 import SideAdd1 from '../Advertisements/SideAdd1';
 import SideAdd2 from '../Advertisements/SideAdd2';
-import SidePopularLifestyle from '../LifeStyle/SidePopularLifestyle';
-import SidePostLifestyle from '../LifeStyle/SidePostLifestyle';
 import Topbar from '../Home/Topbar';
+import { CategoryContent1, CategoryContent2, SidePopularGeneric } from './GenericCategoryContent';
 
 function LifeStyle() {
   const [isMobile, setIsMobile] = useState(false);
@@ -92,20 +87,18 @@ function LifeStyle() {
         <div className='container'>
           <div className='row'>
             <div className='col-md-8' >
-              <Lifestyle1 dataObject={result} />
+              <CategoryContent1 dataObject={result} categoryKey="LifestyleGeneral" />
               <Add1 addObject={value} />
-              <Lifestyle2 dataObject={result} />
+              <CategoryContent2 dataObject={result} categoryKey="LifestyleGeneral" />
               <Add2 addObject={value} />
-              <Lifestyle3 dataObject={result} />
             </div>
             <div className='col-md-4 '>
               <div className='innerPage-side-bar'>
                 <div className='mobile-view'>
                   <SideAdd1 addObject={value} />
                 </div>
-                <SidePopularLifestyle dataObject={result} />
+                <SidePopularGeneric dataObject={result} categoryKey="LifestyleGeneral" />
                 <SideAdd2 addObject={value} />
-                <SidePostLifestyle dataObject={result} />
               </div>
             </div>
           </div>

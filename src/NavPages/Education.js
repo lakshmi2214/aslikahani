@@ -1,20 +1,13 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import LogoColumn from '../Home/LogoColumn';
 import Navbar from '../Utility/Navbar';
-import Education1 from '../Education/Education1';
-import Education2 from '../Education/Education2';
-import Education3 from '../Education/Education3';
 import Add1 from '../Advertisements/Add1';
 import Add2 from '../Advertisements/Add2';
 import SideAdd1 from '../Advertisements/SideAdd1';
 import SideAdd2 from '../Advertisements/SideAdd2';
-import SidePost from '../Education/SidePost';
-import SidePopular from '../Education/SidePopular';
 import Footer from "../Home/Footer/Footer";
 import Topbar from '../Home/Topbar';
-// import EducationComponent from '../Education/EducationComponent';
-
+import { CategoryContent1, CategoryContent2, SidePopularGeneric } from './GenericCategoryContent';
 
 function Education() {
   const [isMobile, setIsMobile] = useState(false)
@@ -95,21 +88,18 @@ function Education() {
         <div className='container'>
           <div className='row'>
             <div className='col-md-8' >
-              {/* <Entertainment1 dataObject={result} /> */}
-              <Education1 dataObject={result} />
+              <CategoryContent1 dataObject={result} categoryKey="EduGeneral" />
               <Add1 addObject={value} />
-              <Education2 dataObject={result} />
+              <CategoryContent2 dataObject={result} categoryKey="EduGeneral" />
               <Add2 addObject={value} />
-              <Education3 dataObject={result} />
             </div>
             <div className='col-md-4 '>
               <div className='innerPage-side-bar'>
                 <div className='mobile-view'>
                   <SideAdd1 addObject={value} />
                 </div>
-                <SidePopular dataObject={result} />
+                <SidePopularGeneric dataObject={result} categoryKey="EduGeneral" />
                 <SideAdd2 addObject={value} />
-                <SidePost dataObject={result} />
               </div>
             </div>
           </div>

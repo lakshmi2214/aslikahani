@@ -1,19 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Footer from "../Home/Footer/Footer";
-import { useState, useEffect } from 'react';
 import Navbar from '../Utility/Navbar';
 import LogoColumn from '../Home/LogoColumn';
-import Business1 from '../Business/Business1';
 import Add1 from '../Advertisements/Add1';
-import Business2 from '../Business/Business2';
 import Add2 from '../Advertisements/Add2';
-import Business3 from '../Business/Business3';
 import SideAdd1 from '../Advertisements/SideAdd1';
-import SidePopularBusiness from '../Business/SidePopularBusiness';
 import SideAdd2 from '../Advertisements/SideAdd2';
-import SidePostBusiness from '../Business/SidePostBusiness';
 import Topbar from '../Home/Topbar';
-
+import { CategoryContent1, CategoryContent2, SidePopularGeneric } from './GenericCategoryContent';
 
 function Business() {
   const [isMobile, setIsMobile] = useState(false);
@@ -89,20 +83,18 @@ function Business() {
         <div className='container'>
           <div className='row'>
             <div className='col-md-8' >
-              <Business1 dataObject={result} />
+              <CategoryContent1 dataObject={result} categoryKey="BussGeneral" />
               <Add1 addObject={value} />
-              <Business2 dataObject={result} />
+              <CategoryContent2 dataObject={result} categoryKey="BussGeneral" />
               <Add2 addObject={value} />
-              <Business3 dataObject={result} />
             </div>
             <div className='col-md-4 '>
               <div className='innerPage-side-bar'>
                 <div className='mobile-view'>
                   <SideAdd1 addObject={value} />
                 </div>
-                <SidePopularBusiness dataObject={result} />
+                <SidePopularGeneric dataObject={result} categoryKey="BussGeneral" />
                 <SideAdd2 addObject={value} />
-                <SidePostBusiness dataObject={result} />
               </div>
             </div>
           </div>

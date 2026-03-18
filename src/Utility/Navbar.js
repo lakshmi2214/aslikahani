@@ -93,6 +93,8 @@ function Navbar() {
 						<li><Link to="/Business" className={`bar ${isActive("/Business")}`}>Business</Link></li>
 						<li><Link to="/Travel" className={`bar ${isActive("/Travel")}`}>Travel</Link></li>
 						<li><Link to="/Lifestyle" className={`bar ${isActive("/Lifestyle")}`}>LifeStyle</Link></li>
+						<li><Link to="/Health" className={`bar ${isActive("/Health")}`}>Health</Link></li>
+						<li><Link to="/Sports" className={`bar ${isActive("/Sports")}`}>Sports</Link></li>
 						{/* <li><Link to="/Art-and-Culture" className={`bar ${isActive("/Art-and-Culture")}`}>Art and Culture</Link></li> */}
 						<li><Link to="/Careers" className={`bar ${isActive("/Careers")}`}>Careers</Link></li>
 
