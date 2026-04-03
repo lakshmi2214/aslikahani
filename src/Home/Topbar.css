@@ -3,7 +3,7 @@ section.topNavebar {
 }
 
 .topNav {
-  padding: 10px 0px;
+  padding: 5px 0px;
   display: flex;
   justify-content: space-between;
   gap: 10px;
