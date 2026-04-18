@@ -1,20 +1,19 @@
 
 import React from "react";
 import { useState, useEffect } from "react";
-import BannerAd1 from "../Advertisements/BannerAd1";
-import BannerAd2 from "../Advertisements/BannerAd2";
+
 import Footer from "../Home/Footer/Footer";
 import Navbar from "../Utility/Navbar";
 import LogoColumn from "../Home/LogoColumn";
-import sidebanner from "../images/banner2.jpg"
+
 // import sidebanner from "../images/banner2.png"
-import WeatherApp from "../WeatherForecast/WeatherApp";
+
 import Tags from "../Home/Tags";
-import GridSection from "../Home/GridSection";
+
 import LatestArticle from "../Home/Content/LatestArticle";
 // import Grids from "../Home/Grids";
 // import { Container, Row, Col } from 'react-bootstrap';
-import SideAdd1 from "../Advertisements/SideAdd1";
+
 import TopArticles from "../Home/Content/TopArticles";
 import Articles from "../Home/Content/Articles";
 import TrendingArticles from "../Home/Content/TrendingArticles";
@@ -25,18 +24,17 @@ import AllTimeBest from "../Home/Content/AllTimeBest";
 // import Navbars from "../Utility/Navbars";
 // import rightBanner from "../images/banner1.jpg"
 import Topbar from "../Home/Topbar";
-import Marquee from "../Component/Marquee";
+
 import SwiperCustom from "../Home/Swiper/Swiper";
 import VideoSection from "../Home/VideoSection/VideoSection";
 import MagazinePosts from "../E-magzine/MagazinePosts";
-import CareerModal from '../Component/CareerModal';
+
 
 function Home() {
   const [isMobile, setIsMobile] = useState(false);
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
   const [magazines, setMagazines] = useState([]);
-  const [showCareerModal, setShowCareerModal] = useState(false);
   useEffect(() => {
     const fetchMagazines = async () => {
       const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/emagzines/list`;
@@ -65,18 +63,7 @@ function Home() {
       .then(response => {
         setvalue(response)
       })
-    const checkMobile = () => {
-      const isMobile = window.innerWidth >= 767;
-      setIsMobile(isMobile);
-    };
 
-    checkMobile();
-
-    window.addEventListener('resize', checkMobile);
-
-    return () => {
-      window.removeEventListener('resize', checkMobile);
-    };
 
   }, []);
   return (

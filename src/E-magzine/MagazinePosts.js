@@ -19,7 +19,7 @@ function MagazinePosts(props) {
               <div className="item-container">
                 <div className='img-posts' onClick={() => handleNavigation(item, index)}>
                   <a href={process.env.REACT_APP_DOMAIN_NAME + '/emagazine/' + item.url + '/preview'}>
-                    <img src={item.cover_image} alt="test image" /></a>
+                    <img src={item.cover_image} alt="test cover" /></a>
                 </div>
                 <div className='content-posts'>
                 <h5>

@@ -59,7 +59,7 @@ function Searching() {
           <p> {item.description} </p>
         </div>
         <div className="col-md-4 " style={{padding:"10px"}}>
-          <img src={item.image} alt="search-image" style={{width:"-webkit-fill-available"}}/>
+          <img src={item.image} alt="search result" style={{width:"-webkit-fill-available"}}/>
         </div>
       </div>
     );

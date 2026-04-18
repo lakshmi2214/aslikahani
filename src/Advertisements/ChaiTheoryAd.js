@@ -5,11 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import React from 'react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import "./Chaitheory.css";
-import WeatherForecast from '../WeatherForecast/WeatherForecast';
-import CurrentWeather from '../WeatherForecast/CurrentWeather';
-import CurrentWeatherReport from '../WeatherForecast/CurrentWeatherReport';
-import Weather from '../WeatherForecast/Weather';
-import WeatherApp from '../WeatherForecast/WeatherApp';
+
 // import App from '../Weather/App';
 // import Weather from './Weather';
 // import WeatherReport from './WeatherReport';
@@ -45,7 +41,7 @@ function ChaiTheoryAd(props) {
                     <div className="single-testimonial-slider">							
 							<div className="client-meta">
 								<a href={item.url} target='blank'>
-                                <img className="testimonial-body" style={{width:"100%", height:"100%"}} src={item.image}/>
+                                <img className="testimonial-body" style={{width:"100%", height:"100%"}} src={item.image} alt=""/>
                                 </a>
 								<a href={item.url} target='blank'>
 									 <div className="last-icon">
@@ -70,7 +66,7 @@ function ChaiTheoryAd(props) {
                     <div className="single-testimonial-slider">							
 							<div className="client-meta">
 							<a href={item.url} target='blank'>
-								<img className="testimonial-body" style={{width:"100%"}} src={item.image}/></a>
+								<img className="testimonial-body" style={{width:"100%"}} src={item.image} alt=""/></a>
 									<a href={item.url} target='blank'> <div className="last-icon">
 									{item.description}
 								</div> </a>               
@@ -134,20 +130,7 @@ export default ChaiTheoryAd;
 
 
 
- {/* <SwiperSlide>
 
-         <div className="single-testimonial-slider">							
-							<div className="client-meta">
-								<h3>Rachana Agarwal<span>Chai Lover</span></h3>
-								<p className="testimonial-body">
-								ChaiCharm's spiced chai is a comforting embrace in a cup. The blend of cinnamon, 
-								cardamom, and ginger is perfectly balanced, creating a harmonious dance of flavors. Served piping hot with a hint of sweetness, it's a delightful pick-me-up on a chilly afternoon.
-								</p>
-								{/* <div className="last-icon">
-									<i className="fas fa-quote-right"></i>
-								</div>                */}
-							{/* </div>
-						</div></SwiperSlide>  */}
 
 
 

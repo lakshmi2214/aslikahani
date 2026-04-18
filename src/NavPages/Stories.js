@@ -1,6 +1,6 @@
 import React from 'react'
 import LogoColumn from '../Home/LogoColumn'
-import Navbar from '../Utility/Navbar'
+// Navbar is not rendered
 
 function Stories() {
   return (

@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
@@ -14,11 +14,12 @@ import { FreeMode, Navigation, Pagination, Thumbs, Autoplay, Mousewheel, Keyboar
 
 function VideoSection() {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
     const [lang, setLanguage] = useState("English")
     const [eachLanguageData, setEachLanguageData] = useState({ shorts: null, videos: null});
     const [allLangData, setAllLangData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+
 
     const toggleLanguage = (selectedLang) => {
         setLanguage(selectedLang);
@@ -100,27 +101,27 @@ function VideoSection() {
                                         eachLanguageData?.videos?.slice(0,5).map((item,index) => {
                                             return (
                                                 <SwiperSlide key={index}>
-                                                    <img className='img-fluid' src={item.thumbnail_image} />
+                                                    <img className='img-fluid' src={item.thumbnail_image} alt="" />
                                                 </SwiperSlide>
                                             )
                                         })
                                     }
 
                                     <SwiperSlide>
-                                        <img className='img-fluid' src="https://img.youtube.com/vi/Rs-lS8fj1Ns/hqdefault.jpg" />
+                                        <img className='img-fluid' src="https://img.youtube.com/vi/Rs-lS8fj1Ns/hqdefault.jpg" alt="" />
                                         {/* <iframe width="100%" height="" src="https://www.youtube.com/embed/Rs-lS8fj1Ns?si=q--mzEUcPjRlG_QD?" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <img className='img-fluid' src="https://img.youtube.com/vi/UYMvkcPktn8/hqdefault.jpg" />
+                                        <img className='img-fluid' src="https://img.youtube.com/vi/UYMvkcPktn8/hqdefault.jpg" alt="" />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <img className='img-fluid' src="https://img.youtube.com/vi/8fqRaz02qNU/hqdefault.jpg" />
+                                        <img className='img-fluid' src="https://img.youtube.com/vi/8fqRaz02qNU/hqdefault.jpg" alt="" />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <img className='img-fluid' src="https://img.youtube.com/vi/4WiDtxX229M/hqdefault.jpg" />
+                                        <img className='img-fluid' src="https://img.youtube.com/vi/4WiDtxX229M/hqdefault.jpg" alt="" />
                                     </SwiperSlide>
                                     <SwiperSlide>
-                                        <img className='img-fluid' src="https://img.youtube.com/vi/3wsUYtS1_W0/hqdefault.jpg" />
+                                        <img className='img-fluid' src="https://img.youtube.com/vi/3wsUYtS1_W0/hqdefault.jpg" alt="" />
                                     </SwiperSlide>
 
                                 </Swiper>

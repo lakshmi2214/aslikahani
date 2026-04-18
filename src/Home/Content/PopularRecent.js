@@ -22,7 +22,7 @@ import '../../css/owl.carousel.css';
 import '../../css/zerogrid.css';
 import '../../fonts/glyphicons-halflings-regular.svg';
 import '../../css/royal-slider/rs-default.css';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function PopularRecent(props) {
    const navigate = useNavigate();
@@ -34,44 +34,28 @@ function PopularRecent(props) {
 
    return (
       <>
-         <div className="widget widget-bg">
-            <div className="tabs">
-               <div role="tabpanel">
-                  <ul className="nav nav-tabs nav-justified" role="tablist">
-                     <li className="active" role="presentation" > <a aria-controls="popularRecent" aria-expanded="true" data-toggle="tab"
-                        href="#popularRecent" role="tab" style={{ color: "white" , backgroundColor:"#d32415"}}>Popular </a> </li>
-                  </ul>
-                  <br></br>
-                  <div className="small-grid-container">
-                     <ul className="small-grid">
-                        <li>
-                           {props.dataObject?.locations?.Popular.slice(0, 4).map((item, index) => {
-                              // console.log(item);
-                              return (
-                                 <div key={index}>
-                                    <div className="small-post">
-                                       <div className="small-thumb small-img">
-                                          <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>
-                                             <img alt="" src={item.image} style={{ height: "85px", width: "85px" }} className="" />
-                                          </a>
-                                       </div>
-                                       <div className="post-content post-contents">
-                                          <h3> <a href={process.env.REACT_APP_DOMAIN_NAME+'/'+item.category+'/'+item.url}>{item.title}</a> </h3>
-                                          <ul className="post-tools" onClick={() => handleNavigation(item, index)}>
-                                             <li>  {item.created_at} </li>
-                                          </ul>
-                                       </div>
-                                    </div>
-                                 </div>
-                              )
-                           })}
-
-                        </li>
-
-                     </ul>
-                  </div>
-
-               </div>
+         <div className="widget side-popular-widget">
+            <div className="side-popular-heading">
+               <h2>Most Popular</h2>
+            </div>
+            <div className="side-popular-list">
+               {(props.relatedArticles || props.dataObject?.locations?.Popular || []).slice(0, 5).map((item, index) => {
+                  return (
+                     <div key={index} className="side-popular-item">
+                        <div className="side-popular-thumb">
+                           <Link to={'/' + item.category + '/' + item.url}>
+                              <img alt="" src={item.image} />
+                           </Link>
+                        </div>
+                        <div className="side-popular-content">
+                           <h3>
+                              <Link to={'/' + item.category + '/' + item.url}>{item.title}</Link>
+                           </h3>
+                           <span className="side-popular-date">{item.created_at}</span>
+                        </div>
+                     </div>
+                  );
+               })}
             </div>
          </div>
       </>

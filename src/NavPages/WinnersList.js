@@ -68,17 +68,9 @@ function WinnersList() {
         }
 
         fetchWinners();
-    }, [location]);
+    }, [location.pathname]);
 
-    const handleCollectReward = (winnerId) => {
-        setWinners(prevWinners => 
-            prevWinners.map(winner => 
-                winner.id === winnerId 
-                    ? { ...winner, collected: true }
-                    : winner
-            )
-        );
-    };
+
 
 
     return (

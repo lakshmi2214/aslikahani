@@ -1,16 +1,10 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import React, { useRef, useState } from 'react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import React from 'react';
 import { useNavigate } from "react-router-dom";
 // import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
 
 
 function PostArticles(props) {
   const navigate = useNavigate();
-  const handleNavigation = (item) => {
-
-    navigate(`/${item.category}/${item.url}`, { state: { item } });
-  }
   return (
     <>
       {/* <div className='col-md-12' style={{ padding: "initial" }}>

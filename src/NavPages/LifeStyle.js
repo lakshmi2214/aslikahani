@@ -10,6 +10,7 @@ import Topbar from '../Home/Topbar';
 import { CategoryContent1, CategoryContent2, SidePopularGeneric } from './GenericCategoryContent';
 
 function LifeStyle() {
+  // eslint-disable-next-line no-unused-vars
   const [isMobile, setIsMobile] = useState(false);
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
@@ -25,18 +26,7 @@ function LifeStyle() {
       .then(response => {
         setvalue(response)
       })
-    const checkMobile = () => {
-      const isMobile = window.innerWidth >= 767;
-      setIsMobile(isMobile);
-    };
 
-    checkMobile();
-
-    window.addEventListener('resize', checkMobile);
-
-    return () => {
-      window.removeEventListener('resize', checkMobile);
-    };
   }, []);
   return (
     //     <div>

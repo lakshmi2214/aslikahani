@@ -10,18 +10,7 @@ function SidePopular(props) {
     navigate(`/${item.category}/${item.url}`, { state: { item } });
   }
   useEffect(() => {
-    const checkMobile = () => {
-      const isMobile = window.innerWidth >= 767;
-      setIsMobile(isMobile);
-    };
 
-    checkMobile();
-
-    window.addEventListener('resize', checkMobile);
-
-    return () => {
-      window.removeEventListener('resize', checkMobile);
-    };
   }, []);
   return (
     <>

@@ -42,6 +42,9 @@
     "use-sound": "^4.0.1",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  },
   "scripts": {
     "start": "env-cmd -f .env react-scripts start",
     "build": "env-cmd -f .env.prod react-scripts build",

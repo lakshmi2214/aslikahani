@@ -31,9 +31,3 @@ function Add1(props) {
 }
 
 export default Add1
-
-{/* <div key={index}>
-<a href={item.url} target="_blank" rel="noreferrer">
-    <img src={item.image} className="img-responsive" alt="itm-img" />
-</a>
-</div> */}

@@ -377,7 +377,7 @@ function DrawForm() {
                                                         }}
                                                     />
                                                     <label className="form-check-label" htmlFor="termsCheckbox" style={{ fontSize: '14px', marginLeft: '8px',fontWeight:'500' }}>
-                                                        I agree to the <a href="javascript:void(0)" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>
+                                                        I agree to the <a href="#" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>
                                                     </label>
                                                 </div>
                                                 {errors.terms && (

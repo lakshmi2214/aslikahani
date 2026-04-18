@@ -2,11 +2,6 @@ import React from 'react'
 import { useNavigate } from "react-router-dom";
 
 function SidePostArt(props) {
-    const navigate = useNavigate();
-    const handleNavigation = (item) => {
-        navigate(`/Art-and-Culture/${item.url}`, { state: { item } });
-
-    }
     return (
         <div className='row row-gap-4' >
             {props.dataObject?.locations?.ArtCultureGeneral.slice(4, 5).map((item, index) => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from "../Home/Footer/Footer";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Navbar from '../Utility/Navbar';
 import LogoColumn from '../Home/LogoColumn';
 import Topbar from '../Home/Topbar';
@@ -116,7 +116,7 @@ function Career() {
 
                 <div className='headPart'>
                   <div className='img-prt'>
-                    <img className='img-fluid' src={CareerImg} />
+                    <img className='img-fluid' src={CareerImg} alt="career" />
                   </div>
                 </div>
               </div>

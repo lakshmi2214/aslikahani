@@ -3,28 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 function SidePopularArt(props) {
-  const [isMobile, setIsMobile] = useState(false);
-  const navigate = useNavigate();
-  const handleNavigation = (item) => {
-    // console.log(item);
-
-    navigate(`/Art-and-Culture/${item.url}`, { state: { item } });
-
-  }
-  useEffect(() => {
-    const checkMobile = () => {
-      const isMobile = window.innerWidth >= 767;
-      setIsMobile(isMobile);
-    };
-
-    checkMobile();
-
-    window.addEventListener('resize', checkMobile);
-
-    return () => {
-      window.removeEventListener('resize', checkMobile);
-    };
-  })
   return (
     <div className='col-md-12'>
       <div className='popular-side-cont'>

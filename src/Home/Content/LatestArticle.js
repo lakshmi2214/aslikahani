@@ -4,11 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 function LatestArticle(props) {
 	const navigate = useNavigate();
-	const handleNavigation = (item) => {
-		//  console.log(item);
 
-		navigate(`/${item.category}/${item.url}`, { state: { item } });
-	}
 	return (
 		<>
 			{/* <div className='row'>

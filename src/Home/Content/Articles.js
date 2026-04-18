@@ -3,11 +3,6 @@ import { useNavigate } from "react-router-dom";
 
 function Articles(props) {
     const navigate = useNavigate();
-    const handleNavigation = (item) => {
-        // console.log(item);
-
-        navigate(`/${item.category}/${item.url}`, { state: { item } });
-    }
 
     const national = props.dataObject;
     return (

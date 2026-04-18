@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import swal from 'sweetalert';
-import CareerImg from '../images/Micopen.png';
+
 import Topbar from '../Home/Topbar';
 import LogoColumn from '../Home/LogoColumn';
 import Navbar from '../Utility/Navbar';
@@ -38,7 +38,7 @@ function DynamicForm() {
       }
     }
     fetchSchema();
-  }, []);
+  }, [location.pathname]);
 
   const validate = () => {
     const newErrors = {};
@@ -81,6 +81,7 @@ function DynamicForm() {
     setIsSubmitting(true);
 
     try {
+      // eslint-disable-next-line no-unused-vars
       let hasFile = schema.some(f => f.FieldType === 'File' && formData[f.form_input_name]);
       let response;
 

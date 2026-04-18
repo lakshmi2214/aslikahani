@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import logosmall from "../images/Rectangle.svg";
 
 function LogoColumn() {
@@ -13,7 +13,7 @@ function LogoColumn() {
             </div>
           </div>
           <div className='banner-header'>
-            <a href='https://stargoldcompany.com'><img className='img-fluid' src='https://media.aslikahani.com/advertisements/sristar_horizontal.jpg' /></a>
+            <a href='https://stargoldcompany.com'><img className='img-fluid' src='https://media.aslikahani.com/advertisements/sristar_horizontal.jpg' alt="" /></a>
           </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ import SidePostArt from '../ArtAndCulture/SidePostArt';
 import Topbar from '../Home/Topbar';
 
 function ArtCulture() {
-  const [isMobile, setIsMobile] = useState(false);
+
   const [result, setResult] = useState([]);
   const [value, setvalue] = useState([]);
   useEffect(() => {
@@ -30,18 +30,7 @@ function ArtCulture() {
         .then(response => {
           setvalue(response)
         })
-        const checkMobile = () => {
-          const isMobile = window.innerWidth >= 767;
-          setIsMobile(isMobile);
-        };
-    
-        checkMobile();
-    
-        window.addEventListener('resize', checkMobile);
-    
-        return () => {
-          window.removeEventListener('resize', checkMobile);
-        };
+
   }, []);
   return (
 //     <div>

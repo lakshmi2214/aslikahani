@@ -3,25 +3,14 @@ import './EditorsChoise.css'
 import { useNavigate } from "react-router-dom";
 
 function EditorsChoise(props) {
-  const [isMobile, setIsMobile] = useState(false);
+
   const navigate = useNavigate();
   const handleNavigation = (item) => {
 
     navigate(`/${item.category}/${item.url}`, { state: { item } });
   }
   useEffect(() => {
-    const checkMobile = () => {
-      const isMobile = window.innerWidth >= 767;
-      setIsMobile(isMobile);
-    };
 
-    checkMobile();
-
-    window.addEventListener('resize', checkMobile);
-
-    return () => {
-      window.removeEventListener('resize', checkMobile);
-    };
   }, []);
   return (
     <>

@@ -58,7 +58,7 @@ function SideAdd1(props) {
                     <div className="col-md-12">
                       <div className="slider-adds">
                         <a href={item.url} target='blank'>
-                          <img style={{ width: "100%", height: "100%" }} src={item.image} />
+                          <img style={{ width: "100%", height: "100%" }} src={item.image} alt="" />
                         </a>
                         <div className="article-desc">
                           <h4>

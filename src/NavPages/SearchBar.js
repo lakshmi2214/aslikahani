@@ -1,11 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 // import ArtPosts from '../ArtAndCulture/ArtPosts';
-import RecentArt from '../ArtAndCulture/RecentArt';
-import SliderWidgetArt from '../ArtAndCulture/SliderWidgetArt';
-import ChaiTheoryAd from '../Advertisements/ChaiTheoryAd';
-import SristarAd1 from '../Advertisements/SristarAd1';
-import ArchivePostArt from '../ArtAndCulture/ArchivePostArt';
+
 import FooterCategory from '../FooterCategory/FooterCategory';
 import Navbar from '../Utility/Navbar';
 // import BannerAd1 from '../Advertisements/BannerAd1';
@@ -38,18 +34,7 @@ function SearchBar() {
         .then(response => {
           setvalue(response)
         })
-      const checkMobile = () => {
-        const isMobile = window.innerWidth >= 767;
-        setIsMobile(isMobile);
-      };
-  
-      checkMobile();
-  
-      window.addEventListener('resize', checkMobile);
-  
-      return () => {
-        window.removeEventListener('resize', checkMobile);
-      };
+
   }, []);
   return (
     <>

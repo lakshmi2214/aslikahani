@@ -3,28 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react'
 
 function PopularArticles(props) {
-  const [isMobile, setIsMobile] = useState(false);
-
   const navigate = useNavigate();
-  const handleNavigation = (item) => {
-    // console.log(item);
-
-    navigate(`/${item.category}/${item.url}`, { state: { item } });
-  }
-  useEffect(() => {
-    const checkMobile = () => {
-      const isMobile = window.innerWidth >= 767;
-      setIsMobile(isMobile);
-    };
-
-    checkMobile();
-
-    window.addEventListener('resize', checkMobile);
-
-    return () => {
-      window.removeEventListener('resize', checkMobile);
-    };
-  }, []);
   return (
     // <div className='row'>
     //   <div className='col-md-12'>
