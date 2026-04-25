@@ -31,7 +31,7 @@ function ArticleContent() {
     const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/category/list`;
     fetch(url).then(response => response.json())
       .then(response => {
-        setCategories(response);
+        setCategories(Array.isArray(response) ? response : response.categories || []);
       });
   }, []);
 
@@ -49,15 +49,32 @@ function ArticleContent() {
   useEffect(() => {
     if (currentArticle && categories.length > 0) {
       // Find category ID
-      const matchingCat = categories.find(cat => cat.name === currentArticle.category);
+      const matchingCat = categories.find(cat => 
+        cat.name && currentArticle.category && cat.name.toLowerCase() === currentArticle.category.toLowerCase()
+      );
       const catId = matchingCat ? matchingCat.id : 10; // Fallback to 10 if not found
 
       const url = `${process.env.REACT_APP_BACKEND_HOST}/api/v1/articles/list?category=${catId}&format=json`;
       fetch(url).then(response => response.json())
         .then(response => {
-          if (response && response.locations && response.locations.Popular) {
+          if (response && response.locations) {
+            let allArticles = [];
+            Object.keys(response.locations).forEach(key => {
+              if (key !== 'trendingTags' && Array.isArray(response.locations[key])) {
+                allArticles = [...allArticles, ...response.locations[key]];
+              }
+            });
+            // Ensure uniqueness based on article_id
+            const uniqueArticles = Array.from(new Map(allArticles.map(item => [item.article_id, item])).values());
+            
+            // Strictly filter by current category
+            const categoryFiltered = uniqueArticles.filter(art => 
+               !currentArticle.category || 
+               (art.category && art.category.toLowerCase() === currentArticle.category.toLowerCase())
+            );
+
             // Filter out current article and limit to 5
-            const filtered = response.locations.Popular
+            const filtered = categoryFiltered
               .filter(art => art.url !== slug)
               .slice(0, 5);
             setRelatedArticles(filtered);
@@ -79,11 +96,11 @@ function ArticleContent() {
             <div className="col-md-2 col-sm-12 col-xs-12">
               <div className="theiaStickySidebar">
                 <aside>
-                  <ChaiTheoryAd addObject={categories} />
+                  <ChaiTheoryAd addObject={{ categories }} />
                   <div style={{ height: "20px" }}></div>
-                  <SristarAd2 addObject={categories} />
+                  <SristarAd2 addObject={{ categories }} />
                   <div style={{ height: "20px" }}></div>
-                  <SristarAd1 addObject={categories} />
+                  <SristarAd1 addObject={{ categories }} />
                 </aside>
               </div>
             </div>
@@ -91,7 +108,7 @@ function ArticleContent() {
               <RelatedArticleContent articleData={currentArticle} />
             </div>
             <div className="col-md-3 col-sm-12 col-xs-12">
-              <PopularRecent relatedArticles={relatedArticles} />
+              <PopularRecent relatedArticles={relatedArticles} currentCategory={currentArticle?.category} />
             </div>
           </div>
         </div>
