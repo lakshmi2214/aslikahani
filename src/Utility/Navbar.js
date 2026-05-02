@@ -64,6 +64,7 @@ import { useState } from "react";
 import "./Navbar.css";
 import "./nav.css";
 import Search from "../Utility/Search";
+import MegaMenu from "./MegaMenu";
 
 function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -119,11 +120,16 @@ function Navbar() {
 
 					<Search onSearch={handleNavigation} />
 
-					<button className={`nav-btn ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
-						<FaBars />
-					</button>
+					{(location.pathname === "/" || location.pathname === "/Home") && (
+						<button className={`nav-btn ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
+							<FaBars />
+						</button>
+					)}
 				</header>
 			</div>
+			{(location.pathname === "/" || location.pathname === "/Home") && (
+				<MegaMenu isOpen={isOpen} toggleMenu={toggleMenu} />
+			)}
 		</div>
 	);
 }

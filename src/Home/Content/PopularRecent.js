@@ -66,11 +66,11 @@ function PopularRecent(props) {
                            Object.keys(data.locations).forEach(key => {
                               if (key !== 'trendingTags' && Array.isArray(data.locations[key])) {
                                  data.locations[key].forEach(item => {
-                                    if (item && item.article_id && !articles.find(a => a.article_id === item.article_id)) {
-                                       if (item.category && item.category.toLowerCase() === matchingCat.name.toLowerCase()) {
-                                          articles.push(item);
-                                       }
-                                    }
+                                     if (item && item.article_id && !articles.find(a => a.article_id === item.article_id)) {
+                                        if (item.category && item.category.trim().toLowerCase() === matchingCat.name.trim().toLowerCase()) {
+                                           articles.push(item);
+                                        }
+                                     }
                                  });
                               }
                            });
@@ -118,12 +118,12 @@ function PopularRecent(props) {
       if (expectedCategory && expectedCategory.toLowerCase() !== 'home') {
          // fallback safety: if category is not resolved yet, we still strictly filter
          articlesToDisplay = articlesToDisplay.filter(item => 
-            item.category && item.category.toLowerCase() === expectedCategory.toLowerCase()
+            item.category && item.category.trim().toLowerCase() === expectedCategory.trim().toLowerCase()
          );
       } else if (expectedCategory) {
          // if it falls back to 'home', we shouldn't show anything until real category resolves
          articlesToDisplay = articlesToDisplay.filter(item => 
-            item.category && item.category.toLowerCase() === expectedCategory.toLowerCase()
+            item.category && item.category.trim().toLowerCase() === expectedCategory.trim().toLowerCase()
          );
       }
    }
@@ -147,7 +147,7 @@ function PopularRecent(props) {
       <>
          <div className="widget side-popular-widget">
             <div className="side-popular-heading">
-               <h2>Recent Articles</h2>
+               <h2>{props.currentCategory || props.relatedArticles ? "Related Articles" : "Recent Articles"}</h2>
             </div>
             <div className="side-popular-list">
                {sortedDisplayList.map((item, index) => {

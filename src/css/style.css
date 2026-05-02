@@ -6015,8 +6015,8 @@ section.inner-pages-section {
   padding: 30px 0px;
 }
 .inner-pages-section .container-fluid {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  /* padding-left: 0 !important;
+  padding-right: 0 !important; */
 }
 
 .inner-pages-section .col-md-7 {

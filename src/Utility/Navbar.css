@@ -39,9 +39,17 @@ header.headCts .nav-btn {
 	display: flex;
 	align-items: center;
 	gap: 10px;
-	padding: 10px 0px;
-	justify-content: space-between;
-	display: none;
+	padding: 10px;
+	justify-content: center;
+	cursor: pointer;
+	background: transparent;
+	border: 1px solid #333;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	font-size: 20px;
+	color: #333;
+	transition: all 0.3s ease;
 }
 
 header.headCts div,
@@ -207,7 +215,7 @@ nav {
 .nav-linking a.emagActive{
 	background: #D02B2B;
     color: white;
-    padding: 6px 10px;
+    padding: 4px 10px;
     white-space: nowrap;
 }
 

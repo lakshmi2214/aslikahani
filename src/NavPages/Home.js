@@ -69,10 +69,9 @@ function Home() {
   return (
     <>
       <Topbar />
-      <LogoColumn />
-      <Navbar />
-      <Tags dataObject={result} />
-      <section className="full-swiper">
+       <LogoColumn />
+       <Navbar />
+       <section className="full-swiper">
           <SwiperCustom dataObject={result} />
       </section>
       {/* <div className="d-flex justify-content-center my-3">

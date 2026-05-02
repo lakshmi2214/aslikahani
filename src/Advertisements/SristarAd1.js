@@ -39,7 +39,7 @@ function SristarAd1(props) {
                         <div className="col-md-12">
                            <div className="slider-adds">
                               <a href={item.url} target='blank'>
-                                 <img className='img-fluid' src={item.image} alt="" />
+                                 <img className='img-fluid' src={item.image} alt="" style={{ height: "350px", width: "100%", objectFit: "cover" }} />
                               </a>
                               <div className="article-desc-small">
                                  <h4>

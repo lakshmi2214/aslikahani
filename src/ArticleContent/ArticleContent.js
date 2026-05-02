@@ -70,7 +70,7 @@ function ArticleContent() {
             // Strictly filter by current category
             const categoryFiltered = uniqueArticles.filter(art => 
                !currentArticle.category || 
-               (art.category && art.category.toLowerCase() === currentArticle.category.toLowerCase())
+               (art.category && art.category.trim().toLowerCase() === currentArticle.category.trim().toLowerCase())
             );
 
             // Filter out current article and limit to 5

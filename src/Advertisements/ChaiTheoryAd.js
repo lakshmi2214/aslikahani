@@ -41,7 +41,7 @@ function ChaiTheoryAd(props) {
                     <div className="single-testimonial-slider">							
 							<div className="client-meta">
 								<a href={item.url} target='blank'>
-                                <img className="testimonial-body" style={{width:"100%", height:"100%"}} src={item.image} alt=""/>
+                                <img className="testimonial-body" style={{width:"100%", height:"350px", objectFit: "cover"}} src={item.image} alt=""/>
                                 </a>
 								<a href={item.url} target='blank'>
 									 <div className="last-icon">
@@ -66,7 +66,7 @@ function ChaiTheoryAd(props) {
                     <div className="single-testimonial-slider">							
 							<div className="client-meta">
 							<a href={item.url} target='blank'>
-								<img className="testimonial-body" style={{width:"100%"}} src={item.image} alt=""/></a>
+								<img className="testimonial-body" style={{width:"100%", height: "350px", objectFit: "cover"}} src={item.image} alt=""/></a>
 									<a href={item.url} target='blank'> <div className="last-icon">
 									{item.description}
 								</div> </a>               
@@ -121,7 +121,7 @@ export default ChaiTheoryAd;
 //                         </h5>
 //                      </div>
 //                   </div>
-//                </div>
+//                </div>  
            
 
 //          )
