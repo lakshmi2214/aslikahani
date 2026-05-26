@@ -49,6 +49,11 @@ const Search = () => {
           setValue(e.target.value);
           if (hasError) setHasError(false);
         }}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            handleNavigation();
+          }
+        }}
         type="text"
         placeholder="Search..."
         name="gsearch"

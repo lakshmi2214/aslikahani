@@ -10,11 +10,10 @@ import LogoColumn from "../Home/LogoColumn";
 
 import Tags from "../Home/Tags";
 
-import LatestArticle from "../Home/Content/LatestArticle";
 // import Grids from "../Home/Grids";
 // import { Container, Row, Col } from 'react-bootstrap';
 
-import TopArticles from "../Home/Content/TopArticles";
+import LatestStories from "../Home/Content/LatestStories";
 import Articles from "../Home/Content/Articles";
 import TrendingArticles from "../Home/Content/TrendingArticles";
 import PopularArticles from "../Home/Content/PopularArticles";
@@ -125,11 +124,8 @@ function Home() {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-md-6 col-12">
-                    <LatestArticle dataObject={result} />
-                  </div>
-                  <div className="col-md-6 col-12">
-                    <TopArticles dataObject={result} />
+                  <div className="col-md-12">
+                    <LatestStories dataObject={result} />
                   </div>
                   <div className="col-md-6 col-12">
                     <Articles dataObject={result} />

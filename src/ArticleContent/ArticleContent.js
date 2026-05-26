@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import RelatedArticleContent from './RelatedContent/RelatedArticleContent'
 import ChaiTheoryAd from '../Advertisements/ChaiTheoryAd'
 
@@ -19,11 +20,22 @@ function ArticleContent() {
   const [currentArticle, setCurrentArticle] = useState(null);
   const [relatedArticles, setRelatedArticles] = useState([]);
 
-  // 1. Determine current slug
+  // 1. Determine current slug and category from route
   let slug = "";
+  let categoryFromRoute = null;
   if (location) {
-    slug = location.pathname.slice(location.pathname.lastIndexOf("/"), location.pathname.length);
-    slug = slug.substring(1, slug.length);
+    const pathSegments = location.pathname.split('/').filter(Boolean);
+    if (pathSegments.length > 0) {
+      slug = pathSegments[0].toLowerCase() === 'category' && pathSegments.length > 1 
+         ? pathSegments[2] || "" 
+         : pathSegments[1] || "";
+      if (!slug) {
+         slug = location.pathname.slice(location.pathname.lastIndexOf("/") + 1);
+      }
+      categoryFromRoute = pathSegments[0].toLowerCase() === 'category' && pathSegments.length > 1 
+         ? pathSegments[1] 
+         : pathSegments[0];
+    }
   }
 
   // 2. Fetch Category List
@@ -48,9 +60,11 @@ function ArticleContent() {
   // 4. Fetch Related Articles based on category
   useEffect(() => {
     if (currentArticle && categories.length > 0) {
+      const activeCategory = categoryFromRoute || currentArticle.category;
+
       // Find category ID
       const matchingCat = categories.find(cat => 
-        cat.name && currentArticle.category && cat.name.toLowerCase() === currentArticle.category.toLowerCase()
+        cat.name && activeCategory && cat.name.toLowerCase() === activeCategory.toLowerCase()
       );
       const catId = matchingCat ? matchingCat.id : 10; // Fallback to 10 if not found
 
@@ -69,14 +83,63 @@ function ArticleContent() {
             
             // Strictly filter by current category
             const categoryFiltered = uniqueArticles.filter(art => 
-               !currentArticle.category || 
-               (art.category && art.category.trim().toLowerCase() === currentArticle.category.trim().toLowerCase())
+               !activeCategory || 
+               (art.category && art.category.trim().toLowerCase() === activeCategory.trim().toLowerCase())
             );
 
-            // Filter out current article and limit to 5
-            const filtered = categoryFiltered
-              .filter(art => art.url !== slug)
-              .slice(0, 5);
+            // Helper to get tags/keywords
+            const getTags = (article) => {
+              let tags = [];
+              if (article.tags) {
+                if (Array.isArray(article.tags)) tags = [...tags, ...article.tags];
+                else if (typeof article.tags === 'string') tags = [...tags, ...article.tags.split(',')];
+              }
+              if (article.keywords) {
+                if (Array.isArray(article.keywords)) tags = [...tags, ...article.keywords];
+                else if (typeof article.keywords === 'string') tags = [...tags, ...article.keywords.split(',')];
+              }
+              return tags.map(t => t.trim().toLowerCase()).filter(t => t);
+            };
+
+            const currentTags = getTags(currentArticle);
+
+            const calculateScore = (article) => {
+              let score = 0;
+              const articleTags = getTags(article);
+              articleTags.forEach(tag => {
+                if (currentTags.includes(tag)) {
+                  score += 1;
+                }
+              });
+              return score;
+            };
+
+            // Filter out current article and score matching articles
+            const validArticles = categoryFiltered.filter(art => art.url !== slug);
+
+            const scoredArticles = validArticles.map(art => {
+              const score = calculateScore(art);
+              const timeVal = new Date(art.time || art.created_at || 0).getTime();
+              return { ...art, _matchScore: score, _timeVal: timeVal };
+            });
+
+            // Sort by tag match score (descending), then by date (descending)
+            scoredArticles.sort((a, b) => {
+              if (b._matchScore !== a._matchScore) {
+                return b._matchScore - a._matchScore; // Most relevant tags first
+              }
+              if (isNaN(a._timeVal) && isNaN(b._timeVal)) return 0;
+              if (isNaN(a._timeVal)) return 1;
+              if (isNaN(b._timeVal)) return -1;
+              return b._timeVal - a._timeVal; // Latest first
+            });
+
+            // Limit to 6 (4-6 requirement)
+            const filtered = scoredArticles.slice(0, 6).map(art => {
+              const { _matchScore, _timeVal, ...rest } = art;
+              return rest;
+            });
+            
             setRelatedArticles(filtered);
           }
         })
@@ -86,6 +149,20 @@ function ArticleContent() {
 
   return (
     <div>
+      {currentArticle && (
+        <Helmet>
+          <title>{currentArticle.title} - Aslikahani</title>
+          <meta property="og:title" content={currentArticle.title} />
+          <meta property="og:description" content={currentArticle.description ? currentArticle.description.replace(/<[^>]+>/g, '') : "Read this article on Aslikahani"} />
+          <meta property="og:image" content={currentArticle.image} />
+          <meta property="og:url" content={window.location.href} />
+          <meta property="og:type" content="article" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={currentArticle.title} />
+          <meta name="twitter:description" content={currentArticle.description ? currentArticle.description.replace(/<[^>]+>/g, '') : "Read this article on Aslikahani"} />
+          <meta name="twitter:image" content={currentArticle.image} />
+        </Helmet>
+      )}
       <Topbar />
       <LogoColumn />
       <Navbar />
@@ -93,7 +170,7 @@ function ArticleContent() {
 
         <div className='container-fluid px-5'>
           <div className="row">
-            <div className="col-md-2 col-sm-12 col-xs-12">
+            <div className="col-md-3 col-sm-12 col-xs-12">
               <div className="theiaStickySidebar">
                 <aside>
                   <ChaiTheoryAd addObject={{ categories }} />
@@ -104,11 +181,11 @@ function ArticleContent() {
                 </aside>
               </div>
             </div>
-            <div className="col-md-7 col-sm-12 col-xs-12">
+            <div className="col-md-6 col-sm-12 col-xs-12">
               <RelatedArticleContent articleData={currentArticle} />
             </div>
             <div className="col-md-3 col-sm-12 col-xs-12">
-              <PopularRecent relatedArticles={relatedArticles} currentCategory={currentArticle?.category} />
+              <PopularRecent relatedArticles={relatedArticles} currentCategory={categoryFromRoute || currentArticle?.category} />
             </div>
           </div>
         </div>

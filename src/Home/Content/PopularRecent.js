@@ -104,15 +104,15 @@ function PopularRecent(props) {
       navigate(`/${item.category}/${item.url}`, { state: { item } });
    }
 
-   let articlesToDisplay = fetchedArticles.length > 0
-      ? fetchedArticles
-      : (props.relatedArticles && props.relatedArticles.length > 0 ? props.relatedArticles : (props.dataObject?.locations?.Popular || []));
+   const usingRelatedArticlesProp = props.relatedArticles && props.relatedArticles.length > 0;
+
+   let articlesToDisplay = usingRelatedArticlesProp
+      ? props.relatedArticles
+      : (fetchedArticles.length > 0 ? fetchedArticles : (props.dataObject?.locations?.Popular || []));
       
    let expectedCategory = props.currentCategory || 
       location.state?.item?.category || 
       (location.pathname.split('/').filter(Boolean)[0]?.toLowerCase() === 'category' ? location.pathname.split('/').filter(Boolean)[1] : location.pathname.split('/').filter(Boolean)[0]);
-
-   const usingRelatedArticlesProp = !fetchedArticles.length && props.relatedArticles && props.relatedArticles.length > 0;
 
    if (!usingRelatedArticlesProp) {
       if (expectedCategory && expectedCategory.toLowerCase() !== 'home') {
@@ -134,14 +134,14 @@ function PopularRecent(props) {
       articlesToDisplay = articlesToDisplay.filter(item => item.url !== currentSlug);
    }
 
-   const sortedDisplayList = [...articlesToDisplay].sort((a, b) => {
+   const sortedDisplayList = usingRelatedArticlesProp ? [...articlesToDisplay].slice(0, 6) : [...articlesToDisplay].sort((a, b) => {
       const timeA = new Date(a.time || a.created_at || 0).getTime();
       const timeB = new Date(b.time || b.created_at || 0).getTime();
       if (isNaN(timeA) && isNaN(timeB)) return 0;
       if (isNaN(timeA)) return 1;
       if (isNaN(timeB)) return -1;
       return timeB - timeA;
-   }).slice(0, 5);
+   }).slice(0, 6);
 
    return (
       <>
@@ -150,23 +150,27 @@ function PopularRecent(props) {
                <h2>{props.currentCategory || props.relatedArticles ? "Related Articles" : "Recent Articles"}</h2>
             </div>
             <div className="side-popular-list">
-               {sortedDisplayList.map((item, index) => {
-                  return (
-                     <div key={index} className="side-popular-item">
-                        <div className="side-popular-thumb">
-                           <Link to={'/' + item.category + '/' + item.url}>
-                              <img alt="" src={item.image} />
-                           </Link>
+               {sortedDisplayList.length > 0 ? (
+                  sortedDisplayList.map((item, index) => {
+                     return (
+                        <div key={index} className="side-popular-item">
+                           <div className="side-popular-thumb">
+                              <Link to={'/' + item.category + '/' + item.url}>
+                                 <img alt="" src={item.image} />
+                              </Link>
+                           </div>
+                           <div className="side-popular-content">
+                              <h3>
+                                 <Link to={'/' + item.category + '/' + item.url}>{item.title}</Link>
+                              </h3>
+                              <span className="side-popular-date">{item.created_at}</span>
+                           </div>
                         </div>
-                        <div className="side-popular-content">
-                           <h3>
-                              <Link to={'/' + item.category + '/' + item.url}>{item.title}</Link>
-                           </h3>
-                           <span className="side-popular-date">{item.created_at}</span>
-                        </div>
-                     </div>
-                  );
-               })}
+                     );
+                  })
+               ) : (
+                  <p className="text-muted" style={{ padding: '15px' }}>No related articles available</p>
+               )}
             </div>
          </div>
       </>

@@ -21,6 +21,7 @@ import Subscribe from "../Subscription/Subscribe";
 import EducationComponent from "../Component/EducationComponent";
 import Stories from "../NavPages/Stories";
 import SiteMap from "../NavPages/SiteMap";
+import LatestPage from "../NavPages/LatestPage";
 import Career from "../NavPages/Carrer";
 import CareerForm from "../NavPages/CareerForm";
 import DynamicForm from "../NavPages/DynamicForm";
@@ -71,6 +72,7 @@ function Router() {
           <Route path="/subscribe" element={<Subscribe />} />
           <Route path="/checking" element={<EducationComponent />} />
           <Route path="/Stories" element={<Stories />} />
+          <Route path="/latest" element={<LatestPage />} />
           <Route path="/sitemap.xml" element={<SiteMap />} />
         </Routes>
       </BrowserRouter>
