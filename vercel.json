@@ -1,0 +1,15 @@
+{
+  "rewrites": [
+    { "source": "/Home/:slug", "destination": "/api/og" },
+    { "source": "/Entertainment/:slug", "destination": "/api/og" },
+    { "source": "/Education/:slug", "destination": "/api/og" },
+    { "source": "/Technology/:slug", "destination": "/api/og" },
+    { "source": "/Business/:slug", "destination": "/api/og" },
+    { "source": "/Travel/:slug", "destination": "/api/og" },
+    { "source": "/Lifestyle/:slug", "destination": "/api/og" },
+    { "source": "/Health/:slug", "destination": "/api/og" },
+    { "source": "/Sports/:slug", "destination": "/api/og" },
+    { "source": "/Art-and-Culture/:slug", "destination": "/api/og" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
